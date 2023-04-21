@@ -1,0 +1,12 @@
+Designator,Footprint,Quantity,Value,LCSC Part #
+"C1, C3, C4, C5, C6, C7",0603,6,0.1uF,
+C2,CP_Elec_5x4.5,1,100uF,
+IC1,SSOP-32_11.305x20.495mm_P1.27mm,1,HM628512,
+IC2,PLCC-32_11.4x14.0mm_P1.27mm,1,M29F010,
+IC3,VQFP-100_14x14mm_P0.5mm,1,XC95144XL_TQ100,
+J1,Conn_uSDcard,1,Micro_SD_Card_Det1,
+JT1,PinHeader_2x05_P2.54mm_Vertical,1,JTAG1A,
+LOGO_MSX,LOGO_MSX,1,,
+R1,0603,1,4.7K,
+U1,SOT-223-3_TabPin2,1,LM1117MP-3.3,
+X1,Crystal_SMD_7050-4Pin_7.0x5.0mm,1,25 Mhz,
