@@ -18,7 +18,13 @@ The ESP8266 enables network connectivity for the microSD card when it is inserte
 
 ## ESP8266/ESP12E Firmware
 
-[TBI]
+The ESP8266/ESP-12E microcontroller is used in the microSD mapper project to provide convenient access to the microSD card from a WebDav client, such as Windows Explorer. The microcontroller executes a program that implements a basic WebDav server, enabling access to the microSD content and allowing for wireless updates to its content.
+
+Additionally, the microcontroller drives a small 128x32 OLED panel, displaying information on the status of the WebDav server and the IP address obtained by the Wireless interface.
+
+The wireless network can be configured through a small website hosted on the root of the server. Upon the first boot, the ESP8266 activates a SoftAP that listens for HTTP connections made to 192.168.4.1. By accessing this website through a browser, the SSID and password for the wireless connection can be configured. Once saved, this configuration is stored on the ESP8266's EPROM and reused for subsequent connections. Modifications to the wireless configuration parameters can be made at any time by returning to the website.
+
+When the webdav server starts, the code saves a file named IP.CFG on the root of the microSD card. If access to the OLED screen is not available, the IP.CFG file can be used to determine the IP address in use.
 
 ## BIOS
 
