@@ -26,6 +26,8 @@ The wireless network can be configured through a small website hosted on the roo
 
 When the webdav server starts, the code saves a file named IP.CFG on the root of the microSD card. If access to the OLED screen is not available, the IP.CFG file can be used to determine the IP address in use.
 
+The code also monitors the CS signal and attaches itself to the "sdmapper bus". That is to avoid any conflicts with the MSX computer trying to save files at the same time you perform the same via the WebDav server.
+
 ## BIOS
 
 [TBI]

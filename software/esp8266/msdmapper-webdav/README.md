@@ -1,5 +1,15 @@
-# WebDAV Server and a 3D Printer
+# WebDAV Server for the MSX MicroSD Mapper
 This project based on the work done by ardyesp:  https://github.com/ardyesp/ESPWebDAV
+
+The ESP8266/ESP-12E microcontroller is used in the microSD mapper project to provide convenient access to the microSD card from a WebDav client, such as Windows Explorer. The microcontroller executes a program that implements a basic WebDav server, enabling access to the microSD content and allowing for wireless updates to its content.
+
+Additionally, the microcontroller drives a small 128x32 OLED panel, displaying information on the status of the WebDav server and the IP address obtained by the Wireless interface.
+
+The wireless network can be configured through a small website hosted on the root of the server. Upon the first boot, the ESP8266 activates a SoftAP that listens for HTTP connections made to 192.168.4.1. By accessing this website through a browser, the SSID and password for the wireless connection can be configured. Once saved, this configuration is stored on the ESP8266's EPROM and reused for subsequent connections. Modifications to the wireless configuration parameters can be made at any time by returning to the website.
+
+When the webdav server starts, the code saves a file named IP.CFG on the root of the microSD card. If access to the OLED screen is not available, the IP.CFG file can be used to determine the IP address in use.
+
+The code also monitors the CS signal and attaches itself to the "sdmapper bus". That is to avoid any conflicts with the MSX computer trying to save files at the same time you perform the same via the WebDav server.
 
 WiFi WebDAV server using ESP8266 SoC with changes to support the MSX MicroSD Mapper. It maintains the filesystem on an microSD card.
 
@@ -14,22 +24,7 @@ Once the WebDAV server is running on the ESP8266, a WebDAV client like Windows c
 
 ## Build And Deploy:
 
-The card should be formatted for Fat16 or Fat32
-
-Compile and upload the program to an ESP8266 module. 
-```
-Detecting chip type... ESP8266
-Chip is ESP8285H16
-Features: WiFi, Embedded Flash
-Crystal is 26MHz
-MAC: xxxx
-Uploading stub...
-Running stub...
-Stub running...
-Manufacturer: a1
-Device: 4015
-Detected flash size: 2MB
-```
+The card should be formatted for Fat16. The code also supports FAT32.
 
 This project is fully compatible with PlatformIO. Additionally, OTA is fully supported for subsequent flashes of the sketch over Wi-Fi.
 
