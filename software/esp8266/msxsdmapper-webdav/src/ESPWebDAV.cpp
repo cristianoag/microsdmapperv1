@@ -10,6 +10,15 @@
 
 #include "ESPWebDAV.h"
 
+//#define SD_CS		4
+//#define MISO		12
+//#define MOSI		13
+//#define SCLK		14
+//#define CS_SENSE	5
+
+//SoftSpiDriver<12, 13, 14> softSpi;
+//#define SD_CONFIG SdSpiConfig(4, SHARED_SPI, SD_SCK_MHZ(0), &softSpi);
+
 // define cal constants
 const char *months[]  = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
 const char *wdays[]  = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
@@ -44,6 +53,7 @@ bool ESPWebDAV::init(int chipSelectPin, int serverPort) {
 	// initialize the SD card
 	// return sd.begin(chipSelectPin, spiSettings);
 	ret= sd.begin(chipSelectPin);
+	//ret= sd.begin(SdSpiConfig(chipSelectPin, SHARED_SPI, SD_SCK_MHZ(0), &softSpi));
 
 	//if the sdcard is ok, create a simple file with the ip address
 	if (ret) {
