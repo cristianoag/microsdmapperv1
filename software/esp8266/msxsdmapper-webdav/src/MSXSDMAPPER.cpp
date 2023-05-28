@@ -18,7 +18,7 @@
 
 #include "ESPWebDAV.h"
 
-#define OLED_DISPLAY 0 //set to 1 if you have a 128x32 oled display connected to the board
+#define OLED_DISPLAY 1 //set to 1 if you have a 128x32 oled display connected to the board
 
 #define BM_WDT_SOFTWARE 0
 #define BM_WDT_HARDWARE 1
@@ -147,7 +147,7 @@ void Display(String msg1, String msg2)
     display.setTextColor(WHITE);
     //display first line
     display.setCursor(20, 4);
-    display.print("microSD Mapper 1.1");
+    display.print("microSD Mapper 1.2");
     display.setCursor(20, 14);
     display.print(msg1);
     display.setCursor(20, 24);
