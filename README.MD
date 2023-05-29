@@ -10,7 +10,8 @@ The ESP8266 enables network connectivity for the microSD card when it is inserte
 ## Hardware Versions
 
 * [microSDmapper v1.0](hardware/microsdmapper_v1.0/) - Initial test board with the basic configuration. 
-* [microSDmapper v1.1](hardware/microsdmapper_v1.1/) - Prototype board with the initial circuit, basic wiring for the ESP12E/8266 and a pin header to wire a display to show the MAC, and IP address acquired via DHCP. (In development)
+* [microSDmapper v1.1](hardware/microsdmapper_v1.1/) - Prototype board with the initial circuit, basic wiring for the ESP12E/8266 and a pin header to wire a display to show the MAC, and IP address acquired via DHCP. (not working without bodge wires)
+* [microSDmapper v1.2](hardware/microsdmapper_v1.2/) - Prototype board with the validated circuit. Tested with the ESP12E/8266 and the access to the microSD card. (working, in production)
 
 ## CPLD Firmware
 
