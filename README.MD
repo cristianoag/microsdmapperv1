@@ -1,6 +1,6 @@
 # MSX microSD Mapper Wireless
 
-![MicroSDMapper](labels\microsdmapper_patola_72x52.png)
+![MicroSDMapper](labels/microsdmapper_patola_72x52.png)
 
 The MSX microSD Mapper Wireless is a project aimed at building upon the success of Luciano Sturaro and Fabio Belavenuto's implementation of the well known MSX SD Mapper.
 
@@ -22,7 +22,7 @@ If you need detailed step by step instructions on how to build the cartridge, ch
 
 The microSD Mapper is compatible with the standard VHDL code made by Fabio Belavenuto for the well known SD Mapper v2. It uses the Xilinx XC95144XL_TQ100 CPLD.
 
-A copy of the source VHDL code, as well as the synthesized [sdmapper.jed](cpld\sdmapper.jed) file are available on this GitHub repository as a reference.
+A copy of the source VHDL code, as well as the synthesized [sdmapper.jed](cpld/sdmapper.jed) file are available on this GitHub repository as a reference.
 
 If you want to synthesize the code by yourself and/or program the CPLD you will need a Xilinx programmer and the Xilinx ISE Webpack.
 
@@ -44,7 +44,7 @@ The BIOS used on the microSD Mapper is a Nextor ROM that uses the driver created
 
 The modified code can be used to build the driver and the MKNEXROM tool can be used to built the Nextor ROM that needs to be flashed to the cartridge.
 
-If you just want to flash a working version of the Nextor ROM to your cartridge, use the [FBL-UPD.COM](software\updater\FBL-UPD.COM) to load the [msdmap.rom](software\driver\msdmap.rom) executing the following command from your MSX-DOS or NEXTOR in a MSX with the microSD Mapper cartridge inserted:
+If you just want to flash a working version of the Nextor ROM to your cartridge, use the [FBL-UPD.COM](software/updater/FBL-UPD.COM) to load the [msdmap.rom](software/driver/msdmap.rom) executing the following command from your MSX-DOS or NEXTOR in a MSX with the microSD Mapper cartridge inserted:
 
 ```
 FBL-UPD.COM msdmap.rom
@@ -52,9 +52,9 @@ FBL-UPD.COM msdmap.rom
 
 After executing the command you will get a message that the BIOS was flashed to the cartridge.
 
-If you want to build the driver from the source code, you will need to use [sjasmplus.exe](software\driver\sjasmplus.exe) to build the [driver.bin](software\driver\driver.bin) file and then use the [mknexrom.exe](software\driver\mknexrom.exe) tool to build the [msdmap.rom](software\driver\msdmap.rom) Nextor rom. 
+If you want to build the driver from the source code, you will need to use [sjasmplus.exe](software/driver/sjasmplus.exe) to build the [driver.bin](software/driver/driver.bin) file and then use the [mknexrom.exe](software/driver/mknexrom.exe) tool to build the [msdmap.rom](software/driver/msdmap.rom) Nextor rom. 
 
-You can do that by executing the commands below from the [driver](software\driver) folder:
+You can do that by executing the commands below from the [driver](software/driver) folder:
 
 ```
 sjasmplus.exe driver.asm
