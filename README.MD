@@ -10,6 +10,8 @@ With microSD cards becoming increasingly affordable and widely available, that s
 
 The ESP8266 enables network connectivity for the microSD card when it is inserted into the cartridge slot. Through a WebDAV server, it provides a convenient method for accessing and modifying the cartridge storage from any networked PC at any time, without requiring adapters, and eliminating the need for repeatedly removing and reinserting the memory card.
 
+The cartridge also features a small OLED display to present the IP address acquired via DHCP and writes the information on a IP.CFG file on the root of the microSD card so you can create automation based on the address of the microSD Mapper. 
+
 If you need detailed step by step instructions on how to build the cartridge, check the article written on the [The Retro Hacker](https://www.theretrohacker.com) website.
 
 ## Hardware Versions
