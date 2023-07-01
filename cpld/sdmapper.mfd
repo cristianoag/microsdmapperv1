@@ -1,0 +1,2545 @@
+MDF Database:  version 1.0
+MDF_INFO | sdmapper | XC95144XL-10-TQ100
+MACROCELL | 2 | 4 | data_bus_io<0>_MLTSRCEDGE
+ATTRIBUTES | 265986 | 0
+INPUTS | 20 | rd_n_i  | portaspi/spi_data_q<0>  | spi_cs_s/spi_cs_s_D2  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | addr_bus_i<1>  | addr_bus_i<0>  | sw_i<0>  | m1_n_i  | memmapper/MapBank0_q<0>  | iorq_n_i  | memmapper/MapBank1_q<0>  | memmapper/MapBank2_q<0>  | sd_chg_q<1>.EXP  | EXP13_.EXP  | data_bus_io<4>_MLTSRCEDGE/data_bus_io<4>_MLTSRCEDGE_TRST
+INPUTMC | 8 | 1 | 0 | 7 | 9 | 2 | 17 | 2 | 15 | 2 | 13 | 2 | 3 | 2 | 5 | 0 | 3
+INPUTP | 12 | 92 | 64 | 68 | 37 | 42 | 44 | 47 | 49 | 54 | 4 | 96 | 95
+IMPORTS | 2 | 2 | 3 | 2 | 5
+EQ | 57 | 
+   !data_bus_io<0> = !rd_n_i & !portaspi/spi_data_q<0> & 
+	spi_cs_s/spi_cs_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	!addr_bus_i<0> & sw_i<0> & m1_n_i & !memmapper/MapBank2_q<0> & 
+	!rd_n_i & !iorq_n_i
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & !addr_bus_i<1> & 
+	addr_bus_i<0> & sw_i<0> & m1_n_i & !memmapper/MapBank1_q<0> & 
+	!rd_n_i & !iorq_n_i
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & sw_i<0> & m1_n_i & !memmapper/MapBank0_q<0> & 
+	!rd_n_i & !iorq_n_i
+;Imported pterms FB3_4
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	addr_bus_i<0> & sw_i<0> & m1_n_i & !memmapper/MapBank3_q<0> & 
+	!rd_n_i & !iorq_n_i
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !tmr_cnt_q<8> & !rd_n_i & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+;Imported pterms FB3_6
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & sw_i<0> & exp/exp_reg<0> & !rd_n_i & !sltsl_n_i
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & !sd_chg_s<0> & !sd_cs_n_o<0> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & !sd_chg_s<1> & !sd_cs_n_o<1> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & !sd_cs_n_o<0> & !sd_cs_n_o<1> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !sw_i<0> & !rd_n_i & sd_cs_n_o<0> & sd_cs_n_o<1> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2;
+   data_bus_io<0>.OE = 
+	data_bus_io<4>_MLTSRCEDGE/data_bus_io<4>_MLTSRCEDGE_TRST;
+
+MACROCELL | 2 | 1 | data_bus_io<1>_MLTSRCEDGE
+ATTRIBUTES | 265986 | 0
+INPUTS | 20 | rd_n_i  | portaspi/spi_data_q<1>  | spi_cs_s/spi_cs_s_D2  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | addr_bus_i<1>  | addr_bus_i<0>  | sw_i<0>  | m1_n_i  | memmapper/MapBank0_q<1>  | iorq_n_i  | memmapper/MapBank1_q<1>  | memmapper/MapBank2_q<1>  | sd_chg_s<1>.EXP  | sd_chg_s<0>.EXP  | data_bus_io<4>_MLTSRCEDGE/data_bus_io<4>_MLTSRCEDGE_TRST
+INPUTMC | 8 | 7 | 4 | 7 | 9 | 2 | 16 | 2 | 14 | 2 | 12 | 2 | 0 | 2 | 2 | 0 | 3
+INPUTP | 12 | 92 | 64 | 68 | 37 | 42 | 44 | 47 | 49 | 54 | 4 | 96 | 95
+IMPORTS | 2 | 2 | 0 | 2 | 2
+EQ | 57 | 
+   !data_bus_io<1> = !rd_n_i & !portaspi/spi_data_q<1> & 
+	spi_cs_s/spi_cs_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	!addr_bus_i<0> & sw_i<0> & m1_n_i & !memmapper/MapBank2_q<1> & 
+	!rd_n_i & !iorq_n_i
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & !addr_bus_i<1> & 
+	addr_bus_i<0> & sw_i<0> & m1_n_i & !memmapper/MapBank1_q<1> & 
+	!rd_n_i & !iorq_n_i
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & sw_i<0> & m1_n_i & !memmapper/MapBank0_q<1> & 
+	!rd_n_i & !iorq_n_i
+;Imported pterms FB3_1
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	addr_bus_i<0> & sw_i<0> & m1_n_i & !memmapper/MapBank3_q<1> & 
+	!rd_n_i & !iorq_n_i
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !tmr_cnt_q<9> & !rd_n_i & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !sd_pres_n_i<1> & !rd_n_i & !sd_cs_n_o<1> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & !sd_cs_n_o<0> & !sd_cs_n_o<1> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+;Imported pterms FB3_3
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & sw_i<0> & exp/exp_reg<1> & !rd_n_i & !sltsl_n_i
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !sd_pres_n_i<0> & !rd_n_i & !sd_cs_n_o<0> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & !sw_i<1> & sd_cs_n_o<0> & sd_cs_n_o<1> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2;
+   data_bus_io<1>.OE = 
+	data_bus_io<4>_MLTSRCEDGE/data_bus_io<4>_MLTSRCEDGE_TRST;
+
+MACROCELL | 3 | 0 | data_bus_io<2>_BUFR.MC
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 1 | 0 | 15
+INPUTS | 20 | rd_n_i  | portaspi/spi_data_q<2>  | spi_cs_s/spi_cs_s_D2  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | addr_bus_i<1>  | addr_bus_i<0>  | sw_i<0>  | m1_n_i  | memmapper/MapBank0_q<2>  | iorq_n_i  | memmapper/MapBank1_q<2>  | memmapper/MapBank2_q<2>  | memmapper/MapBank3_q<2>  | ram_a_o_18_OBUF.EXP  | EXP14_.EXP
+INPUTMC | 8 | 7 | 3 | 7 | 9 | 3 | 15 | 3 | 14 | 5 | 12 | 5 | 3 | 3 | 1 | 3 | 17
+INPUTP | 12 | 92 | 64 | 68 | 37 | 42 | 44 | 47 | 49 | 54 | 4 | 96 | 95
+IMPORTS | 2 | 3 | 1 | 3 | 17
+EQ | 55 | 
+   !data_bus_io<2>_BUFR = !rd_n_i & !portaspi/spi_data_q<2> & 
+	spi_cs_s/spi_cs_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	addr_bus_i<0> & sw_i<0> & m1_n_i & !memmapper/MapBank3_q<2> & 
+	!rd_n_i & !iorq_n_i
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	!addr_bus_i<0> & sw_i<0> & m1_n_i & !memmapper/MapBank2_q<2> & 
+	!rd_n_i & !iorq_n_i
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & !addr_bus_i<1> & 
+	addr_bus_i<0> & sw_i<0> & m1_n_i & !memmapper/MapBank1_q<2> & 
+	!rd_n_i & !iorq_n_i
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & sw_i<0> & m1_n_i & !memmapper/MapBank0_q<2> & 
+	!rd_n_i & !iorq_n_i
+;Imported pterms FB4_2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & sw_i<0> & exp/exp_reg<2> & !rd_n_i & !sltsl_n_i
+;Imported pterms FB4_18
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !tmr_cnt_q<10> & !rd_n_i & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & !sd_wp_i<0> & sd_cs_n_o<1> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & !sd_wp_i<1> & !sd_cs_n_o<1> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & sd_cs_n_o<0> & sd_cs_n_o<1> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & !sd_cs_n_o<0> & !sd_cs_n_o<1> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2;
+
+MACROCELL | 0 | 13 | data_bus_io<3>_MLTSRCEDGE
+ATTRIBUTES | 265986 | 0
+INPUTS | 19 | rd_n_i  | portaspi/spi_data_q<3>  | spi_cs_s/spi_cs_s_D2  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | addr_bus_i<1>  | addr_bus_i<0>  | sw_i<0>  | m1_n_i  | memmapper/MapBank0_q<3>  | iorq_n_i  | memmapper/MapBank1_q<3>  | memmapper/MapBank2_q<3>  | _10_.EXP  | data_bus_io<4>_MLTSRCEDGE/data_bus_io<4>_MLTSRCEDGE_TRST
+INPUTMC | 7 | 7 | 2 | 7 | 9 | 4 | 9 | 4 | 8 | 5 | 9 | 0 | 14 | 0 | 3
+INPUTP | 12 | 92 | 64 | 68 | 37 | 42 | 44 | 47 | 49 | 54 | 4 | 96 | 95
+IMPORTS | 1 | 0 | 14
+EQ | 36 | 
+   !data_bus_io<3> = !rd_n_i & !portaspi/spi_data_q<3> & 
+	spi_cs_s/spi_cs_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	!addr_bus_i<0> & sw_i<0> & m1_n_i & !memmapper/MapBank2_q<3> & 
+	!rd_n_i & !iorq_n_i
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & !addr_bus_i<1> & 
+	addr_bus_i<0> & sw_i<0> & m1_n_i & !memmapper/MapBank1_q<3> & 
+	!rd_n_i & !iorq_n_i
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & sw_i<0> & m1_n_i & !memmapper/MapBank0_q<3> & 
+	!rd_n_i & !iorq_n_i
+;Imported pterms FB1_15
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	addr_bus_i<0> & sw_i<0> & m1_n_i & !memmapper/MapBank3_q<3> & 
+	!rd_n_i & !iorq_n_i
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & addr_bus_i<14> & 
+	addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & addr_bus_i<10> & 
+	!tmr_cnt_q<11> & !rd_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & sw_i<0> & exp/exp_reg<3> & !rd_n_i & !sltsl_n_i;
+   data_bus_io<3>.OE = 
+	data_bus_io<4>_MLTSRCEDGE/data_bus_io<4>_MLTSRCEDGE_TRST;
+
+MACROCELL | 0 | 11 | data_bus_io<4>_MLTSRCEDGE
+ATTRIBUTES | 265986 | 0
+INPUTS | 19 | rd_n_i  | portaspi/spi_data_q<4>  | spi_cs_s/spi_cs_s_D2  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | addr_bus_i<1>  | addr_bus_i<0>  | sw_i<0>  | m1_n_i  | memmapper/MapBank0_q<4>  | iorq_n_i  | memmapper/MapBank1_q<4>  | memmapper/MapBank2_q<4>  | EXP11_.EXP  | data_bus_io<4>_MLTSRCEDGE/data_bus_io<4>_MLTSRCEDGE_TRST
+INPUTMC | 7 | 6 | 7 | 7 | 9 | 5 | 17 | 5 | 15 | 5 | 6 | 0 | 12 | 0 | 3
+INPUTP | 12 | 92 | 64 | 68 | 37 | 42 | 44 | 47 | 49 | 54 | 4 | 96 | 95
+IMPORTS | 1 | 0 | 12
+EQ | 36 | 
+   !data_bus_io<4> = !rd_n_i & !portaspi/spi_data_q<4> & 
+	spi_cs_s/spi_cs_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	!addr_bus_i<0> & sw_i<0> & m1_n_i & !memmapper/MapBank2_q<4> & 
+	!rd_n_i & !iorq_n_i
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & !addr_bus_i<1> & 
+	addr_bus_i<0> & sw_i<0> & m1_n_i & !memmapper/MapBank1_q<4> & 
+	!rd_n_i & !iorq_n_i
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & sw_i<0> & m1_n_i & !memmapper/MapBank0_q<4> & 
+	!rd_n_i & !iorq_n_i
+;Imported pterms FB1_13
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	addr_bus_i<0> & sw_i<0> & m1_n_i & !memmapper/MapBank3_q<4> & 
+	!rd_n_i & !iorq_n_i
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & addr_bus_i<14> & 
+	addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & addr_bus_i<10> & 
+	!tmr_cnt_q<12> & !rd_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & sw_i<0> & exp/exp_reg<4> & !rd_n_i & !sltsl_n_i;
+   data_bus_io<4>.OE = 
+	data_bus_io<4>_MLTSRCEDGE/data_bus_io<4>_MLTSRCEDGE_TRST;
+
+MACROCELL | 0 | 10 | data_bus_io<5>_MLTSRCEDGE
+ATTRIBUTES | 265986 | 0
+INPUTS | 25 | rd_n_i  | portaspi/spi_data_q<5>  | spi_cs_s/spi_cs_s_D2  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | addr_bus_i<1>  | addr_bus_i<0>  | addr_bus_i<9>  | addr_bus_i<8>  | addr_bus_i<15>  | addr_bus_i<14>  | addr_bus_i<13>  | addr_bus_i<12>  | addr_bus_i<11>  | addr_bus_i<10>  | sltsl_rom_n_s/sltsl_rom_n_s_D2  | tmr_cnt_q<13>  | sw_i<0>  | exp/exp_reg<5>  | sltsl_n_i  | data_bus_io<7>_MLTSRCEDGE/data_bus_io<7>_MLTSRCEDGE_TRST
+INPUTMC | 6 | 6 | 6 | 7 | 9 | 3 | 16 | 4 | 15 | 4 | 5 | 0 | 4
+INPUTP | 19 | 92 | 64 | 68 | 37 | 42 | 44 | 47 | 49 | 54 | 82 | 60 | 88 | 56 | 57 | 58 | 69 | 79 | 4 | 105
+EQ | 19 | 
+   !data_bus_io<5> = !rd_n_i & !portaspi/spi_data_q<5> & 
+	spi_cs_s/spi_cs_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & addr_bus_i<14> & 
+	addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & addr_bus_i<10> & 
+	!tmr_cnt_q<13> & !rd_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & sw_i<0> & exp/exp_reg<5> & !rd_n_i & !sltsl_n_i;
+   data_bus_io<5>.OE = 
+	data_bus_io<7>_MLTSRCEDGE/data_bus_io<7>_MLTSRCEDGE_TRST;
+
+MACROCELL | 0 | 8 | data_bus_io<6>_MLTSRCEDGE
+ATTRIBUTES | 265986 | 0
+INPUTS | 25 | rd_n_i  | portaspi/spi_data_q<6>  | spi_cs_s/spi_cs_s_D2  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | addr_bus_i<1>  | addr_bus_i<0>  | addr_bus_i<9>  | addr_bus_i<8>  | addr_bus_i<15>  | addr_bus_i<14>  | addr_bus_i<13>  | addr_bus_i<12>  | addr_bus_i<11>  | addr_bus_i<10>  | sltsl_rom_n_s/sltsl_rom_n_s_D2  | tmr_cnt_q<14>  | sw_i<0>  | exp/exp_reg<6>  | sltsl_n_i  | data_bus_io<7>_MLTSRCEDGE/data_bus_io<7>_MLTSRCEDGE_TRST
+INPUTMC | 6 | 6 | 5 | 7 | 9 | 3 | 16 | 4 | 17 | 4 | 3 | 0 | 4
+INPUTP | 19 | 92 | 64 | 68 | 37 | 42 | 44 | 47 | 49 | 54 | 82 | 60 | 88 | 56 | 57 | 58 | 69 | 79 | 4 | 105
+EQ | 19 | 
+   !data_bus_io<6> = !rd_n_i & !portaspi/spi_data_q<6> & 
+	spi_cs_s/spi_cs_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & addr_bus_i<14> & 
+	addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & addr_bus_i<10> & 
+	!tmr_cnt_q<14> & !rd_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & sw_i<0> & exp/exp_reg<6> & !rd_n_i & !sltsl_n_i;
+   data_bus_io<6>.OE = 
+	data_bus_io<7>_MLTSRCEDGE/data_bus_io<7>_MLTSRCEDGE_TRST;
+
+MACROCELL | 0 | 7 | data_bus_io<7>_MLTSRCEDGE
+ATTRIBUTES | 265986 | 0
+INPUTS | 25 | rd_n_i  | portaspi/spi_data_q<7>  | spi_cs_s/spi_cs_s_D2  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | addr_bus_i<1>  | addr_bus_i<0>  | addr_bus_i<9>  | addr_bus_i<8>  | addr_bus_i<15>  | addr_bus_i<14>  | addr_bus_i<13>  | addr_bus_i<12>  | addr_bus_i<11>  | addr_bus_i<10>  | sltsl_rom_n_s/sltsl_rom_n_s_D2  | tmr_cnt_q<15>  | sw_i<0>  | exp/exp_reg<7>  | sltsl_n_i  | data_bus_io<7>_MLTSRCEDGE/data_bus_io<7>_MLTSRCEDGE_TRST
+INPUTMC | 6 | 6 | 4 | 7 | 9 | 3 | 16 | 4 | 1 | 4 | 2 | 0 | 4
+INPUTP | 19 | 92 | 64 | 68 | 37 | 42 | 44 | 47 | 49 | 54 | 82 | 60 | 88 | 56 | 57 | 58 | 69 | 79 | 4 | 105
+EQ | 19 | 
+   !data_bus_io<7> = !rd_n_i & !portaspi/spi_data_q<7> & 
+	spi_cs_s/spi_cs_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & addr_bus_i<14> & 
+	addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & addr_bus_i<10> & 
+	!tmr_cnt_q<15> & !rd_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & sw_i<0> & exp/exp_reg<7> & !rd_n_i & !sltsl_n_i;
+   data_bus_io<7>.OE = 
+	data_bus_io<7>_MLTSRCEDGE/data_bus_io<7>_MLTSRCEDGE_TRST;
+
+MACROCELL | 2 | 17 | memmapper/MapBank0_q<0>
+ATTRIBUTES | 8524640 | 0
+OUTPUTMC | 3 | 2 | 4 | 5 | 11 | 2 | 0
+INPUTS | 14 | data_bus_io<0>.PIN  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | sw_i<0>  | m1_n_i  | wr_n_i  | iorq_n_i  | addr_bus_i<1>  | addr_bus_i<0>  | sd_chg_q<1>
+INPUTMC | 1 | 2 | 3
+INPUTP | 13 | 36 | 64 | 68 | 37 | 42 | 44 | 47 | 4 | 96 | 90 | 95 | 49 | 54
+EXPORTS | 1 | 2 | 0
+EQ | 7 | 
+   memmapper/MapBank0_q<0>.D = data_bus_io<0>.PIN;
+   memmapper/MapBank0_q<0>.CLK = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & sw_i<0> & 
+	m1_n_i & !wr_n_i & !iorq_n_i;
+   !memmapper/MapBank0_q<0>.AP = reset_n_i;	// GSR
+   memmapper/MapBank0_q<0>.CE = !addr_bus_i<1> & !addr_bus_i<0>;
+    memmapper/MapBank0_q<0>.EXP  =  sd_chg_q<1>
+GLOBALS | 1 | 1 | reset_n_i
+
+MACROCELL | 2 | 16 | memmapper/MapBank0_q<1>
+ATTRIBUTES | 8524640 | 0
+OUTPUTMC | 2 | 2 | 1 | 5 | 13
+INPUTS | 13 | data_bus_io<1>.PIN  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | sw_i<0>  | m1_n_i  | wr_n_i  | iorq_n_i  | addr_bus_i<1>  | addr_bus_i<0>
+INPUTP | 13 | 35 | 64 | 68 | 37 | 42 | 44 | 47 | 4 | 96 | 90 | 95 | 49 | 54
+EQ | 6 | 
+   memmapper/MapBank0_q<1>.D = data_bus_io<1>.PIN;
+   memmapper/MapBank0_q<1>.CLK = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & sw_i<0> & 
+	m1_n_i & !wr_n_i & !iorq_n_i;
+   !memmapper/MapBank0_q<1>.AP = reset_n_i;	// GSR
+   memmapper/MapBank0_q<1>.CE = !addr_bus_i<1> & !addr_bus_i<0>;
+GLOBALS | 1 | 1 | reset_n_i
+
+MACROCELL | 3 | 15 | memmapper/MapBank0_q<2>
+ATTRIBUTES | 8528736 | 0
+OUTPUTMC | 2 | 3 | 0 | 5 | 14
+INPUTS | 13 | data_bus_io<2>.PIN  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | sw_i<0>  | m1_n_i  | wr_n_i  | iorq_n_i  | addr_bus_i<1>  | addr_bus_i<0>
+INPUTP | 13 | 30 | 64 | 68 | 37 | 42 | 44 | 47 | 4 | 96 | 90 | 95 | 49 | 54
+EQ | 6 | 
+   memmapper/MapBank0_q<2>.D = data_bus_io<2>.PIN;
+   memmapper/MapBank0_q<2>.CLK = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & sw_i<0> & 
+	m1_n_i & !wr_n_i & !iorq_n_i;
+   !memmapper/MapBank0_q<2>.AR = reset_n_i;	// GSR
+   memmapper/MapBank0_q<2>.CE = !addr_bus_i<1> & !addr_bus_i<0>;
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 4 | 9 | memmapper/MapBank0_q<3>
+ATTRIBUTES | 8528736 | 0
+OUTPUTMC | 3 | 0 | 13 | 5 | 16 | 4 | 10
+INPUTS | 31 | data_bus_io<3>.PIN  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | sw_i<0>  | m1_n_i  | wr_n_i  | iorq_n_i  | addr_bus_i<1>  | addr_bus_i<0>  | tmr_cnt_q<9>  | tmr_wr_s/tmr_wr_s_D2  | Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2  | tmr_cnt_q<0>  | tmr_cnt_q<11>  | tmr_cnt_q<13>  | tmr_cnt_q<10>  | tmr_cnt_q<12>  | tmr_cnt_q<14>  | tmr_cnt_q<1>  | tmr_cnt_q<3>  | tmr_cnt_q<5>  | tmr_cnt_q<7>  | tmr_cnt_q<8>  | tmr_cnt_q<15>  | tmr_cnt_q<2>  | tmr_cnt_q<4>  | tmr_cnt_q<6>
+INPUTMC | 18 | 4 | 10 | 0 | 0 | 7 | 0 | 4 | 0 | 4 | 12 | 4 | 15 | 4 | 11 | 4 | 13 | 4 | 17 | 7 | 7 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 17 | 4 | 1 | 7 | 13 | 7 | 16 | 7 | 12
+INPUTP | 13 | 29 | 64 | 68 | 37 | 42 | 44 | 47 | 4 | 96 | 90 | 95 | 49 | 54
+EXPORTS | 1 | 4 | 10
+EQ | 13 | 
+   memmapper/MapBank0_q<3>.D = data_bus_io<3>.PIN;
+   memmapper/MapBank0_q<3>.CLK = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & sw_i<0> & 
+	m1_n_i & !wr_n_i & !iorq_n_i;
+   !memmapper/MapBank0_q<3>.AR = reset_n_i;	// GSR
+   memmapper/MapBank0_q<3>.CE = !addr_bus_i<1> & !addr_bus_i<0>;
+    memmapper/MapBank0_q<3>.EXP  =  !tmr_cnt_q<9> & !tmr_wr_s/tmr_wr_s_D2 & 
+	!Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2
+	# !tmr_cnt_q<0> & !tmr_cnt_q<11> & !tmr_cnt_q<13> & 
+	!tmr_cnt_q<9> & !tmr_cnt_q<10> & !tmr_cnt_q<12> & !tmr_cnt_q<14> & 
+	!tmr_cnt_q<1> & !tmr_cnt_q<3> & !tmr_cnt_q<5> & !tmr_cnt_q<7> & 
+	!tmr_cnt_q<8> & !tmr_cnt_q<15> & !tmr_cnt_q<2> & !tmr_cnt_q<4> & 
+	!tmr_cnt_q<6> & !tmr_wr_s/tmr_wr_s_D2
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 5 | 17 | memmapper/MapBank0_q<4>
+ATTRIBUTES | 8528736 | 0
+OUTPUTMC | 2 | 0 | 11 | 3 | 1
+INPUTS | 13 | data_bus_io<4>.PIN  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | sw_i<0>  | m1_n_i  | wr_n_i  | iorq_n_i  | addr_bus_i<1>  | addr_bus_i<0>
+INPUTP | 13 | 28 | 64 | 68 | 37 | 42 | 44 | 47 | 4 | 96 | 90 | 95 | 49 | 54
+EQ | 6 | 
+   memmapper/MapBank0_q<4>.D = data_bus_io<4>.PIN;
+   memmapper/MapBank0_q<4>.CLK = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & sw_i<0> & 
+	m1_n_i & !wr_n_i & !iorq_n_i;
+   !memmapper/MapBank0_q<4>.AR = reset_n_i;	// GSR
+   memmapper/MapBank0_q<4>.CE = !addr_bus_i<1> & !addr_bus_i<0>;
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 2 | 15 | memmapper/MapBank1_q<0>
+ATTRIBUTES | 8528736 | 0
+OUTPUTMC | 2 | 2 | 4 | 5 | 11
+INPUTS | 13 | data_bus_io<0>.PIN  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | sw_i<0>  | m1_n_i  | wr_n_i  | iorq_n_i  | addr_bus_i<1>  | addr_bus_i<0>
+INPUTP | 13 | 36 | 64 | 68 | 37 | 42 | 44 | 47 | 4 | 96 | 90 | 95 | 49 | 54
+EQ | 6 | 
+   memmapper/MapBank1_q<0>.D = data_bus_io<0>.PIN;
+   memmapper/MapBank1_q<0>.CLK = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & sw_i<0> & 
+	m1_n_i & !wr_n_i & !iorq_n_i;
+   !memmapper/MapBank1_q<0>.AR = reset_n_i;	// GSR
+   memmapper/MapBank1_q<0>.CE = !addr_bus_i<1> & addr_bus_i<0>;
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 2 | 14 | memmapper/MapBank1_q<1>
+ATTRIBUTES | 8524640 | 0
+OUTPUTMC | 2 | 2 | 1 | 5 | 13
+INPUTS | 13 | data_bus_io<1>.PIN  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | sw_i<0>  | m1_n_i  | wr_n_i  | iorq_n_i  | addr_bus_i<1>  | addr_bus_i<0>
+INPUTP | 13 | 35 | 64 | 68 | 37 | 42 | 44 | 47 | 4 | 96 | 90 | 95 | 49 | 54
+EQ | 6 | 
+   memmapper/MapBank1_q<1>.D = data_bus_io<1>.PIN;
+   memmapper/MapBank1_q<1>.CLK = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & sw_i<0> & 
+	m1_n_i & !wr_n_i & !iorq_n_i;
+   !memmapper/MapBank1_q<1>.AP = reset_n_i;	// GSR
+   memmapper/MapBank1_q<1>.CE = !addr_bus_i<1> & addr_bus_i<0>;
+GLOBALS | 1 | 1 | reset_n_i
+
+MACROCELL | 3 | 14 | memmapper/MapBank1_q<2>
+ATTRIBUTES | 8528736 | 0
+OUTPUTMC | 2 | 3 | 0 | 5 | 14
+INPUTS | 13 | data_bus_io<2>.PIN  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | sw_i<0>  | m1_n_i  | wr_n_i  | iorq_n_i  | addr_bus_i<1>  | addr_bus_i<0>
+INPUTP | 13 | 30 | 64 | 68 | 37 | 42 | 44 | 47 | 4 | 96 | 90 | 95 | 49 | 54
+EQ | 6 | 
+   memmapper/MapBank1_q<2>.D = data_bus_io<2>.PIN;
+   memmapper/MapBank1_q<2>.CLK = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & sw_i<0> & 
+	m1_n_i & !wr_n_i & !iorq_n_i;
+   !memmapper/MapBank1_q<2>.AR = reset_n_i;	// GSR
+   memmapper/MapBank1_q<2>.CE = !addr_bus_i<1> & addr_bus_i<0>;
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 4 | 8 | memmapper/MapBank1_q<3>
+ATTRIBUTES | 8528736 | 0
+OUTPUTMC | 2 | 0 | 13 | 5 | 16
+INPUTS | 13 | data_bus_io<3>.PIN  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | sw_i<0>  | m1_n_i  | wr_n_i  | iorq_n_i  | addr_bus_i<1>  | addr_bus_i<0>
+INPUTP | 13 | 29 | 64 | 68 | 37 | 42 | 44 | 47 | 4 | 96 | 90 | 95 | 49 | 54
+EQ | 6 | 
+   memmapper/MapBank1_q<3>.D = data_bus_io<3>.PIN;
+   memmapper/MapBank1_q<3>.CLK = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & sw_i<0> & 
+	m1_n_i & !wr_n_i & !iorq_n_i;
+   !memmapper/MapBank1_q<3>.AR = reset_n_i;	// GSR
+   memmapper/MapBank1_q<3>.CE = !addr_bus_i<1> & addr_bus_i<0>;
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 5 | 15 | memmapper/MapBank1_q<4>
+ATTRIBUTES | 8528736 | 0
+OUTPUTMC | 2 | 0 | 11 | 3 | 1
+INPUTS | 13 | data_bus_io<4>.PIN  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | sw_i<0>  | m1_n_i  | wr_n_i  | iorq_n_i  | addr_bus_i<1>  | addr_bus_i<0>
+INPUTP | 13 | 28 | 64 | 68 | 37 | 42 | 44 | 47 | 4 | 96 | 90 | 95 | 49 | 54
+EQ | 6 | 
+   memmapper/MapBank1_q<4>.D = data_bus_io<4>.PIN;
+   memmapper/MapBank1_q<4>.CLK = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & sw_i<0> & 
+	m1_n_i & !wr_n_i & !iorq_n_i;
+   !memmapper/MapBank1_q<4>.AR = reset_n_i;	// GSR
+   memmapper/MapBank1_q<4>.CE = !addr_bus_i<1> & addr_bus_i<0>;
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 2 | 13 | memmapper/MapBank2_q<0>
+ATTRIBUTES | 8524640 | 0
+OUTPUTMC | 2 | 2 | 4 | 5 | 11
+INPUTS | 13 | data_bus_io<0>.PIN  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | sw_i<0>  | m1_n_i  | wr_n_i  | iorq_n_i  | addr_bus_i<1>  | addr_bus_i<0>
+INPUTP | 13 | 36 | 64 | 68 | 37 | 42 | 44 | 47 | 4 | 96 | 90 | 95 | 49 | 54
+EQ | 6 | 
+   memmapper/MapBank2_q<0>.D = data_bus_io<0>.PIN;
+   memmapper/MapBank2_q<0>.CLK = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & sw_i<0> & 
+	m1_n_i & !wr_n_i & !iorq_n_i;
+   !memmapper/MapBank2_q<0>.AP = reset_n_i;	// GSR
+   memmapper/MapBank2_q<0>.CE = addr_bus_i<1> & !addr_bus_i<0>;
+GLOBALS | 1 | 1 | reset_n_i
+
+MACROCELL | 2 | 12 | memmapper/MapBank2_q<1>
+ATTRIBUTES | 8528736 | 0
+OUTPUTMC | 2 | 2 | 1 | 5 | 13
+INPUTS | 13 | data_bus_io<1>.PIN  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | sw_i<0>  | m1_n_i  | wr_n_i  | iorq_n_i  | addr_bus_i<1>  | addr_bus_i<0>
+INPUTP | 13 | 35 | 64 | 68 | 37 | 42 | 44 | 47 | 4 | 96 | 90 | 95 | 49 | 54
+EQ | 6 | 
+   memmapper/MapBank2_q<1>.D = data_bus_io<1>.PIN;
+   memmapper/MapBank2_q<1>.CLK = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & sw_i<0> & 
+	m1_n_i & !wr_n_i & !iorq_n_i;
+   !memmapper/MapBank2_q<1>.AR = reset_n_i;	// GSR
+   memmapper/MapBank2_q<1>.CE = addr_bus_i<1> & !addr_bus_i<0>;
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 5 | 12 | memmapper/MapBank2_q<2>
+ATTRIBUTES | 8528736 | 0
+OUTPUTMC | 2 | 3 | 0 | 5 | 14
+INPUTS | 13 | data_bus_io<2>.PIN  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | sw_i<0>  | m1_n_i  | wr_n_i  | iorq_n_i  | addr_bus_i<1>  | addr_bus_i<0>
+INPUTP | 13 | 30 | 64 | 68 | 37 | 42 | 44 | 47 | 4 | 96 | 90 | 95 | 49 | 54
+EQ | 6 | 
+   memmapper/MapBank2_q<2>.D = data_bus_io<2>.PIN;
+   memmapper/MapBank2_q<2>.CLK = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & sw_i<0> & 
+	m1_n_i & !wr_n_i & !iorq_n_i;
+   !memmapper/MapBank2_q<2>.AR = reset_n_i;	// GSR
+   memmapper/MapBank2_q<2>.CE = addr_bus_i<1> & !addr_bus_i<0>;
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 5 | 9 | memmapper/MapBank2_q<3>
+ATTRIBUTES | 8528736 | 0
+OUTPUTMC | 2 | 0 | 13 | 5 | 16
+INPUTS | 13 | data_bus_io<3>.PIN  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | sw_i<0>  | m1_n_i  | wr_n_i  | iorq_n_i  | addr_bus_i<1>  | addr_bus_i<0>
+INPUTP | 13 | 29 | 64 | 68 | 37 | 42 | 44 | 47 | 4 | 96 | 90 | 95 | 49 | 54
+EQ | 6 | 
+   memmapper/MapBank2_q<3>.D = data_bus_io<3>.PIN;
+   memmapper/MapBank2_q<3>.CLK = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & sw_i<0> & 
+	m1_n_i & !wr_n_i & !iorq_n_i;
+   !memmapper/MapBank2_q<3>.AR = reset_n_i;	// GSR
+   memmapper/MapBank2_q<3>.CE = addr_bus_i<1> & !addr_bus_i<0>;
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 5 | 6 | memmapper/MapBank2_q<4>
+ATTRIBUTES | 8528736 | 0
+OUTPUTMC | 3 | 0 | 11 | 3 | 1 | 5 | 5
+INPUTS | 20 | data_bus_io<4>.PIN  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | sw_i<0>  | m1_n_i  | wr_n_i  | iorq_n_i  | addr_bus_i<1>  | addr_bus_i<0>  | addr_bus_i<9>  | addr_bus_i<8>  | addr_bus_i<14>  | addr_bus_i<13>  | addr_bus_i<12>  | addr_bus_i<11>  | addr_bus_i<10>
+INPUTP | 20 | 28 | 64 | 68 | 37 | 42 | 44 | 47 | 4 | 96 | 90 | 95 | 49 | 54 | 82 | 60 | 56 | 57 | 58 | 69 | 79
+EXPORTS | 1 | 5 | 5
+EQ | 9 | 
+   memmapper/MapBank2_q<4>.D = data_bus_io<4>.PIN;
+   memmapper/MapBank2_q<4>.CLK = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & sw_i<0> & 
+	m1_n_i & !wr_n_i & !iorq_n_i;
+   !memmapper/MapBank2_q<4>.AR = reset_n_i;	// GSR
+   memmapper/MapBank2_q<4>.CE = addr_bus_i<1> & !addr_bus_i<0>;
+    memmapper/MapBank2_q<4>.EXP  =  addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<9> & addr_bus_i<8> & addr_bus_i<14> & 
+	addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & addr_bus_i<10>
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 2 | 11 | memmapper/MapBank3_q<0>
+ATTRIBUTES | 8528736 | 0
+OUTPUTMC | 2 | 2 | 3 | 5 | 11
+INPUTS | 13 | data_bus_io<0>.PIN  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | sw_i<0>  | m1_n_i  | wr_n_i  | iorq_n_i  | addr_bus_i<1>  | addr_bus_i<0>
+INPUTP | 13 | 36 | 64 | 68 | 37 | 42 | 44 | 47 | 4 | 96 | 90 | 95 | 49 | 54
+EQ | 6 | 
+   memmapper/MapBank3_q<0>.D = data_bus_io<0>.PIN;
+   memmapper/MapBank3_q<0>.CLK = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & sw_i<0> & 
+	m1_n_i & !wr_n_i & !iorq_n_i;
+   !memmapper/MapBank3_q<0>.AR = reset_n_i;	// GSR
+   memmapper/MapBank3_q<0>.CE = addr_bus_i<1> & addr_bus_i<0>;
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 2 | 10 | memmapper/MapBank3_q<1>
+ATTRIBUTES | 8528736 | 0
+OUTPUTMC | 2 | 2 | 0 | 5 | 13
+INPUTS | 13 | data_bus_io<1>.PIN  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | sw_i<0>  | m1_n_i  | wr_n_i  | iorq_n_i  | addr_bus_i<1>  | addr_bus_i<0>
+INPUTP | 13 | 35 | 64 | 68 | 37 | 42 | 44 | 47 | 4 | 96 | 90 | 95 | 49 | 54
+EQ | 6 | 
+   memmapper/MapBank3_q<1>.D = data_bus_io<1>.PIN;
+   memmapper/MapBank3_q<1>.CLK = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & sw_i<0> & 
+	m1_n_i & !wr_n_i & !iorq_n_i;
+   !memmapper/MapBank3_q<1>.AR = reset_n_i;	// GSR
+   memmapper/MapBank3_q<1>.CE = addr_bus_i<1> & addr_bus_i<0>;
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 5 | 3 | memmapper/MapBank3_q<2>
+ATTRIBUTES | 8528736 | 0
+OUTPUTMC | 2 | 3 | 0 | 5 | 14
+INPUTS | 13 | data_bus_io<2>.PIN  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | sw_i<0>  | m1_n_i  | wr_n_i  | iorq_n_i  | addr_bus_i<1>  | addr_bus_i<0>
+INPUTP | 13 | 30 | 64 | 68 | 37 | 42 | 44 | 47 | 4 | 96 | 90 | 95 | 49 | 54
+EQ | 6 | 
+   memmapper/MapBank3_q<2>.D = data_bus_io<2>.PIN;
+   memmapper/MapBank3_q<2>.CLK = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & sw_i<0> & 
+	m1_n_i & !wr_n_i & !iorq_n_i;
+   !memmapper/MapBank3_q<2>.AR = reset_n_i;	// GSR
+   memmapper/MapBank3_q<2>.CE = addr_bus_i<1> & addr_bus_i<0>;
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 5 | 2 | memmapper/MapBank3_q<3>
+ATTRIBUTES | 8528736 | 0
+OUTPUTMC | 2 | 5 | 16 | 0 | 14
+INPUTS | 13 | data_bus_io<3>.PIN  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | sw_i<0>  | m1_n_i  | wr_n_i  | iorq_n_i  | addr_bus_i<1>  | addr_bus_i<0>
+INPUTP | 13 | 29 | 64 | 68 | 37 | 42 | 44 | 47 | 4 | 96 | 90 | 95 | 49 | 54
+EQ | 6 | 
+   memmapper/MapBank3_q<3>.D = data_bus_io<3>.PIN;
+   memmapper/MapBank3_q<3>.CLK = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & sw_i<0> & 
+	m1_n_i & !wr_n_i & !iorq_n_i;
+   !memmapper/MapBank3_q<3>.AR = reset_n_i;	// GSR
+   memmapper/MapBank3_q<3>.CE = addr_bus_i<1> & addr_bus_i<0>;
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 5 | 1 | memmapper/MapBank3_q<4>
+ATTRIBUTES | 8528736 | 0
+OUTPUTMC | 2 | 3 | 1 | 0 | 12
+INPUTS | 13 | data_bus_io<4>.PIN  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | sw_i<0>  | m1_n_i  | wr_n_i  | iorq_n_i  | addr_bus_i<1>  | addr_bus_i<0>
+INPUTP | 13 | 28 | 64 | 68 | 37 | 42 | 44 | 47 | 4 | 96 | 90 | 95 | 49 | 54
+EQ | 6 | 
+   memmapper/MapBank3_q<4>.D = data_bus_io<4>.PIN;
+   memmapper/MapBank3_q<4>.CLK = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & sw_i<0> & 
+	m1_n_i & !wr_n_i & !iorq_n_i;
+   !memmapper/MapBank3_q<4>.AR = reset_n_i;	// GSR
+   memmapper/MapBank3_q<4>.CE = addr_bus_i<1> & addr_bus_i<0>;
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 2 | 9 | rom_bank1_q<0>
+ATTRIBUTES | 8528736 | 0
+OUTPUTMC | 2 | 5 | 7 | 7 | 9
+INPUTS | 8 | data_bus_io<0>.PIN  | addr_bus_i<15>  | addr_bus_i<14>  | addr_bus_i<13>  | addr_bus_i<11>  | wr_n_i  | sltsl_rom_n_s/sltsl_rom_n_s_D2  | addr_bus_i<12>
+INPUTMC | 1 | 3 | 16
+INPUTP | 7 | 36 | 88 | 56 | 57 | 69 | 90 | 58
+EQ | 5 | 
+   rom_bank1_q<0>.D = data_bus_io<0>.PIN;
+   !rom_bank1_q<0>.CLK = !addr_bus_i<15> & addr_bus_i<14> & addr_bus_i<13> & 
+	!addr_bus_i<11> & !wr_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2;
+   !rom_bank1_q<0>.AR = reset_n_i;	// GSR
+   rom_bank1_q<0>.CE = !addr_bus_i<12>;
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 2 | 8 | rom_bank1_q<1>
+ATTRIBUTES | 8528736 | 0
+OUTPUTMC | 2 | 5 | 8 | 7 | 9
+INPUTS | 8 | data_bus_io<1>.PIN  | addr_bus_i<15>  | addr_bus_i<14>  | addr_bus_i<13>  | addr_bus_i<11>  | wr_n_i  | sltsl_rom_n_s/sltsl_rom_n_s_D2  | addr_bus_i<12>
+INPUTMC | 1 | 3 | 16
+INPUTP | 7 | 35 | 88 | 56 | 57 | 69 | 90 | 58
+EQ | 5 | 
+   rom_bank1_q<1>.D = data_bus_io<1>.PIN;
+   !rom_bank1_q<1>.CLK = !addr_bus_i<15> & addr_bus_i<14> & addr_bus_i<13> & 
+	!addr_bus_i<11> & !wr_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2;
+   !rom_bank1_q<1>.AR = reset_n_i;	// GSR
+   rom_bank1_q<1>.CE = !addr_bus_i<12>;
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 3 | 13 | rom_bank1_q<2>
+ATTRIBUTES | 8528736 | 0
+OUTPUTMC | 2 | 5 | 10 | 7 | 9
+INPUTS | 8 | data_bus_io<2>.PIN  | addr_bus_i<15>  | addr_bus_i<14>  | addr_bus_i<13>  | addr_bus_i<11>  | wr_n_i  | sltsl_rom_n_s/sltsl_rom_n_s_D2  | addr_bus_i<12>
+INPUTMC | 1 | 3 | 16
+INPUTP | 7 | 30 | 88 | 56 | 57 | 69 | 90 | 58
+EQ | 5 | 
+   rom_bank1_q<2>.D = data_bus_io<2>.PIN;
+   !rom_bank1_q<2>.CLK = !addr_bus_i<15> & addr_bus_i<14> & addr_bus_i<13> & 
+	!addr_bus_i<11> & !wr_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2;
+   !rom_bank1_q<2>.AR = reset_n_i;	// GSR
+   rom_bank1_q<2>.CE = !addr_bus_i<12>;
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 2 | 6 | sd_chg_q<0>
+ATTRIBUTES | 4334496 | 0
+OUTPUTMC | 2 | 2 | 6 | 2 | 2
+INPUTS | 22 | sd_chg_q<0>  | sd_cs_n_o<0>  | sd_cs_n_o<1>  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | addr_bus_i<1>  | addr_bus_i<0>  | addr_bus_i<9>  | addr_bus_i<8>  | addr_bus_i<15>  | addr_bus_i<14>  | addr_bus_i<13>  | addr_bus_i<12>  | addr_bus_i<11>  | addr_bus_i<10>  | rd_n_i  | sltsl_rom_n_s/sltsl_rom_n_s_D2  | sd_pres_n_i<0>
+INPUTMC | 4 | 2 | 6 | 3 | 10 | 3 | 11 | 3 | 16
+INPUTP | 18 | 64 | 68 | 37 | 42 | 44 | 47 | 49 | 54 | 82 | 60 | 88 | 56 | 57 | 58 | 69 | 79 | 92 | 17
+EQ | 8 | 
+   sd_chg_q<0>.T = sd_chg_q<0> & !sd_cs_n_o<0> & sd_cs_n_o<1>;
+   !sd_chg_q<0>.CLK = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2;
+   sd_chg_q<0>.AP = sd_pres_n_i<0>;
+   !sd_chg_q<0>.AR = reset_n_i;	// GSR
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 2 | 3 | sd_chg_q<1>
+ATTRIBUTES | 4334496 | 0
+OUTPUTMC | 3 | 2 | 3 | 2 | 17 | 2 | 4
+INPUTS | 27 | sd_chg_q<1>  | sd_cs_n_o<0>  | sd_cs_n_o<1>  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | addr_bus_i<1>  | addr_bus_i<0>  | addr_bus_i<9>  | addr_bus_i<8>  | addr_bus_i<15>  | addr_bus_i<14>  | addr_bus_i<13>  | addr_bus_i<12>  | addr_bus_i<11>  | addr_bus_i<10>  | rd_n_i  | sltsl_rom_n_s/sltsl_rom_n_s_D2  | sd_pres_n_i<1>  | sw_i<0>  | m1_n_i  | memmapper/MapBank3_q<0>  | iorq_n_i  | tmr_cnt_q<8>
+INPUTMC | 6 | 2 | 3 | 3 | 10 | 3 | 11 | 3 | 16 | 2 | 11 | 7 | 17
+INPUTP | 21 | 64 | 68 | 37 | 42 | 44 | 47 | 49 | 54 | 82 | 60 | 88 | 56 | 57 | 58 | 69 | 79 | 92 | 155 | 4 | 96 | 95
+EXPORTS | 1 | 2 | 4
+EQ | 18 | 
+   sd_chg_q<1>.T = sd_chg_q<1> & sd_cs_n_o<0> & !sd_cs_n_o<1>;
+   !sd_chg_q<1>.CLK = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2;
+   sd_chg_q<1>.AP = sd_pres_n_i<1>;
+   !sd_chg_q<1>.AR = reset_n_i;	// GSR
+    sd_chg_q<1>.EXP  =  addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	addr_bus_i<0> & sw_i<0> & m1_n_i & !memmapper/MapBank3_q<0> & 
+	!rd_n_i & !iorq_n_i
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !tmr_cnt_q<8> & !rd_n_i & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 2 | 7 | rom_bank2_q<0>
+ATTRIBUTES | 8528736 | 0
+OUTPUTMC | 1 | 5 | 7
+INPUTS | 8 | data_bus_io<0>.PIN  | addr_bus_i<15>  | addr_bus_i<14>  | addr_bus_i<13>  | addr_bus_i<11>  | wr_n_i  | sltsl_rom_n_s/sltsl_rom_n_s_D2  | addr_bus_i<12>
+INPUTMC | 1 | 3 | 16
+INPUTP | 7 | 36 | 88 | 56 | 57 | 69 | 90 | 58
+EQ | 5 | 
+   rom_bank2_q<0>.D = data_bus_io<0>.PIN;
+   !rom_bank2_q<0>.CLK = !addr_bus_i<15> & addr_bus_i<14> & addr_bus_i<13> & 
+	!addr_bus_i<11> & !wr_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2;
+   !rom_bank2_q<0>.AR = reset_n_i;	// GSR
+   rom_bank2_q<0>.CE = addr_bus_i<12>;
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 3 | 12 | rom_bank2_q<1>
+ATTRIBUTES | 8528736 | 0
+OUTPUTMC | 1 | 5 | 8
+INPUTS | 8 | data_bus_io<1>.PIN  | addr_bus_i<15>  | addr_bus_i<14>  | addr_bus_i<13>  | addr_bus_i<11>  | wr_n_i  | sltsl_rom_n_s/sltsl_rom_n_s_D2  | addr_bus_i<12>
+INPUTMC | 1 | 3 | 16
+INPUTP | 7 | 35 | 88 | 56 | 57 | 69 | 90 | 58
+EQ | 5 | 
+   rom_bank2_q<1>.D = data_bus_io<1>.PIN;
+   !rom_bank2_q<1>.CLK = !addr_bus_i<15> & addr_bus_i<14> & addr_bus_i<13> & 
+	!addr_bus_i<11> & !wr_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2;
+   !rom_bank2_q<1>.AR = reset_n_i;	// GSR
+   rom_bank2_q<1>.CE = addr_bus_i<12>;
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 3 | 9 | rom_bank2_q<2>
+ATTRIBUTES | 8528736 | 0
+OUTPUTMC | 1 | 5 | 10
+INPUTS | 8 | data_bus_io<2>.PIN  | addr_bus_i<15>  | addr_bus_i<14>  | addr_bus_i<13>  | addr_bus_i<11>  | wr_n_i  | sltsl_rom_n_s/sltsl_rom_n_s_D2  | addr_bus_i<12>
+INPUTMC | 1 | 3 | 16
+INPUTP | 7 | 30 | 88 | 56 | 57 | 69 | 90 | 58
+EQ | 5 | 
+   rom_bank2_q<2>.D = data_bus_io<2>.PIN;
+   !rom_bank2_q<2>.CLK = !addr_bus_i<15> & addr_bus_i<14> & addr_bus_i<13> & 
+	!addr_bus_i<11> & !wr_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2;
+   !rom_bank2_q<2>.AR = reset_n_i;	// GSR
+   rom_bank2_q<2>.CE = addr_bus_i<12>;
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 5 | 0 | rom_bank2_q<3>
+ATTRIBUTES | 8528736 | 0
+OUTPUTMC | 1 | 5 | 4
+INPUTS | 8 | data_bus_io<3>.PIN  | addr_bus_i<15>  | addr_bus_i<14>  | addr_bus_i<13>  | addr_bus_i<11>  | wr_n_i  | sltsl_rom_n_s/sltsl_rom_n_s_D2  | addr_bus_i<12>
+INPUTMC | 1 | 3 | 16
+INPUTP | 7 | 29 | 88 | 56 | 57 | 69 | 90 | 58
+EQ | 5 | 
+   rom_bank2_q<3>.D = data_bus_io<3>.PIN;
+   !rom_bank2_q<3>.CLK = !addr_bus_i<15> & addr_bus_i<14> & addr_bus_i<13> & 
+	!addr_bus_i<11> & !wr_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2;
+   !rom_bank2_q<3>.AR = reset_n_i;	// GSR
+   rom_bank2_q<3>.CE = addr_bus_i<12>;
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 1 | 11 | portaspi/shift_reg_s<8>
+ATTRIBUTES | 8815426 | 0
+OUTPUTMC | 1 | 1 | 11
+INPUTS | 10 | sd_mosi_o  | $OpTx$FX_DC$330  | portaspi/ff_q  | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2  | portaspi/spi_data_buf_s<7>  | portaspi/spi_clk_buf_s  | portaspi/prev_spi_clk_s  | portaspi/shift_reg_s<7>  | reset_n_i
+INPUTMC | 9 | 1 | 11 | 1 | 2 | 6 | 9 | 4 | 14 | 1 | 3 | 6 | 10 | 6 | 2 | 6 | 8 | 1 | 6
+INPUTP | 1 | 160
+EQ | 8 | 
+   sd_mosi_o.D = sd_mosi_o & !$OpTx$FX_DC$330
+	# portaspi/ff_q & !portaspi/state_s_FSM_FFd1 & 
+	!portaspi/state_s_FSM_FFd2 & portaspi/spi_data_buf_s<7>
+	# portaspi/state_s_FSM_FFd1 & 
+	portaspi/state_s_FSM_FFd2 & !portaspi/spi_clk_buf_s & portaspi/prev_spi_clk_s & 
+	portaspi/shift_reg_s<7>;
+   sd_mosi_o.CLK = clock_i;	// GCK
+   sd_mosi_o.CE = reset_n_i;
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 6 | 9 | portaspi/ff_q
+ATTRIBUTES | 8553232 | 0
+OUTPUTMC | 13 | 1 | 11 | 1 | 3 | 1 | 4 | 1 | 1 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 12 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 2
+INPUTS | 2 | portaspi/start_s  | portaspi/ff_clr_s
+INPUTMC | 2 | 6 | 3 | 1 | 1
+EQ | 3 | 
+   portaspi/ff_q.D = portaspi/start_s;
+   portaspi/ff_q.CLK = clock_i;	// GCK
+   portaspi/ff_q.AR = portaspi/ff_clr_s;
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 4 | 14 | portaspi/state_s_FSM_FFd1
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 28 | 1 | 11 | 1 | 3 | 1 | 5 | 6 | 2 | 1 | 16 | 1 | 17 | 1 | 4 | 1 | 1 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 12 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 7 | 10 | 1 | 0 | 7 | 4 | 7 | 3 | 7 | 2 | 6 | 7 | 6 | 6 | 6 | 5 | 6 | 4 | 1 | 10 | 1 | 2 | 4 | 15
+INPUTS | 10 | portaspi/state_s_FSM_FFd2  | reset_n_i  | data_bus_io<5>.PIN  | tmr_wr_s/tmr_wr_s_D2  | tmr_cnt_q<11>  | tmr_cnt_q<13>  | tmr_cnt_q<9>  | tmr_cnt_q<10>  | tmr_cnt_q<12>  | Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2
+INPUTMC | 8 | 1 | 3 | 0 | 0 | 4 | 12 | 4 | 15 | 4 | 10 | 4 | 11 | 4 | 13 | 7 | 0
+INPUTP | 2 | 160 | 26
+EXPORTS | 1 | 4 | 15
+EQ | 9 | 
+   portaspi/state_s_FSM_FFd1.D = portaspi/state_s_FSM_FFd2;
+   portaspi/state_s_FSM_FFd1.CLK = clock_i;	// GCK
+   portaspi/state_s_FSM_FFd1.CE = reset_n_i;
+    portaspi/state_s_FSM_FFd1.EXP  =  !data_bus_io<5>.PIN & tmr_wr_s/tmr_wr_s_D2
+	# tmr_cnt_q<11> & !tmr_cnt_q<13> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<11> & tmr_cnt_q<13> & !tmr_cnt_q<9> & 
+	!tmr_cnt_q<10> & !tmr_cnt_q<12> & !tmr_wr_s/tmr_wr_s_D2 & 
+	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 1 | 3 | portaspi/state_s_FSM_FFd2
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 28 | 1 | 11 | 4 | 14 | 1 | 3 | 1 | 5 | 6 | 2 | 1 | 16 | 1 | 17 | 1 | 4 | 1 | 1 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 12 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 7 | 10 | 1 | 0 | 7 | 4 | 7 | 3 | 7 | 2 | 6 | 7 | 6 | 6 | 6 | 5 | 6 | 4 | 1 | 10 | 1 | 2
+INPUTS | 10 | portaspi/ff_q  | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2  | portaspi/count_q<0>  | portaspi/spi_clk_buf_s  | portaspi/count_q<1>  | portaspi/count_q<2>  | portaspi/count_q<3>  | portaspi/prev_spi_clk_s  | reset_n_i
+INPUTMC | 9 | 6 | 9 | 4 | 14 | 1 | 3 | 1 | 5 | 6 | 2 | 1 | 16 | 1 | 17 | 1 | 4 | 6 | 8
+INPUTP | 1 | 160
+EQ | 8 | 
+   portaspi/state_s_FSM_FFd2.T = portaspi/ff_q & !portaspi/state_s_FSM_FFd1 & 
+	!portaspi/state_s_FSM_FFd2
+	# portaspi/state_s_FSM_FFd1 & 
+	portaspi/state_s_FSM_FFd2 & portaspi/count_q<0> & !portaspi/spi_clk_buf_s & 
+	portaspi/count_q<1> & portaspi/count_q<2> & !portaspi/count_q<3> & 
+	portaspi/prev_spi_clk_s;
+   portaspi/state_s_FSM_FFd2.CLK = clock_i;	// GCK
+   portaspi/state_s_FSM_FFd2.CE = reset_n_i;
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 1 | 5 | portaspi/count_q<0>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 5 | 1 | 3 | 1 | 5 | 1 | 16 | 1 | 17 | 1 | 4
+INPUTS | 7 | portaspi/count_q<0>  | $OpTx$FX_DC$330  | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2  | portaspi/spi_clk_buf_s  | portaspi/prev_spi_clk_s  | reset_n_i
+INPUTMC | 6 | 1 | 5 | 1 | 2 | 4 | 14 | 1 | 3 | 6 | 2 | 6 | 8
+INPUTP | 1 | 160
+EQ | 6 | 
+   portaspi/count_q<0>.D = portaspi/count_q<0> & !$OpTx$FX_DC$330
+	# portaspi/state_s_FSM_FFd1 & 
+	portaspi/state_s_FSM_FFd2 & !portaspi/count_q<0> & !portaspi/spi_clk_buf_s & 
+	portaspi/prev_spi_clk_s;
+   portaspi/count_q<0>.CLK = clock_i;	// GCK
+   portaspi/count_q<0>.CE = reset_n_i;
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 6 | 2 | portaspi/spi_clk_buf_s
+ATTRIBUTES | 8561408 | 0
+OUTPUTMC | 18 | 1 | 11 | 1 | 3 | 1 | 5 | 6 | 2 | 1 | 16 | 1 | 17 | 1 | 4 | 6 | 8 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 12 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 10 | 1 | 2
+INPUTS | 3 | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2  | portaspi/spi_clk_buf_s
+INPUTMC | 3 | 4 | 14 | 1 | 3 | 6 | 2
+EQ | 4 | 
+   portaspi/spi_clk_buf_s.D = portaspi/state_s_FSM_FFd1 & 
+	portaspi/state_s_FSM_FFd2 & !portaspi/spi_clk_buf_s;
+   portaspi/spi_clk_buf_s.CLK = clock_i;	// GCK
+   !portaspi/spi_clk_buf_s.AR = reset_n_i;	// GSR
+GLOBALS | 2 | 2 | clock_i | 4 | reset_n_i
+
+MACROCELL | 4 | 0 | tmr_cnt_q<0>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 18 | 4 | 0 | 4 | 11 | 4 | 15 | 4 | 9 | 4 | 10 | 4 | 12 | 4 | 17 | 7 | 7 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 0 | 4 | 1 | 7 | 13 | 7 | 16 | 7 | 12 | 7 | 1 | 7 | 17
+INPUTS | 17 | tmr_cnt_q<11>  | tmr_cnt_q<13>  | tmr_cnt_q<9>  | tmr_cnt_q<10>  | tmr_cnt_q<12>  | tmr_cnt_q<14>  | tmr_cnt_q<1>  | tmr_cnt_q<3>  | tmr_cnt_q<5>  | tmr_cnt_q<7>  | tmr_cnt_q<8>  | tmr_cnt_q<15>  | tmr_cnt_q<2>  | tmr_cnt_q<4>  | tmr_cnt_q<6>  | tmr_wr_s/tmr_wr_s_D2  | tmr_cnt_q<0>
+INPUTMC | 17 | 4 | 12 | 4 | 15 | 4 | 10 | 4 | 11 | 4 | 13 | 4 | 17 | 7 | 7 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 17 | 4 | 1 | 7 | 13 | 7 | 16 | 7 | 12 | 0 | 0 | 4 | 0
+EXPORTS | 1 | 4 | 1
+EQ | 13 | 
+   !tmr_cnt_q<0>.D = tmr_cnt_q<0> & !tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<11> & !tmr_cnt_q<13> & !tmr_cnt_q<9> & 
+	!tmr_cnt_q<10> & !tmr_cnt_q<12> & !tmr_cnt_q<14> & !tmr_cnt_q<1> & 
+	!tmr_cnt_q<3> & !tmr_cnt_q<5> & !tmr_cnt_q<7> & !tmr_cnt_q<8> & 
+	!tmr_cnt_q<15> & !tmr_cnt_q<2> & !tmr_cnt_q<4> & !tmr_cnt_q<6> & 
+	!tmr_wr_s/tmr_wr_s_D2;
+   tmr_cnt_q<0>.CLK = clock_i;	// GCK
+    tmr_cnt_q<0>.EXP  =  tmr_cnt_q<11> & !tmr_cnt_q<15> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# tmr_cnt_q<9> & !tmr_cnt_q<15> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# tmr_cnt_q<10> & !tmr_cnt_q<15> & 
+	!tmr_wr_s/tmr_wr_s_D2
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 4 | 12 | tmr_cnt_q<11>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 18 | 7 | 12 | 4 | 0 | 4 | 12 | 4 | 14 | 4 | 9 | 4 | 10 | 4 | 13 | 4 | 16 | 7 | 7 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 0 | 0 | 14 | 7 | 13 | 7 | 16 | 4 | 2 | 4 | 11
+INPUTS | 20 | data_bus_io<3>.PIN  | tmr_wr_s/tmr_wr_s_D2  | tmr_cnt_q<11>  | tmr_cnt_q<9>  | tmr_cnt_q<10>  | tmr_cnt_q<12>  | Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2  | tmr_cnt_q<0>  | tmr_cnt_q<13>  | tmr_cnt_q<14>  | tmr_cnt_q<1>  | tmr_cnt_q<3>  | tmr_cnt_q<5>  | tmr_cnt_q<7>  | tmr_cnt_q<8>  | tmr_cnt_q<15>  | tmr_cnt_q<2>  | tmr_cnt_q<4>  | tmr_cnt_q<6>  | tmr_cnt_q<10>.EXP
+INPUTMC | 19 | 0 | 0 | 4 | 12 | 4 | 10 | 4 | 11 | 4 | 13 | 7 | 0 | 4 | 0 | 4 | 15 | 4 | 17 | 7 | 7 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 17 | 4 | 1 | 7 | 13 | 7 | 16 | 7 | 12 | 4 | 11
+INPUTP | 1 | 29
+EXPORTS | 1 | 4 | 13
+IMPORTS | 1 | 4 | 11
+EQ | 24 | 
+   !tmr_cnt_q<11>.D = !data_bus_io<3>.PIN & tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<11> & tmr_cnt_q<9> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<11> & tmr_cnt_q<10> & 
+	!tmr_wr_s/tmr_wr_s_D2
+;Imported pterms FB5_12
+	# !tmr_cnt_q<11> & !tmr_wr_s/tmr_wr_s_D2 & 
+	!Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2
+	# tmr_cnt_q<11> & !tmr_cnt_q<9> & !tmr_cnt_q<10> & 
+	!tmr_wr_s/tmr_wr_s_D2 & 
+	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2
+	# !tmr_cnt_q<0> & !tmr_cnt_q<11> & !tmr_cnt_q<13> & 
+	!tmr_cnt_q<12> & !tmr_cnt_q<14> & !tmr_cnt_q<1> & !tmr_cnt_q<3> & 
+	!tmr_cnt_q<5> & !tmr_cnt_q<7> & !tmr_cnt_q<8> & !tmr_cnt_q<15> & 
+	!tmr_cnt_q<2> & !tmr_cnt_q<4> & !tmr_cnt_q<6> & 
+	!tmr_wr_s/tmr_wr_s_D2;
+   tmr_cnt_q<11>.CLK = clock_i;	// GCK
+    tmr_cnt_q<11>.EXP  =  !tmr_cnt_q<11> & !tmr_cnt_q<9> & !tmr_cnt_q<10> & 
+	tmr_cnt_q<12> & !tmr_wr_s/tmr_wr_s_D2 & 
+	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2
+	# !tmr_cnt_q<0> & !tmr_cnt_q<13> & !tmr_cnt_q<12> & 
+	!tmr_cnt_q<14> & !tmr_cnt_q<1> & !tmr_cnt_q<3> & !tmr_cnt_q<5> & 
+	!tmr_cnt_q<7> & !tmr_cnt_q<8> & !tmr_cnt_q<15> & !tmr_cnt_q<2> & 
+	!tmr_cnt_q<4> & !tmr_cnt_q<6> & !tmr_wr_s/tmr_wr_s_D2
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 4 | 15 | tmr_cnt_q<13>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 20 | 0 | 10 | 4 | 0 | 4 | 11 | 4 | 15 | 4 | 9 | 4 | 10 | 4 | 12 | 4 | 17 | 7 | 7 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 0 | 4 | 1 | 7 | 13 | 7 | 16 | 7 | 12 | 4 | 2 | 4 | 14 | 4 | 16
+INPUTS | 18 | tmr_cnt_q<13>  | tmr_wr_s/tmr_wr_s_D2  | Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2  | tmr_cnt_q<0>  | tmr_cnt_q<14>  | tmr_cnt_q<1>  | tmr_cnt_q<3>  | tmr_cnt_q<5>  | tmr_cnt_q<7>  | tmr_cnt_q<8>  | tmr_cnt_q<15>  | tmr_cnt_q<2>  | tmr_cnt_q<4>  | tmr_cnt_q<6>  | tmr_cnt_q<12>  | tmr_cnt_q<10>  | tmr_cnt_q<9>  | portaspi/state_s_FSM_FFd1.EXP
+INPUTMC | 18 | 4 | 15 | 0 | 0 | 7 | 0 | 4 | 0 | 4 | 17 | 7 | 7 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 17 | 4 | 1 | 7 | 13 | 7 | 16 | 7 | 12 | 4 | 13 | 4 | 11 | 4 | 10 | 4 | 14
+IMPORTS | 1 | 4 | 14
+EQ | 20 | 
+   !tmr_cnt_q<13>.D = !tmr_cnt_q<13> & tmr_cnt_q<9> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<13> & tmr_cnt_q<10> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<13> & tmr_cnt_q<12> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<13> & !tmr_wr_s/tmr_wr_s_D2 & 
+	!Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2
+	# !tmr_cnt_q<0> & !tmr_cnt_q<13> & !tmr_cnt_q<14> & 
+	!tmr_cnt_q<1> & !tmr_cnt_q<3> & !tmr_cnt_q<5> & !tmr_cnt_q<7> & 
+	!tmr_cnt_q<8> & !tmr_cnt_q<15> & !tmr_cnt_q<2> & !tmr_cnt_q<4> & 
+	!tmr_cnt_q<6> & !tmr_wr_s/tmr_wr_s_D2
+;Imported pterms FB5_15
+	# !data_bus_io<5>.PIN & tmr_wr_s/tmr_wr_s_D2
+	# tmr_cnt_q<11> & !tmr_cnt_q<13> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<11> & tmr_cnt_q<13> & !tmr_cnt_q<9> & 
+	!tmr_cnt_q<10> & !tmr_cnt_q<12> & !tmr_wr_s/tmr_wr_s_D2 & 
+	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2;
+   tmr_cnt_q<13>.CLK = clock_i;	// GCK
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 4 | 10 | tmr_cnt_q<9>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 19 | 2 | 0 | 4 | 0 | 4 | 12 | 4 | 15 | 4 | 10 | 4 | 11 | 4 | 13 | 4 | 16 | 7 | 7 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 0 | 7 | 12 | 7 | 13 | 7 | 16 | 4 | 2 | 4 | 9 | 4 | 14
+INPUTS | 20 | data_bus_io<1>.PIN  | tmr_wr_s/tmr_wr_s_D2  | tmr_cnt_q<9>  | Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2  | tmr_cnt_q<10>  | tmr_cnt_q<0>  | tmr_cnt_q<11>  | tmr_cnt_q<13>  | tmr_cnt_q<12>  | tmr_cnt_q<14>  | tmr_cnt_q<1>  | tmr_cnt_q<3>  | tmr_cnt_q<5>  | tmr_cnt_q<7>  | tmr_cnt_q<8>  | tmr_cnt_q<15>  | tmr_cnt_q<2>  | tmr_cnt_q<4>  | tmr_cnt_q<6>  | memmapper/MapBank0_q<3>.EXP
+INPUTMC | 19 | 0 | 0 | 4 | 10 | 7 | 0 | 4 | 11 | 4 | 0 | 4 | 12 | 4 | 15 | 4 | 13 | 4 | 17 | 7 | 7 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 17 | 4 | 1 | 7 | 13 | 7 | 16 | 7 | 12 | 4 | 9
+INPUTP | 1 | 35
+EXPORTS | 1 | 4 | 11
+IMPORTS | 1 | 4 | 9
+EQ | 22 | 
+   !tmr_cnt_q<9>.D = !data_bus_io<1>.PIN & tmr_wr_s/tmr_wr_s_D2
+	# tmr_cnt_q<9> & !tmr_wr_s/tmr_wr_s_D2 & 
+	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2
+;Imported pterms FB5_10
+	# !tmr_cnt_q<9> & !tmr_wr_s/tmr_wr_s_D2 & 
+	!Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2
+	# !tmr_cnt_q<0> & !tmr_cnt_q<11> & !tmr_cnt_q<13> & 
+	!tmr_cnt_q<9> & !tmr_cnt_q<10> & !tmr_cnt_q<12> & !tmr_cnt_q<14> & 
+	!tmr_cnt_q<1> & !tmr_cnt_q<3> & !tmr_cnt_q<5> & !tmr_cnt_q<7> & 
+	!tmr_cnt_q<8> & !tmr_cnt_q<15> & !tmr_cnt_q<2> & !tmr_cnt_q<4> & 
+	!tmr_cnt_q<6> & !tmr_wr_s/tmr_wr_s_D2;
+   tmr_cnt_q<9>.CLK = clock_i;	// GCK
+    tmr_cnt_q<9>.EXP  =  !tmr_cnt_q<10> & !tmr_wr_s/tmr_wr_s_D2 & 
+	!Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2
+	# !tmr_cnt_q<9> & tmr_cnt_q<10> & 
+	!tmr_wr_s/tmr_wr_s_D2 & 
+	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2
+	# !tmr_cnt_q<0> & !tmr_cnt_q<11> & !tmr_cnt_q<13> & 
+	!tmr_cnt_q<10> & !tmr_cnt_q<12> & !tmr_cnt_q<14> & !tmr_cnt_q<1> & 
+	!tmr_cnt_q<3> & !tmr_cnt_q<5> & !tmr_cnt_q<7> & !tmr_cnt_q<8> & 
+	!tmr_cnt_q<15> & !tmr_cnt_q<2> & !tmr_cnt_q<4> & !tmr_cnt_q<6> & 
+	!tmr_wr_s/tmr_wr_s_D2
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 1 | 16 | portaspi/count_q<1>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 4 | 1 | 3 | 1 | 16 | 1 | 17 | 1 | 4
+INPUTS | 8 | portaspi/count_q<1>  | $OpTx$FX_DC$330  | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2  | portaspi/count_q<0>  | portaspi/spi_clk_buf_s  | portaspi/prev_spi_clk_s  | reset_n_i
+INPUTMC | 7 | 1 | 16 | 1 | 2 | 4 | 14 | 1 | 3 | 1 | 5 | 6 | 2 | 6 | 8
+INPUTP | 1 | 160
+EQ | 9 | 
+   portaspi/count_q<1>.D = portaspi/count_q<1> & !$OpTx$FX_DC$330
+	# portaspi/state_s_FSM_FFd1 & 
+	portaspi/state_s_FSM_FFd2 & !portaspi/count_q<0> & !portaspi/spi_clk_buf_s & 
+	portaspi/count_q<1> & portaspi/prev_spi_clk_s
+	# portaspi/state_s_FSM_FFd1 & 
+	portaspi/state_s_FSM_FFd2 & portaspi/count_q<0> & !portaspi/spi_clk_buf_s & 
+	!portaspi/count_q<1> & portaspi/prev_spi_clk_s & $OpTx$FX_DC$330;
+   portaspi/count_q<1>.CLK = clock_i;	// GCK
+   portaspi/count_q<1>.CE = reset_n_i;
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 1 | 17 | portaspi/count_q<2>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 3 | 1 | 3 | 1 | 17 | 1 | 4
+INPUTS | 8 | portaspi/count_q<2>  | $OpTx$FX_DC$330  | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2  | portaspi/count_q<0>  | portaspi/spi_clk_buf_s  | portaspi/count_q<1>  | reset_n_i
+INPUTMC | 7 | 1 | 17 | 1 | 2 | 4 | 14 | 1 | 3 | 1 | 5 | 6 | 2 | 1 | 16
+INPUTP | 1 | 160
+EQ | 12 | 
+   portaspi/count_q<2>.D = portaspi/count_q<2> & !$OpTx$FX_DC$330
+	# portaspi/state_s_FSM_FFd1 & 
+	portaspi/state_s_FSM_FFd2 & !portaspi/count_q<0> & !portaspi/spi_clk_buf_s & 
+	portaspi/count_q<2>
+	# portaspi/state_s_FSM_FFd1 & 
+	portaspi/state_s_FSM_FFd2 & !portaspi/spi_clk_buf_s & !portaspi/count_q<1> & 
+	portaspi/count_q<2>
+	# portaspi/state_s_FSM_FFd1 & 
+	portaspi/state_s_FSM_FFd2 & portaspi/count_q<0> & !portaspi/spi_clk_buf_s & 
+	portaspi/count_q<1> & !portaspi/count_q<2> & $OpTx$FX_DC$330;
+   portaspi/count_q<2>.CLK = clock_i;	// GCK
+   portaspi/count_q<2>.CE = reset_n_i;
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 4 | 11 | tmr_cnt_q<10>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 20 | 7 | 12 | 4 | 0 | 4 | 12 | 4 | 15 | 4 | 9 | 4 | 11 | 4 | 13 | 4 | 17 | 7 | 7 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 0 | 3 | 17 | 7 | 13 | 7 | 16 | 4 | 2 | 4 | 10 | 4 | 14 | 4 | 16
+INPUTS | 20 | data_bus_io<2>.PIN  | tmr_wr_s/tmr_wr_s_D2  | tmr_cnt_q<9>  | tmr_cnt_q<10>  | tmr_cnt_q<11>  | Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2  | tmr_cnt_q<0>  | tmr_cnt_q<13>  | tmr_cnt_q<12>  | tmr_cnt_q<14>  | tmr_cnt_q<1>  | tmr_cnt_q<3>  | tmr_cnt_q<5>  | tmr_cnt_q<7>  | tmr_cnt_q<8>  | tmr_cnt_q<15>  | tmr_cnt_q<2>  | tmr_cnt_q<4>  | tmr_cnt_q<6>  | tmr_cnt_q<9>.EXP
+INPUTMC | 19 | 0 | 0 | 4 | 10 | 4 | 11 | 4 | 12 | 7 | 0 | 4 | 0 | 4 | 15 | 4 | 13 | 4 | 17 | 7 | 7 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 17 | 4 | 1 | 7 | 13 | 7 | 16 | 7 | 12 | 4 | 10
+INPUTP | 1 | 30
+EXPORTS | 1 | 4 | 12
+IMPORTS | 1 | 4 | 10
+EQ | 25 | 
+   !tmr_cnt_q<10>.D = !data_bus_io<2>.PIN & tmr_wr_s/tmr_wr_s_D2
+	# tmr_cnt_q<9> & !tmr_cnt_q<10> & 
+	!tmr_wr_s/tmr_wr_s_D2
+;Imported pterms FB5_11
+	# !tmr_cnt_q<10> & !tmr_wr_s/tmr_wr_s_D2 & 
+	!Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2
+	# !tmr_cnt_q<9> & tmr_cnt_q<10> & 
+	!tmr_wr_s/tmr_wr_s_D2 & 
+	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2
+	# !tmr_cnt_q<0> & !tmr_cnt_q<11> & !tmr_cnt_q<13> & 
+	!tmr_cnt_q<10> & !tmr_cnt_q<12> & !tmr_cnt_q<14> & !tmr_cnt_q<1> & 
+	!tmr_cnt_q<3> & !tmr_cnt_q<5> & !tmr_cnt_q<7> & !tmr_cnt_q<8> & 
+	!tmr_cnt_q<15> & !tmr_cnt_q<2> & !tmr_cnt_q<4> & !tmr_cnt_q<6> & 
+	!tmr_wr_s/tmr_wr_s_D2;
+   tmr_cnt_q<10>.CLK = clock_i;	// GCK
+    tmr_cnt_q<10>.EXP  =  !tmr_cnt_q<11> & !tmr_wr_s/tmr_wr_s_D2 & 
+	!Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2
+	# tmr_cnt_q<11> & !tmr_cnt_q<9> & !tmr_cnt_q<10> & 
+	!tmr_wr_s/tmr_wr_s_D2 & 
+	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2
+	# !tmr_cnt_q<0> & !tmr_cnt_q<11> & !tmr_cnt_q<13> & 
+	!tmr_cnt_q<12> & !tmr_cnt_q<14> & !tmr_cnt_q<1> & !tmr_cnt_q<3> & 
+	!tmr_cnt_q<5> & !tmr_cnt_q<7> & !tmr_cnt_q<8> & !tmr_cnt_q<15> & 
+	!tmr_cnt_q<2> & !tmr_cnt_q<4> & !tmr_cnt_q<6> & 
+	!tmr_wr_s/tmr_wr_s_D2
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 4 | 13 | tmr_cnt_q<12>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 21 | 7 | 12 | 4 | 0 | 4 | 11 | 4 | 15 | 4 | 9 | 4 | 10 | 4 | 13 | 4 | 17 | 7 | 7 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 0 | 4 | 1 | 7 | 13 | 7 | 16 | 0 | 12 | 4 | 2 | 4 | 12 | 4 | 14 | 4 | 16
+INPUTS | 8 | data_bus_io<4>.PIN  | tmr_wr_s/tmr_wr_s_D2  | tmr_cnt_q<11>  | tmr_cnt_q<12>  | tmr_cnt_q<9>  | tmr_cnt_q<10>  | Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2  | tmr_cnt_q<11>.EXP
+INPUTMC | 7 | 0 | 0 | 4 | 12 | 4 | 13 | 4 | 10 | 4 | 11 | 7 | 0 | 4 | 12
+INPUTP | 1 | 28
+IMPORTS | 1 | 4 | 12
+EQ | 18 | 
+   !tmr_cnt_q<12>.D = !data_bus_io<4>.PIN & tmr_wr_s/tmr_wr_s_D2
+	# tmr_cnt_q<11> & !tmr_cnt_q<12> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# tmr_cnt_q<9> & !tmr_cnt_q<12> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# tmr_cnt_q<10> & !tmr_cnt_q<12> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<12> & !tmr_wr_s/tmr_wr_s_D2 & 
+	!Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2
+;Imported pterms FB5_13
+	# !tmr_cnt_q<11> & !tmr_cnt_q<9> & !tmr_cnt_q<10> & 
+	tmr_cnt_q<12> & !tmr_wr_s/tmr_wr_s_D2 & 
+	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2
+	# !tmr_cnt_q<0> & !tmr_cnt_q<13> & !tmr_cnt_q<12> & 
+	!tmr_cnt_q<14> & !tmr_cnt_q<1> & !tmr_cnt_q<3> & !tmr_cnt_q<5> & 
+	!tmr_cnt_q<7> & !tmr_cnt_q<8> & !tmr_cnt_q<15> & !tmr_cnt_q<2> & 
+	!tmr_cnt_q<4> & !tmr_cnt_q<6> & !tmr_wr_s/tmr_wr_s_D2;
+   tmr_cnt_q<12>.CLK = clock_i;	// GCK
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 4 | 17 | tmr_cnt_q<14>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 19 | 0 | 8 | 4 | 0 | 4 | 11 | 4 | 15 | 4 | 9 | 4 | 10 | 4 | 12 | 4 | 17 | 7 | 7 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 0 | 4 | 1 | 7 | 13 | 7 | 16 | 7 | 12 | 4 | 2 | 4 | 16
+INPUTS | 17 | tmr_cnt_q<13>  | tmr_cnt_q<14>  | tmr_wr_s/tmr_wr_s_D2  | Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2  | tmr_cnt_q<0>  | tmr_cnt_q<1>  | tmr_cnt_q<3>  | tmr_cnt_q<5>  | tmr_cnt_q<7>  | tmr_cnt_q<8>  | tmr_cnt_q<15>  | tmr_cnt_q<2>  | tmr_cnt_q<4>  | tmr_cnt_q<6>  | tmr_cnt_q<12>  | tmr_cnt_q<10>  | busdir_n_o_OBUF.EXP
+INPUTMC | 17 | 4 | 15 | 4 | 17 | 0 | 0 | 7 | 0 | 4 | 0 | 7 | 7 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 17 | 4 | 1 | 7 | 13 | 7 | 16 | 7 | 12 | 4 | 13 | 4 | 11 | 4 | 16
+IMPORTS | 1 | 4 | 16
+EQ | 23 | 
+   !tmr_cnt_q<14>.D = tmr_cnt_q<13> & !tmr_cnt_q<14> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# tmr_cnt_q<10> & !tmr_cnt_q<14> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# tmr_cnt_q<12> & !tmr_cnt_q<14> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<14> & !tmr_wr_s/tmr_wr_s_D2 & 
+	!Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2
+	# !tmr_cnt_q<0> & !tmr_cnt_q<14> & !tmr_cnt_q<1> & 
+	!tmr_cnt_q<3> & !tmr_cnt_q<5> & !tmr_cnt_q<7> & !tmr_cnt_q<8> & 
+	!tmr_cnt_q<15> & !tmr_cnt_q<2> & !tmr_cnt_q<4> & !tmr_cnt_q<6> & 
+	!tmr_wr_s/tmr_wr_s_D2
+;Imported pterms FB5_17
+	# !data_bus_io<6>.PIN & tmr_wr_s/tmr_wr_s_D2
+	# tmr_cnt_q<11> & !tmr_cnt_q<14> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# tmr_cnt_q<9> & !tmr_cnt_q<14> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<11> & !tmr_cnt_q<13> & !tmr_cnt_q<9> & 
+	!tmr_cnt_q<10> & !tmr_cnt_q<12> & tmr_cnt_q<14> & 
+	!tmr_wr_s/tmr_wr_s_D2 & 
+	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2;
+   tmr_cnt_q<14>.CLK = clock_i;	// GCK
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 7 | 7 | tmr_cnt_q<1>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 18 | 4 | 0 | 4 | 11 | 4 | 15 | 4 | 9 | 4 | 10 | 4 | 12 | 4 | 17 | 7 | 7 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 0 | 4 | 1 | 7 | 13 | 7 | 16 | 7 | 12 | 7 | 1 | 7 | 17
+INPUTS | 17 | tmr_cnt_q<0>  | tmr_cnt_q<11>  | tmr_cnt_q<13>  | tmr_cnt_q<9>  | tmr_cnt_q<10>  | tmr_cnt_q<12>  | tmr_cnt_q<14>  | tmr_cnt_q<3>  | tmr_cnt_q<5>  | tmr_cnt_q<7>  | tmr_cnt_q<8>  | tmr_cnt_q<15>  | tmr_cnt_q<2>  | tmr_cnt_q<4>  | tmr_cnt_q<6>  | tmr_wr_s/tmr_wr_s_D2  | tmr_cnt_q<1>
+INPUTMC | 17 | 4 | 0 | 4 | 12 | 4 | 15 | 4 | 10 | 4 | 11 | 4 | 13 | 4 | 17 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 17 | 4 | 1 | 7 | 13 | 7 | 16 | 7 | 12 | 0 | 0 | 7 | 7
+EQ | 10 | 
+   !tmr_cnt_q<1>.D = tmr_cnt_q<0> & !tmr_cnt_q<1> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<0> & tmr_cnt_q<1> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<0> & !tmr_cnt_q<11> & !tmr_cnt_q<13> & 
+	!tmr_cnt_q<9> & !tmr_cnt_q<10> & !tmr_cnt_q<12> & !tmr_cnt_q<14> & 
+	!tmr_cnt_q<3> & !tmr_cnt_q<5> & !tmr_cnt_q<7> & !tmr_cnt_q<8> & 
+	!tmr_cnt_q<15> & !tmr_cnt_q<2> & !tmr_cnt_q<4> & !tmr_cnt_q<6> & 
+	!tmr_wr_s/tmr_wr_s_D2;
+   tmr_cnt_q<1>.CLK = clock_i;	// GCK
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 7 | 15 | tmr_cnt_q<3>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 18 | 4 | 0 | 4 | 11 | 4 | 15 | 4 | 9 | 4 | 10 | 4 | 12 | 4 | 17 | 7 | 7 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 0 | 4 | 1 | 7 | 13 | 7 | 16 | 7 | 12 | 7 | 1 | 7 | 17
+INPUTS | 17 | tmr_cnt_q<11>  | tmr_cnt_q<13>  | tmr_cnt_q<9>  | tmr_cnt_q<10>  | tmr_cnt_q<12>  | tmr_cnt_q<14>  | tmr_cnt_q<3>  | tmr_cnt_q<5>  | tmr_cnt_q<7>  | tmr_cnt_q<8>  | tmr_cnt_q<15>  | tmr_cnt_q<4>  | tmr_cnt_q<6>  | tmr_wr_s/tmr_wr_s_D2  | tmr_cnt_q<1>  | tmr_cnt_q<0>  | tmr_cnt_q<2>
+INPUTMC | 17 | 4 | 12 | 4 | 15 | 4 | 10 | 4 | 11 | 4 | 13 | 4 | 17 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 17 | 4 | 1 | 7 | 16 | 7 | 12 | 0 | 0 | 7 | 7 | 4 | 0 | 7 | 13
+EQ | 13 | 
+   !tmr_cnt_q<3>.D = tmr_cnt_q<0> & !tmr_cnt_q<3> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# tmr_cnt_q<1> & !tmr_cnt_q<3> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<3> & tmr_cnt_q<2> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<0> & !tmr_cnt_q<1> & tmr_cnt_q<3> & 
+	!tmr_cnt_q<2> & !tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<11> & !tmr_cnt_q<13> & !tmr_cnt_q<9> & 
+	!tmr_cnt_q<10> & !tmr_cnt_q<12> & !tmr_cnt_q<14> & !tmr_cnt_q<3> & 
+	!tmr_cnt_q<5> & !tmr_cnt_q<7> & !tmr_cnt_q<8> & !tmr_cnt_q<15> & 
+	!tmr_cnt_q<4> & !tmr_cnt_q<6> & !tmr_wr_s/tmr_wr_s_D2;
+   tmr_cnt_q<3>.CLK = clock_i;	// GCK
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 7 | 6 | tmr_cnt_q<5>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 17 | 4 | 0 | 4 | 11 | 4 | 15 | 4 | 9 | 4 | 10 | 4 | 12 | 4 | 17 | 7 | 7 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 17 | 4 | 1 | 7 | 13 | 7 | 16 | 7 | 12 | 7 | 0
+INPUTS | 18 | tmr_cnt_q<5>  | tmr_wr_s/tmr_wr_s_D2  | Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2  | tmr_cnt_q<0>  | tmr_cnt_q<11>  | tmr_cnt_q<13>  | tmr_cnt_q<9>  | tmr_cnt_q<10>  | tmr_cnt_q<12>  | tmr_cnt_q<14>  | tmr_cnt_q<1>  | tmr_cnt_q<3>  | tmr_cnt_q<7>  | tmr_cnt_q<8>  | tmr_cnt_q<15>  | tmr_cnt_q<2>  | tmr_cnt_q<4>  | tmr_cnt_q<6>
+INPUTMC | 18 | 7 | 6 | 0 | 0 | 7 | 1 | 4 | 0 | 4 | 12 | 4 | 15 | 4 | 10 | 4 | 11 | 4 | 13 | 4 | 17 | 7 | 7 | 7 | 15 | 7 | 14 | 7 | 17 | 4 | 1 | 7 | 13 | 7 | 16 | 7 | 12
+EQ | 10 | 
+   !tmr_cnt_q<5>.D = tmr_cnt_q<5> & !tmr_wr_s/tmr_wr_s_D2 & 
+	Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2
+	# !tmr_cnt_q<5> & !tmr_wr_s/tmr_wr_s_D2 & 
+	!Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2
+	# !tmr_cnt_q<0> & !tmr_cnt_q<11> & !tmr_cnt_q<13> & 
+	!tmr_cnt_q<9> & !tmr_cnt_q<10> & !tmr_cnt_q<12> & !tmr_cnt_q<14> & 
+	!tmr_cnt_q<1> & !tmr_cnt_q<3> & !tmr_cnt_q<5> & !tmr_cnt_q<7> & 
+	!tmr_cnt_q<8> & !tmr_cnt_q<15> & !tmr_cnt_q<2> & !tmr_cnt_q<4> & 
+	!tmr_cnt_q<6> & !tmr_wr_s/tmr_wr_s_D2;
+   tmr_cnt_q<5>.CLK = clock_i;	// GCK
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 7 | 14 | tmr_cnt_q<7>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 17 | 4 | 0 | 4 | 11 | 4 | 15 | 4 | 9 | 4 | 10 | 4 | 12 | 4 | 17 | 7 | 7 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 17 | 4 | 1 | 7 | 13 | 7 | 16 | 7 | 12 | 7 | 0
+INPUTS | 18 | tmr_cnt_q<7>  | tmr_wr_s/tmr_wr_s_D2  | Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2  | tmr_cnt_q<0>  | tmr_cnt_q<11>  | tmr_cnt_q<13>  | tmr_cnt_q<9>  | tmr_cnt_q<10>  | tmr_cnt_q<12>  | tmr_cnt_q<14>  | tmr_cnt_q<1>  | tmr_cnt_q<3>  | tmr_cnt_q<8>  | tmr_cnt_q<15>  | tmr_cnt_q<2>  | tmr_cnt_q<4>  | tmr_cnt_q<6>  | tmr_cnt_q<5>
+INPUTMC | 18 | 7 | 14 | 0 | 0 | 7 | 1 | 4 | 0 | 4 | 12 | 4 | 15 | 4 | 10 | 4 | 11 | 4 | 13 | 4 | 17 | 7 | 7 | 7 | 15 | 7 | 17 | 4 | 1 | 7 | 13 | 7 | 16 | 7 | 12 | 7 | 6
+EQ | 15 | 
+   !tmr_cnt_q<7>.D = tmr_cnt_q<5> & !tmr_cnt_q<7> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<7> & tmr_cnt_q<6> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<7> & !tmr_wr_s/tmr_wr_s_D2 & 
+	!Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2
+	# !tmr_cnt_q<5> & tmr_cnt_q<7> & !tmr_cnt_q<6> & 
+	!tmr_wr_s/tmr_wr_s_D2 & 
+	Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2
+	# !tmr_cnt_q<0> & !tmr_cnt_q<11> & !tmr_cnt_q<13> & 
+	!tmr_cnt_q<9> & !tmr_cnt_q<10> & !tmr_cnt_q<12> & !tmr_cnt_q<14> & 
+	!tmr_cnt_q<1> & !tmr_cnt_q<3> & !tmr_cnt_q<7> & !tmr_cnt_q<8> & 
+	!tmr_cnt_q<15> & !tmr_cnt_q<2> & !tmr_cnt_q<4> & 
+	!tmr_wr_s/tmr_wr_s_D2;
+   tmr_cnt_q<7>.CLK = clock_i;	// GCK
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 7 | 17 | tmr_cnt_q<8>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 18 | 2 | 3 | 4 | 0 | 4 | 11 | 4 | 15 | 4 | 9 | 4 | 10 | 4 | 12 | 4 | 17 | 7 | 7 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 17 | 4 | 1 | 7 | 13 | 7 | 16 | 7 | 12 | 7 | 0
+INPUTS | 12 | data_bus_io<0>.PIN  | tmr_wr_s/tmr_wr_s_D2  | tmr_cnt_q<5>  | tmr_cnt_q<8>  | tmr_cnt_q<7>  | tmr_cnt_q<6>  | tmr_cnt_q<0>  | tmr_cnt_q<1>  | tmr_cnt_q<3>  | tmr_cnt_q<2>  | tmr_cnt_q<4>  | Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2.EXP
+INPUTMC | 11 | 0 | 0 | 7 | 6 | 7 | 17 | 7 | 14 | 7 | 12 | 4 | 0 | 7 | 7 | 7 | 15 | 7 | 13 | 7 | 16 | 7 | 0
+INPUTP | 1 | 36
+EXPORTS | 1 | 7 | 16
+IMPORTS | 1 | 7 | 0
+EQ | 20 | 
+   !tmr_cnt_q<8>.D = !data_bus_io<0>.PIN & tmr_wr_s/tmr_wr_s_D2
+	# tmr_cnt_q<5> & !tmr_cnt_q<8> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# tmr_cnt_q<7> & !tmr_cnt_q<8> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<8> & tmr_cnt_q<6> & 
+	!tmr_wr_s/tmr_wr_s_D2
+;Imported pterms FB8_1
+	# !tmr_cnt_q<8> & !tmr_wr_s/tmr_wr_s_D2 & 
+	!Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2
+	# !tmr_cnt_q<5> & !tmr_cnt_q<7> & tmr_cnt_q<8> & 
+	!tmr_cnt_q<6> & !tmr_wr_s/tmr_wr_s_D2 & 
+	Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2
+	# !tmr_cnt_q<0> & !tmr_cnt_q<11> & !tmr_cnt_q<13> & 
+	!tmr_cnt_q<9> & !tmr_cnt_q<10> & !tmr_cnt_q<12> & !tmr_cnt_q<14> & 
+	!tmr_cnt_q<1> & !tmr_cnt_q<3> & !tmr_cnt_q<8> & !tmr_cnt_q<15> & 
+	!tmr_cnt_q<2> & !tmr_cnt_q<4> & !tmr_wr_s/tmr_wr_s_D2;
+   tmr_cnt_q<8>.CLK = clock_i;	// GCK
+    tmr_cnt_q<8>.EXP  =  !tmr_cnt_q<0> & !tmr_cnt_q<1> & !tmr_cnt_q<3> & 
+	!tmr_cnt_q<2> & tmr_cnt_q<4> & !tmr_wr_s/tmr_wr_s_D2
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 1 | 4 | portaspi/count_q<3>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 2 | 1 | 3 | 1 | 4
+INPUTS | 10 | portaspi/ff_q  | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2  | portaspi/count_q<3>  | portaspi/count_q<0>  | portaspi/spi_clk_buf_s  | portaspi/count_q<1>  | portaspi/count_q<2>  | portaspi/prev_spi_clk_s  | reset_n_i
+INPUTMC | 9 | 6 | 9 | 4 | 14 | 1 | 3 | 1 | 4 | 1 | 5 | 6 | 2 | 1 | 16 | 1 | 17 | 6 | 8
+INPUTP | 1 | 160
+EQ | 7 | 
+   portaspi/count_q<3>.T = portaspi/ff_q & !portaspi/state_s_FSM_FFd1 & 
+	!portaspi/state_s_FSM_FFd2 & portaspi/count_q<3>
+	# portaspi/state_s_FSM_FFd1 & 
+	portaspi/state_s_FSM_FFd2 & portaspi/count_q<0> & !portaspi/spi_clk_buf_s & 
+	portaspi/count_q<1> & portaspi/count_q<2> & portaspi/prev_spi_clk_s;
+   portaspi/count_q<3>.CLK = clock_i;	// GCK
+   portaspi/count_q<3>.CE = reset_n_i;
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 1 | 1 | portaspi/ff_clr_s
+ATTRIBUTES | 4367104 | 0
+OUTPUTMC | 3 | 6 | 9 | 1 | 1 | 6 | 1
+INPUTS | 4 | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2  | portaspi/ff_clr_s  | portaspi/ff_q
+INPUTMC | 4 | 4 | 14 | 1 | 3 | 1 | 1 | 6 | 9
+EQ | 6 | 
+   portaspi/ff_clr_s.T = !portaspi/state_s_FSM_FFd1 & 
+	portaspi/state_s_FSM_FFd2 & portaspi/ff_clr_s
+	# portaspi/ff_q & !portaspi/state_s_FSM_FFd1 & 
+	!portaspi/state_s_FSM_FFd2 & !portaspi/ff_clr_s;
+   portaspi/ff_clr_s.CLK = clock_i;	// GCK
+   !portaspi/ff_clr_s.AR = reset_n_i;	// GSR
+GLOBALS | 2 | 2 | clock_i | 4 | reset_n_i
+
+MACROCELL | 6 | 8 | portaspi/prev_spi_clk_s
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 15 | 1 | 11 | 1 | 3 | 1 | 5 | 1 | 16 | 1 | 4 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 12 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 1 | 10 | 1 | 2
+INPUTS | 2 | portaspi/spi_clk_buf_s  | reset_n_i
+INPUTMC | 1 | 6 | 2
+INPUTP | 1 | 160
+EQ | 3 | 
+   portaspi/prev_spi_clk_s.D = portaspi/spi_clk_buf_s;
+   portaspi/prev_spi_clk_s.CLK = clock_i;	// GCK
+   portaspi/prev_spi_clk_s.CE = reset_n_i;
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 1 | 15 | portaspi/shift_reg_s<0>
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 3 | 1 | 15 | 1 | 14 | 1 | 0
+INPUTS | 8 | portaspi/ff_q  | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2  | portaspi/shift_reg_s<0>  | sd_miso_i  | portaspi/spi_clk_buf_s  | portaspi/prev_spi_clk_s  | reset_n_i
+INPUTMC | 6 | 6 | 9 | 4 | 14 | 1 | 3 | 1 | 15 | 6 | 2 | 6 | 8
+INPUTP | 2 | 8 | 160
+EQ | 10 | 
+   portaspi/shift_reg_s<0>.T = portaspi/ff_q & !portaspi/state_s_FSM_FFd1 & 
+	!portaspi/state_s_FSM_FFd2 & !portaspi/shift_reg_s<0>
+	# sd_miso_i & portaspi/state_s_FSM_FFd1 & 
+	portaspi/state_s_FSM_FFd2 & !portaspi/spi_clk_buf_s & portaspi/prev_spi_clk_s & 
+	!portaspi/shift_reg_s<0>
+	# !sd_miso_i & portaspi/state_s_FSM_FFd1 & 
+	portaspi/state_s_FSM_FFd2 & !portaspi/spi_clk_buf_s & portaspi/prev_spi_clk_s & 
+	portaspi/shift_reg_s<0>;
+   portaspi/shift_reg_s<0>.CLK = clock_i;	// GCK
+   portaspi/shift_reg_s<0>.CE = reset_n_i;
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 1 | 14 | portaspi/shift_reg_s<1>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 3 | 1 | 14 | 1 | 13 | 7 | 4
+INPUTS | 10 | portaspi/shift_reg_s<1>  | $OpTx$FX_DC$330  | portaspi/ff_q  | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2  | portaspi/spi_data_buf_s<0>  | portaspi/spi_clk_buf_s  | portaspi/prev_spi_clk_s  | portaspi/shift_reg_s<0>  | reset_n_i
+INPUTMC | 9 | 1 | 14 | 1 | 2 | 6 | 9 | 4 | 14 | 1 | 3 | 6 | 17 | 6 | 2 | 6 | 8 | 1 | 15
+INPUTP | 1 | 160
+EQ | 8 | 
+   portaspi/shift_reg_s<1>.D = portaspi/shift_reg_s<1> & !$OpTx$FX_DC$330
+	# portaspi/ff_q & !portaspi/state_s_FSM_FFd1 & 
+	!portaspi/state_s_FSM_FFd2 & portaspi/spi_data_buf_s<0>
+	# portaspi/state_s_FSM_FFd1 & 
+	portaspi/state_s_FSM_FFd2 & !portaspi/spi_clk_buf_s & portaspi/prev_spi_clk_s & 
+	portaspi/shift_reg_s<0>;
+   portaspi/shift_reg_s<1>.CLK = clock_i;	// GCK
+   portaspi/shift_reg_s<1>.CE = reset_n_i;
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 1 | 13 | portaspi/shift_reg_s<2>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 3 | 1 | 13 | 1 | 12 | 7 | 3
+INPUTS | 10 | portaspi/shift_reg_s<2>  | $OpTx$FX_DC$330  | portaspi/ff_q  | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2  | portaspi/spi_data_buf_s<1>  | portaspi/spi_clk_buf_s  | portaspi/prev_spi_clk_s  | portaspi/shift_reg_s<1>  | reset_n_i
+INPUTMC | 9 | 1 | 13 | 1 | 2 | 6 | 9 | 4 | 14 | 1 | 3 | 6 | 16 | 6 | 2 | 6 | 8 | 1 | 14
+INPUTP | 1 | 160
+EQ | 8 | 
+   portaspi/shift_reg_s<2>.D = portaspi/shift_reg_s<2> & !$OpTx$FX_DC$330
+	# portaspi/ff_q & !portaspi/state_s_FSM_FFd1 & 
+	!portaspi/state_s_FSM_FFd2 & portaspi/spi_data_buf_s<1>
+	# portaspi/state_s_FSM_FFd1 & 
+	portaspi/state_s_FSM_FFd2 & !portaspi/spi_clk_buf_s & portaspi/prev_spi_clk_s & 
+	portaspi/shift_reg_s<1>;
+   portaspi/shift_reg_s<2>.CLK = clock_i;	// GCK
+   portaspi/shift_reg_s<2>.CE = reset_n_i;
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 1 | 12 | portaspi/shift_reg_s<3>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 3 | 1 | 12 | 1 | 9 | 7 | 2
+INPUTS | 10 | portaspi/shift_reg_s<3>  | $OpTx$FX_DC$330  | portaspi/ff_q  | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2  | portaspi/spi_data_buf_s<2>  | portaspi/spi_clk_buf_s  | portaspi/prev_spi_clk_s  | portaspi/shift_reg_s<2>  | reset_n_i
+INPUTMC | 9 | 1 | 12 | 1 | 2 | 6 | 9 | 4 | 14 | 1 | 3 | 6 | 15 | 6 | 2 | 6 | 8 | 1 | 13
+INPUTP | 1 | 160
+EQ | 8 | 
+   portaspi/shift_reg_s<3>.D = portaspi/shift_reg_s<3> & !$OpTx$FX_DC$330
+	# portaspi/ff_q & !portaspi/state_s_FSM_FFd1 & 
+	!portaspi/state_s_FSM_FFd2 & portaspi/spi_data_buf_s<2>
+	# portaspi/state_s_FSM_FFd1 & 
+	portaspi/state_s_FSM_FFd2 & !portaspi/spi_clk_buf_s & portaspi/prev_spi_clk_s & 
+	portaspi/shift_reg_s<2>;
+   portaspi/shift_reg_s<3>.CLK = clock_i;	// GCK
+   portaspi/shift_reg_s<3>.CE = reset_n_i;
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 1 | 9 | portaspi/shift_reg_s<4>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 3 | 1 | 9 | 1 | 8 | 6 | 7
+INPUTS | 10 | portaspi/shift_reg_s<4>  | $OpTx$FX_DC$330  | portaspi/ff_q  | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2  | portaspi/spi_data_buf_s<3>  | portaspi/spi_clk_buf_s  | portaspi/prev_spi_clk_s  | portaspi/shift_reg_s<3>  | reset_n_i
+INPUTMC | 9 | 1 | 9 | 1 | 2 | 6 | 9 | 4 | 14 | 1 | 3 | 6 | 14 | 6 | 2 | 6 | 8 | 1 | 12
+INPUTP | 1 | 160
+EQ | 8 | 
+   portaspi/shift_reg_s<4>.D = portaspi/shift_reg_s<4> & !$OpTx$FX_DC$330
+	# portaspi/ff_q & !portaspi/state_s_FSM_FFd1 & 
+	!portaspi/state_s_FSM_FFd2 & portaspi/spi_data_buf_s<3>
+	# portaspi/state_s_FSM_FFd1 & 
+	portaspi/state_s_FSM_FFd2 & !portaspi/spi_clk_buf_s & portaspi/prev_spi_clk_s & 
+	portaspi/shift_reg_s<3>;
+   portaspi/shift_reg_s<4>.CLK = clock_i;	// GCK
+   portaspi/shift_reg_s<4>.CE = reset_n_i;
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 1 | 8 | portaspi/shift_reg_s<5>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 3 | 1 | 8 | 1 | 7 | 6 | 6
+INPUTS | 10 | portaspi/shift_reg_s<5>  | $OpTx$FX_DC$330  | portaspi/ff_q  | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2  | portaspi/spi_data_buf_s<4>  | portaspi/spi_clk_buf_s  | portaspi/prev_spi_clk_s  | portaspi/shift_reg_s<4>  | reset_n_i
+INPUTMC | 9 | 1 | 8 | 1 | 2 | 6 | 9 | 4 | 14 | 1 | 3 | 6 | 13 | 6 | 2 | 6 | 8 | 1 | 9
+INPUTP | 1 | 160
+EQ | 8 | 
+   portaspi/shift_reg_s<5>.D = portaspi/shift_reg_s<5> & !$OpTx$FX_DC$330
+	# portaspi/ff_q & !portaspi/state_s_FSM_FFd1 & 
+	!portaspi/state_s_FSM_FFd2 & portaspi/spi_data_buf_s<4>
+	# portaspi/state_s_FSM_FFd1 & 
+	portaspi/state_s_FSM_FFd2 & !portaspi/spi_clk_buf_s & portaspi/prev_spi_clk_s & 
+	portaspi/shift_reg_s<4>;
+   portaspi/shift_reg_s<5>.CLK = clock_i;	// GCK
+   portaspi/shift_reg_s<5>.CE = reset_n_i;
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 1 | 7 | portaspi/shift_reg_s<6>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 3 | 1 | 7 | 1 | 6 | 6 | 5
+INPUTS | 10 | portaspi/shift_reg_s<6>  | $OpTx$FX_DC$330  | portaspi/ff_q  | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2  | portaspi/spi_data_buf_s<5>  | portaspi/spi_clk_buf_s  | portaspi/prev_spi_clk_s  | portaspi/shift_reg_s<5>  | reset_n_i
+INPUTMC | 9 | 1 | 7 | 1 | 2 | 6 | 9 | 4 | 14 | 1 | 3 | 6 | 12 | 6 | 2 | 6 | 8 | 1 | 8
+INPUTP | 1 | 160
+EQ | 8 | 
+   portaspi/shift_reg_s<6>.D = portaspi/shift_reg_s<6> & !$OpTx$FX_DC$330
+	# portaspi/ff_q & !portaspi/state_s_FSM_FFd1 & 
+	!portaspi/state_s_FSM_FFd2 & portaspi/spi_data_buf_s<5>
+	# portaspi/state_s_FSM_FFd1 & 
+	portaspi/state_s_FSM_FFd2 & !portaspi/spi_clk_buf_s & portaspi/prev_spi_clk_s & 
+	portaspi/shift_reg_s<5>;
+   portaspi/shift_reg_s<6>.CLK = clock_i;	// GCK
+   portaspi/shift_reg_s<6>.CE = reset_n_i;
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 1 | 6 | portaspi/shift_reg_s<7>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 3 | 1 | 11 | 1 | 6 | 6 | 4
+INPUTS | 10 | portaspi/shift_reg_s<7>  | $OpTx$FX_DC$330  | portaspi/ff_q  | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2  | portaspi/spi_data_buf_s<6>  | portaspi/spi_clk_buf_s  | portaspi/prev_spi_clk_s  | portaspi/shift_reg_s<6>  | reset_n_i
+INPUTMC | 9 | 1 | 6 | 1 | 2 | 6 | 9 | 4 | 14 | 1 | 3 | 6 | 11 | 6 | 2 | 6 | 8 | 1 | 7
+INPUTP | 1 | 160
+EQ | 8 | 
+   portaspi/shift_reg_s<7>.D = portaspi/shift_reg_s<7> & !$OpTx$FX_DC$330
+	# portaspi/ff_q & !portaspi/state_s_FSM_FFd1 & 
+	!portaspi/state_s_FSM_FFd2 & portaspi/spi_data_buf_s<6>
+	# portaspi/state_s_FSM_FFd1 & 
+	portaspi/state_s_FSM_FFd2 & !portaspi/spi_clk_buf_s & portaspi/prev_spi_clk_s & 
+	portaspi/shift_reg_s<6>;
+   portaspi/shift_reg_s<7>.CLK = clock_i;	// GCK
+   portaspi/shift_reg_s<7>.CE = reset_n_i;
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 4 | 1 | tmr_cnt_q<15>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 18 | 0 | 7 | 4 | 0 | 4 | 11 | 4 | 15 | 4 | 9 | 4 | 10 | 4 | 12 | 4 | 17 | 7 | 7 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 0 | 4 | 1 | 7 | 13 | 7 | 16 | 7 | 12 | 4 | 2
+INPUTS | 17 | tmr_cnt_q<13>  | tmr_cnt_q<15>  | tmr_wr_s/tmr_wr_s_D2  | tmr_cnt_q<14>  | Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2  | tmr_cnt_q<0>  | tmr_cnt_q<1>  | tmr_cnt_q<3>  | tmr_cnt_q<5>  | tmr_cnt_q<7>  | tmr_cnt_q<8>  | tmr_cnt_q<2>  | tmr_cnt_q<4>  | tmr_cnt_q<6>  | tmr_cnt_q<12>  | tmr_cnt_q<0>.EXP  | exp/exp_reg<7>.EXP
+INPUTMC | 17 | 4 | 15 | 4 | 1 | 0 | 0 | 4 | 17 | 7 | 0 | 4 | 0 | 7 | 7 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 17 | 7 | 13 | 7 | 16 | 7 | 12 | 4 | 13 | 4 | 0 | 4 | 2
+IMPORTS | 2 | 4 | 0 | 4 | 2
+EQ | 26 | 
+   !tmr_cnt_q<15>.D = tmr_cnt_q<13> & !tmr_cnt_q<15> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# tmr_cnt_q<12> & !tmr_cnt_q<15> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# tmr_cnt_q<14> & !tmr_cnt_q<15> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<15> & !tmr_wr_s/tmr_wr_s_D2 & 
+	!Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2
+	# !tmr_cnt_q<0> & !tmr_cnt_q<1> & !tmr_cnt_q<3> & 
+	!tmr_cnt_q<5> & !tmr_cnt_q<7> & !tmr_cnt_q<8> & !tmr_cnt_q<15> & 
+	!tmr_cnt_q<2> & !tmr_cnt_q<4> & !tmr_cnt_q<6> & 
+	!tmr_wr_s/tmr_wr_s_D2
+;Imported pterms FB5_1
+	# tmr_cnt_q<11> & !tmr_cnt_q<15> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# tmr_cnt_q<9> & !tmr_cnt_q<15> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# tmr_cnt_q<10> & !tmr_cnt_q<15> & 
+	!tmr_wr_s/tmr_wr_s_D2
+;Imported pterms FB5_3
+	# !data_bus_io<7>.PIN & tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<11> & !tmr_cnt_q<13> & !tmr_cnt_q<9> & 
+	!tmr_cnt_q<10> & !tmr_cnt_q<12> & !tmr_cnt_q<14> & tmr_cnt_q<15> & 
+	!tmr_wr_s/tmr_wr_s_D2 & 
+	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2;
+   tmr_cnt_q<15>.CLK = clock_i;	// GCK
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 7 | 13 | tmr_cnt_q<2>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 18 | 4 | 0 | 4 | 11 | 4 | 15 | 4 | 9 | 4 | 10 | 4 | 12 | 4 | 17 | 7 | 7 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 0 | 4 | 1 | 7 | 13 | 7 | 16 | 7 | 12 | 7 | 1 | 7 | 17
+INPUTS | 17 | tmr_cnt_q<11>  | tmr_cnt_q<13>  | tmr_cnt_q<9>  | tmr_cnt_q<10>  | tmr_cnt_q<12>  | tmr_cnt_q<14>  | tmr_cnt_q<3>  | tmr_cnt_q<5>  | tmr_cnt_q<7>  | tmr_cnt_q<8>  | tmr_cnt_q<15>  | tmr_cnt_q<2>  | tmr_cnt_q<4>  | tmr_cnt_q<6>  | tmr_wr_s/tmr_wr_s_D2  | tmr_cnt_q<1>  | tmr_cnt_q<0>
+INPUTMC | 17 | 4 | 12 | 4 | 15 | 4 | 10 | 4 | 11 | 4 | 13 | 4 | 17 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 17 | 4 | 1 | 7 | 13 | 7 | 16 | 7 | 12 | 0 | 0 | 7 | 7 | 4 | 0
+EQ | 12 | 
+   !tmr_cnt_q<2>.D = tmr_cnt_q<0> & !tmr_cnt_q<2> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# tmr_cnt_q<1> & !tmr_cnt_q<2> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<0> & !tmr_cnt_q<1> & tmr_cnt_q<2> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<11> & !tmr_cnt_q<13> & !tmr_cnt_q<9> & 
+	!tmr_cnt_q<10> & !tmr_cnt_q<12> & !tmr_cnt_q<14> & !tmr_cnt_q<3> & 
+	!tmr_cnt_q<5> & !tmr_cnt_q<7> & !tmr_cnt_q<8> & !tmr_cnt_q<15> & 
+	!tmr_cnt_q<2> & !tmr_cnt_q<4> & !tmr_cnt_q<6> & 
+	!tmr_wr_s/tmr_wr_s_D2;
+   tmr_cnt_q<2>.CLK = clock_i;	// GCK
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 7 | 16 | tmr_cnt_q<4>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 18 | 4 | 0 | 4 | 11 | 4 | 15 | 4 | 9 | 4 | 10 | 4 | 12 | 4 | 17 | 7 | 7 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 0 | 4 | 1 | 7 | 13 | 7 | 16 | 7 | 12 | 7 | 1 | 7 | 17
+INPUTS | 18 | tmr_cnt_q<11>  | tmr_cnt_q<13>  | tmr_cnt_q<9>  | tmr_cnt_q<10>  | tmr_cnt_q<12>  | tmr_cnt_q<14>  | tmr_cnt_q<5>  | tmr_cnt_q<7>  | tmr_cnt_q<8>  | tmr_cnt_q<15>  | tmr_cnt_q<4>  | tmr_cnt_q<6>  | tmr_wr_s/tmr_wr_s_D2  | tmr_cnt_q<1>  | tmr_cnt_q<0>  | tmr_cnt_q<2>  | tmr_cnt_q<3>  | tmr_cnt_q<8>.EXP
+INPUTMC | 18 | 4 | 12 | 4 | 15 | 4 | 10 | 4 | 11 | 4 | 13 | 4 | 17 | 7 | 6 | 7 | 14 | 7 | 17 | 4 | 1 | 7 | 16 | 7 | 12 | 0 | 0 | 7 | 7 | 4 | 0 | 7 | 13 | 7 | 15 | 7 | 17
+IMPORTS | 1 | 7 | 17
+EQ | 16 | 
+   !tmr_cnt_q<4>.D = tmr_cnt_q<0> & !tmr_cnt_q<4> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# tmr_cnt_q<1> & !tmr_cnt_q<4> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# tmr_cnt_q<3> & !tmr_cnt_q<4> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# tmr_cnt_q<2> & !tmr_cnt_q<4> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<11> & !tmr_cnt_q<13> & !tmr_cnt_q<9> & 
+	!tmr_cnt_q<10> & !tmr_cnt_q<12> & !tmr_cnt_q<14> & !tmr_cnt_q<5> & 
+	!tmr_cnt_q<7> & !tmr_cnt_q<8> & !tmr_cnt_q<15> & !tmr_cnt_q<4> & 
+	!tmr_cnt_q<6> & !tmr_wr_s/tmr_wr_s_D2
+;Imported pterms FB8_18
+	# !tmr_cnt_q<0> & !tmr_cnt_q<1> & !tmr_cnt_q<3> & 
+	!tmr_cnt_q<2> & tmr_cnt_q<4> & !tmr_wr_s/tmr_wr_s_D2;
+   tmr_cnt_q<4>.CLK = clock_i;	// GCK
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 7 | 12 | tmr_cnt_q<6>
+ATTRIBUTES | 8553216 | 0
+OUTPUTMC | 17 | 4 | 0 | 4 | 11 | 4 | 15 | 4 | 9 | 4 | 10 | 4 | 12 | 4 | 17 | 7 | 7 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 17 | 4 | 1 | 7 | 13 | 7 | 16 | 7 | 12 | 7 | 0
+INPUTS | 18 | tmr_cnt_q<6>  | tmr_wr_s/tmr_wr_s_D2  | Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2  | tmr_cnt_q<0>  | tmr_cnt_q<11>  | tmr_cnt_q<13>  | tmr_cnt_q<9>  | tmr_cnt_q<10>  | tmr_cnt_q<12>  | tmr_cnt_q<14>  | tmr_cnt_q<1>  | tmr_cnt_q<3>  | tmr_cnt_q<7>  | tmr_cnt_q<8>  | tmr_cnt_q<15>  | tmr_cnt_q<2>  | tmr_cnt_q<4>  | tmr_cnt_q<5>
+INPUTMC | 18 | 7 | 12 | 0 | 0 | 7 | 1 | 4 | 0 | 4 | 12 | 4 | 15 | 4 | 10 | 4 | 11 | 4 | 13 | 4 | 17 | 7 | 7 | 7 | 15 | 7 | 14 | 7 | 17 | 4 | 1 | 7 | 13 | 7 | 16 | 7 | 6
+EQ | 13 | 
+   !tmr_cnt_q<6>.D = tmr_cnt_q<5> & !tmr_cnt_q<6> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<6> & !tmr_wr_s/tmr_wr_s_D2 & 
+	!Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2
+	# !tmr_cnt_q<5> & tmr_cnt_q<6> & 
+	!tmr_wr_s/tmr_wr_s_D2 & 
+	Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2
+	# !tmr_cnt_q<0> & !tmr_cnt_q<11> & !tmr_cnt_q<13> & 
+	!tmr_cnt_q<9> & !tmr_cnt_q<10> & !tmr_cnt_q<12> & !tmr_cnt_q<14> & 
+	!tmr_cnt_q<1> & !tmr_cnt_q<3> & !tmr_cnt_q<7> & !tmr_cnt_q<8> & 
+	!tmr_cnt_q<15> & !tmr_cnt_q<2> & !tmr_cnt_q<4> & !tmr_cnt_q<6> & 
+	!tmr_wr_s/tmr_wr_s_D2;
+   tmr_cnt_q<6>.CLK = clock_i;	// GCK
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 3 | 8 | exp/exp_reg<0>
+ATTRIBUTES | 8528672 | 0
+OUTPUTMC | 3 | 3 | 16 | 3 | 4 | 2 | 5
+INPUTS | 5 | data_bus_io<0>.PIN  | sw_i<0>  | wr_n_i  | sltsl_n_i  | ffff/ffff_D2
+INPUTMC | 1 | 0 | 1
+INPUTP | 4 | 36 | 4 | 90 | 105
+EQ | 3 | 
+   exp/exp_reg<0>.D = data_bus_io<0>.PIN;
+   !exp/exp_reg<0>.CLK = sw_i<0> & !wr_n_i & !sltsl_n_i & ffff/ffff_D2;
+   !exp/exp_reg<0>.AR = reset_n_i;	// GSR
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 3 | 7 | exp/exp_reg<1>
+ATTRIBUTES | 8528672 | 0
+OUTPUTMC | 3 | 3 | 16 | 3 | 4 | 2 | 2
+INPUTS | 5 | data_bus_io<1>.PIN  | sw_i<0>  | wr_n_i  | sltsl_n_i  | ffff/ffff_D2
+INPUTMC | 1 | 0 | 1
+INPUTP | 4 | 35 | 4 | 90 | 105
+EQ | 3 | 
+   exp/exp_reg<1>.D = data_bus_io<1>.PIN;
+   !exp/exp_reg<1>.CLK = sw_i<0> & !wr_n_i & !sltsl_n_i & ffff/ffff_D2;
+   !exp/exp_reg<1>.AR = reset_n_i;	// GSR
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 3 | 6 | exp/exp_reg<2>
+ATTRIBUTES | 8528672 | 0
+OUTPUTMC | 3 | 3 | 16 | 3 | 4 | 3 | 1
+INPUTS | 5 | data_bus_io<2>.PIN  | sw_i<0>  | wr_n_i  | sltsl_n_i  | ffff/ffff_D2
+INPUTMC | 1 | 0 | 1
+INPUTP | 4 | 30 | 4 | 90 | 105
+EQ | 3 | 
+   exp/exp_reg<2>.D = data_bus_io<2>.PIN;
+   !exp/exp_reg<2>.CLK = sw_i<0> & !wr_n_i & !sltsl_n_i & ffff/ffff_D2;
+   !exp/exp_reg<2>.AR = reset_n_i;	// GSR
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 4 | 7 | exp/exp_reg<3>
+ATTRIBUTES | 8528672 | 0
+OUTPUTMC | 3 | 3 | 16 | 3 | 4 | 0 | 14
+INPUTS | 5 | data_bus_io<3>.PIN  | sw_i<0>  | wr_n_i  | sltsl_n_i  | ffff/ffff_D2
+INPUTMC | 1 | 0 | 1
+INPUTP | 4 | 29 | 4 | 90 | 105
+EQ | 3 | 
+   exp/exp_reg<3>.D = data_bus_io<3>.PIN;
+   !exp/exp_reg<3>.CLK = sw_i<0> & !wr_n_i & !sltsl_n_i & ffff/ffff_D2;
+   !exp/exp_reg<3>.AR = reset_n_i;	// GSR
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 4 | 6 | exp/exp_reg<4>
+ATTRIBUTES | 8528672 | 0
+OUTPUTMC | 3 | 3 | 16 | 3 | 4 | 0 | 12
+INPUTS | 5 | data_bus_io<4>.PIN  | sw_i<0>  | wr_n_i  | sltsl_n_i  | ffff/ffff_D2
+INPUTMC | 1 | 0 | 1
+INPUTP | 4 | 28 | 4 | 90 | 105
+EQ | 3 | 
+   exp/exp_reg<4>.D = data_bus_io<4>.PIN;
+   !exp/exp_reg<4>.CLK = sw_i<0> & !wr_n_i & !sltsl_n_i & ffff/ffff_D2;
+   !exp/exp_reg<4>.AR = reset_n_i;	// GSR
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 4 | 5 | exp/exp_reg<5>
+ATTRIBUTES | 8528672 | 0
+OUTPUTMC | 3 | 0 | 10 | 3 | 4 | 3 | 16
+INPUTS | 5 | data_bus_io<5>.PIN  | sw_i<0>  | wr_n_i  | sltsl_n_i  | ffff/ffff_D2
+INPUTMC | 1 | 0 | 1
+INPUTP | 4 | 26 | 4 | 90 | 105
+EQ | 3 | 
+   exp/exp_reg<5>.D = data_bus_io<5>.PIN;
+   !exp/exp_reg<5>.CLK = sw_i<0> & !wr_n_i & !sltsl_n_i & ffff/ffff_D2;
+   !exp/exp_reg<5>.AR = reset_n_i;	// GSR
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 4 | 3 | exp/exp_reg<6>
+ATTRIBUTES | 8528672 | 0
+OUTPUTMC | 3 | 0 | 8 | 3 | 4 | 3 | 16
+INPUTS | 5 | data_bus_io<6>.PIN  | sw_i<0>  | wr_n_i  | sltsl_n_i  | ffff/ffff_D2
+INPUTMC | 1 | 0 | 1
+INPUTP | 4 | 24 | 4 | 90 | 105
+EQ | 3 | 
+   exp/exp_reg<6>.D = data_bus_io<6>.PIN;
+   !exp/exp_reg<6>.CLK = sw_i<0> & !wr_n_i & !sltsl_n_i & ffff/ffff_D2;
+   !exp/exp_reg<6>.AR = reset_n_i;	// GSR
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 4 | 2 | exp/exp_reg<7>
+ATTRIBUTES | 8528672 | 0
+OUTPUTMC | 4 | 0 | 7 | 3 | 4 | 3 | 16 | 4 | 1
+INPUTS | 14 | data_bus_io<7>.PIN  | sw_i<0>  | wr_n_i  | sltsl_n_i  | ffff/ffff_D2  | tmr_wr_s/tmr_wr_s_D2  | tmr_cnt_q<11>  | tmr_cnt_q<13>  | tmr_cnt_q<9>  | tmr_cnt_q<10>  | tmr_cnt_q<12>  | tmr_cnt_q<14>  | tmr_cnt_q<15>  | Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2
+INPUTMC | 10 | 0 | 1 | 0 | 0 | 4 | 12 | 4 | 15 | 4 | 10 | 4 | 11 | 4 | 13 | 4 | 17 | 4 | 1 | 7 | 0
+INPUTP | 4 | 23 | 4 | 90 | 105
+EXPORTS | 1 | 4 | 1
+EQ | 8 | 
+   exp/exp_reg<7>.D = data_bus_io<7>.PIN;
+   !exp/exp_reg<7>.CLK = sw_i<0> & !wr_n_i & !sltsl_n_i & ffff/ffff_D2;
+   !exp/exp_reg<7>.AR = reset_n_i;	// GSR
+    exp/exp_reg<7>.EXP  =  !data_bus_io<7>.PIN & tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<11> & !tmr_cnt_q<13> & !tmr_cnt_q<9> & 
+	!tmr_cnt_q<10> & !tmr_cnt_q<12> & !tmr_cnt_q<14> & tmr_cnt_q<15> & 
+	!tmr_wr_s/tmr_wr_s_D2 & 
+	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 7 | 10 | portaspi/wait_n_s
+ATTRIBUTES | 4358976 | 0
+OUTPUTMC | 2 | 7 | 10 | 4 | 4
+INPUTS | 5 | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2  | portaspi/wait_n_s  | portaspi/start_s  | reset_n_i
+INPUTMC | 4 | 4 | 14 | 1 | 3 | 7 | 10 | 6 | 3
+INPUTP | 1 | 160
+EQ | 6 | 
+   portaspi/wait_n_s.T = !portaspi/state_s_FSM_FFd1 & 
+	!portaspi/state_s_FSM_FFd2 & !portaspi/wait_n_s
+	# portaspi/state_s_FSM_FFd1 & 
+	portaspi/state_s_FSM_FFd2 & portaspi/wait_n_s & portaspi/start_s;
+   portaspi/wait_n_s.CLK = clock_i;	// GCK
+   portaspi/wait_n_s.CE = reset_n_i;
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 6 | 17 | portaspi/spi_data_buf_s<0>
+ATTRIBUTES | 8520608 | 0
+OUTPUTMC | 1 | 1 | 14
+INPUTS | 4 | data_bus_io<0>.PIN  | rd_n_i  | portaspi/start_s/portaspi/start_s_CLKF  | portaspi/start_s/portaspi/start_s_RSTF
+INPUTMC | 2 | 0 | 2 | 6 | 1
+INPUTP | 2 | 36 | 92
+EQ | 3 | 
+   !portaspi/spi_data_buf_s<0>.D = !data_bus_io<0>.PIN & rd_n_i;
+   portaspi/spi_data_buf_s<0>.CLK = portaspi/start_s/portaspi/start_s_CLKF;
+   portaspi/spi_data_buf_s<0>.AP = !portaspi/start_s/portaspi/start_s_RSTF;
+
+MACROCELL | 6 | 16 | portaspi/spi_data_buf_s<1>
+ATTRIBUTES | 8520608 | 0
+OUTPUTMC | 1 | 1 | 13
+INPUTS | 4 | data_bus_io<1>.PIN  | rd_n_i  | portaspi/start_s/portaspi/start_s_CLKF  | portaspi/start_s/portaspi/start_s_RSTF
+INPUTMC | 2 | 0 | 2 | 6 | 1
+INPUTP | 2 | 35 | 92
+EQ | 3 | 
+   !portaspi/spi_data_buf_s<1>.D = !data_bus_io<1>.PIN & rd_n_i;
+   portaspi/spi_data_buf_s<1>.CLK = portaspi/start_s/portaspi/start_s_CLKF;
+   portaspi/spi_data_buf_s<1>.AP = !portaspi/start_s/portaspi/start_s_RSTF;
+
+MACROCELL | 6 | 15 | portaspi/spi_data_buf_s<2>
+ATTRIBUTES | 8520608 | 0
+OUTPUTMC | 1 | 1 | 12
+INPUTS | 4 | data_bus_io<2>.PIN  | rd_n_i  | portaspi/start_s/portaspi/start_s_CLKF  | portaspi/start_s/portaspi/start_s_RSTF
+INPUTMC | 2 | 0 | 2 | 6 | 1
+INPUTP | 2 | 30 | 92
+EQ | 3 | 
+   !portaspi/spi_data_buf_s<2>.D = !data_bus_io<2>.PIN & rd_n_i;
+   portaspi/spi_data_buf_s<2>.CLK = portaspi/start_s/portaspi/start_s_CLKF;
+   portaspi/spi_data_buf_s<2>.AP = !portaspi/start_s/portaspi/start_s_RSTF;
+
+MACROCELL | 6 | 14 | portaspi/spi_data_buf_s<3>
+ATTRIBUTES | 8520608 | 0
+OUTPUTMC | 1 | 1 | 9
+INPUTS | 4 | data_bus_io<3>.PIN  | rd_n_i  | portaspi/start_s/portaspi/start_s_CLKF  | portaspi/start_s/portaspi/start_s_RSTF
+INPUTMC | 2 | 0 | 2 | 6 | 1
+INPUTP | 2 | 29 | 92
+EQ | 3 | 
+   !portaspi/spi_data_buf_s<3>.D = !data_bus_io<3>.PIN & rd_n_i;
+   portaspi/spi_data_buf_s<3>.CLK = portaspi/start_s/portaspi/start_s_CLKF;
+   portaspi/spi_data_buf_s<3>.AP = !portaspi/start_s/portaspi/start_s_RSTF;
+
+MACROCELL | 6 | 13 | portaspi/spi_data_buf_s<4>
+ATTRIBUTES | 8520608 | 0
+OUTPUTMC | 1 | 1 | 8
+INPUTS | 4 | data_bus_io<4>.PIN  | rd_n_i  | portaspi/start_s/portaspi/start_s_CLKF  | portaspi/start_s/portaspi/start_s_RSTF
+INPUTMC | 2 | 0 | 2 | 6 | 1
+INPUTP | 2 | 28 | 92
+EQ | 3 | 
+   !portaspi/spi_data_buf_s<4>.D = !data_bus_io<4>.PIN & rd_n_i;
+   portaspi/spi_data_buf_s<4>.CLK = portaspi/start_s/portaspi/start_s_CLKF;
+   portaspi/spi_data_buf_s<4>.AP = !portaspi/start_s/portaspi/start_s_RSTF;
+
+MACROCELL | 6 | 12 | portaspi/spi_data_buf_s<5>
+ATTRIBUTES | 8520608 | 0
+OUTPUTMC | 1 | 1 | 7
+INPUTS | 4 | data_bus_io<5>.PIN  | rd_n_i  | portaspi/start_s/portaspi/start_s_CLKF  | portaspi/start_s/portaspi/start_s_RSTF
+INPUTMC | 2 | 0 | 2 | 6 | 1
+INPUTP | 2 | 26 | 92
+EQ | 3 | 
+   !portaspi/spi_data_buf_s<5>.D = !data_bus_io<5>.PIN & rd_n_i;
+   portaspi/spi_data_buf_s<5>.CLK = portaspi/start_s/portaspi/start_s_CLKF;
+   portaspi/spi_data_buf_s<5>.AP = !portaspi/start_s/portaspi/start_s_RSTF;
+
+MACROCELL | 6 | 11 | portaspi/spi_data_buf_s<6>
+ATTRIBUTES | 8520608 | 0
+OUTPUTMC | 1 | 1 | 6
+INPUTS | 4 | data_bus_io<6>.PIN  | rd_n_i  | portaspi/start_s/portaspi/start_s_CLKF  | portaspi/start_s/portaspi/start_s_RSTF
+INPUTMC | 2 | 0 | 2 | 6 | 1
+INPUTP | 2 | 24 | 92
+EQ | 3 | 
+   !portaspi/spi_data_buf_s<6>.D = !data_bus_io<6>.PIN & rd_n_i;
+   portaspi/spi_data_buf_s<6>.CLK = portaspi/start_s/portaspi/start_s_CLKF;
+   portaspi/spi_data_buf_s<6>.AP = !portaspi/start_s/portaspi/start_s_RSTF;
+
+MACROCELL | 6 | 10 | portaspi/spi_data_buf_s<7>
+ATTRIBUTES | 8520608 | 0
+OUTPUTMC | 1 | 1 | 11
+INPUTS | 4 | data_bus_io<7>.PIN  | rd_n_i  | portaspi/start_s/portaspi/start_s_CLKF  | portaspi/start_s/portaspi/start_s_RSTF
+INPUTMC | 2 | 0 | 2 | 6 | 1
+INPUTP | 2 | 23 | 92
+EQ | 3 | 
+   !portaspi/spi_data_buf_s<7>.D = !data_bus_io<7>.PIN & rd_n_i;
+   portaspi/spi_data_buf_s<7>.CLK = portaspi/start_s/portaspi/start_s_CLKF;
+   portaspi/spi_data_buf_s<7>.AP = !portaspi/start_s/portaspi/start_s_RSTF;
+
+MACROCELL | 2 | 2 | sd_chg_s<0>
+ATTRIBUTES | 8528672 | 0
+OUTPUTMC | 2 | 2 | 5 | 2 | 1
+INPUTS | 26 | sd_chg_q<0>  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | addr_bus_i<1>  | addr_bus_i<0>  | addr_bus_i<9>  | addr_bus_i<8>  | addr_bus_i<15>  | addr_bus_i<14>  | addr_bus_i<13>  | addr_bus_i<12>  | addr_bus_i<11>  | addr_bus_i<10>  | rd_n_i  | sltsl_rom_n_s/sltsl_rom_n_s_D2  | sw_i<0>  | exp/exp_reg<1>  | sltsl_n_i  | sd_pres_n_i<0>  | sd_cs_n_o<0>  | sw_i<1>  | sd_cs_n_o<1>
+INPUTMC | 5 | 2 | 6 | 3 | 16 | 3 | 7 | 3 | 10 | 3 | 11
+INPUTP | 21 | 64 | 68 | 37 | 42 | 44 | 47 | 49 | 54 | 82 | 60 | 88 | 56 | 57 | 58 | 69 | 79 | 92 | 4 | 105 | 17 | 2
+EXPORTS | 1 | 2 | 1
+EQ | 24 | 
+   sd_chg_s<0>.D = sd_chg_q<0>;
+   sd_chg_s<0>.CLK = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2;
+   !sd_chg_s<0>.AR = reset_n_i;	// GSR
+    sd_chg_s<0>.EXP  =  addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & sw_i<0> & exp/exp_reg<1> & !rd_n_i & !sltsl_n_i
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !sd_pres_n_i<0> & !rd_n_i & !sd_cs_n_o<0> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & !sw_i<1> & sd_cs_n_o<0> & sd_cs_n_o<1> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 2 | 0 | sd_chg_s<1>
+ATTRIBUTES | 8528672 | 0
+OUTPUTMC | 2 | 2 | 5 | 2 | 1
+INPUTS | 27 | sw_i<0>  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | addr_bus_i<1>  | addr_bus_i<0>  | addr_bus_i<9>  | addr_bus_i<8>  | addr_bus_i<15>  | addr_bus_i<14>  | addr_bus_i<13>  | addr_bus_i<12>  | addr_bus_i<11>  | addr_bus_i<10>  | rd_n_i  | sltsl_rom_n_s/sltsl_rom_n_s_D2  | m1_n_i  | memmapper/MapBank3_q<1>  | iorq_n_i  | tmr_cnt_q<9>  | sd_pres_n_i<1>  | sd_cs_n_o<1>  | sd_cs_n_o<0>  | memmapper/MapBank0_q<0>.EXP
+INPUTMC | 6 | 3 | 16 | 2 | 10 | 4 | 10 | 3 | 11 | 3 | 10 | 2 | 17
+INPUTP | 21 | 4 | 64 | 68 | 37 | 42 | 44 | 47 | 49 | 54 | 82 | 60 | 88 | 56 | 57 | 58 | 69 | 79 | 92 | 96 | 95 | 155
+EXPORTS | 1 | 2 | 1
+IMPORTS | 1 | 2 | 17
+EQ | 30 | 
+   sd_chg_s<1>.D = ;Imported pterms FB3_18
+	  sd_chg_q<1>;
+   sd_chg_s<1>.CLK = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2;
+   !sd_chg_s<1>.AR = reset_n_i;	// GSR
+    sd_chg_s<1>.EXP  =  addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	addr_bus_i<0> & sw_i<0> & m1_n_i & !memmapper/MapBank3_q<1> & 
+	!rd_n_i & !iorq_n_i
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !tmr_cnt_q<9> & !rd_n_i & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !sd_pres_n_i<1> & !rd_n_i & !sd_cs_n_o<1> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & !sd_cs_n_o<0> & !sd_cs_n_o<1> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+GLOBALS | 1 | 4 | reset_n_i
+
+MACROCELL | 1 | 0 | portaspi/spi_data_q<0>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 1 | 2 | 4
+INPUTS | 4 | portaspi/shift_reg_s<0>  | reset_n_i  | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2
+INPUTMC | 3 | 1 | 15 | 4 | 14 | 1 | 3
+INPUTP | 1 | 160
+EQ | 4 | 
+   portaspi/spi_data_q<0>.D = portaspi/shift_reg_s<0>;
+   portaspi/spi_data_q<0>.CLK = clock_i;	// GCK
+   portaspi/spi_data_q<0>.CE = reset_n_i & portaspi/state_s_FSM_FFd1 & 
+	!portaspi/state_s_FSM_FFd2;
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 7 | 4 | portaspi/spi_data_q<1>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 1 | 2 | 1
+INPUTS | 4 | portaspi/shift_reg_s<1>  | reset_n_i  | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2
+INPUTMC | 3 | 1 | 14 | 4 | 14 | 1 | 3
+INPUTP | 1 | 160
+EQ | 4 | 
+   portaspi/spi_data_q<1>.D = portaspi/shift_reg_s<1>;
+   portaspi/spi_data_q<1>.CLK = clock_i;	// GCK
+   portaspi/spi_data_q<1>.CE = reset_n_i & portaspi/state_s_FSM_FFd1 & 
+	!portaspi/state_s_FSM_FFd2;
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 7 | 3 | portaspi/spi_data_q<2>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 1 | 3 | 0
+INPUTS | 4 | portaspi/shift_reg_s<2>  | reset_n_i  | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2
+INPUTMC | 3 | 1 | 13 | 4 | 14 | 1 | 3
+INPUTP | 1 | 160
+EQ | 4 | 
+   portaspi/spi_data_q<2>.D = portaspi/shift_reg_s<2>;
+   portaspi/spi_data_q<2>.CLK = clock_i;	// GCK
+   portaspi/spi_data_q<2>.CE = reset_n_i & portaspi/state_s_FSM_FFd1 & 
+	!portaspi/state_s_FSM_FFd2;
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 7 | 2 | portaspi/spi_data_q<3>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 1 | 0 | 13
+INPUTS | 4 | portaspi/shift_reg_s<3>  | reset_n_i  | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2
+INPUTMC | 3 | 1 | 12 | 4 | 14 | 1 | 3
+INPUTP | 1 | 160
+EQ | 4 | 
+   portaspi/spi_data_q<3>.D = portaspi/shift_reg_s<3>;
+   portaspi/spi_data_q<3>.CLK = clock_i;	// GCK
+   portaspi/spi_data_q<3>.CE = reset_n_i & portaspi/state_s_FSM_FFd1 & 
+	!portaspi/state_s_FSM_FFd2;
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 6 | 7 | portaspi/spi_data_q<4>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 1 | 0 | 11
+INPUTS | 4 | portaspi/shift_reg_s<4>  | reset_n_i  | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2
+INPUTMC | 3 | 1 | 9 | 4 | 14 | 1 | 3
+INPUTP | 1 | 160
+EQ | 4 | 
+   portaspi/spi_data_q<4>.D = portaspi/shift_reg_s<4>;
+   portaspi/spi_data_q<4>.CLK = clock_i;	// GCK
+   portaspi/spi_data_q<4>.CE = reset_n_i & portaspi/state_s_FSM_FFd1 & 
+	!portaspi/state_s_FSM_FFd2;
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 6 | 6 | portaspi/spi_data_q<5>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 1 | 0 | 10
+INPUTS | 4 | portaspi/shift_reg_s<5>  | reset_n_i  | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2
+INPUTMC | 3 | 1 | 8 | 4 | 14 | 1 | 3
+INPUTP | 1 | 160
+EQ | 4 | 
+   portaspi/spi_data_q<5>.D = portaspi/shift_reg_s<5>;
+   portaspi/spi_data_q<5>.CLK = clock_i;	// GCK
+   portaspi/spi_data_q<5>.CE = reset_n_i & portaspi/state_s_FSM_FFd1 & 
+	!portaspi/state_s_FSM_FFd2;
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 6 | 5 | portaspi/spi_data_q<6>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 1 | 0 | 8
+INPUTS | 4 | portaspi/shift_reg_s<6>  | reset_n_i  | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2
+INPUTMC | 3 | 1 | 7 | 4 | 14 | 1 | 3
+INPUTP | 1 | 160
+EQ | 4 | 
+   portaspi/spi_data_q<6>.D = portaspi/shift_reg_s<6>;
+   portaspi/spi_data_q<6>.CLK = clock_i;	// GCK
+   portaspi/spi_data_q<6>.CE = reset_n_i & portaspi/state_s_FSM_FFd1 & 
+	!portaspi/state_s_FSM_FFd2;
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 6 | 4 | portaspi/spi_data_q<7>
+ATTRIBUTES | 8553280 | 0
+OUTPUTMC | 1 | 0 | 7
+INPUTS | 4 | portaspi/shift_reg_s<7>  | reset_n_i  | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2
+INPUTMC | 3 | 1 | 6 | 4 | 14 | 1 | 3
+INPUTP | 1 | 160
+EQ | 4 | 
+   portaspi/spi_data_q<7>.D = portaspi/shift_reg_s<7>;
+   portaspi/spi_data_q<7>.CLK = clock_i;	// GCK
+   portaspi/spi_data_q<7>.CE = reset_n_i & portaspi/state_s_FSM_FFd1 & 
+	!portaspi/state_s_FSM_FFd2;
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 1 | 10 | portaspi/spi_clk_out_s
+ATTRIBUTES | 4621058 | 0
+OUTPUTMC | 1 | 1 | 10
+INPUTS | 6 | reset_n_i  | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2  | portaspi/spi_clk_buf_s  | portaspi/prev_spi_clk_s  | sd_sclk_o
+INPUTMC | 5 | 4 | 14 | 1 | 3 | 6 | 2 | 6 | 8 | 1 | 10
+INPUTP | 1 | 160
+EQ | 7 | 
+   sd_sclk_o.T = reset_n_i & portaspi/state_s_FSM_FFd1 & 
+	portaspi/state_s_FSM_FFd2 & portaspi/spi_clk_buf_s & !portaspi/prev_spi_clk_s & 
+	!sd_sclk_o
+	# reset_n_i & portaspi/state_s_FSM_FFd1 & 
+	portaspi/state_s_FSM_FFd2 & !portaspi/spi_clk_buf_s & portaspi/prev_spi_clk_s & 
+	sd_sclk_o;
+   sd_sclk_o.CLK = clock_i;	// GCK
+GLOBALS | 1 | 2 | clock_i
+
+MACROCELL | 3 | 4 | sltsl_ram_n_s
+ATTRIBUTES | 264962 | 0
+INPUTS | 13 | addr_bus_i<15>  | addr_bus_i<14>  | sw_i<0>  | exp/exp_reg<4>  | exp/exp_reg<5>  | sltsl_n_i  | ffff/ffff_D2  | exp/exp_reg<2>  | exp/exp_reg<3>  | exp/exp_reg<6>  | exp/exp_reg<7>  | exp/exp_reg<0>  | exp/exp_reg<1>
+INPUTMC | 9 | 4 | 6 | 4 | 5 | 0 | 1 | 3 | 6 | 4 | 7 | 4 | 3 | 4 | 2 | 3 | 8 | 3 | 7
+INPUTP | 4 | 88 | 56 | 4 | 105
+EQ | 8 | 
+   !ram_cs_n_o = addr_bus_i<15> & addr_bus_i<14> & sw_i<0> & 
+	exp/exp_reg<6> & !exp/exp_reg<7> & !sltsl_n_i & !ffff/ffff_D2
+	# addr_bus_i<15> & !addr_bus_i<14> & sw_i<0> & 
+	exp/exp_reg<4> & !exp/exp_reg<5> & !sltsl_n_i & !ffff/ffff_D2
+	# !addr_bus_i<15> & addr_bus_i<14> & sw_i<0> & 
+	exp/exp_reg<2> & !exp/exp_reg<3> & !sltsl_n_i & !ffff/ffff_D2
+	# !addr_bus_i<15> & !addr_bus_i<14> & sw_i<0> & 
+	exp/exp_reg<0> & !exp/exp_reg<1> & !sltsl_n_i & !ffff/ffff_D2;
+
+MACROCELL | 6 | 3 | portaspi/start_s
+ATTRIBUTES | 8520496 | 0
+OUTPUTMC | 2 | 6 | 9 | 7 | 10
+INPUTS | 2 | portaspi/start_s/portaspi/start_s_CLKF  | portaspi/start_s/portaspi/start_s_RSTF
+INPUTMC | 2 | 0 | 2 | 6 | 1
+EQ | 3 | 
+   portaspi/start_s.D = Vcc;
+   portaspi/start_s.CLK = portaspi/start_s/portaspi/start_s_CLKF;
+   portaspi/start_s.AR = !portaspi/start_s/portaspi/start_s_RSTF;
+
+MACROCELL | 4 | 16 | busdir_n_o_OBUF
+ATTRIBUTES | 264962 | 0
+OUTPUTMC | 1 | 4 | 17
+INPUTS | 19 | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | sw_i<0>  | m1_n_i  | rd_n_i  | iorq_n_i  | data_bus_io<6>.PIN  | tmr_wr_s/tmr_wr_s_D2  | tmr_cnt_q<11>  | tmr_cnt_q<14>  | tmr_cnt_q<9>  | tmr_cnt_q<13>  | tmr_cnt_q<10>  | tmr_cnt_q<12>  | Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2
+INPUTMC | 8 | 0 | 0 | 4 | 12 | 4 | 17 | 4 | 10 | 4 | 15 | 4 | 11 | 4 | 13 | 7 | 0
+INPUTP | 11 | 64 | 68 | 37 | 42 | 44 | 47 | 4 | 96 | 92 | 95 | 24
+EXPORTS | 1 | 4 | 17
+EQ | 12 | 
+   !busdir_n_o = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & sw_i<0> & 
+	m1_n_i & !rd_n_i & !iorq_n_i;
+    busdir_n_o_OBUF.EXP  =  !data_bus_io<6>.PIN & tmr_wr_s/tmr_wr_s_D2
+	# tmr_cnt_q<11> & !tmr_cnt_q<14> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# tmr_cnt_q<9> & !tmr_cnt_q<14> & 
+	!tmr_wr_s/tmr_wr_s_D2
+	# !tmr_cnt_q<11> & !tmr_cnt_q<13> & !tmr_cnt_q<9> & 
+	!tmr_cnt_q<10> & !tmr_cnt_q<12> & tmr_cnt_q<14> & 
+	!tmr_wr_s/tmr_wr_s_D2 & 
+	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2
+
+MACROCELL | 5 | 11 | ram_a_o_14_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 6 | addr_bus_i<15>  | addr_bus_i<14>  | memmapper/MapBank2_q<0>  | memmapper/MapBank1_q<0>  | memmapper/MapBank3_q<0>  | memmapper/MapBank0_q<0>
+INPUTMC | 4 | 2 | 13 | 2 | 15 | 2 | 11 | 2 | 17
+INPUTP | 2 | 88 | 56
+EQ | 8 | 
+   ram_a_o<14> = addr_bus_i<15> & addr_bus_i<14> & 
+	memmapper/MapBank3_q<0>
+	# addr_bus_i<15> & !addr_bus_i<14> & 
+	memmapper/MapBank2_q<0>
+	# !addr_bus_i<15> & addr_bus_i<14> & 
+	memmapper/MapBank1_q<0>
+	# !addr_bus_i<15> & !addr_bus_i<14> & 
+	memmapper/MapBank0_q<0>;
+
+MACROCELL | 5 | 13 | ram_a_o_15_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 6 | addr_bus_i<15>  | addr_bus_i<14>  | memmapper/MapBank2_q<1>  | memmapper/MapBank1_q<1>  | memmapper/MapBank3_q<1>  | memmapper/MapBank0_q<1>
+INPUTMC | 4 | 2 | 12 | 2 | 14 | 2 | 10 | 2 | 16
+INPUTP | 2 | 88 | 56
+EQ | 8 | 
+   ram_a_o<15> = addr_bus_i<15> & addr_bus_i<14> & 
+	memmapper/MapBank3_q<1>
+	# addr_bus_i<15> & !addr_bus_i<14> & 
+	memmapper/MapBank2_q<1>
+	# !addr_bus_i<15> & addr_bus_i<14> & 
+	memmapper/MapBank1_q<1>
+	# !addr_bus_i<15> & !addr_bus_i<14> & 
+	memmapper/MapBank0_q<1>;
+
+MACROCELL | 5 | 14 | ram_a_o_16_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 6 | addr_bus_i<15>  | addr_bus_i<14>  | memmapper/MapBank2_q<2>  | memmapper/MapBank1_q<2>  | memmapper/MapBank3_q<2>  | memmapper/MapBank0_q<2>
+INPUTMC | 4 | 5 | 12 | 3 | 14 | 5 | 3 | 3 | 15
+INPUTP | 2 | 88 | 56
+EQ | 8 | 
+   ram_a_o<16> = addr_bus_i<15> & addr_bus_i<14> & 
+	memmapper/MapBank3_q<2>
+	# addr_bus_i<15> & !addr_bus_i<14> & 
+	memmapper/MapBank2_q<2>
+	# !addr_bus_i<15> & addr_bus_i<14> & 
+	memmapper/MapBank1_q<2>
+	# !addr_bus_i<15> & !addr_bus_i<14> & 
+	memmapper/MapBank0_q<2>;
+
+MACROCELL | 5 | 16 | ram_a_o_17_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 6 | addr_bus_i<15>  | addr_bus_i<14>  | memmapper/MapBank2_q<3>  | memmapper/MapBank1_q<3>  | memmapper/MapBank3_q<3>  | memmapper/MapBank0_q<3>
+INPUTMC | 4 | 5 | 9 | 4 | 8 | 5 | 2 | 4 | 9
+INPUTP | 2 | 88 | 56
+EQ | 8 | 
+   ram_a_o<17> = addr_bus_i<15> & addr_bus_i<14> & 
+	memmapper/MapBank3_q<3>
+	# addr_bus_i<15> & !addr_bus_i<14> & 
+	memmapper/MapBank2_q<3>
+	# !addr_bus_i<15> & addr_bus_i<14> & 
+	memmapper/MapBank1_q<3>
+	# !addr_bus_i<15> & !addr_bus_i<14> & 
+	memmapper/MapBank0_q<3>;
+
+MACROCELL | 3 | 1 | ram_a_o_18_OBUF
+ATTRIBUTES | 264962 | 0
+OUTPUTMC | 1 | 3 | 0
+INPUTS | 24 | addr_bus_i<15>  | addr_bus_i<14>  | memmapper/MapBank2_q<4>  | memmapper/MapBank1_q<4>  | memmapper/MapBank3_q<4>  | memmapper/MapBank0_q<4>  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | addr_bus_i<1>  | addr_bus_i<0>  | addr_bus_i<9>  | addr_bus_i<8>  | addr_bus_i<13>  | addr_bus_i<12>  | addr_bus_i<11>  | addr_bus_i<10>  | sw_i<0>  | exp/exp_reg<2>  | rd_n_i  | sltsl_n_i
+INPUTMC | 5 | 5 | 6 | 5 | 15 | 5 | 1 | 5 | 17 | 3 | 6
+INPUTP | 19 | 88 | 56 | 64 | 68 | 37 | 42 | 44 | 47 | 49 | 54 | 82 | 60 | 57 | 58 | 69 | 79 | 4 | 92 | 105
+EXPORTS | 1 | 3 | 0
+EQ | 13 | 
+   ram_a_o<18> = addr_bus_i<15> & addr_bus_i<14> & 
+	memmapper/MapBank3_q<4>
+	# addr_bus_i<15> & !addr_bus_i<14> & 
+	memmapper/MapBank2_q<4>
+	# !addr_bus_i<15> & addr_bus_i<14> & 
+	memmapper/MapBank1_q<4>
+	# !addr_bus_i<15> & !addr_bus_i<14> & 
+	memmapper/MapBank0_q<4>;
+    ram_a_o_18_OBUF.EXP  =  addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & sw_i<0> & exp/exp_reg<2> & !rd_n_i & !sltsl_n_i
+
+MACROCELL | 5 | 7 | rom_a_o_14_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 5 | addr_bus_i<15>  | addr_bus_i<14>  | rom_bank1_q<0>  | sltsl_rom_n_s/sltsl_rom_n_s_D2  | rom_bank2_q<0>
+INPUTMC | 3 | 2 | 9 | 3 | 16 | 2 | 7
+INPUTP | 2 | 88 | 56
+EQ | 4 | 
+   rom_a_o<14> = addr_bus_i<15> & !addr_bus_i<14> & rom_bank2_q<0> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# !addr_bus_i<15> & addr_bus_i<14> & rom_bank1_q<0> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2;
+
+MACROCELL | 5 | 8 | rom_a_o_15_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 5 | addr_bus_i<15>  | addr_bus_i<14>  | rom_bank1_q<1>  | sltsl_rom_n_s/sltsl_rom_n_s_D2  | rom_bank2_q<1>
+INPUTMC | 3 | 2 | 8 | 3 | 16 | 3 | 12
+INPUTP | 2 | 88 | 56
+EQ | 4 | 
+   rom_a_o<15> = addr_bus_i<15> & !addr_bus_i<14> & rom_bank2_q<1> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# !addr_bus_i<15> & addr_bus_i<14> & rom_bank1_q<1> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2;
+
+MACROCELL | 5 | 10 | rom_a_o_16_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 5 | addr_bus_i<15>  | addr_bus_i<14>  | rom_bank1_q<2>  | sltsl_rom_n_s/sltsl_rom_n_s_D2  | rom_bank2_q<2>
+INPUTMC | 3 | 3 | 13 | 3 | 16 | 3 | 9
+INPUTP | 2 | 88 | 56
+EQ | 4 | 
+   rom_a_o<16> = addr_bus_i<15> & !addr_bus_i<14> & rom_bank2_q<2> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# !addr_bus_i<15> & addr_bus_i<14> & rom_bank1_q<2> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2;
+
+MACROCELL | 5 | 5 | rom_ce_n_o_OBUF
+ATTRIBUTES | 264962 | 0
+INPUTS | 7 | sltsl_rom_n_s/sltsl_rom_n_s_D2  | addr_bus_i<15>  | addr_bus_i<14>  | rd_n_i  | spi_cs_s/spi_cs_s_D2  | rom_we_n_o_OBUF.EXP  | memmapper/MapBank2_q<4>.EXP
+INPUTMC | 4 | 3 | 16 | 7 | 9 | 5 | 4 | 5 | 6
+INPUTP | 3 | 88 | 56 | 92
+IMPORTS | 2 | 5 | 4 | 5 | 6
+EQ | 11 | 
+   rom_ce_n_o = !sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<15> & addr_bus_i<14>
+	# !addr_bus_i<15> & !addr_bus_i<14>
+	# addr_bus_i<14> & rd_n_i
+	# addr_bus_i<14> & spi_cs_s/spi_cs_s_D2
+;Imported pterms FB6_5
+	# !addr_bus_i<14> & !rom_bank2_q<3>
+;Imported pterms FB6_7
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<9> & addr_bus_i<8> & addr_bus_i<14> & 
+	addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & addr_bus_i<10>;
+
+MACROCELL | 4 | 4 | N0
+ATTRIBUTES | 265986 | 0
+INPUTS | 1 | portaspi/wait_n_s
+INPUTMC | 1 | 7 | 10
+EQ | 2 | 
+   wait_n_o = Gnd;
+   wait_n_o.OE = !portaspi/wait_n_s;
+
+MACROCELL | 7 | 11 | addr_bus_i_13_IBUF$BUF0
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | addr_bus_i<13>
+INPUTP | 1 | 57
+EQ | 1 | 
+   ram_a_o<13> = addr_bus_i<13>;
+
+MACROCELL | 7 | 8 | rom_a_o_17_OBUF$BUF0
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | sw_i<1>
+INPUTP | 1 | 2
+EQ | 1 | 
+   rom_a_o<17> = sw_i<1>;
+
+MACROCELL | 5 | 4 | rom_we_n_o_OBUF
+ATTRIBUTES | 264962 | 0
+OUTPUTMC | 1 | 5 | 5
+INPUTS | 5 | addr_bus_i<15>  | addr_bus_i<14>  | wr_n_i  | sltsl_rom_n_s/sltsl_rom_n_s_D2  | rom_bank2_q<3>
+INPUTMC | 2 | 3 | 16 | 5 | 0
+INPUTP | 3 | 88 | 56 | 90
+EXPORTS | 1 | 5 | 5
+EQ | 3 | 
+   !rom_we_n_o = addr_bus_i<15> & !addr_bus_i<14> & !wr_n_i & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2;
+    rom_we_n_o_OBUF.EXP  =  !addr_bus_i<14> & !rom_bank2_q<3>
+
+MACROCELL | 3 | 10 | sd_cs_n_o_0_OBUF
+ATTRIBUTES | 8786726 | 0
+OUTPUTMC | 6 | 2 | 2 | 2 | 0 | 2 | 5 | 2 | 6 | 2 | 3 | 3 | 17
+INPUTS | 19 | data_bus_io<0>.PIN  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | addr_bus_i<1>  | addr_bus_i<0>  | addr_bus_i<9>  | addr_bus_i<8>  | addr_bus_i<15>  | addr_bus_i<14>  | addr_bus_i<13>  | addr_bus_i<12>  | addr_bus_i<11>  | addr_bus_i<10>  | wr_n_i  | sltsl_rom_n_s/sltsl_rom_n_s_D2
+INPUTMC | 1 | 3 | 16
+INPUTP | 18 | 36 | 64 | 68 | 37 | 42 | 44 | 47 | 49 | 54 | 82 | 60 | 88 | 56 | 57 | 58 | 69 | 79 | 90
+EQ | 7 | 
+   sd_cs_n_o<0>.D = !data_bus_io<0>.PIN;
+   !sd_cs_n_o<0>.CLK = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !wr_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2;
+   !sd_cs_n_o<0>.AP = reset_n_i;	// GSR
+GLOBALS | 1 | 1 | reset_n_i
+
+MACROCELL | 3 | 11 | sd_cs_n_o_1_OBUF
+ATTRIBUTES | 8786726 | 0
+OUTPUTMC | 6 | 2 | 2 | 2 | 0 | 2 | 5 | 2 | 6 | 2 | 3 | 3 | 17
+INPUTS | 19 | data_bus_io<1>.PIN  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | addr_bus_i<1>  | addr_bus_i<0>  | addr_bus_i<9>  | addr_bus_i<8>  | addr_bus_i<15>  | addr_bus_i<14>  | addr_bus_i<13>  | addr_bus_i<12>  | addr_bus_i<11>  | addr_bus_i<10>  | wr_n_i  | sltsl_rom_n_s/sltsl_rom_n_s_D2
+INPUTMC | 1 | 3 | 16
+INPUTP | 18 | 35 | 64 | 68 | 37 | 42 | 44 | 47 | 49 | 54 | 82 | 60 | 88 | 56 | 57 | 58 | 69 | 79 | 90
+EQ | 7 | 
+   sd_cs_n_o<1>.D = !data_bus_io<1>.PIN;
+   !sd_cs_n_o<1>.CLK = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !wr_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2;
+   !sd_cs_n_o<1>.AP = reset_n_i;	// GSR
+GLOBALS | 1 | 1 | reset_n_i
+
+MACROCELL | 7 | 5 | wr_n_i_IBUF$BUF0
+ATTRIBUTES | 264962 | 0
+INPUTS | 1 | wr_n_i
+INPUTP | 1 | 90
+EQ | 1 | 
+   ram_we_n_o = wr_n_i;
+
+MACROCELL | 0 | 3 | data_bus_io<4>_MLTSRCEDGE/data_bus_io<4>_MLTSRCEDGE_TRST
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 5 | 2 | 4 | 2 | 1 | 0 | 14 | 0 | 13 | 0 | 11
+INPUTS | 11 | data_bus_io<7>_MLTSRCEDGE/data_bus_io<7>_MLTSRCEDGE_TRST  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | sw_i<0>  | m1_n_i  | rd_n_i  | iorq_n_i
+INPUTMC | 1 | 0 | 4
+INPUTP | 10 | 64 | 68 | 37 | 42 | 44 | 47 | 4 | 96 | 92 | 95
+EQ | 5 | 
+   data_bus_io<4>_MLTSRCEDGE/data_bus_io<4>_MLTSRCEDGE_TRST = 
+	data_bus_io<7>_MLTSRCEDGE/data_bus_io<7>_MLTSRCEDGE_TRST
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & sw_i<0> & 
+	m1_n_i & !rd_n_i & !iorq_n_i;
+
+MACROCELL | 0 | 4 | data_bus_io<7>_MLTSRCEDGE/data_bus_io<7>_MLTSRCEDGE_TRST
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 4 | 0 | 10 | 0 | 8 | 0 | 7 | 0 | 3
+INPUTS | 21 | rd_n_i  | spi_cs_s/spi_cs_s_D2  | sw_i<0>  | sltsl_n_i  | ffff/ffff_D2  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | addr_bus_i<1>  | addr_bus_i<9>  | addr_bus_i<8>  | addr_bus_i<15>  | addr_bus_i<14>  | addr_bus_i<13>  | addr_bus_i<12>  | addr_bus_i<11>  | addr_bus_i<10>  | sltsl_rom_n_s/sltsl_rom_n_s_D2
+INPUTMC | 3 | 7 | 9 | 0 | 1 | 3 | 16
+INPUTP | 18 | 92 | 4 | 105 | 64 | 68 | 37 | 42 | 44 | 47 | 49 | 82 | 60 | 88 | 56 | 57 | 58 | 69 | 79
+EQ | 7 | 
+   data_bus_io<7>_MLTSRCEDGE/data_bus_io<7>_MLTSRCEDGE_TRST = !rd_n_i & spi_cs_s/spi_cs_s_D2
+	# sw_i<0> & !rd_n_i & !sltsl_n_i & ffff/ffff_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & addr_bus_i<14> & 
+	addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & addr_bus_i<10> & 
+	!rd_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2;
+
+MACROCELL | 3 | 16 | sltsl_rom_n_s/sltsl_rom_n_s_D2
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 28 | 7 | 9 | 0 | 14 | 2 | 5 | 0 | 12 | 0 | 0 | 0 | 10 | 0 | 8 | 0 | 7 | 2 | 9 | 2 | 8 | 3 | 13 | 2 | 6 | 2 | 3 | 2 | 7 | 3 | 12 | 3 | 9 | 5 | 0 | 2 | 2 | 2 | 0 | 5 | 7 | 5 | 8 | 5 | 10 | 5 | 5 | 5 | 4 | 3 | 10 | 3 | 11 | 0 | 4 | 3 | 17
+INPUTS | 13 | sw_i<0>  | sltsl_n_i  | addr_bus_i<15>  | addr_bus_i<14>  | exp/exp_reg<4>  | exp/exp_reg<5>  | ffff/ffff_D2  | exp/exp_reg<2>  | exp/exp_reg<3>  | exp/exp_reg<6>  | exp/exp_reg<7>  | exp/exp_reg<0>  | exp/exp_reg<1>
+INPUTMC | 9 | 4 | 6 | 4 | 5 | 0 | 1 | 3 | 6 | 4 | 7 | 4 | 3 | 4 | 2 | 3 | 8 | 3 | 7
+INPUTP | 4 | 4 | 105 | 88 | 56
+EQ | 9 | 
+   sltsl_rom_n_s/sltsl_rom_n_s_D2 = !sw_i<0> & !sltsl_n_i
+	# addr_bus_i<15> & addr_bus_i<14> & !exp/exp_reg<6> & 
+	!exp/exp_reg<7> & !sltsl_n_i & !ffff/ffff_D2
+	# addr_bus_i<15> & !addr_bus_i<14> & !exp/exp_reg<4> & 
+	!exp/exp_reg<5> & !sltsl_n_i & !ffff/ffff_D2
+	# !addr_bus_i<15> & addr_bus_i<14> & !exp/exp_reg<2> & 
+	!exp/exp_reg<3> & !sltsl_n_i & !ffff/ffff_D2
+	# !addr_bus_i<15> & !addr_bus_i<14> & !exp/exp_reg<0> & 
+	!exp/exp_reg<1> & !sltsl_n_i & !ffff/ffff_D2;
+
+MACROCELL | 0 | 1 | ffff/ffff_D2
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 11 | 3 | 8 | 3 | 7 | 3 | 6 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 3 | 4 | 2 | 3 | 4 | 0 | 4 | 3 | 16
+INPUTS | 16 | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | addr_bus_i<1>  | addr_bus_i<0>  | addr_bus_i<9>  | addr_bus_i<8>  | addr_bus_i<15>  | addr_bus_i<14>  | addr_bus_i<13>  | addr_bus_i<12>  | addr_bus_i<11>  | addr_bus_i<10>
+INPUTP | 16 | 64 | 68 | 37 | 42 | 44 | 47 | 49 | 54 | 82 | 60 | 88 | 56 | 57 | 58 | 69 | 79
+EQ | 5 | 
+   ffff/ffff_D2 = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10>;
+
+MACROCELL | 7 | 9 | spi_cs_s/spi_cs_s_D2
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 11 | 2 | 4 | 2 | 1 | 3 | 0 | 0 | 13 | 0 | 11 | 0 | 10 | 0 | 8 | 0 | 7 | 5 | 5 | 0 | 4 | 0 | 2
+INPUTS | 12 | addr_bus_i<8>  | addr_bus_i<15>  | addr_bus_i<14>  | addr_bus_i<13>  | addr_bus_i<12>  | addr_bus_i<11>  | addr_bus_i<10>  | rom_bank1_q<0>  | rom_bank1_q<1>  | rom_bank1_q<2>  | sltsl_rom_n_s/sltsl_rom_n_s_D2  | addr_bus_i<9>
+INPUTMC | 4 | 2 | 9 | 2 | 8 | 3 | 13 | 3 | 16
+INPUTP | 8 | 60 | 88 | 56 | 57 | 58 | 69 | 79 | 82
+EQ | 12 | 
+   spi_cs_s/spi_cs_s_D2 = !addr_bus_i<9> & !addr_bus_i<15> & addr_bus_i<14> & 
+	addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & addr_bus_i<10> & 
+	rom_bank1_q<0> & rom_bank1_q<1> & rom_bank1_q<2> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# !addr_bus_i<8> & !addr_bus_i<15> & addr_bus_i<14> & 
+	addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & addr_bus_i<10> & 
+	rom_bank1_q<0> & rom_bank1_q<1> & rom_bank1_q<2> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	!addr_bus_i<10> & rom_bank1_q<0> & rom_bank1_q<1> & rom_bank1_q<2> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2;
+
+MACROCELL | 1 | 2 | $OpTx$FX_DC$330
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 11 | 1 | 11 | 1 | 5 | 1 | 16 | 1 | 17 | 1 | 14 | 1 | 13 | 1 | 12 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6
+INPUTS | 5 | portaspi/ff_q  | portaspi/state_s_FSM_FFd1  | portaspi/state_s_FSM_FFd2  | portaspi/spi_clk_buf_s  | portaspi/prev_spi_clk_s
+INPUTMC | 5 | 6 | 9 | 4 | 14 | 1 | 3 | 6 | 2 | 6 | 8
+EQ | 4 | 
+   $OpTx$FX_DC$330 = portaspi/ff_q & !portaspi/state_s_FSM_FFd1 & 
+	!portaspi/state_s_FSM_FFd2
+	# portaspi/state_s_FSM_FFd1 & 
+	portaspi/state_s_FSM_FFd2 & !portaspi/spi_clk_buf_s & portaspi/prev_spi_clk_s;
+
+MACROCELL | 0 | 0 | tmr_wr_s/tmr_wr_s_D2
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 21 | 4 | 0 | 4 | 12 | 4 | 15 | 4 | 10 | 4 | 11 | 4 | 13 | 4 | 17 | 7 | 7 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 17 | 4 | 1 | 7 | 13 | 7 | 16 | 7 | 12 | 4 | 2 | 4 | 9 | 4 | 14 | 4 | 16 | 7 | 0
+INPUTS | 18 | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | addr_bus_i<1>  | addr_bus_i<0>  | addr_bus_i<9>  | addr_bus_i<8>  | addr_bus_i<15>  | addr_bus_i<14>  | addr_bus_i<13>  | addr_bus_i<12>  | addr_bus_i<11>  | addr_bus_i<10>  | wr_n_i  | sltsl_rom_n_s/sltsl_rom_n_s_D2
+INPUTMC | 1 | 3 | 16
+INPUTP | 17 | 64 | 68 | 37 | 42 | 44 | 47 | 49 | 54 | 82 | 60 | 88 | 56 | 57 | 58 | 69 | 79 | 90
+EQ | 5 | 
+   tmr_wr_s/tmr_wr_s_D2 = addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !wr_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2;
+
+MACROCELL | 7 | 0 | Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 12 | 4 | 11 | 4 | 15 | 4 | 10 | 4 | 9 | 4 | 13 | 4 | 17 | 4 | 1 | 4 | 2 | 4 | 12 | 4 | 14 | 4 | 16 | 7 | 17
+INPUTS | 18 | tmr_cnt_q<5>  | tmr_cnt_q<7>  | tmr_cnt_q<8>  | tmr_cnt_q<6>  | Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2  | tmr_wr_s/tmr_wr_s_D2  | tmr_cnt_q<0>  | tmr_cnt_q<11>  | tmr_cnt_q<13>  | tmr_cnt_q<9>  | tmr_cnt_q<10>  | tmr_cnt_q<12>  | tmr_cnt_q<14>  | tmr_cnt_q<1>  | tmr_cnt_q<3>  | tmr_cnt_q<15>  | tmr_cnt_q<2>  | tmr_cnt_q<4>
+INPUTMC | 18 | 7 | 6 | 7 | 14 | 7 | 17 | 7 | 12 | 7 | 1 | 0 | 0 | 4 | 0 | 4 | 12 | 4 | 15 | 4 | 10 | 4 | 11 | 4 | 13 | 4 | 17 | 7 | 7 | 7 | 15 | 4 | 1 | 7 | 13 | 7 | 16
+EXPORTS | 1 | 7 | 17
+EQ | 12 | 
+   Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2 = !tmr_cnt_q<5> & !tmr_cnt_q<7> & !tmr_cnt_q<8> & 
+	!tmr_cnt_q<6> & 
+	Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2;
+    Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2.EXP  =  !tmr_cnt_q<8> & !tmr_wr_s/tmr_wr_s_D2 & 
+	!Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2
+	# !tmr_cnt_q<5> & !tmr_cnt_q<7> & tmr_cnt_q<8> & 
+	!tmr_cnt_q<6> & !tmr_wr_s/tmr_wr_s_D2 & 
+	Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2
+	# !tmr_cnt_q<0> & !tmr_cnt_q<11> & !tmr_cnt_q<13> & 
+	!tmr_cnt_q<9> & !tmr_cnt_q<10> & !tmr_cnt_q<12> & !tmr_cnt_q<14> & 
+	!tmr_cnt_q<1> & !tmr_cnt_q<3> & !tmr_cnt_q<8> & !tmr_cnt_q<15> & 
+	!tmr_cnt_q<2> & !tmr_cnt_q<4> & !tmr_wr_s/tmr_wr_s_D2
+
+MACROCELL | 7 | 1 | Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 4 | 7 | 6 | 7 | 14 | 7 | 0 | 7 | 12
+INPUTS | 5 | tmr_cnt_q<0>  | tmr_cnt_q<1>  | tmr_cnt_q<3>  | tmr_cnt_q<2>  | tmr_cnt_q<4>
+INPUTMC | 5 | 4 | 0 | 7 | 7 | 7 | 15 | 7 | 13 | 7 | 16
+EQ | 2 | 
+   Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2 = !tmr_cnt_q<0> & !tmr_cnt_q<1> & !tmr_cnt_q<3> & 
+	!tmr_cnt_q<2> & !tmr_cnt_q<4>;
+
+MACROCELL | 0 | 2 | portaspi/start_s/portaspi/start_s_CLKF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 9 | 6 | 17 | 6 | 16 | 6 | 15 | 6 | 14 | 6 | 13 | 6 | 12 | 6 | 11 | 6 | 10 | 6 | 3
+INPUTS | 3 | wr_n_i  | spi_cs_s/spi_cs_s_D2  | rd_n_i
+INPUTMC | 1 | 7 | 9
+INPUTP | 2 | 90 | 92
+EQ | 2 | 
+   portaspi/start_s/portaspi/start_s_CLKF = !rd_n_i & spi_cs_s/spi_cs_s_D2
+	# !wr_n_i & spi_cs_s/spi_cs_s_D2;
+
+MACROCELL | 6 | 1 | portaspi/start_s/portaspi/start_s_RSTF
+ATTRIBUTES | 133888 | 0
+OUTPUTMC | 9 | 6 | 17 | 6 | 16 | 6 | 15 | 6 | 14 | 6 | 13 | 6 | 12 | 6 | 11 | 6 | 10 | 6 | 3
+INPUTS | 2 | reset_n_i  | portaspi/ff_clr_s
+INPUTMC | 1 | 1 | 1
+INPUTP | 1 | 160
+EQ | 1 | 
+   portaspi/start_s/portaspi/start_s_RSTF = reset_n_i & !portaspi/ff_clr_s;
+
+MACROCELL | 0 | 14 | _10_
+ATTRIBUTES | 265986 | 0
+OUTPUTMC | 1 | 0 | 13
+INPUTS | 27 | data_bus_io<4>_MLTSRCEDGE/data_bus_io<4>_MLTSRCEDGE_TRST  | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | addr_bus_i<1>  | addr_bus_i<0>  | sw_i<0>  | m1_n_i  | memmapper/MapBank3_q<3>  | rd_n_i  | iorq_n_i  | addr_bus_i<9>  | addr_bus_i<8>  | addr_bus_i<15>  | addr_bus_i<14>  | addr_bus_i<13>  | addr_bus_i<12>  | addr_bus_i<11>  | addr_bus_i<10>  | sltsl_rom_n_s/sltsl_rom_n_s_D2  | tmr_cnt_q<11>  | exp/exp_reg<3>  | sltsl_n_i  | EXP12_.EXP
+INPUTMC | 6 | 0 | 3 | 5 | 2 | 3 | 16 | 4 | 12 | 4 | 7 | 0 | 15
+INPUTP | 21 | 64 | 68 | 37 | 42 | 44 | 47 | 49 | 54 | 4 | 96 | 92 | 95 | 82 | 60 | 88 | 56 | 57 | 58 | 69 | 79 | 105
+EXPORTS | 1 | 0 | 13
+IMPORTS | 1 | 0 | 15
+EQ | 23 | 
+   data_bus_io<2> = ;Imported pterms FB1_16
+	  data_bus_io<2>_BUFR;
+   data_bus_io<2>.OE = 
+	data_bus_io<4>_MLTSRCEDGE/data_bus_io<4>_MLTSRCEDGE_TRST;
+    _10_.EXP  =  addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	addr_bus_i<0> & sw_i<0> & m1_n_i & !memmapper/MapBank3_q<3> & 
+	!rd_n_i & !iorq_n_i
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & addr_bus_i<14> & 
+	addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & addr_bus_i<10> & 
+	!tmr_cnt_q<11> & !rd_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & sw_i<0> & exp/exp_reg<3> & !rd_n_i & !sltsl_n_i
+
+MACROCELL | 0 | 12 | EXP11_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 11
+INPUTS | 25 | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | addr_bus_i<1>  | addr_bus_i<0>  | sw_i<0>  | m1_n_i  | memmapper/MapBank3_q<4>  | rd_n_i  | iorq_n_i  | addr_bus_i<9>  | addr_bus_i<8>  | addr_bus_i<15>  | addr_bus_i<14>  | addr_bus_i<13>  | addr_bus_i<12>  | addr_bus_i<11>  | addr_bus_i<10>  | sltsl_rom_n_s/sltsl_rom_n_s_D2  | tmr_cnt_q<12>  | exp/exp_reg<4>  | sltsl_n_i
+INPUTMC | 4 | 5 | 1 | 3 | 16 | 4 | 13 | 4 | 6
+INPUTP | 21 | 64 | 68 | 37 | 42 | 44 | 47 | 49 | 54 | 4 | 96 | 92 | 95 | 82 | 60 | 88 | 56 | 57 | 58 | 69 | 79 | 105
+EXPORTS | 1 | 0 | 11
+EQ | 19 | 
+       EXP11_.EXP  =  addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	addr_bus_i<0> & sw_i<0> & m1_n_i & !memmapper/MapBank3_q<4> & 
+	!rd_n_i & !iorq_n_i
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & addr_bus_i<14> & 
+	addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & addr_bus_i<10> & 
+	!tmr_cnt_q<12> & !rd_n_i & sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & sw_i<0> & exp/exp_reg<4> & !rd_n_i & !sltsl_n_i
+
+MACROCELL | 0 | 15 | EXP12_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 0 | 14
+INPUTS | 1 | data_bus_io<2>_BUFR
+INPUTMC | 1 | 3 | 0
+EXPORTS | 1 | 0 | 14
+EQ | 1 | 
+       EXP12_.EXP  =  data_bus_io<2>_BUFR
+
+MACROCELL | 2 | 5 | EXP13_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 2 | 4
+INPUTS | 25 | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | addr_bus_i<1>  | addr_bus_i<0>  | addr_bus_i<9>  | addr_bus_i<8>  | addr_bus_i<15>  | addr_bus_i<14>  | addr_bus_i<13>  | addr_bus_i<12>  | addr_bus_i<11>  | addr_bus_i<10>  | sw_i<0>  | exp/exp_reg<0>  | rd_n_i  | sltsl_n_i  | sd_chg_s<0>  | sd_cs_n_o<0>  | sltsl_rom_n_s/sltsl_rom_n_s_D2  | sd_chg_s<1>  | sd_cs_n_o<1>
+INPUTMC | 6 | 3 | 8 | 2 | 2 | 3 | 10 | 3 | 16 | 2 | 0 | 3 | 11
+INPUTP | 19 | 64 | 68 | 37 | 42 | 44 | 47 | 49 | 54 | 82 | 60 | 88 | 56 | 57 | 58 | 69 | 79 | 4 | 92 | 105
+EXPORTS | 1 | 2 | 4
+EQ | 29 | 
+       EXP13_.EXP  =  addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & addr_bus_i<3> & addr_bus_i<2> & addr_bus_i<1> & 
+	addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & sw_i<0> & exp/exp_reg<0> & !rd_n_i & !sltsl_n_i
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & !sd_chg_s<0> & !sd_cs_n_o<0> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & !sd_chg_s<1> & !sd_cs_n_o<1> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & !sd_cs_n_o<0> & !sd_cs_n_o<1> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !sw_i<0> & !rd_n_i & sd_cs_n_o<0> & sd_cs_n_o<1> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+
+MACROCELL | 3 | 17 | EXP14_
+ATTRIBUTES | 2048 | 0
+OUTPUTMC | 1 | 3 | 0
+INPUTS | 23 | addr_bus_i<7>  | addr_bus_i<6>  | addr_bus_i<5>  | addr_bus_i<4>  | addr_bus_i<3>  | addr_bus_i<2>  | addr_bus_i<1>  | addr_bus_i<0>  | addr_bus_i<9>  | addr_bus_i<8>  | addr_bus_i<15>  | addr_bus_i<14>  | addr_bus_i<13>  | addr_bus_i<12>  | addr_bus_i<11>  | addr_bus_i<10>  | tmr_cnt_q<10>  | rd_n_i  | sltsl_rom_n_s/sltsl_rom_n_s_D2  | sd_wp_i<0>  | sd_cs_n_o<1>  | sd_wp_i<1>  | sd_cs_n_o<0>
+INPUTMC | 4 | 4 | 11 | 3 | 16 | 3 | 11 | 3 | 10
+INPUTP | 19 | 64 | 68 | 37 | 42 | 44 | 47 | 49 | 54 | 82 | 60 | 88 | 56 | 57 | 58 | 69 | 79 | 92 | 15 | 13
+EXPORTS | 1 | 3 | 0
+EQ | 30 | 
+       EXP14_.EXP  =  addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !tmr_cnt_q<10> & !rd_n_i & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & !sd_wp_i<0> & sd_cs_n_o<1> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & !sd_wp_i<1> & !sd_cs_n_o<1> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & sd_cs_n_o<0> & sd_cs_n_o<1> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+	# addr_bus_i<7> & addr_bus_i<6> & addr_bus_i<5> & 
+	addr_bus_i<4> & !addr_bus_i<3> & !addr_bus_i<2> & !addr_bus_i<1> & 
+	!addr_bus_i<0> & addr_bus_i<9> & addr_bus_i<8> & !addr_bus_i<15> & 
+	addr_bus_i<14> & addr_bus_i<13> & addr_bus_i<12> & addr_bus_i<11> & 
+	addr_bus_i<10> & !rd_n_i & !sd_cs_n_o<0> & !sd_cs_n_o<1> & 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2
+
+PIN | addr_bus_i<7> | 64 | 0 | N/A | 64 | 44 | 2 | 4 | 2 | 1 | 3 | 0 | 0 | 13 | 0 | 11 | 0 | 10 | 0 | 8 | 0 | 7 | 2 | 17 | 2 | 16 | 3 | 15 | 4 | 9 | 5 | 17 | 2 | 15 | 2 | 14 | 3 | 14 | 4 | 8 | 5 | 15 | 2 | 13 | 2 | 12 | 5 | 12 | 5 | 9 | 5 | 6 | 2 | 11 | 2 | 10 | 5 | 3 | 5 | 2 | 5 | 1 | 2 | 6 | 2 | 3 | 2 | 2 | 2 | 0 | 4 | 16 | 3 | 17 | 3 | 10 | 3 | 11 | 0 | 3 | 0 | 4 | 0 | 1 | 0 | 0 | 0 | 12 | 0 | 14 | 2 | 5 | 3 | 1
+PIN | addr_bus_i<6> | 64 | 0 | N/A | 68 | 44 | 2 | 4 | 2 | 1 | 3 | 0 | 0 | 13 | 0 | 11 | 0 | 10 | 0 | 8 | 0 | 7 | 2 | 17 | 2 | 16 | 3 | 15 | 4 | 9 | 5 | 17 | 2 | 15 | 2 | 14 | 3 | 14 | 4 | 8 | 5 | 15 | 2 | 13 | 2 | 12 | 5 | 12 | 5 | 9 | 5 | 6 | 2 | 11 | 2 | 10 | 5 | 3 | 5 | 2 | 5 | 1 | 2 | 6 | 2 | 3 | 2 | 2 | 2 | 0 | 4 | 16 | 3 | 17 | 3 | 10 | 3 | 11 | 0 | 3 | 0 | 4 | 0 | 1 | 0 | 0 | 0 | 12 | 0 | 14 | 2 | 5 | 3 | 1
+PIN | addr_bus_i<5> | 64 | 0 | N/A | 37 | 44 | 2 | 4 | 2 | 1 | 3 | 0 | 0 | 13 | 0 | 11 | 0 | 10 | 0 | 8 | 0 | 7 | 2 | 17 | 2 | 16 | 3 | 15 | 4 | 9 | 5 | 17 | 2 | 15 | 2 | 14 | 3 | 14 | 4 | 8 | 5 | 15 | 2 | 13 | 2 | 12 | 5 | 12 | 5 | 9 | 5 | 6 | 2 | 11 | 2 | 10 | 5 | 3 | 5 | 2 | 5 | 1 | 2 | 6 | 2 | 3 | 2 | 2 | 2 | 0 | 4 | 16 | 3 | 17 | 3 | 10 | 3 | 11 | 0 | 3 | 0 | 4 | 0 | 1 | 0 | 0 | 0 | 12 | 0 | 14 | 2 | 5 | 3 | 1
+PIN | addr_bus_i<4> | 64 | 0 | N/A | 42 | 44 | 2 | 4 | 2 | 1 | 3 | 0 | 0 | 13 | 0 | 11 | 0 | 10 | 0 | 8 | 0 | 7 | 2 | 17 | 2 | 16 | 3 | 15 | 4 | 9 | 5 | 17 | 2 | 15 | 2 | 14 | 3 | 14 | 4 | 8 | 5 | 15 | 2 | 13 | 2 | 12 | 5 | 12 | 5 | 9 | 5 | 6 | 2 | 11 | 2 | 10 | 5 | 3 | 5 | 2 | 5 | 1 | 2 | 6 | 2 | 3 | 2 | 2 | 2 | 0 | 4 | 16 | 3 | 17 | 3 | 10 | 3 | 11 | 0 | 3 | 0 | 4 | 0 | 1 | 0 | 0 | 0 | 12 | 0 | 14 | 2 | 5 | 3 | 1
+PIN | addr_bus_i<3> | 64 | 0 | N/A | 44 | 44 | 2 | 4 | 2 | 1 | 3 | 0 | 0 | 13 | 0 | 11 | 0 | 10 | 0 | 8 | 0 | 7 | 2 | 17 | 2 | 16 | 3 | 15 | 4 | 9 | 5 | 17 | 2 | 15 | 2 | 14 | 3 | 14 | 4 | 8 | 5 | 15 | 2 | 13 | 2 | 12 | 5 | 12 | 5 | 9 | 5 | 6 | 2 | 11 | 2 | 10 | 5 | 3 | 5 | 2 | 5 | 1 | 2 | 6 | 2 | 3 | 2 | 2 | 2 | 0 | 4 | 16 | 3 | 10 | 3 | 11 | 0 | 3 | 0 | 4 | 0 | 1 | 0 | 0 | 0 | 12 | 0 | 14 | 2 | 5 | 3 | 1 | 3 | 17
+PIN | addr_bus_i<2> | 64 | 0 | N/A | 47 | 44 | 2 | 4 | 2 | 1 | 3 | 0 | 0 | 13 | 0 | 11 | 0 | 10 | 0 | 8 | 0 | 7 | 2 | 17 | 2 | 16 | 3 | 15 | 4 | 9 | 5 | 17 | 2 | 15 | 2 | 14 | 3 | 14 | 4 | 8 | 5 | 15 | 2 | 13 | 2 | 12 | 5 | 12 | 5 | 9 | 5 | 6 | 2 | 11 | 2 | 10 | 5 | 3 | 5 | 2 | 5 | 1 | 2 | 6 | 2 | 3 | 2 | 2 | 2 | 0 | 4 | 16 | 3 | 10 | 3 | 11 | 0 | 3 | 0 | 4 | 0 | 1 | 0 | 0 | 0 | 12 | 0 | 14 | 2 | 5 | 3 | 1 | 3 | 17
+PIN | addr_bus_i<1> | 64 | 0 | N/A | 49 | 42 | 2 | 4 | 2 | 1 | 3 | 0 | 0 | 13 | 0 | 11 | 0 | 10 | 0 | 8 | 0 | 7 | 2 | 17 | 2 | 16 | 3 | 15 | 4 | 9 | 5 | 17 | 2 | 15 | 2 | 14 | 3 | 14 | 4 | 8 | 5 | 15 | 2 | 13 | 2 | 12 | 5 | 12 | 5 | 9 | 5 | 6 | 2 | 11 | 2 | 10 | 5 | 3 | 5 | 2 | 5 | 1 | 2 | 6 | 2 | 3 | 2 | 2 | 2 | 0 | 3 | 10 | 3 | 11 | 0 | 4 | 0 | 1 | 0 | 0 | 0 | 12 | 0 | 14 | 2 | 5 | 3 | 1 | 3 | 17
+PIN | addr_bus_i<0> | 64 | 0 | N/A | 54 | 41 | 2 | 4 | 2 | 1 | 3 | 0 | 0 | 13 | 0 | 11 | 0 | 10 | 0 | 8 | 0 | 7 | 2 | 17 | 2 | 16 | 3 | 15 | 4 | 9 | 5 | 17 | 2 | 15 | 2 | 14 | 3 | 14 | 4 | 8 | 5 | 15 | 2 | 13 | 2 | 12 | 5 | 12 | 5 | 9 | 5 | 6 | 2 | 11 | 2 | 10 | 5 | 3 | 5 | 2 | 5 | 1 | 2 | 6 | 2 | 3 | 2 | 2 | 2 | 0 | 3 | 10 | 3 | 11 | 0 | 1 | 0 | 0 | 0 | 12 | 0 | 14 | 2 | 5 | 3 | 1 | 3 | 17
+PIN | addr_bus_i<9> | 64 | 0 | N/A | 82 | 19 | 7 | 9 | 0 | 14 | 2 | 5 | 0 | 12 | 0 | 0 | 0 | 10 | 0 | 8 | 0 | 7 | 2 | 6 | 2 | 3 | 2 | 2 | 2 | 0 | 3 | 17 | 3 | 10 | 3 | 11 | 0 | 4 | 0 | 1 | 3 | 1 | 5 | 6
+PIN | addr_bus_i<8> | 64 | 0 | N/A | 60 | 19 | 7 | 9 | 0 | 14 | 2 | 5 | 0 | 12 | 0 | 0 | 0 | 10 | 0 | 8 | 0 | 7 | 2 | 6 | 2 | 3 | 2 | 2 | 2 | 0 | 3 | 17 | 3 | 10 | 3 | 11 | 0 | 4 | 0 | 1 | 3 | 1 | 5 | 6
+PIN | addr_bus_i<15> | 64 | 0 | N/A | 88 | 36 | 7 | 9 | 0 | 14 | 2 | 5 | 0 | 12 | 0 | 0 | 0 | 10 | 0 | 8 | 0 | 7 | 2 | 9 | 2 | 8 | 3 | 13 | 2 | 6 | 2 | 3 | 2 | 7 | 3 | 12 | 3 | 9 | 5 | 0 | 2 | 2 | 2 | 0 | 3 | 4 | 5 | 11 | 5 | 13 | 5 | 14 | 5 | 16 | 3 | 1 | 5 | 7 | 5 | 8 | 5 | 10 | 5 | 5 | 5 | 4 | 3 | 10 | 3 | 11 | 0 | 4 | 3 | 16 | 0 | 1 | 3 | 17
+PIN | addr_bus_i<14> | 64 | 0 | N/A | 56 | 37 | 7 | 9 | 0 | 14 | 2 | 5 | 0 | 12 | 0 | 0 | 0 | 10 | 0 | 8 | 0 | 7 | 2 | 9 | 2 | 8 | 3 | 13 | 2 | 6 | 2 | 3 | 2 | 7 | 3 | 12 | 3 | 9 | 5 | 0 | 2 | 2 | 2 | 0 | 3 | 4 | 5 | 11 | 5 | 13 | 5 | 14 | 5 | 16 | 3 | 1 | 5 | 7 | 5 | 8 | 5 | 10 | 5 | 5 | 5 | 4 | 3 | 10 | 3 | 11 | 0 | 4 | 3 | 16 | 0 | 1 | 3 | 17 | 5 | 6
+PIN | addr_bus_i<13> | 64 | 0 | N/A | 57 | 27 | 7 | 9 | 0 | 14 | 2 | 5 | 0 | 12 | 0 | 0 | 0 | 10 | 0 | 8 | 0 | 7 | 2 | 9 | 2 | 8 | 3 | 13 | 2 | 6 | 2 | 3 | 2 | 7 | 3 | 12 | 3 | 9 | 5 | 0 | 2 | 2 | 2 | 0 | 3 | 17 | 7 | 11 | 3 | 10 | 3 | 11 | 0 | 4 | 0 | 1 | 3 | 1 | 5 | 6
+PIN | addr_bus_i<12> | 64 | 0 | N/A | 58 | 26 | 7 | 9 | 0 | 14 | 2 | 5 | 0 | 12 | 0 | 0 | 0 | 10 | 0 | 8 | 0 | 7 | 2 | 9 | 2 | 8 | 3 | 13 | 2 | 6 | 2 | 3 | 2 | 7 | 3 | 12 | 3 | 9 | 5 | 0 | 2 | 2 | 2 | 0 | 3 | 17 | 3 | 10 | 3 | 11 | 0 | 4 | 0 | 1 | 3 | 1 | 5 | 6
+PIN | addr_bus_i<11> | 64 | 0 | N/A | 69 | 26 | 7 | 9 | 0 | 14 | 2 | 5 | 0 | 12 | 0 | 0 | 0 | 10 | 0 | 8 | 0 | 7 | 2 | 9 | 2 | 8 | 3 | 13 | 2 | 6 | 2 | 3 | 2 | 7 | 3 | 12 | 3 | 9 | 5 | 0 | 2 | 2 | 2 | 0 | 3 | 17 | 3 | 10 | 3 | 11 | 0 | 4 | 0 | 1 | 3 | 1 | 5 | 6
+PIN | addr_bus_i<10> | 64 | 0 | N/A | 79 | 19 | 7 | 9 | 0 | 14 | 2 | 5 | 0 | 12 | 0 | 0 | 0 | 10 | 0 | 8 | 0 | 7 | 2 | 6 | 2 | 3 | 2 | 2 | 2 | 0 | 3 | 17 | 3 | 10 | 3 | 11 | 0 | 4 | 0 | 1 | 3 | 1 | 5 | 6
+PIN | sw_i<0> | 64 | 0 | N/A | 4 | 48 | 2 | 4 | 2 | 1 | 3 | 0 | 0 | 13 | 0 | 11 | 0 | 10 | 0 | 8 | 0 | 7 | 2 | 17 | 2 | 16 | 3 | 15 | 4 | 9 | 5 | 17 | 2 | 15 | 2 | 14 | 3 | 14 | 4 | 8 | 5 | 15 | 2 | 13 | 2 | 12 | 5 | 12 | 5 | 9 | 5 | 6 | 2 | 11 | 2 | 10 | 5 | 3 | 5 | 2 | 5 | 1 | 3 | 8 | 3 | 7 | 3 | 6 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 3 | 4 | 2 | 3 | 4 | 4 | 16 | 0 | 3 | 0 | 4 | 3 | 16 | 0 | 12 | 0 | 14 | 2 | 0 | 2 | 2 | 2 | 3 | 2 | 5 | 3 | 1
+PIN | m1_n_i | 64 | 0 | N/A | 96 | 31 | 2 | 4 | 2 | 1 | 3 | 0 | 0 | 13 | 0 | 11 | 2 | 17 | 2 | 16 | 3 | 15 | 4 | 9 | 5 | 17 | 2 | 15 | 2 | 14 | 3 | 14 | 4 | 8 | 5 | 15 | 2 | 13 | 2 | 12 | 5 | 12 | 5 | 9 | 5 | 6 | 2 | 11 | 2 | 10 | 5 | 3 | 5 | 2 | 5 | 1 | 4 | 16 | 0 | 3 | 0 | 12 | 0 | 14 | 2 | 0 | 2 | 3
+PIN | rd_n_i | 64 | 0 | N/A | 92 | 30 | 2 | 4 | 2 | 1 | 3 | 0 | 0 | 13 | 0 | 11 | 0 | 10 | 0 | 8 | 0 | 7 | 2 | 6 | 2 | 3 | 6 | 17 | 6 | 16 | 6 | 15 | 6 | 14 | 6 | 13 | 6 | 12 | 6 | 11 | 6 | 10 | 2 | 2 | 2 | 0 | 4 | 16 | 5 | 5 | 0 | 3 | 0 | 4 | 0 | 2 | 0 | 12 | 0 | 14 | 2 | 5 | 3 | 1 | 3 | 17
+PIN | iorq_n_i | 64 | 0 | N/A | 95 | 31 | 2 | 4 | 2 | 1 | 3 | 0 | 0 | 13 | 0 | 11 | 2 | 17 | 2 | 16 | 3 | 15 | 4 | 9 | 5 | 17 | 2 | 15 | 2 | 14 | 3 | 14 | 4 | 8 | 5 | 15 | 2 | 13 | 2 | 12 | 5 | 12 | 5 | 9 | 5 | 6 | 2 | 11 | 2 | 10 | 5 | 3 | 5 | 2 | 5 | 1 | 4 | 16 | 0 | 3 | 0 | 12 | 0 | 14 | 2 | 0 | 2 | 3
+PIN | sltsl_n_i | 64 | 0 | N/A | 105 | 19 | 2 | 2 | 0 | 14 | 2 | 5 | 0 | 12 | 3 | 16 | 0 | 10 | 0 | 8 | 0 | 7 | 3 | 8 | 3 | 7 | 3 | 6 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 3 | 4 | 2 | 3 | 4 | 0 | 4 | 3 | 1
+PIN | sd_pres_n_i<1> | 64 | 0 | N/A | 155 | 2 | 2 | 0 | 2 | 3
+PIN | sd_pres_n_i<0> | 64 | 0 | N/A | 17 | 2 | 2 | 6 | 2 | 2
+PIN | sw_i<1> | 64 | 0 | N/A | 2 | 2 | 7 | 8 | 2 | 2
+PIN | sd_wp_i<0> | 64 | 0 | N/A | 15 | 1 | 3 | 17
+PIN | sd_wp_i<1> | 64 | 0 | N/A | 13 | 1 | 3 | 17
+PIN | reset_n_i | 65600 | 0 | N/A | 160 | 70 | 1 | 11 | 4 | 14 | 1 | 3 | 1 | 5 | 1 | 16 | 1 | 17 | 1 | 4 | 6 | 8 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 12 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 7 | 10 | 1 | 0 | 7 | 4 | 7 | 3 | 7 | 2 | 6 | 7 | 6 | 6 | 6 | 5 | 6 | 4 | 1 | 10 | 6 | 1 | 2 | 17 | 2 | 16 | 3 | 15 | 4 | 9 | 5 | 17 | 2 | 15 | 2 | 14 | 3 | 14 | 4 | 8 | 5 | 15 | 2 | 13 | 2 | 12 | 5 | 12 | 5 | 9 | 5 | 6 | 2 | 11 | 2 | 10 | 5 | 3 | 5 | 2 | 5 | 1 | 2 | 9 | 2 | 8 | 3 | 13 | 2 | 6 | 2 | 3 | 2 | 7 | 3 | 12 | 3 | 9 | 5 | 0 | 6 | 2 | 1 | 1 | 3 | 8 | 3 | 7 | 3 | 6 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 3 | 4 | 2 | 2 | 2 | 2 | 0 | 3 | 10 | 3 | 11
+PIN | wr_n_i | 64 | 0 | N/A | 90 | 41 | 2 | 17 | 2 | 16 | 3 | 15 | 4 | 9 | 5 | 17 | 2 | 15 | 2 | 14 | 3 | 14 | 4 | 8 | 5 | 15 | 2 | 13 | 2 | 12 | 5 | 12 | 5 | 9 | 5 | 6 | 2 | 11 | 2 | 10 | 5 | 3 | 5 | 2 | 5 | 1 | 2 | 9 | 2 | 8 | 3 | 13 | 2 | 7 | 3 | 12 | 3 | 9 | 5 | 0 | 3 | 8 | 3 | 7 | 3 | 6 | 4 | 7 | 4 | 6 | 4 | 5 | 4 | 3 | 4 | 2 | 5 | 4 | 3 | 10 | 3 | 11 | 7 | 5 | 0 | 0 | 0 | 2
+PIN | sd_miso_i | 64 | 0 | N/A | 8 | 1 | 1 | 15
+PIN | clock_i | 4096 | 0 | N/A | 33 | 45 | 1 | 11 | 6 | 9 | 4 | 14 | 1 | 3 | 1 | 5 | 6 | 2 | 4 | 0 | 4 | 12 | 4 | 15 | 4 | 10 | 1 | 16 | 1 | 17 | 4 | 11 | 4 | 13 | 4 | 17 | 7 | 7 | 7 | 15 | 7 | 6 | 7 | 14 | 7 | 17 | 1 | 4 | 1 | 1 | 6 | 8 | 1 | 15 | 1 | 14 | 1 | 13 | 1 | 12 | 1 | 9 | 1 | 8 | 1 | 7 | 1 | 6 | 4 | 1 | 7 | 13 | 7 | 16 | 7 | 12 | 7 | 10 | 1 | 0 | 7 | 4 | 7 | 3 | 7 | 2 | 6 | 7 | 6 | 6 | 6 | 5 | 6 | 4 | 1 | 10
+PIN | sd_mosi_o | 536871040 | 0 | N/A | 12
+PIN | sd_sclk_o | 536871040 | 0 | N/A | 11
+PIN | ram_cs_n_o | 536871040 | 0 | N/A | 143
+PIN | busdir_n_o | 536871040 | 0 | N/A | 77
+PIN | ram_a_o<14> | 536871040 | 0 | N/A | 135
+PIN | ram_a_o<15> | 536871040 | 0 | N/A | 136
+PIN | ram_a_o<16> | 536871040 | 0 | N/A | 139
+PIN | ram_a_o<17> | 536871040 | 0 | N/A | 140
+PIN | ram_a_o<18> | 536871040 | 0 | N/A | 141
+PIN | rom_a_o<14> | 536871040 | 0 | N/A | 127
+PIN | rom_a_o<15> | 536871040 | 0 | N/A | 130
+PIN | rom_a_o<16> | 536871040 | 0 | N/A | 134
+PIN | rom_ce_n_o | 536871040 | 0 | N/A | 125
+PIN | wait_n_o | 536871040 | 0 | N/A | 59
+PIN | ram_a_o<13> | 536871040 | 0 | N/A | 112
+PIN | rom_a_o<17> | 536871040 | 0 | N/A | 107
+PIN | rom_we_n_o | 536871040 | 0 | N/A | 123
+PIN | sd_cs_n_o<0> | 536871040 | 0 | N/A | 147
+PIN | sd_cs_n_o<1> | 536871040 | 0 | N/A | 149
+PIN | ram_we_n_o | 536871040 | 0 | N/A | 104
+PIN | data_bus_io<0> | 536870976 | 0 | N/A | 36 | 10 | 2 | 17 | 2 | 15 | 2 | 13 | 2 | 11 | 2 | 9 | 2 | 7 | 7 | 17 | 3 | 8 | 6 | 17 | 3 | 10
+PIN | data_bus_io<1> | 536870976 | 0 | N/A | 35 | 10 | 2 | 16 | 2 | 14 | 2 | 12 | 2 | 10 | 2 | 8 | 3 | 12 | 4 | 10 | 3 | 7 | 6 | 16 | 3 | 11
+PIN | data_bus_io<2> | 536870976 | 0 | N/A | 30 | 9 | 3 | 15 | 3 | 14 | 5 | 12 | 5 | 3 | 3 | 13 | 3 | 9 | 4 | 11 | 3 | 6 | 6 | 15
+PIN | data_bus_io<3> | 536870976 | 0 | N/A | 29 | 8 | 4 | 9 | 4 | 8 | 5 | 9 | 5 | 2 | 5 | 0 | 4 | 12 | 4 | 7 | 6 | 14
+PIN | data_bus_io<4> | 536870976 | 0 | N/A | 28 | 7 | 5 | 17 | 5 | 15 | 5 | 6 | 5 | 1 | 4 | 13 | 4 | 6 | 6 | 13
+PIN | data_bus_io<5> | 536870976 | 0 | N/A | 26 | 3 | 4 | 14 | 4 | 5 | 6 | 12
+PIN | data_bus_io<6> | 536870976 | 0 | N/A | 24 | 3 | 4 | 16 | 4 | 3 | 6 | 11
+PIN | data_bus_io<7> | 536870976 | 0 | N/A | 23 | 2 | 6 | 10 | 4 | 2

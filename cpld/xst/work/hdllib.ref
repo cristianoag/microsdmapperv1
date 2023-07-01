@@ -1,0 +1,8 @@
+EN exp_slot NULL /home/ise/msxsdmapperv2/CPLD/src/exp_slot.vhd sub00/vhpl02 1685285165
+EN mapper NULL /home/ise/msxsdmapperv2/CPLD/src/mapper.vhd sub00/vhpl04 1685285167
+EN sdmapper NULL /home/ise/msxsdmapperv2/CPLD/src/sdmapper.vhd sub00/vhpl06 1685285169
+EN spi NULL /home/ise/msxsdmapperv2/CPLD/src/spi.vhd sub00/vhpl00 1685285163
+AR spi behavioral /home/ise/msxsdmapperv2/CPLD/src/spi.vhd sub00/vhpl01 1685285164
+AR exp_slot rtl /home/ise/msxsdmapperv2/CPLD/src/exp_slot.vhd sub00/vhpl03 1685285166
+AR sdmapper behavioral /home/ise/msxsdmapperv2/CPLD/src/sdmapper.vhd sub00/vhpl07 1685285170
+AR mapper rtl /home/ise/msxsdmapperv2/CPLD/src/mapper.vhd sub00/vhpl05 1685285168

@@ -1,0 +1,4 @@
+vhdl work "/home/ise/msxsdmapperv2/CPLD/src/spi.vhd"
+vhdl work "/home/ise/msxsdmapperv2/CPLD/src/mapper.vhd"
+vhdl work "/home/ise/msxsdmapperv2/CPLD/src/exp_slot.vhd"
+vhdl work "/home/ise/msxsdmapperv2/CPLD/src/sdmapper.vhd"

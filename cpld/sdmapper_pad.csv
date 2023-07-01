@@ -1,0 +1,129 @@
+Release 8.1i - Fit P.20131013
+Copyright(c) 1995-2003 Xilinx Inc. All rights reserved
+
+ 5-28-2023  2:46PM
+
+NOTE: This file is designed to be imported into a spreadsheet program
+such as Microsoft Excel for viewing, printing and sorting. The comma ','
+character is used as the data field separator.
+This file is also designed to support parsing.
+
+Input file:  sdmapper.ngd
+output file: sdmapper_pad.csv
+Part type:   xc95144xl
+Speed grade: -10
+Package:     tq100
+
+Pinout by Pin Number:
+
+-----,-----,-----,-----,-----,-----,-----,-----,-----,-----,
+Pin Number,Signal Name,Pin Usage,Pin Name,Direction,IO Standard,IO Bank Number,{blank},Slew Rate,Termination,{blank},Voltage,Constraint,
+P1,sw_i<1>,I,I/O/GTS3,INPUT,,,,,,,,,
+P2,sw_i<0>,I,I/O/GTS4,INPUT,,,,,,,,,
+P3,TIE,,I/O/GTS1,,,,,,,,,,
+P4,sd_miso_i,I,I/O/GTS2,INPUT,,,,,,,,,
+P5,VCC,,VCCINT,,,,,,,,,,
+P6,sd_sclk_o,O,I/O,OUTPUT,,,,,,,,,
+P7,sd_mosi_o,O,I/O,OUTPUT,,,,,,,,,
+P8,sd_wp_i<1>,I,I/O,INPUT,,,,,,,,,
+P9,sd_wp_i<0>,I,I/O,INPUT,,,,,,,,,
+P10,sd_pres_n_i<0>,I,I/O,INPUT,,,,,,,,,
+P11,TIE,,I/O,,,,,,,,,,
+P12,TIE,,I/O,,,,,,,,,,
+P13,TIE,,I/O,,,,,,,,,,
+P14,TIE,,I/O,,,,,,,,,,
+P15,data_bus_io<7>,I/O,I/O,BIDIR,,,,,,,,,
+P16,data_bus_io<6>,I/O,I/O,BIDIR,,,,,,,,,
+P17,data_bus_io<5>,I/O,I/O,BIDIR,,,,,,,,,
+P18,data_bus_io<4>,I/O,I/O,BIDIR,,,,,,,,,
+P19,data_bus_io<3>,I/O,I/O,BIDIR,,,,,,,,,
+P20,data_bus_io<2>,I/O,I/O,BIDIR,,,,,,,,,
+P21,GND,,GND,,,,,,,,,,
+P22,clock_i,GCK,I/O/GCK1,,,,,,,,,,
+P23,data_bus_io<1>,I/O,I/O/GCK2,BIDIR,,,,,,,,,
+P24,data_bus_io<0>,I/O,I/O,BIDIR,,,,,,,,,
+P25,addr_bus_i<5>,I,I/O,INPUT,,,,,,,,,
+P26,VCC,,VCCIO,,,,,,,,,,
+P27,addr_bus_i<4>,I,I/O/GCK3,INPUT,,,,,,,,,
+P28,addr_bus_i<3>,I,I/O,INPUT,,,,,,,,,
+P29,addr_bus_i<2>,I,I/O,INPUT,,,,,,,,,
+P30,addr_bus_i<1>,I,I/O,INPUT,,,,,,,,,
+P31,GND,,GND,,,,,,,,,,
+P32,addr_bus_i<0>,I,I/O,INPUT,,,,,,,,,
+P33,addr_bus_i<14>,I,I/O,INPUT,,,,,,,,,
+P34,addr_bus_i<13>,I,I/O,INPUT,,,,,,,,,
+P35,addr_bus_i<12>,I,I/O,INPUT,,,,,,,,,
+P36,wait_n_o,O,I/O,OUTPUT,,,,,,,,,
+P37,addr_bus_i<8>,I,I/O,INPUT,,,,,,,,,
+P38,VCC,,VCCIO,,,,,,,,,,
+P39,TIE,,I/O,,,,,,,,,,
+P40,TIE,,I/O,,,,,,,,,,
+P41,addr_bus_i<7>,I,I/O,INPUT,,,,,,,,,
+P42,addr_bus_i<6>,I,I/O,INPUT,,,,,,,,,
+P43,addr_bus_i<11>,I,I/O,INPUT,,,,,,,,,
+P44,GND,,GND,,,,,,,,,,
+P45,TDI,,TDI,,,,,,,,,,
+P46,TIE,,I/O,,,,,,,,,,
+P47,TMS,,TMS,,,,,,,,,,
+P48,TCK,,TCK,,,,,,,,,,
+P49,busdir_n_o,O,I/O,OUTPUT,,,,,,,,,
+P50,addr_bus_i<10>,I,I/O,INPUT,,,,,,,,,
+P51,VCC,,VCCIO,,,,,,,,,,
+P52,addr_bus_i<9>,I,I/O,INPUT,,,,,,,,,
+P53,TIE,,I/O,,,,,,,,,,
+P54,addr_bus_i<15>,I,I/O,INPUT,,,,,,,,,
+P55,wr_n_i,I,I/O,INPUT,,,,,,,,,
+P56,rd_n_i,I,I/O,INPUT,,,,,,,,,
+P57,VCC,,VCCINT,,,,,,,,,,
+P58,iorq_n_i,I,I/O,INPUT,,,,,,,,,
+P59,m1_n_i,I,I/O,INPUT,,,,,,,,,
+P60,TIE,,I/O,,,,,,,,,,
+P61,TIE,,I/O,,,,,,,,,,
+P62,GND,,GND,,,,,,,,,,
+P63,TIE,,I/O,,,,,,,,,,
+P64,TIE,,I/O,,,,,,,,,,
+P65,ram_we_n_o,O,I/O,OUTPUT,,,,,,,,,
+P66,sltsl_n_i,I,I/O,INPUT,,,,,,,,,
+P67,rom_a_o<17>,O,I/O,OUTPUT,,,,,,,,,
+P68,TIE,,I/O,,,,,,,,,,
+P69,GND,,GND,,,,,,,,,,
+P70,ram_a_o<13>,O,I/O,OUTPUT,,,,,,,,,
+P71,TIE,,I/O,,,,,,,,,,
+P72,TIE,,I/O,,,,,,,,,,
+P73,TIE,,I/O,,,,,,,,,,
+P74,TIE,,I/O,,,,,,,,,,
+P75,GND,,GND,,,,,,,,,,
+P76,rom_we_n_o,O,I/O,OUTPUT,,,,,,,,,
+P77,rom_ce_n_o,O,I/O,OUTPUT,,,,,,,,,
+P78,rom_a_o<14>,O,I/O,OUTPUT,,,,,,,,,
+P79,rom_a_o<15>,O,I/O,OUTPUT,,,,,,,,,
+P80,rom_a_o<16>,O,I/O,OUTPUT,,,,,,,,,
+P81,ram_a_o<14>,O,I/O,OUTPUT,,,,,,,,,
+P82,ram_a_o<15>,O,I/O,OUTPUT,,,,,,,,,
+P83,TDO,,TDO,,,,,,,,,,
+P84,GND,,GND,,,,,,,,,,
+P85,ram_a_o<16>,O,I/O,OUTPUT,,,,,,,,,
+P86,ram_a_o<17>,O,I/O,OUTPUT,,,,,,,,,
+P87,ram_a_o<18>,O,I/O,OUTPUT,,,,,,,,,
+P88,VCC,,VCCIO,,,,,,,,,,
+P89,ram_cs_n_o,O,I/O,OUTPUT,,,,,,,,,
+P90,TIE,,I/O,,,,,,,,,,
+P91,TIE,,I/O,,,,,,,,,,
+P92,TIE,,I/O,,,,,,,,,,
+P93,sd_cs_n_o<0>,O,I/O,OUTPUT,,,,,,,,,
+P94,sd_cs_n_o<1>,O,I/O,OUTPUT,,,,,,,,,
+P95,TIE,,I/O,,,,,,,,,,
+P96,sd_pres_n_i<1>,I,I/O,INPUT,,,,,,,,,
+P97,TIE,,I/O,,,,,,,,,,
+P98,VCC,,VCCINT,,,,,,,,,,
+P99,reset_n_i,GSR/I,I/O/GSR,,,,,,,,,,
+P100,GND,,GND,,,,,,,,,,
+
+To preserve the pinout above for future design iterations in
+Project Navigator simply execute the (Lock Pins) process
+located under the (Implement Design) process in a toolbox named
+(Optional Implementation Tools) or invoke PIN2UCF from the
+command line. The location constraints will be written into your
+specified UCF file
+
+

@@ -1,0 +1,2195 @@
+ 
+cpldfit:  version P.20131013                        Xilinx Inc.
+                                  Fitter Report
+Design Name: sdmapper                            Date:  5-28-2023,  2:46PM
+Device Used: XC95144XL-10-TQ100
+Fitting Status: Successful
+
+*************************  Mapped Resource Summary  **************************
+
+Macrocells     Product Terms    Function Block   Registers      Pins           
+Used/Tot       Used/Tot         Inps Used/Tot    Used/Tot       Used/Tot       
+131/144 ( 91%) 444 /720  ( 62%) 336/432 ( 78%)   95 /144 ( 66%) 58 /81  ( 72%)
+
+** Function Block Resources **
+
+Function    Mcells      FB Inps     Pterms      IO          
+Block       Used/Tot    Used/Tot    Used/Tot    Used/Tot    
+FB1          11/18       51/54       44/90       7/11
+FB2          18/18*      31/54       62/90       9/10
+FB3          17/18       50/54       67/90      10/10*
+FB4          14/18       50/54       49/90       5/10
+FB5          18/18*      43/54       71/90       7/10
+FB6          18/18*      49/54       57/90       9/10
+FB7          17/18       21/54       40/90       7/10
+FB8          18/18*      41/54       54/90       4/10
+             -----       -----       -----      -----    
+            131/144     336/432     444/720     58/81 
+
+* - Resource is exhausted
+
+** Global Control Resources **
+
+Signal 'clock_i' mapped onto global clock net GCK1.
+Global output enable net(s) unused.
+Signal 'reset_n_i' mapped onto global set/reset net GSR.
+
+** Pin Resources **
+
+Signal Type    Required     Mapped  |  Pin Type            Used    Total 
+------------------------------------|------------------------------------
+Input         :   28          28    |  I/O              :    51      73
+Output        :   20          20    |  GCK/IO           :     3       3
+Bidirectional :    8           8    |  GTS/IO           :     3       4
+GCK           :    1           1    |  GSR/IO           :     1       1
+GTS           :    0           0    |
+GSR           :    1           1    |
+                 ----        ----
+        Total     58          58
+
+** Power Data **
+
+There are 131 macrocells in high performance mode (MCHP).
+There are 0 macrocells in low power mode (MCLP).
+End of Mapped Resource Summary
+**************************  Errors and Warnings  ***************************
+
+WARNING:Cpld - Unable to retrieve the path to the iSE Project Repository. Will
+   use the default filename of 'sdmapper.ise'.
+INFO:Cpld - Inferring BUFG constraint for signal 'addr_bus_i<4>' based upon the
+   LOC constraint 'P27'. It is recommended that you declare this BUFG
+   explicitedly in your design. Note that for certain device families the output
+   of a BUFG constraint can not drive a gated clock, and the BUFG constraint
+   will be ignored.
+INFO:Cpld - Inferring BUFG constraint for signal 'clock_i' based upon the LOC
+   constraint 'P22'. It is recommended that you declare this BUFG explicitedly
+   in your design. Note that for certain device families the output of a BUFG
+   constraint can not drive a gated clock, and the BUFG constraint will be
+   ignored.
+INFO:Cpld - Inferring BUFG constraint for signal 'data_bus_io<1>' based upon the
+   LOC constraint 'P23'. It is recommended that you declare this BUFG
+   explicitedly in your design. Note that for certain device families the output
+   of a BUFG constraint can not drive a gated clock, and the BUFG constraint
+   will be ignored.
+WARNING:Cpld:1239 - The global clock designation (BUFG) on signal 'N13' is
+   ignored. Most likely the signal is gated and therefore cannot be used as a
+   global control signal.
+WARNING:Cpld:1239 - The global clock designation (BUFG) on signal
+   'addr_bus_i_4_IBUF' is ignored. Most likely the signal is gated and therefore
+   cannot be used as a global control signal.
+WARNING:Cpld:895 - Unable to map all desired signals into function block, FB1,
+   because too many function block inputs are required. Buffering output signal
+   data_bus_io<2> to allow all signals assigned to this function block to be
+   placed.
+*************************  Summary of Mapped Logic  ************************
+
+** 28 Outputs **
+
+Signal                                                            Total Total Loc     Pin  Pin     Pin     Pwr  Slew Reg Init
+Name                                                              Pts   Inps          No.  Type    Use     Mode Rate State
+data_bus_io<7>                                                    5     25    FB1_8   15   I/O     I/O     STD  FAST 
+data_bus_io<6>                                                    5     25    FB1_9   16   I/O     I/O     STD  FAST 
+data_bus_io<5>                                                    5     25    FB1_11  17   I/O     I/O     STD  FAST 
+data_bus_io<4>                                                    9     31    FB1_12  18   I/O     I/O     STD  FAST 
+data_bus_io<3>                                                    9     31    FB1_14  19   I/O     I/O     STD  FAST 
+data_bus_io<2>                                                    2     2     FB1_15  20   I/O     I/O     STD  FAST 
+sd_sclk_o                                                         2     6     FB2_11  6    I/O     O       STD  FAST RESET
+sd_mosi_o                                                         4     10    FB2_12  7    I/O     O       STD  FAST RESET
+data_bus_io<1>                                                    12    36    FB3_2   23   GCK/I/O I/O     STD  FAST 
+data_bus_io<0>                                                    12    35    FB3_5   24   I/O     I/O     STD  FAST 
+ram_a_o<18>                                                       4     6     FB4_2   87   I/O     O       STD  FAST 
+ram_cs_n_o                                                        4     13    FB4_5   89   I/O     O       STD  FAST 
+sd_cs_n_o<0>                                                      2     19    FB4_11  93   I/O     O       STD  FAST SET
+sd_cs_n_o<1>                                                      2     19    FB4_12  94   I/O     O       STD  FAST SET
+wait_n_o                                                          1     1     FB5_5   36   I/O     O       STD  FAST 
+busdir_n_o                                                        1     10    FB5_17  49   I/O     O       STD  FAST 
+rom_we_n_o                                                        1     4     FB6_5   76   I/O     O       STD  FAST 
+rom_ce_n_o                                                        7     16    FB6_6   77   I/O     O       STD  FAST 
+rom_a_o<14>                                                       2     5     FB6_8   78   I/O     O       STD  FAST 
+rom_a_o<15>                                                       2     5     FB6_9   79   I/O     O       STD  FAST 
+rom_a_o<16>                                                       2     5     FB6_11  80   I/O     O       STD  FAST 
+ram_a_o<14>                                                       4     6     FB6_12  81   I/O     O       STD  FAST 
+ram_a_o<15>                                                       4     6     FB6_14  82   I/O     O       STD  FAST 
+ram_a_o<16>                                                       4     6     FB6_15  85   I/O     O       STD  FAST 
+ram_a_o<17>                                                       4     6     FB6_17  86   I/O     O       STD  FAST 
+ram_we_n_o                                                        1     1     FB8_6   65   I/O     O       STD  FAST 
+rom_a_o<17>                                                       1     1     FB8_9   67   I/O     O       STD  FAST 
+ram_a_o<13>                                                       1     1     FB8_12  70   I/O     O       STD  FAST 
+
+** 103 Buried Nodes **
+
+Signal                                                            Total Total Loc     Pwr  Reg Init
+Name                                                              Pts   Inps          Mode State
+tmr_wr_s/tmr_wr_s_D2                                              1     18    FB1_1   STD  
+ffff/ffff_D2                                                      1     16    FB1_2   STD  
+portaspi/start_s/portaspi/start_s_CLKF                            2     3     FB1_3   STD  
+data_bus_io<4>_MLTSRCEDGE/data_bus_io<4>_MLTSRCEDGE_TRST          2     11    FB1_4   STD  
+data_bus_io<7>_MLTSRCEDGE/data_bus_io<7>_MLTSRCEDGE_TRST          3     21    FB1_5   STD  
+portaspi/spi_data_q<0>                                            2     4     FB2_1   STD  RESET
+portaspi/ff_clr_s                                                 2     4     FB2_2   STD  RESET
+$OpTx$FX_DC$330                                                   2     5     FB2_3   STD  
+portaspi/state_s_FSM_FFd2                                         3     10    FB2_4   STD  RESET
+portaspi/count_q<3>                                               3     10    FB2_5   STD  RESET
+portaspi/count_q<0>                                               3     7     FB2_6   STD  RESET
+portaspi/shift_reg_s<7>                                           4     10    FB2_7   STD  RESET
+portaspi/shift_reg_s<6>                                           4     10    FB2_8   STD  RESET
+portaspi/shift_reg_s<5>                                           4     10    FB2_9   STD  RESET
+portaspi/shift_reg_s<4>                                           4     10    FB2_10  STD  RESET
+portaspi/shift_reg_s<3>                                           4     10    FB2_13  STD  RESET
+portaspi/shift_reg_s<2>                                           4     10    FB2_14  STD  RESET
+portaspi/shift_reg_s<1>                                           4     10    FB2_15  STD  RESET
+portaspi/shift_reg_s<0>                                           4     8     FB2_16  STD  RESET
+portaspi/count_q<1>                                               4     8     FB2_17  STD  RESET
+portaspi/count_q<2>                                               5     8     FB2_18  STD  RESET
+sd_chg_s<1>                                                       2     19    FB3_1   STD  RESET
+sd_chg_s<0>                                                       2     19    FB3_3   STD  RESET
+sd_chg_q<1>                                                       3     22    FB3_4   STD  RESET
+sd_chg_q<0>                                                       3     22    FB3_7   STD  RESET
+rom_bank2_q<0>                                                    3     8     FB3_8   STD  RESET
+rom_bank1_q<1>                                                    3     8     FB3_9   STD  RESET
+rom_bank1_q<0>                                                    3     8     FB3_10  STD  RESET
+memmapper/MapBank3_q<1>                                           3     13    FB3_11  STD  RESET
+memmapper/MapBank3_q<0>                                           3     13    FB3_12  STD  RESET
+memmapper/MapBank2_q<1>                                           3     13    FB3_13  STD  RESET
+memmapper/MapBank2_q<0>                                           3     13    FB3_14  STD  RESET
+memmapper/MapBank1_q<1>                                           3     13    FB3_15  STD  RESET
+memmapper/MapBank1_q<0>                                           3     13    FB3_16  STD  RESET
+memmapper/MapBank0_q<1>                                           3     13    FB3_17  STD  RESET
+memmapper/MapBank0_q<0>                                           3     13    FB3_18  STD  RESET
+data_bus_io<2>_BUFR                                               11    34    FB4_1   STD  
+exp/exp_reg<2>                                                    2     5     FB4_7   STD  RESET
+exp/exp_reg<1>                                                    2     5     FB4_8   STD  RESET
+exp/exp_reg<0>                                                    2     5     FB4_9   STD  RESET
+
+Signal                                                            Total Total Loc     Pwr  Reg Init
+Name                                                              Pts   Inps          Mode State
+rom_bank2_q<2>                                                    3     8     FB4_10  STD  RESET
+rom_bank2_q<1>                                                    3     8     FB4_13  STD  RESET
+rom_bank1_q<2>                                                    3     8     FB4_14  STD  RESET
+memmapper/MapBank1_q<2>                                           3     13    FB4_15  STD  RESET
+memmapper/MapBank0_q<2>                                           3     13    FB4_16  STD  RESET
+sltsl_rom_n_s/sltsl_rom_n_s_D2                                    5     13    FB4_17  STD  
+tmr_cnt_q<0>                                                      2     17    FB5_1   STD  RESET
+tmr_cnt_q<15>                                                     10    19    FB5_2   STD  RESET
+exp/exp_reg<7>                                                    2     5     FB5_3   STD  RESET
+exp/exp_reg<6>                                                    2     5     FB5_4   STD  RESET
+exp/exp_reg<5>                                                    2     5     FB5_6   STD  RESET
+exp/exp_reg<4>                                                    2     5     FB5_7   STD  RESET
+exp/exp_reg<3>                                                    2     5     FB5_8   STD  RESET
+memmapper/MapBank1_q<3>                                           3     13    FB5_9   STD  RESET
+memmapper/MapBank0_q<3>                                           3     13    FB5_10  STD  RESET
+tmr_cnt_q<9>                                                      4     19    FB5_11  STD  RESET
+tmr_cnt_q<10>                                                     5     19    FB5_12  STD  RESET
+tmr_cnt_q<11>                                                     6     19    FB5_13  STD  RESET
+tmr_cnt_q<12>                                                     7     19    FB5_14  STD  RESET
+portaspi/state_s_FSM_FFd1                                         2     2     FB5_15  STD  RESET
+tmr_cnt_q<13>                                                     8     19    FB5_16  STD  RESET
+tmr_cnt_q<14>                                                     9     19    FB5_18  STD  RESET
+rom_bank2_q<3>                                                    3     8     FB6_1   STD  RESET
+memmapper/MapBank3_q<4>                                           3     13    FB6_2   STD  RESET
+memmapper/MapBank3_q<3>                                           3     13    FB6_3   STD  RESET
+memmapper/MapBank3_q<2>                                           3     13    FB6_4   STD  RESET
+memmapper/MapBank2_q<4>                                           3     13    FB6_7   STD  RESET
+memmapper/MapBank2_q<3>                                           3     13    FB6_10  STD  RESET
+memmapper/MapBank2_q<2>                                           3     13    FB6_13  STD  RESET
+memmapper/MapBank1_q<4>                                           3     13    FB6_16  STD  RESET
+memmapper/MapBank0_q<4>                                           3     13    FB6_18  STD  RESET
+portaspi/start_s/portaspi/start_s_RSTF                            1     2     FB7_2   STD  
+portaspi/spi_clk_buf_s                                            1     3     FB7_3   STD  RESET
+portaspi/start_s                                                  2     2     FB7_4   STD  RESET
+portaspi/spi_data_q<7>                                            2     4     FB7_5   STD  RESET
+portaspi/spi_data_q<6>                                            2     4     FB7_6   STD  RESET
+portaspi/spi_data_q<5>                                            2     4     FB7_7   STD  RESET
+portaspi/spi_data_q<4>                                            2     4     FB7_8   STD  RESET
+portaspi/prev_spi_clk_s                                           2     2     FB7_9   STD  RESET
+portaspi/ff_q                                                     2     2     FB7_10  STD  RESET
+
+Signal                                                            Total Total Loc     Pwr  Reg Init
+Name                                                              Pts   Inps          Mode State
+portaspi/spi_data_buf_s<7>                                        3     4     FB7_11  STD  RESET
+portaspi/spi_data_buf_s<6>                                        3     4     FB7_12  STD  RESET
+portaspi/spi_data_buf_s<5>                                        3     4     FB7_13  STD  RESET
+portaspi/spi_data_buf_s<4>                                        3     4     FB7_14  STD  RESET
+portaspi/spi_data_buf_s<3>                                        3     4     FB7_15  STD  RESET
+portaspi/spi_data_buf_s<2>                                        3     4     FB7_16  STD  RESET
+portaspi/spi_data_buf_s<1>                                        3     4     FB7_17  STD  RESET
+portaspi/spi_data_buf_s<0>                                        3     4     FB7_18  STD  RESET
+Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2  1     5     FB8_1   STD  
+Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2  1     5     FB8_2   STD  
+portaspi/spi_data_q<3>                                            2     4     FB8_3   STD  RESET
+portaspi/spi_data_q<2>                                            2     4     FB8_4   STD  RESET
+portaspi/spi_data_q<1>                                            2     4     FB8_5   STD  RESET
+tmr_cnt_q<5>                                                      3     18    FB8_7   STD  RESET
+tmr_cnt_q<1>                                                      3     17    FB8_8   STD  RESET
+spi_cs_s/spi_cs_s_D2                                              3     12    FB8_10  STD  
+portaspi/wait_n_s                                                 3     5     FB8_11  STD  RESET
+tmr_cnt_q<6>                                                      4     18    FB8_13  STD  RESET
+tmr_cnt_q<2>                                                      4     17    FB8_14  STD  RESET
+tmr_cnt_q<7>                                                      5     18    FB8_15  STD  RESET
+tmr_cnt_q<3>                                                      5     17    FB8_16  STD  RESET
+tmr_cnt_q<4>                                                      6     17    FB8_17  STD  RESET
+tmr_cnt_q<8>                                                      7     19    FB8_18  STD  RESET
+
+** 30 Inputs **
+
+Signal                                                            Loc     Pin  Pin     Pin     
+Name                                                                      No.  Type    Use     
+clock_i                                                           FB1_17  22   GCK/I/O GCK
+reset_n_i                                                         FB2_2   99   GSR/I/O GSR/I
+sw_i<1>                                                           FB2_5   1    GTS/I/O I
+sw_i<0>                                                           FB2_6   2    GTS/I/O I
+sd_miso_i                                                         FB2_9   4    GTS/I/O I
+sd_wp_i<1>                                                        FB2_14  8    I/O     I
+sd_wp_i<0>                                                        FB2_15  9    I/O     I
+sd_pres_n_i<0>                                                    FB2_17  10   I/O     I
+addr_bus_i<5>                                                     FB3_6   25   I/O     I
+addr_bus_i<4>                                                     FB3_8   27   GCK/I/O I
+addr_bus_i<3>                                                     FB3_9   28   I/O     I
+addr_bus_i<2>                                                     FB3_11  29   I/O     I
+addr_bus_i<1>                                                     FB3_12  30   I/O     I
+addr_bus_i<0>                                                     FB3_14  32   I/O     I
+addr_bus_i<14>                                                    FB3_15  33   I/O     I
+addr_bus_i<13>                                                    FB3_17  34   I/O     I
+sd_pres_n_i<1>                                                    FB4_15  96   I/O     I
+addr_bus_i<12>                                                    FB5_2   35   I/O     I
+addr_bus_i<8>                                                     FB5_6   37   I/O     I
+addr_bus_i<7>                                                     FB5_11  41   I/O     I
+addr_bus_i<6>                                                     FB5_12  42   I/O     I
+addr_bus_i<11>                                                    FB5_14  43   I/O     I
+addr_bus_i<10>                                                    FB7_2   50   I/O     I
+addr_bus_i<9>                                                     FB7_5   52   I/O     I
+addr_bus_i<15>                                                    FB7_8   54   I/O     I
+wr_n_i                                                            FB7_9   55   I/O     I
+rd_n_i                                                            FB7_11  56   I/O     I
+iorq_n_i                                                          FB7_12  58   I/O     I
+m1_n_i                                                            FB7_14  59   I/O     I
+sltsl_n_i                                                         FB8_8   66   I/O     I
+
+Legend:
+Pin No. - ~ - User Assigned
+**************************  Function Block Details  ************************
+Legend:
+Total Pt     - Total product terms used by the macrocell signal
+Imp Pt       - Product terms imported from other macrocells
+Exp Pt       - Product terms exported to other macrocells
+               in direction shown
+Unused Pt    - Unused local product terms remaining in macrocell
+Loc          - Location where logic was mapped in device
+Pin Type/Use - I  - Input             GCK - Global Clock
+               O  - Output            GTS - Global Output Enable
+              (b) - Buried macrocell  GSR - Global Set/Reset
+X            - Signal used as input to the macrocell logic.
+Pin No.      - ~  - User Assigned
+*********************************** FB1  ***********************************
+Number of function block inputs used/remaining:               51/3
+Number of signals used by logic mapping into function block:  51
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+tmr_wr_s/tmr_wr_s_D2
+                      1       0     0   4     FB1_1         (b)     (b)
+ffff/ffff_D2          1       0     0   4     FB1_2   11    I/O     (b)
+portaspi/start_s/portaspi/start_s_CLKF
+                      2       0     0   3     FB1_3   12    I/O     (b)
+data_bus_io<4>_MLTSRCEDGE/data_bus_io<4>_MLTSRCEDGE_TRST
+                      2       0     0   3     FB1_4         (b)     (b)
+data_bus_io<7>_MLTSRCEDGE/data_bus_io<7>_MLTSRCEDGE_TRST
+                      3       0     0   2     FB1_5   13    I/O     (b)
+(unused)              0       0     0   5     FB1_6   14    I/O     
+(unused)              0       0     0   5     FB1_7         (b)     
+data_bus_io<7>        5       0     0   0     FB1_8   15    I/O     I/O
+data_bus_io<6>        5       0     0   0     FB1_9   16    I/O     I/O
+(unused)              0       0     0   5     FB1_10        (b)     
+data_bus_io<5>        5       0     0   0     FB1_11  17    I/O     I/O
+data_bus_io<4>        9       4<-   0   0     FB1_12  18    I/O     I/O
+(unused)              0       0   /\4   1     FB1_13        (b)     (b)
+data_bus_io<3>        9       4<-   0   0     FB1_14  19    I/O     I/O
+data_bus_io<2>        2       1<- /\4   0     FB1_15  20    I/O     I/O
+(unused)              0       0   /\1   4     FB1_16        (b)     (b)
+(unused)              0       0     0   5     FB1_17  22    GCK/I/O GCK
+(unused)              0       0     0   5     FB1_18        (b)     
+
+Signals Used by Logic in Function Block
+  1: addr_bus_i<0>        18: data_bus_io<4>_MLTSRCEDGE/data_bus_io<4>_MLTSRCEDGE_TRST  35: memmapper/MapBank3_q<4> 
+  2: addr_bus_i<10>       19: data_bus_io<7>_MLTSRCEDGE/data_bus_io<7>_MLTSRCEDGE_TRST  36: portaspi/spi_data_q<3> 
+  3: addr_bus_i<11>       20: exp/exp_reg<3>                                            37: portaspi/spi_data_q<4> 
+  4: addr_bus_i<12>       21: exp/exp_reg<4>                                            38: portaspi/spi_data_q<5> 
+  5: addr_bus_i<13>       22: exp/exp_reg<5>                                            39: portaspi/spi_data_q<6> 
+  6: addr_bus_i<14>       23: exp/exp_reg<6>                                            40: portaspi/spi_data_q<7> 
+  7: addr_bus_i<15>       24: exp/exp_reg<7>                                            41: rd_n_i 
+  8: addr_bus_i<1>        25: ffff/ffff_D2                                              42: sltsl_n_i 
+  9: addr_bus_i<2>        26: iorq_n_i                                                  43: sltsl_rom_n_s/sltsl_rom_n_s_D2 
+ 10: addr_bus_i<3>        27: m1_n_i                                                    44: spi_cs_s/spi_cs_s_D2 
+ 11: addr_bus_i<4>        28: memmapper/MapBank0_q<3>                                   45: sw_i<0> 
+ 12: addr_bus_i<5>        29: memmapper/MapBank0_q<4>                                   46: tmr_cnt_q<11> 
+ 13: addr_bus_i<6>        30: memmapper/MapBank1_q<3>                                   47: tmr_cnt_q<12> 
+ 14: addr_bus_i<7>        31: memmapper/MapBank1_q<4>                                   48: tmr_cnt_q<13> 
+ 15: addr_bus_i<8>        32: memmapper/MapBank2_q<3>                                   49: tmr_cnt_q<14> 
+ 16: addr_bus_i<9>        33: memmapper/MapBank2_q<4>                                   50: tmr_cnt_q<15> 
+ 17: data_bus_io<2>_BUFR  34: memmapper/MapBank3_q<3>                                   51: wr_n_i 
+
+Signal                        1         2         3         4         5         6 FB
+Name                0----+----0----+----0----+----0----+----0----+----0----+----0 Inputs
+tmr_wr_s/tmr_wr_s_D2 
+                     XXXXXXXXXXXXXXXX..........................X.......X......... 18
+ffff/ffff_D2         XXXXXXXXXXXXXXXX............................................ 16
+portaspi/start_s/portaspi/start_s_CLKF 
+                     ........................................X..X......X......... 3
+data_bus_io<4>_MLTSRCEDGE/data_bus_io<4>_MLTSRCEDGE_TRST 
+                     ........XXXXXX....X......XX.............X...X............... 11
+data_bus_io<7>_MLTSRCEDGE/data_bus_io<7>_MLTSRCEDGE_TRST 
+                     .XXXXXXXXXXXXXXX........X...............XXXXX............... 21
+data_bus_io<7>       XXXXXXXXXXXXXXXX..X....X...............XXXXXX....X.......... 25
+data_bus_io<6>       XXXXXXXXXXXXXXXX..X...X...............X.XXXXX...X........... 25
+data_bus_io<5>       XXXXXXXXXXXXXXXX..X..X...............X..XXXXX..X............ 25
+data_bus_io<4>       XXXXXXXXXXXXXXXX.X..X....XX.X.X.X.X.X...XXXXX.X............. 31
+data_bus_io<3>       XXXXXXXXXXXXXXXX.X.X.....XXX.X.X.X.X....XXXXXX.............. 31
+data_bus_io<2>       ................XX.......................................... 2
+                    0----+----1----+----2----+----3----+----4----+----5----+----6
+                              0         0         0         0         0         0
+*********************************** FB2  ***********************************
+Number of function block inputs used/remaining:               31/23
+Number of signals used by logic mapping into function block:  31
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+portaspi/spi_data_q<0>
+                      2       0     0   3     FB2_1         (b)     (b)
+portaspi/ff_clr_s     2       0     0   3     FB2_2   99    GSR/I/O GSR/I
+$OpTx$FX_DC$330       2       0     0   3     FB2_3         (b)     (b)
+portaspi/state_s_FSM_FFd2
+                      3       0     0   2     FB2_4         (b)     (b)
+portaspi/count_q<3>   3       0     0   2     FB2_5   1     GTS/I/O I
+portaspi/count_q<0>   3       0     0   2     FB2_6   2     GTS/I/O I
+portaspi/shift_reg_s<7>
+                      4       0     0   1     FB2_7         (b)     (b)
+portaspi/shift_reg_s<6>
+                      4       0     0   1     FB2_8   3     GTS/I/O (b)
+portaspi/shift_reg_s<5>
+                      4       0     0   1     FB2_9   4     GTS/I/O I
+portaspi/shift_reg_s<4>
+                      4       0     0   1     FB2_10        (b)     (b)
+sd_sclk_o             2       0     0   3     FB2_11  6     I/O     O
+sd_mosi_o             4       0     0   1     FB2_12  7     I/O     O
+portaspi/shift_reg_s<3>
+                      4       0     0   1     FB2_13        (b)     (b)
+portaspi/shift_reg_s<2>
+                      4       0     0   1     FB2_14  8     I/O     I
+portaspi/shift_reg_s<1>
+                      4       0     0   1     FB2_15  9     I/O     I
+portaspi/shift_reg_s<0>
+                      4       0     0   1     FB2_16        (b)     (b)
+portaspi/count_q<1>   4       0     0   1     FB2_17  10    I/O     I
+portaspi/count_q<2>   5       0     0   0     FB2_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: $OpTx$FX_DC$330          12: portaspi/shift_reg_s<3>     22: portaspi/spi_data_buf_s<4> 
+  2: portaspi/count_q<0>      13: portaspi/shift_reg_s<4>     23: portaspi/spi_data_buf_s<5> 
+  3: portaspi/count_q<1>      14: portaspi/shift_reg_s<5>     24: portaspi/spi_data_buf_s<6> 
+  4: portaspi/count_q<2>      15: portaspi/shift_reg_s<6>     25: portaspi/spi_data_buf_s<7> 
+  5: portaspi/count_q<3>      16: portaspi/shift_reg_s<7>     26: portaspi/state_s_FSM_FFd1 
+  6: portaspi/ff_clr_s        17: portaspi/spi_clk_buf_s      27: portaspi/state_s_FSM_FFd2 
+  7: portaspi/ff_q            18: portaspi/spi_data_buf_s<0>  28: reset_n_i 
+  8: portaspi/prev_spi_clk_s  19: portaspi/spi_data_buf_s<1>  29: sd_miso_i 
+  9: portaspi/shift_reg_s<0>  20: portaspi/spi_data_buf_s<2>  30: sd_mosi_o 
+ 10: portaspi/shift_reg_s<1>  21: portaspi/spi_data_buf_s<3>  31: sd_sclk_o 
+ 11: portaspi/shift_reg_s<2> 
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+portaspi/spi_data_q<0> 
+                     ........X................XXX............ 4
+portaspi/ff_clr_s    .....XX..................XX............. 4
+$OpTx$FX_DC$330      ......XX........X........XX............. 5
+portaspi/state_s_FSM_FFd2 
+                     .XXXX.XX........X........XXX............ 10
+portaspi/count_q<3>  .XXXX.XX........X........XXX............ 10
+portaspi/count_q<0>  XX.....X........X........XXX............ 7
+portaspi/shift_reg_s<7> 
+                     X.....XX......XXX......X.XXX............ 10
+portaspi/shift_reg_s<6> 
+                     X.....XX.....XX.X.....X..XXX............ 10
+portaspi/shift_reg_s<5> 
+                     X.....XX....XX..X....X...XXX............ 10
+portaspi/shift_reg_s<4> 
+                     X.....XX...XX...X...X....XXX............ 10
+sd_sclk_o            .......X........X........XXX..X......... 6
+sd_mosi_o            X.....XX.......XX.......XXXX.X.......... 10
+portaspi/shift_reg_s<3> 
+                     X.....XX..XX....X..X.....XXX............ 10
+portaspi/shift_reg_s<2> 
+                     X.....XX.XX.....X.X......XXX............ 10
+portaspi/shift_reg_s<1> 
+                     X.....XXXX......XX.......XXX............ 10
+portaspi/shift_reg_s<0> 
+                     ......XXX.......X........XXXX........... 8
+portaspi/count_q<1>  XXX....X........X........XXX............ 8
+portaspi/count_q<2>  XXXX............X........XXX............ 8
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB3  ***********************************
+Number of function block inputs used/remaining:               50/4
+Number of signals used by logic mapping into function block:  50
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+sd_chg_s<1>           2       1<- \/4   0     FB3_1         (b)     (b)
+data_bus_io<1>       12       7<-   0   0     FB3_2   23    GCK/I/O I/O
+sd_chg_s<0>           2       0   /\3   0     FB3_3         (b)     (b)
+sd_chg_q<1>           3       0   \/2   0     FB3_4         (b)     (b)
+data_bus_io<0>       12       7<-   0   0     FB3_5   24    I/O     I/O
+(unused)              0       0   /\5   0     FB3_6   25    I/O     I
+sd_chg_q<0>           3       0     0   2     FB3_7         (b)     (b)
+rom_bank2_q<0>        3       0     0   2     FB3_8   27    GCK/I/O I
+rom_bank1_q<1>        3       0     0   2     FB3_9   28    I/O     I
+rom_bank1_q<0>        3       0     0   2     FB3_10        (b)     (b)
+memmapper/MapBank3_q<1>
+                      3       0     0   2     FB3_11  29    I/O     I
+memmapper/MapBank3_q<0>
+                      3       0     0   2     FB3_12  30    I/O     I
+memmapper/MapBank2_q<1>
+                      3       0     0   2     FB3_13        (b)     (b)
+memmapper/MapBank2_q<0>
+                      3       0     0   2     FB3_14  32    I/O     I
+memmapper/MapBank1_q<1>
+                      3       0     0   2     FB3_15  33    I/O     I
+memmapper/MapBank1_q<0>
+                      3       0     0   2     FB3_16        (b)     (b)
+memmapper/MapBank0_q<1>
+                      3       0     0   2     FB3_17  34    I/O     I
+memmapper/MapBank0_q<0>
+                      3       0   \/1   1     FB3_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: data_bus_io<1>.PIN  18: addr_bus_i<9>                                             35: sw_i<1> 
+  2: data_bus_io<0>.PIN  19: data_bus_io<4>_MLTSRCEDGE/data_bus_io<4>_MLTSRCEDGE_TRST  36: sd_chg_q<0> 
+  3: addr_bus_i<0>       20: exp/exp_reg<0>                                            37: sd_chg_q<1> 
+  4: addr_bus_i<10>      21: exp/exp_reg<1>                                            38: sd_chg_s<0> 
+  5: addr_bus_i<11>      22: iorq_n_i                                                  39: sd_chg_s<1> 
+  6: addr_bus_i<12>      23: m1_n_i                                                    40: sd_cs_n_o<0> 
+  7: addr_bus_i<13>      24: memmapper/MapBank0_q<0>                                   41: sd_cs_n_o<1> 
+  8: addr_bus_i<14>      25: memmapper/MapBank0_q<1>                                   42: sd_pres_n_i<0> 
+  9: addr_bus_i<15>      26: memmapper/MapBank1_q<0>                                   43: sd_pres_n_i<1> 
+ 10: addr_bus_i<1>       27: memmapper/MapBank1_q<1>                                   44: sltsl_n_i 
+ 11: addr_bus_i<2>       28: memmapper/MapBank2_q<0>                                   45: sltsl_rom_n_s/sltsl_rom_n_s_D2 
+ 12: addr_bus_i<3>       29: memmapper/MapBank2_q<1>                                   46: spi_cs_s/spi_cs_s_D2 
+ 13: addr_bus_i<4>       30: memmapper/MapBank3_q<0>                                   47: sw_i<0> 
+ 14: addr_bus_i<5>       31: memmapper/MapBank3_q<1>                                   48: tmr_cnt_q<8> 
+ 15: addr_bus_i<6>       32: portaspi/spi_data_q<0>                                    49: tmr_cnt_q<9> 
+ 16: addr_bus_i<7>       33: portaspi/spi_data_q<1>                                    50: wr_n_i 
+ 17: addr_bus_i<8>       34: rd_n_i                                                   
+
+Signal                        1         2         3         4         5         6 FB
+Name                0----+----0----+----0----+----0----+----0----+----0----+----0 Inputs
+sd_chg_s<1>          ..XXXXXXXXXXXXXXXX...............X..X.......X............... 19
+data_bus_io<1>       ..XXXXXXXXXXXXXXXXX.XXX.X.X.X.X.XXX....XXXXXXXX.X........... 36
+sd_chg_s<0>          ..XXXXXXXXXXXXXXXX...............X.X........X............... 19
+sd_chg_q<1>          ..XXXXXXXXXXXXXXXX...............X..X..XX.X.X............... 22
+data_bus_io<0>       ..XXXXXXXXXXXXXXXXXX.XXX.X.X.X.X.X...XXXX..XXXXX............ 35
+sd_chg_q<0>          ..XXXXXXXXXXXXXXXX...............X.X...XXX..X............... 22
+rom_bank2_q<0>       .X..XXXXX...................................X....X.......... 8
+rom_bank1_q<1>       X...XXXXX...................................X....X.......... 8
+rom_bank1_q<0>       .X..XXXXX...................................X....X.......... 8
+memmapper/MapBank3_q<1> 
+                     X.X......XXXXXXX.....XX.......................X..X.......... 13
+memmapper/MapBank3_q<0> 
+                     .XX......XXXXXXX.....XX.......................X..X.......... 13
+memmapper/MapBank2_q<1> 
+                     X.X......XXXXXXX.....XX.......................X..X.......... 13
+memmapper/MapBank2_q<0> 
+                     .XX......XXXXXXX.....XX.......................X..X.......... 13
+memmapper/MapBank1_q<1> 
+                     X.X......XXXXXXX.....XX.......................X..X.......... 13
+memmapper/MapBank1_q<0> 
+                     .XX......XXXXXXX.....XX.......................X..X.......... 13
+memmapper/MapBank0_q<1> 
+                     X.X......XXXXXXX.....XX.......................X..X.......... 13
+memmapper/MapBank0_q<0> 
+                     .XX......XXXXXXX.....XX.......................X..X.......... 13
+                    0----+----1----+----2----+----3----+----4----+----5----+----6
+                              0         0         0         0         0         0
+*********************************** FB4  ***********************************
+Number of function block inputs used/remaining:               50/4
+Number of signals used by logic mapping into function block:  50
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+data_bus_io<2>_BUFR  11       6<-   0   0     FB4_1         (b)     (b)
+ram_a_o<18>           4       0   /\1   0     FB4_2   87    I/O     O
+(unused)              0       0     0   5     FB4_3         (b)     
+(unused)              0       0     0   5     FB4_4         (b)     
+ram_cs_n_o            4       0     0   1     FB4_5   89    I/O     O
+(unused)              0       0     0   5     FB4_6   90    I/O     
+exp/exp_reg<2>        2       0     0   3     FB4_7         (b)     (b)
+exp/exp_reg<1>        2       0     0   3     FB4_8   91    I/O     (b)
+exp/exp_reg<0>        2       0     0   3     FB4_9   92    I/O     (b)
+rom_bank2_q<2>        3       0     0   2     FB4_10        (b)     (b)
+sd_cs_n_o<0>          2       0     0   3     FB4_11  93    I/O     O
+sd_cs_n_o<1>          2       0     0   3     FB4_12  94    I/O     O
+rom_bank2_q<1>        3       0     0   2     FB4_13        (b)     (b)
+rom_bank1_q<2>        3       0     0   2     FB4_14  95    I/O     (b)
+memmapper/MapBank1_q<2>
+                      3       0     0   2     FB4_15  96    I/O     I
+memmapper/MapBank0_q<2>
+                      3       0     0   2     FB4_16        (b)     (b)
+sltsl_rom_n_s/sltsl_rom_n_s_D2
+                      5       0     0   0     FB4_17  97    I/O     (b)
+(unused)              0       0   \/5   0     FB4_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: data_bus_io<2>.PIN  18: addr_bus_i<8>            35: memmapper/MapBank2_q<2> 
+  2: data_bus_io<1>.PIN  19: addr_bus_i<9>            36: memmapper/MapBank2_q<4> 
+  3: data_bus_io<0>.PIN  20: exp/exp_reg<0>           37: memmapper/MapBank3_q<2> 
+  4: addr_bus_i<0>       21: exp/exp_reg<1>           38: memmapper/MapBank3_q<4> 
+  5: addr_bus_i<10>      22: exp/exp_reg<2>           39: portaspi/spi_data_q<2> 
+  6: addr_bus_i<11>      23: exp/exp_reg<3>           40: rd_n_i 
+  7: addr_bus_i<12>      24: exp/exp_reg<4>           41: sd_cs_n_o<0> 
+  8: addr_bus_i<13>      25: exp/exp_reg<5>           42: sd_cs_n_o<1> 
+  9: addr_bus_i<14>      26: exp/exp_reg<6>           43: sd_wp_i<0> 
+ 10: addr_bus_i<15>      27: exp/exp_reg<7>           44: sd_wp_i<1> 
+ 11: addr_bus_i<1>       28: ffff/ffff_D2             45: sltsl_n_i 
+ 12: addr_bus_i<2>       29: iorq_n_i                 46: sltsl_rom_n_s/sltsl_rom_n_s_D2 
+ 13: addr_bus_i<3>       30: m1_n_i                   47: spi_cs_s/spi_cs_s_D2 
+ 14: addr_bus_i<4>       31: memmapper/MapBank0_q<2>  48: sw_i<0> 
+ 15: addr_bus_i<5>       32: memmapper/MapBank0_q<4>  49: tmr_cnt_q<10> 
+ 16: addr_bus_i<6>       33: memmapper/MapBank1_q<2>  50: wr_n_i 
+ 17: addr_bus_i<7>       34: memmapper/MapBank1_q<4> 
+
+Signal                        1         2         3         4         5         6 FB
+Name                0----+----0----+----0----+----0----+----0----+----0----+----0 Inputs
+data_bus_io<2>_BUFR  ...XXXXXXXXXXXXXXXX..X......XXX.X.X.X.XXXXXXXXXXX........... 34
+ram_a_o<18>          ........XX.....................X.X.X.X...................... 6
+ram_cs_n_o           ........XX.........XXXXXXXXX................X..X............ 13
+exp/exp_reg<2>       X..........................X................X..X.X.......... 5
+exp/exp_reg<1>       .X.........................X................X..X.X.......... 5
+exp/exp_reg<0>       ..X........................X................X..X.X.......... 5
+rom_bank2_q<2>       X....XXXXX...................................X...X.......... 8
+sd_cs_n_o<0>         ..XXXXXXXXXXXXXXXXX..........................X...X.......... 19
+sd_cs_n_o<1>         .X.XXXXXXXXXXXXXXXX..........................X...X.......... 19
+rom_bank2_q<1>       .X...XXXXX...................................X...X.......... 8
+rom_bank1_q<2>       X....XXXXX...................................X...X.......... 8
+memmapper/MapBank1_q<2> 
+                     X..X......XXXXXXX...........XX.................X.X.......... 13
+memmapper/MapBank0_q<2> 
+                     X..X......XXXXXXX...........XX.................X.X.......... 13
+sltsl_rom_n_s/sltsl_rom_n_s_D2 
+                     ........XX.........XXXXXXXXX................X..X............ 13
+                    0----+----1----+----2----+----3----+----4----+----5----+----6
+                              0         0         0         0         0         0
+*********************************** FB5  ***********************************
+Number of function block inputs used/remaining:               43/11
+Number of signals used by logic mapping into function block:  43
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+tmr_cnt_q<0>          2       0   \/3   0     FB5_1         (b)     (b)
+tmr_cnt_q<15>        10       5<-   0   0     FB5_2   35    I/O     I
+exp/exp_reg<7>        2       0   /\2   1     FB5_3         (b)     (b)
+exp/exp_reg<6>        2       0     0   3     FB5_4         (b)     (b)
+wait_n_o              1       0     0   4     FB5_5   36    I/O     O
+exp/exp_reg<5>        2       0     0   3     FB5_6   37    I/O     I
+exp/exp_reg<4>        2       0     0   3     FB5_7         (b)     (b)
+exp/exp_reg<3>        2       0     0   3     FB5_8   39    I/O     (b)
+memmapper/MapBank1_q<3>
+                      3       0     0   2     FB5_9   40    I/O     (b)
+memmapper/MapBank0_q<3>
+                      3       0   \/2   0     FB5_10        (b)     (b)
+tmr_cnt_q<9>          4       2<- \/3   0     FB5_11  41    I/O     I
+tmr_cnt_q<10>         5       3<- \/3   0     FB5_12  42    I/O     I
+tmr_cnt_q<11>         6       3<- \/2   0     FB5_13        (b)     (b)
+tmr_cnt_q<12>         7       2<-   0   0     FB5_14  43    I/O     I
+portaspi/state_s_FSM_FFd1
+                      2       0   \/3   0     FB5_15  46    I/O     (b)
+tmr_cnt_q<13>         8       3<-   0   0     FB5_16        (b)     (b)
+busdir_n_o            1       0   \/4   0     FB5_17  49    I/O     O
+tmr_cnt_q<14>         9       4<-   0   0     FB5_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2  16: addr_bus_i<7>              30: tmr_cnt_q<13> 
+  2: data_bus_io<7>.PIN                                                17: ffff/ffff_D2               31: tmr_cnt_q<14> 
+  3: data_bus_io<2>.PIN                                                18: iorq_n_i                   32: tmr_cnt_q<15> 
+  4: data_bus_io<1>.PIN                                                19: m1_n_i                     33: tmr_cnt_q<1> 
+  5: data_bus_io<6>.PIN                                                20: portaspi/state_s_FSM_FFd2  34: tmr_cnt_q<2> 
+  6: data_bus_io<5>.PIN                                                21: portaspi/wait_n_s          35: tmr_cnt_q<3> 
+  7: data_bus_io<4>.PIN                                                22: rd_n_i                     36: tmr_cnt_q<4> 
+  8: data_bus_io<3>.PIN                                                23: reset_n_i                  37: tmr_cnt_q<5> 
+  9: addr_bus_i<0>                                                     24: sltsl_n_i                  38: tmr_cnt_q<6> 
+ 10: addr_bus_i<1>                                                     25: sw_i<0>                    39: tmr_cnt_q<7> 
+ 11: addr_bus_i<2>                                                     26: tmr_cnt_q<0>               40: tmr_cnt_q<8> 
+ 12: addr_bus_i<3>                                                     27: tmr_cnt_q<10>              41: tmr_cnt_q<9> 
+ 13: addr_bus_i<4>                                                     28: tmr_cnt_q<11>              42: tmr_wr_s/tmr_wr_s_D2 
+ 14: addr_bus_i<5>                                                     29: tmr_cnt_q<12>              43: wr_n_i 
+ 15: addr_bus_i<6>                                                    
+
+Signal                        1         2         3         4         5 FB
+Name                0----+----0----+----0----+----0----+----0----+----0 Inputs
+tmr_cnt_q<0>         .........................XXXXXXXXXXXXXXXXX........ 17
+tmr_cnt_q<15>        XX.......................XXXXXXXXXXXXXXXXX........ 19
+exp/exp_reg<7>       .X..............X......XX.................X....... 5
+exp/exp_reg<6>       ....X...........X......XX.................X....... 5
+wait_n_o             ....................X............................. 1
+exp/exp_reg<5>       .....X..........X......XX.................X....... 5
+exp/exp_reg<4>       ......X.........X......XX.................X....... 5
+exp/exp_reg<3>       .......X........X......XX.................X....... 5
+memmapper/MapBank1_q<3> 
+                     .......XXXXXXXXX.XX.....X.................X....... 13
+memmapper/MapBank0_q<3> 
+                     .......XXXXXXXXX.XX.....X.................X....... 13
+tmr_cnt_q<9>         X..X.....................XXXXXXXXXXXXXXXXX........ 19
+tmr_cnt_q<10>        X.X......................XXXXXXXXXXXXXXXXX........ 19
+tmr_cnt_q<11>        X......X.................XXXXXXXXXXXXXXXXX........ 19
+tmr_cnt_q<12>        X.....X..................XXXXXXXXXXXXXXXXX........ 19
+portaspi/state_s_FSM_FFd1 
+                     ...................X..X........................... 2
+tmr_cnt_q<13>        X....X...................XXXXXXXXXXXXXXXXX........ 19
+busdir_n_o           ..........XXXXXX.XX..X..X......................... 10
+tmr_cnt_q<14>        X...X....................XXXXXXXXXXXXXXXXX........ 19
+                    0----+----1----+----2----+----3----+----4----+----5
+                              0         0         0         0         0
+*********************************** FB6  ***********************************
+Number of function block inputs used/remaining:               49/5
+Number of signals used by logic mapping into function block:  49
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+rom_bank2_q<3>        3       0     0   2     FB6_1         (b)     (b)
+memmapper/MapBank3_q<4>
+                      3       0     0   2     FB6_2   74    I/O     (b)
+memmapper/MapBank3_q<3>
+                      3       0     0   2     FB6_3         (b)     (b)
+memmapper/MapBank3_q<2>
+                      3       0     0   2     FB6_4         (b)     (b)
+rom_we_n_o            1       0   \/1   3     FB6_5   76    I/O     O
+rom_ce_n_o            7       2<-   0   0     FB6_6   77    I/O     O
+memmapper/MapBank2_q<4>
+                      3       0   /\1   1     FB6_7         (b)     (b)
+rom_a_o<14>           2       0     0   3     FB6_8   78    I/O     O
+rom_a_o<15>           2       0     0   3     FB6_9   79    I/O     O
+memmapper/MapBank2_q<3>
+                      3       0     0   2     FB6_10        (b)     (b)
+rom_a_o<16>           2       0     0   3     FB6_11  80    I/O     O
+ram_a_o<14>           4       0     0   1     FB6_12  81    I/O     O
+memmapper/MapBank2_q<2>
+                      3       0     0   2     FB6_13        (b)     (b)
+ram_a_o<15>           4       0     0   1     FB6_14  82    I/O     O
+ram_a_o<16>           4       0     0   1     FB6_15  85    I/O     O
+memmapper/MapBank1_q<4>
+                      3       0     0   2     FB6_16        (b)     (b)
+ram_a_o<17>           4       0     0   1     FB6_17  86    I/O     O
+memmapper/MapBank0_q<4>
+                      3       0     0   2     FB6_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: data_bus_io<2>.PIN  18: addr_bus_i<8>            34: memmapper/MapBank3_q<0> 
+  2: data_bus_io<4>.PIN  19: addr_bus_i<9>            35: memmapper/MapBank3_q<1> 
+  3: data_bus_io<3>.PIN  20: iorq_n_i                 36: memmapper/MapBank3_q<2> 
+  4: addr_bus_i<0>       21: m1_n_i                   37: memmapper/MapBank3_q<3> 
+  5: addr_bus_i<10>      22: memmapper/MapBank0_q<0>  38: rd_n_i 
+  6: addr_bus_i<11>      23: memmapper/MapBank0_q<1>  39: rom_bank1_q<0> 
+  7: addr_bus_i<12>      24: memmapper/MapBank0_q<2>  40: rom_bank1_q<1> 
+  8: addr_bus_i<13>      25: memmapper/MapBank0_q<3>  41: rom_bank1_q<2> 
+  9: addr_bus_i<14>      26: memmapper/MapBank1_q<0>  42: rom_bank2_q<0> 
+ 10: addr_bus_i<15>      27: memmapper/MapBank1_q<1>  43: rom_bank2_q<1> 
+ 11: addr_bus_i<1>       28: memmapper/MapBank1_q<2>  44: rom_bank2_q<2> 
+ 12: addr_bus_i<2>       29: memmapper/MapBank1_q<3>  45: rom_bank2_q<3> 
+ 13: addr_bus_i<3>       30: memmapper/MapBank2_q<0>  46: sltsl_rom_n_s/sltsl_rom_n_s_D2 
+ 14: addr_bus_i<4>       31: memmapper/MapBank2_q<1>  47: spi_cs_s/spi_cs_s_D2 
+ 15: addr_bus_i<5>       32: memmapper/MapBank2_q<2>  48: sw_i<0> 
+ 16: addr_bus_i<6>       33: memmapper/MapBank2_q<3>  49: wr_n_i 
+ 17: addr_bus_i<7>      
+
+Signal                        1         2         3         4         5 FB
+Name                0----+----0----+----0----+----0----+----0----+----0 Inputs
+rom_bank2_q<3>       ..X..XXXXX...................................X..X. 8
+memmapper/MapBank3_q<4> 
+                     .X.X......XXXXXXX..XX..........................XX. 13
+memmapper/MapBank3_q<3> 
+                     ..XX......XXXXXXX..XX..........................XX. 13
+memmapper/MapBank3_q<2> 
+                     X..X......XXXXXXX..XX..........................XX. 13
+rom_we_n_o           ........XX...................................X..X. 4
+rom_ce_n_o           ....XXXXXX...XXXXXX..................X......XXX... 16
+memmapper/MapBank2_q<4> 
+                     .X.X......XXXXXXX..XX..........................XX. 13
+rom_a_o<14>          ........XX............................X..X...X.... 5
+rom_a_o<15>          ........XX.............................X..X..X.... 5
+memmapper/MapBank2_q<3> 
+                     ..XX......XXXXXXX..XX..........................XX. 13
+rom_a_o<16>          ........XX..............................X..X.X.... 5
+ram_a_o<14>          ........XX...........X...X...X...X................ 6
+memmapper/MapBank2_q<2> 
+                     X..X......XXXXXXX..XX..........................XX. 13
+ram_a_o<15>          ........XX............X...X...X...X............... 6
+ram_a_o<16>          ........XX.............X...X...X...X.............. 6
+memmapper/MapBank1_q<4> 
+                     .X.X......XXXXXXX..XX..........................XX. 13
+ram_a_o<17>          ........XX..............X...X...X...X............. 6
+memmapper/MapBank0_q<4> 
+                     .X.X......XXXXXXX..XX..........................XX. 13
+                    0----+----1----+----2----+----3----+----4----+----5
+                              0         0         0         0         0
+*********************************** FB7  ***********************************
+Number of function block inputs used/remaining:               21/33
+Number of signals used by logic mapping into function block:  21
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+(unused)              0       0     0   5     FB7_1         (b)     
+portaspi/start_s/portaspi/start_s_RSTF
+                      1       0     0   4     FB7_2   50    I/O     I
+portaspi/spi_clk_buf_s
+                      1       0     0   4     FB7_3         (b)     (b)
+portaspi/start_s      2       0     0   3     FB7_4         (b)     (b)
+portaspi/spi_data_q<7>
+                      2       0     0   3     FB7_5   52    I/O     I
+portaspi/spi_data_q<6>
+                      2       0     0   3     FB7_6   53    I/O     (b)
+portaspi/spi_data_q<5>
+                      2       0     0   3     FB7_7         (b)     (b)
+portaspi/spi_data_q<4>
+                      2       0     0   3     FB7_8   54    I/O     I
+portaspi/prev_spi_clk_s
+                      2       0     0   3     FB7_9   55    I/O     I
+portaspi/ff_q         2       0     0   3     FB7_10        (b)     (b)
+portaspi/spi_data_buf_s<7>
+                      3       0     0   2     FB7_11  56    I/O     I
+portaspi/spi_data_buf_s<6>
+                      3       0     0   2     FB7_12  58    I/O     I
+portaspi/spi_data_buf_s<5>
+                      3       0     0   2     FB7_13        (b)     (b)
+portaspi/spi_data_buf_s<4>
+                      3       0     0   2     FB7_14  59    I/O     I
+portaspi/spi_data_buf_s<3>
+                      3       0     0   2     FB7_15  60    I/O     (b)
+portaspi/spi_data_buf_s<2>
+                      3       0     0   2     FB7_16        (b)     (b)
+portaspi/spi_data_buf_s<1>
+                      3       0     0   2     FB7_17  61    I/O     (b)
+portaspi/spi_data_buf_s<0>
+                      3       0     0   2     FB7_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: data_bus_io<7>.PIN   8: data_bus_io<3>.PIN       15: portaspi/start_s 
+  2: data_bus_io<2>.PIN   9: portaspi/ff_clr_s        16: portaspi/start_s/portaspi/start_s_CLKF 
+  3: data_bus_io<1>.PIN  10: portaspi/shift_reg_s<4>  17: portaspi/start_s/portaspi/start_s_RSTF 
+  4: data_bus_io<0>.PIN  11: portaspi/shift_reg_s<5>  18: portaspi/state_s_FSM_FFd1 
+  5: data_bus_io<6>.PIN  12: portaspi/shift_reg_s<6>  19: portaspi/state_s_FSM_FFd2 
+  6: data_bus_io<5>.PIN  13: portaspi/shift_reg_s<7>  20: rd_n_i 
+  7: data_bus_io<4>.PIN  14: portaspi/spi_clk_buf_s   21: reset_n_i 
+
+Signal                        1         2         3         4 FB
+Name                0----+----0----+----0----+----0----+----0 Inputs
+portaspi/start_s/portaspi/start_s_RSTF 
+                     ........X...........X................... 2
+portaspi/spi_clk_buf_s 
+                     .............X...XX..................... 3
+portaspi/start_s     ...............XX....................... 2
+portaspi/spi_data_q<7> 
+                     ............X....XX.X................... 4
+portaspi/spi_data_q<6> 
+                     ...........X.....XX.X................... 4
+portaspi/spi_data_q<5> 
+                     ..........X......XX.X................... 4
+portaspi/spi_data_q<4> 
+                     .........X.......XX.X................... 4
+portaspi/prev_spi_clk_s 
+                     .............X......X................... 2
+portaspi/ff_q        ........X.....X......................... 2
+portaspi/spi_data_buf_s<7> 
+                     X..............XX..X.................... 4
+portaspi/spi_data_buf_s<6> 
+                     ....X..........XX..X.................... 4
+portaspi/spi_data_buf_s<5> 
+                     .....X.........XX..X.................... 4
+portaspi/spi_data_buf_s<4> 
+                     ......X........XX..X.................... 4
+portaspi/spi_data_buf_s<3> 
+                     .......X.......XX..X.................... 4
+portaspi/spi_data_buf_s<2> 
+                     .X.............XX..X.................... 4
+portaspi/spi_data_buf_s<1> 
+                     ..X............XX..X.................... 4
+portaspi/spi_data_buf_s<0> 
+                     ...X...........XX..X.................... 4
+                    0----+----1----+----2----+----3----+----4
+                              0         0         0         0
+*********************************** FB8  ***********************************
+Number of function block inputs used/remaining:               41/13
+Number of signals used by logic mapping into function block:  41
+Signal              Total   Imp   Exp Unused  Loc     Pin   Pin     Pin
+Name                Pt      Pt    Pt  Pt               #    Type    Use
+Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2
+                      1       0   /\3   1     FB8_1         (b)     (b)
+Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2
+                      1       0     0   4     FB8_2   63    I/O     (b)
+portaspi/spi_data_q<3>
+                      2       0     0   3     FB8_3         (b)     (b)
+portaspi/spi_data_q<2>
+                      2       0     0   3     FB8_4         (b)     (b)
+portaspi/spi_data_q<1>
+                      2       0     0   3     FB8_5   64    I/O     (b)
+ram_we_n_o            1       0     0   4     FB8_6   65    I/O     O
+tmr_cnt_q<5>          3       0     0   2     FB8_7         (b)     (b)
+tmr_cnt_q<1>          3       0     0   2     FB8_8   66    I/O     I
+rom_a_o<17>           1       0     0   4     FB8_9   67    I/O     O
+spi_cs_s/spi_cs_s_D2
+                      3       0     0   2     FB8_10        (b)     (b)
+portaspi/wait_n_s     3       0     0   2     FB8_11  68    I/O     (b)
+ram_a_o<13>           1       0     0   4     FB8_12  70    I/O     O
+tmr_cnt_q<6>          4       0     0   1     FB8_13        (b)     (b)
+tmr_cnt_q<2>          4       0     0   1     FB8_14  71    I/O     (b)
+tmr_cnt_q<7>          5       0     0   0     FB8_15  72    I/O     (b)
+tmr_cnt_q<3>          5       0     0   0     FB8_16        (b)     (b)
+tmr_cnt_q<4>          6       1<-   0   0     FB8_17  73    I/O     (b)
+tmr_cnt_q<8>          7       3<- /\1   0     FB8_18        (b)     (b)
+
+Signals Used by Logic in Function Block
+  1: Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2  15: portaspi/state_s_FSM_FFd1       29: tmr_cnt_q<14> 
+  2: data_bus_io<0>.PIN                                                16: portaspi/state_s_FSM_FFd2       30: tmr_cnt_q<15> 
+  3: addr_bus_i<10>                                                    17: portaspi/wait_n_s               31: tmr_cnt_q<1> 
+  4: addr_bus_i<11>                                                    18: reset_n_i                       32: tmr_cnt_q<2> 
+  5: addr_bus_i<12>                                                    19: sw_i<1>                         33: tmr_cnt_q<3> 
+  6: addr_bus_i<13>                                                    20: rom_bank1_q<0>                  34: tmr_cnt_q<4> 
+  7: addr_bus_i<14>                                                    21: rom_bank1_q<1>                  35: tmr_cnt_q<5> 
+  8: addr_bus_i<15>                                                    22: rom_bank1_q<2>                  36: tmr_cnt_q<6> 
+  9: addr_bus_i<8>                                                     23: sltsl_rom_n_s/sltsl_rom_n_s_D2  37: tmr_cnt_q<7> 
+ 10: addr_bus_i<9>                                                     24: tmr_cnt_q<0>                    38: tmr_cnt_q<8> 
+ 11: portaspi/shift_reg_s<1>                                           25: tmr_cnt_q<10>                   39: tmr_cnt_q<9> 
+ 12: portaspi/shift_reg_s<2>                                           26: tmr_cnt_q<11>                   40: tmr_wr_s/tmr_wr_s_D2 
+ 13: portaspi/shift_reg_s<3>                                           27: tmr_cnt_q<12>                   41: wr_n_i 
+ 14: portaspi/start_s                                                  28: tmr_cnt_q<13>                  
+
+Signal                        1         2         3         4         5 FB
+Name                0----+----0----+----0----+----0----+----0----+----0 Inputs
+Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2 
+                     X.................................XXXX............ 5
+Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2 
+                     .......................X......XXXX................ 5
+portaspi/spi_data_q<3> 
+                     ............X.XX.X................................ 4
+portaspi/spi_data_q<2> 
+                     ...........X..XX.X................................ 4
+portaspi/spi_data_q<1> 
+                     ..........X...XX.X................................ 4
+ram_we_n_o           ........................................X......... 1
+tmr_cnt_q<5>         X......................XXXXXXXXXXXXXXXXX.......... 18
+tmr_cnt_q<1>         .......................XXXXXXXXXXXXXXXXX.......... 17
+rom_a_o<17>          ..................X............................... 1
+spi_cs_s/spi_cs_s_D2 
+                     ..XXXXXXXX.........XXXX........................... 12
+portaspi/wait_n_s    .............XXXXX................................ 5
+ram_a_o<13>          .....X............................................ 1
+tmr_cnt_q<6>         X......................XXXXXXXXXXXXXXXXX.......... 18
+tmr_cnt_q<2>         .......................XXXXXXXXXXXXXXXXX.......... 17
+tmr_cnt_q<7>         X......................XXXXXXXXXXXXXXXXX.......... 18
+tmr_cnt_q<3>         .......................XXXXXXXXXXXXXXXXX.......... 17
+tmr_cnt_q<4>         .......................XXXXXXXXXXXXXXXXX.......... 17
+tmr_cnt_q<8>         XX.....................XXXXXXXXXXXXXXXXX.......... 19
+                    0----+----1----+----2----+----3----+----4----+----5
+                              0         0         0         0         0
+*******************************  Equations  ********************************
+
+********** Mapped Logic **********
+
+
+$OpTx$FX_DC$330 <= ((portaspi/ff_q AND NOT portaspi/state_s_FSM_FFd1 AND 
+	NOT portaspi/state_s_FSM_FFd2)
+	OR (portaspi/state_s_FSM_FFd1 AND 
+	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s AND portaspi/prev_spi_clk_s));
+
+
+
+
+
+
+
+
+
+
+Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2 <= (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(1) AND NOT tmr_cnt_q(3) AND 
+	NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4));
+
+
+Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2 <= (NOT tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND 
+	NOT tmr_cnt_q(6) AND 
+	Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2);
+
+
+busdir_n_o <= NOT ((addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+	m1_n_i AND NOT rd_n_i AND NOT iorq_n_i));
+
+
+data_bus_io_I(0) <= NOT (((addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+	addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank3_q(0) AND 
+	NOT rd_n_i AND NOT iorq_n_i)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT tmr_cnt_q(8) AND NOT rd_n_i AND 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+	addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND sw_i(0) AND exp/exp_reg(0) AND NOT rd_n_i AND NOT sltsl_n_i)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT rd_n_i AND NOT sd_chg_s(0) AND NOT sd_cs_n_o(0) AND 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT rd_n_i AND NOT sd_chg_s(1) AND NOT sd_cs_n_o(1) AND 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT rd_n_i AND NOT sd_cs_n_o(0) AND NOT sd_cs_n_o(1) AND 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT sw_i(0) AND NOT rd_n_i AND sd_cs_n_o(0) AND sd_cs_n_o(1) AND 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (NOT rd_n_i AND NOT portaspi/spi_data_q(0) AND 
+	spi_cs_s/spi_cs_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank2_q(0) AND 
+	NOT rd_n_i AND NOT iorq_n_i)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank1_q(0) AND 
+	NOT rd_n_i AND NOT iorq_n_i)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank0_q(0) AND 
+	NOT rd_n_i AND NOT iorq_n_i)));
+data_bus_io(0) <= data_bus_io_I(0) when data_bus_io_OE(0) = '1' else 'Z';
+data_bus_io_OE(0) <= data_bus_io(4)_MLTSRCEDGE/data_bus_io(4)_MLTSRCEDGE_TRST;
+
+
+data_bus_io_I(1) <= NOT (((addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+	addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank3_q(1) AND 
+	NOT rd_n_i AND NOT iorq_n_i)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT tmr_cnt_q(9) AND NOT rd_n_i AND 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT sd_pres_n_i(1) AND NOT rd_n_i AND NOT sd_cs_n_o(1) AND 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT rd_n_i AND NOT sd_cs_n_o(0) AND NOT sd_cs_n_o(1) AND 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+	addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND sw_i(0) AND exp/exp_reg(1) AND NOT rd_n_i AND NOT sltsl_n_i)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT sd_pres_n_i(0) AND NOT rd_n_i AND NOT sd_cs_n_o(0) AND 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT rd_n_i AND NOT sw_i(1) AND sd_cs_n_o(0) AND sd_cs_n_o(1) AND 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (NOT rd_n_i AND NOT portaspi/spi_data_q(1) AND 
+	spi_cs_s/spi_cs_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank2_q(1) AND 
+	NOT rd_n_i AND NOT iorq_n_i)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank1_q(1) AND 
+	NOT rd_n_i AND NOT iorq_n_i)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank0_q(1) AND 
+	NOT rd_n_i AND NOT iorq_n_i)));
+data_bus_io(1) <= data_bus_io_I(1) when data_bus_io_OE(1) = '1' else 'Z';
+data_bus_io_OE(1) <= data_bus_io(4)_MLTSRCEDGE/data_bus_io(4)_MLTSRCEDGE_TRST;
+
+
+data_bus_io(2)_BUFR <= NOT (((addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+	addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND sw_i(0) AND exp/exp_reg(2) AND NOT rd_n_i AND NOT sltsl_n_i)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT tmr_cnt_q(10) AND NOT rd_n_i AND 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT rd_n_i AND NOT sd_wp_i(0) AND sd_cs_n_o(1) AND 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT rd_n_i AND NOT sd_wp_i(1) AND NOT sd_cs_n_o(1) AND 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT rd_n_i AND sd_cs_n_o(0) AND sd_cs_n_o(1) AND 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT rd_n_i AND NOT sd_cs_n_o(0) AND NOT sd_cs_n_o(1) AND 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (NOT rd_n_i AND NOT portaspi/spi_data_q(2) AND 
+	spi_cs_s/spi_cs_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+	addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank3_q(2) AND 
+	NOT rd_n_i AND NOT iorq_n_i)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank2_q(2) AND 
+	NOT rd_n_i AND NOT iorq_n_i)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank1_q(2) AND 
+	NOT rd_n_i AND NOT iorq_n_i)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank0_q(2) AND 
+	NOT rd_n_i AND NOT iorq_n_i)));
+
+
+data_bus_io_I(2) <= data_bus_io(2)_BUFR;
+data_bus_io(2) <= data_bus_io_I(2) when data_bus_io_OE(2) = '1' else 'Z';
+data_bus_io_OE(2) <= data_bus_io(4)_MLTSRCEDGE/data_bus_io(4)_MLTSRCEDGE_TRST;
+
+
+data_bus_io_I(3) <= NOT (((addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+	addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank3_q(3) AND 
+	NOT rd_n_i AND NOT iorq_n_i)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND addr_bus_i(14) AND 
+	addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND addr_bus_i(10) AND 
+	NOT tmr_cnt_q(11) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+	addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND sw_i(0) AND exp/exp_reg(3) AND NOT rd_n_i AND NOT sltsl_n_i)
+	OR (NOT rd_n_i AND NOT portaspi/spi_data_q(3) AND 
+	spi_cs_s/spi_cs_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank2_q(3) AND 
+	NOT rd_n_i AND NOT iorq_n_i)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank1_q(3) AND 
+	NOT rd_n_i AND NOT iorq_n_i)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank0_q(3) AND 
+	NOT rd_n_i AND NOT iorq_n_i)));
+data_bus_io(3) <= data_bus_io_I(3) when data_bus_io_OE(3) = '1' else 'Z';
+data_bus_io_OE(3) <= data_bus_io(4)_MLTSRCEDGE/data_bus_io(4)_MLTSRCEDGE_TRST;
+
+
+data_bus_io(4)_MLTSRCEDGE/data_bus_io(4)_MLTSRCEDGE_TRST <= ((
+	data_bus_io(7)_MLTSRCEDGE/data_bus_io(7)_MLTSRCEDGE_TRST)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+	m1_n_i AND NOT rd_n_i AND NOT iorq_n_i));
+
+
+data_bus_io_I(4) <= NOT (((addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+	addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank3_q(4) AND 
+	NOT rd_n_i AND NOT iorq_n_i)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND addr_bus_i(14) AND 
+	addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND addr_bus_i(10) AND 
+	NOT tmr_cnt_q(12) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+	addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND sw_i(0) AND exp/exp_reg(4) AND NOT rd_n_i AND NOT sltsl_n_i)
+	OR (NOT rd_n_i AND NOT portaspi/spi_data_q(4) AND 
+	spi_cs_s/spi_cs_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank2_q(4) AND 
+	NOT rd_n_i AND NOT iorq_n_i)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank1_q(4) AND 
+	NOT rd_n_i AND NOT iorq_n_i)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank0_q(4) AND 
+	NOT rd_n_i AND NOT iorq_n_i)));
+data_bus_io(4) <= data_bus_io_I(4) when data_bus_io_OE(4) = '1' else 'Z';
+data_bus_io_OE(4) <= data_bus_io(4)_MLTSRCEDGE/data_bus_io(4)_MLTSRCEDGE_TRST;
+
+
+data_bus_io_I(5) <= NOT (((NOT rd_n_i AND NOT portaspi/spi_data_q(5) AND 
+	spi_cs_s/spi_cs_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND addr_bus_i(14) AND 
+	addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND addr_bus_i(10) AND 
+	NOT tmr_cnt_q(13) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+	addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND sw_i(0) AND exp/exp_reg(5) AND NOT rd_n_i AND NOT sltsl_n_i)));
+data_bus_io(5) <= data_bus_io_I(5) when data_bus_io_OE(5) = '1' else 'Z';
+data_bus_io_OE(5) <= data_bus_io(7)_MLTSRCEDGE/data_bus_io(7)_MLTSRCEDGE_TRST;
+
+
+data_bus_io_I(6) <= NOT (((NOT rd_n_i AND NOT portaspi/spi_data_q(6) AND 
+	spi_cs_s/spi_cs_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND addr_bus_i(14) AND 
+	addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND addr_bus_i(10) AND 
+	NOT tmr_cnt_q(14) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+	addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND sw_i(0) AND exp/exp_reg(6) AND NOT rd_n_i AND NOT sltsl_n_i)));
+data_bus_io(6) <= data_bus_io_I(6) when data_bus_io_OE(6) = '1' else 'Z';
+data_bus_io_OE(6) <= data_bus_io(7)_MLTSRCEDGE/data_bus_io(7)_MLTSRCEDGE_TRST;
+
+
+data_bus_io_I(7) <= NOT (((NOT rd_n_i AND NOT portaspi/spi_data_q(7) AND 
+	spi_cs_s/spi_cs_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND addr_bus_i(14) AND 
+	addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND addr_bus_i(10) AND 
+	NOT tmr_cnt_q(15) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+	addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND sw_i(0) AND exp/exp_reg(7) AND NOT rd_n_i AND NOT sltsl_n_i)));
+data_bus_io(7) <= data_bus_io_I(7) when data_bus_io_OE(7) = '1' else 'Z';
+data_bus_io_OE(7) <= data_bus_io(7)_MLTSRCEDGE/data_bus_io(7)_MLTSRCEDGE_TRST;
+
+
+data_bus_io(7)_MLTSRCEDGE/data_bus_io(7)_MLTSRCEDGE_TRST <= ((NOT rd_n_i AND spi_cs_s/spi_cs_s_D2)
+	OR (sw_i(0) AND NOT rd_n_i AND NOT sltsl_n_i AND ffff/ffff_D2)
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND addr_bus_i(14) AND 
+	addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND addr_bus_i(10) AND 
+	NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2));
+
+FDCPE_exp/exp_reg0: FDCPE port map (exp/exp_reg(0),data_bus_io(0).PIN,exp/exp_reg_C(0),NOT reset_n_i,'0');
+exp/exp_reg_C(0) <= NOT ((sw_i(0) AND NOT wr_n_i AND NOT sltsl_n_i AND ffff/ffff_D2));
+
+FDCPE_exp/exp_reg1: FDCPE port map (exp/exp_reg(1),data_bus_io(1).PIN,exp/exp_reg_C(1),NOT reset_n_i,'0');
+exp/exp_reg_C(1) <= NOT ((sw_i(0) AND NOT wr_n_i AND NOT sltsl_n_i AND ffff/ffff_D2));
+
+FDCPE_exp/exp_reg2: FDCPE port map (exp/exp_reg(2),data_bus_io(2).PIN,exp/exp_reg_C(2),NOT reset_n_i,'0');
+exp/exp_reg_C(2) <= NOT ((sw_i(0) AND NOT wr_n_i AND NOT sltsl_n_i AND ffff/ffff_D2));
+
+FDCPE_exp/exp_reg3: FDCPE port map (exp/exp_reg(3),data_bus_io(3).PIN,exp/exp_reg_C(3),NOT reset_n_i,'0');
+exp/exp_reg_C(3) <= NOT ((sw_i(0) AND NOT wr_n_i AND NOT sltsl_n_i AND ffff/ffff_D2));
+
+FDCPE_exp/exp_reg4: FDCPE port map (exp/exp_reg(4),data_bus_io(4).PIN,exp/exp_reg_C(4),NOT reset_n_i,'0');
+exp/exp_reg_C(4) <= NOT ((sw_i(0) AND NOT wr_n_i AND NOT sltsl_n_i AND ffff/ffff_D2));
+
+FDCPE_exp/exp_reg5: FDCPE port map (exp/exp_reg(5),data_bus_io(5).PIN,exp/exp_reg_C(5),NOT reset_n_i,'0');
+exp/exp_reg_C(5) <= NOT ((sw_i(0) AND NOT wr_n_i AND NOT sltsl_n_i AND ffff/ffff_D2));
+
+FDCPE_exp/exp_reg6: FDCPE port map (exp/exp_reg(6),data_bus_io(6).PIN,exp/exp_reg_C(6),NOT reset_n_i,'0');
+exp/exp_reg_C(6) <= NOT ((sw_i(0) AND NOT wr_n_i AND NOT sltsl_n_i AND ffff/ffff_D2));
+
+FDCPE_exp/exp_reg7: FDCPE port map (exp/exp_reg(7),data_bus_io(7).PIN,exp/exp_reg_C(7),NOT reset_n_i,'0');
+exp/exp_reg_C(7) <= NOT ((sw_i(0) AND NOT wr_n_i AND NOT sltsl_n_i AND ffff/ffff_D2));
+
+
+ffff/ffff_D2 <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+	addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10));
+
+FDCPE_memmapper/MapBank0_q0: FDCPE port map (memmapper/MapBank0_q(0),data_bus_io(0).PIN,memmapper/MapBank0_q_C(0),'0',NOT reset_n_i,memmapper/MapBank0_q_CE(0));
+memmapper/MapBank0_q_C(0) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+memmapper/MapBank0_q_CE(0) <= (NOT addr_bus_i(1) AND NOT addr_bus_i(0));
+
+FDCPE_memmapper/MapBank0_q1: FDCPE port map (memmapper/MapBank0_q(1),data_bus_io(1).PIN,memmapper/MapBank0_q_C(1),'0',NOT reset_n_i,memmapper/MapBank0_q_CE(1));
+memmapper/MapBank0_q_C(1) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+memmapper/MapBank0_q_CE(1) <= (NOT addr_bus_i(1) AND NOT addr_bus_i(0));
+
+FDCPE_memmapper/MapBank0_q2: FDCPE port map (memmapper/MapBank0_q(2),data_bus_io(2).PIN,memmapper/MapBank0_q_C(2),NOT reset_n_i,'0',memmapper/MapBank0_q_CE(2));
+memmapper/MapBank0_q_C(2) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+memmapper/MapBank0_q_CE(2) <= (NOT addr_bus_i(1) AND NOT addr_bus_i(0));
+
+FDCPE_memmapper/MapBank0_q3: FDCPE port map (memmapper/MapBank0_q(3),data_bus_io(3).PIN,memmapper/MapBank0_q_C(3),NOT reset_n_i,'0',memmapper/MapBank0_q_CE(3));
+memmapper/MapBank0_q_C(3) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+memmapper/MapBank0_q_CE(3) <= (NOT addr_bus_i(1) AND NOT addr_bus_i(0));
+
+FDCPE_memmapper/MapBank0_q4: FDCPE port map (memmapper/MapBank0_q(4),data_bus_io(4).PIN,memmapper/MapBank0_q_C(4),NOT reset_n_i,'0',memmapper/MapBank0_q_CE(4));
+memmapper/MapBank0_q_C(4) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+memmapper/MapBank0_q_CE(4) <= (NOT addr_bus_i(1) AND NOT addr_bus_i(0));
+
+FDCPE_memmapper/MapBank1_q0: FDCPE port map (memmapper/MapBank1_q(0),data_bus_io(0).PIN,memmapper/MapBank1_q_C(0),NOT reset_n_i,'0',memmapper/MapBank1_q_CE(0));
+memmapper/MapBank1_q_C(0) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+memmapper/MapBank1_q_CE(0) <= (NOT addr_bus_i(1) AND addr_bus_i(0));
+
+FDCPE_memmapper/MapBank1_q1: FDCPE port map (memmapper/MapBank1_q(1),data_bus_io(1).PIN,memmapper/MapBank1_q_C(1),'0',NOT reset_n_i,memmapper/MapBank1_q_CE(1));
+memmapper/MapBank1_q_C(1) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+memmapper/MapBank1_q_CE(1) <= (NOT addr_bus_i(1) AND addr_bus_i(0));
+
+FDCPE_memmapper/MapBank1_q2: FDCPE port map (memmapper/MapBank1_q(2),data_bus_io(2).PIN,memmapper/MapBank1_q_C(2),NOT reset_n_i,'0',memmapper/MapBank1_q_CE(2));
+memmapper/MapBank1_q_C(2) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+memmapper/MapBank1_q_CE(2) <= (NOT addr_bus_i(1) AND addr_bus_i(0));
+
+FDCPE_memmapper/MapBank1_q3: FDCPE port map (memmapper/MapBank1_q(3),data_bus_io(3).PIN,memmapper/MapBank1_q_C(3),NOT reset_n_i,'0',memmapper/MapBank1_q_CE(3));
+memmapper/MapBank1_q_C(3) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+memmapper/MapBank1_q_CE(3) <= (NOT addr_bus_i(1) AND addr_bus_i(0));
+
+FDCPE_memmapper/MapBank1_q4: FDCPE port map (memmapper/MapBank1_q(4),data_bus_io(4).PIN,memmapper/MapBank1_q_C(4),NOT reset_n_i,'0',memmapper/MapBank1_q_CE(4));
+memmapper/MapBank1_q_C(4) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+memmapper/MapBank1_q_CE(4) <= (NOT addr_bus_i(1) AND addr_bus_i(0));
+
+FDCPE_memmapper/MapBank2_q0: FDCPE port map (memmapper/MapBank2_q(0),data_bus_io(0).PIN,memmapper/MapBank2_q_C(0),'0',NOT reset_n_i,memmapper/MapBank2_q_CE(0));
+memmapper/MapBank2_q_C(0) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+memmapper/MapBank2_q_CE(0) <= (addr_bus_i(1) AND NOT addr_bus_i(0));
+
+FDCPE_memmapper/MapBank2_q1: FDCPE port map (memmapper/MapBank2_q(1),data_bus_io(1).PIN,memmapper/MapBank2_q_C(1),NOT reset_n_i,'0',memmapper/MapBank2_q_CE(1));
+memmapper/MapBank2_q_C(1) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+memmapper/MapBank2_q_CE(1) <= (addr_bus_i(1) AND NOT addr_bus_i(0));
+
+FDCPE_memmapper/MapBank2_q2: FDCPE port map (memmapper/MapBank2_q(2),data_bus_io(2).PIN,memmapper/MapBank2_q_C(2),NOT reset_n_i,'0',memmapper/MapBank2_q_CE(2));
+memmapper/MapBank2_q_C(2) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+memmapper/MapBank2_q_CE(2) <= (addr_bus_i(1) AND NOT addr_bus_i(0));
+
+FDCPE_memmapper/MapBank2_q3: FDCPE port map (memmapper/MapBank2_q(3),data_bus_io(3).PIN,memmapper/MapBank2_q_C(3),NOT reset_n_i,'0',memmapper/MapBank2_q_CE(3));
+memmapper/MapBank2_q_C(3) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+memmapper/MapBank2_q_CE(3) <= (addr_bus_i(1) AND NOT addr_bus_i(0));
+
+FDCPE_memmapper/MapBank2_q4: FDCPE port map (memmapper/MapBank2_q(4),data_bus_io(4).PIN,memmapper/MapBank2_q_C(4),NOT reset_n_i,'0',memmapper/MapBank2_q_CE(4));
+memmapper/MapBank2_q_C(4) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+memmapper/MapBank2_q_CE(4) <= (addr_bus_i(1) AND NOT addr_bus_i(0));
+
+FDCPE_memmapper/MapBank3_q0: FDCPE port map (memmapper/MapBank3_q(0),data_bus_io(0).PIN,memmapper/MapBank3_q_C(0),NOT reset_n_i,'0',memmapper/MapBank3_q_CE(0));
+memmapper/MapBank3_q_C(0) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+memmapper/MapBank3_q_CE(0) <= (addr_bus_i(1) AND addr_bus_i(0));
+
+FDCPE_memmapper/MapBank3_q1: FDCPE port map (memmapper/MapBank3_q(1),data_bus_io(1).PIN,memmapper/MapBank3_q_C(1),NOT reset_n_i,'0',memmapper/MapBank3_q_CE(1));
+memmapper/MapBank3_q_C(1) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+memmapper/MapBank3_q_CE(1) <= (addr_bus_i(1) AND addr_bus_i(0));
+
+FDCPE_memmapper/MapBank3_q2: FDCPE port map (memmapper/MapBank3_q(2),data_bus_io(2).PIN,memmapper/MapBank3_q_C(2),NOT reset_n_i,'0',memmapper/MapBank3_q_CE(2));
+memmapper/MapBank3_q_C(2) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+memmapper/MapBank3_q_CE(2) <= (addr_bus_i(1) AND addr_bus_i(0));
+
+FDCPE_memmapper/MapBank3_q3: FDCPE port map (memmapper/MapBank3_q(3),data_bus_io(3).PIN,memmapper/MapBank3_q_C(3),NOT reset_n_i,'0',memmapper/MapBank3_q_CE(3));
+memmapper/MapBank3_q_C(3) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+memmapper/MapBank3_q_CE(3) <= (addr_bus_i(1) AND addr_bus_i(0));
+
+FDCPE_memmapper/MapBank3_q4: FDCPE port map (memmapper/MapBank3_q(4),data_bus_io(4).PIN,memmapper/MapBank3_q_C(4),NOT reset_n_i,'0',memmapper/MapBank3_q_CE(4));
+memmapper/MapBank3_q_C(4) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+memmapper/MapBank3_q_CE(4) <= (addr_bus_i(1) AND addr_bus_i(0));
+
+FDCPE_portaspi/count_q0: FDCPE port map (portaspi/count_q(0),portaspi/count_q_D(0),clock_i,'0','0',reset_n_i);
+portaspi/count_q_D(0) <= ((portaspi/count_q(0) AND NOT $OpTx$FX_DC$330)
+	OR (portaspi/state_s_FSM_FFd1 AND 
+	portaspi/state_s_FSM_FFd2 AND NOT portaspi/count_q(0) AND NOT portaspi/spi_clk_buf_s AND 
+	portaspi/prev_spi_clk_s));
+
+FDCPE_portaspi/count_q1: FDCPE port map (portaspi/count_q(1),portaspi/count_q_D(1),clock_i,'0','0',reset_n_i);
+portaspi/count_q_D(1) <= ((portaspi/count_q(1) AND NOT $OpTx$FX_DC$330)
+	OR (portaspi/state_s_FSM_FFd1 AND 
+	portaspi/state_s_FSM_FFd2 AND NOT portaspi/count_q(0) AND NOT portaspi/spi_clk_buf_s AND 
+	portaspi/count_q(1) AND portaspi/prev_spi_clk_s)
+	OR (portaspi/state_s_FSM_FFd1 AND 
+	portaspi/state_s_FSM_FFd2 AND portaspi/count_q(0) AND NOT portaspi/spi_clk_buf_s AND 
+	NOT portaspi/count_q(1) AND portaspi/prev_spi_clk_s AND $OpTx$FX_DC$330));
+
+FDCPE_portaspi/count_q2: FDCPE port map (portaspi/count_q(2),portaspi/count_q_D(2),clock_i,'0','0',reset_n_i);
+portaspi/count_q_D(2) <= ((portaspi/count_q(2) AND NOT $OpTx$FX_DC$330)
+	OR (portaspi/state_s_FSM_FFd1 AND 
+	portaspi/state_s_FSM_FFd2 AND NOT portaspi/count_q(0) AND NOT portaspi/spi_clk_buf_s AND 
+	portaspi/count_q(2))
+	OR (portaspi/state_s_FSM_FFd1 AND 
+	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s AND NOT portaspi/count_q(1) AND 
+	portaspi/count_q(2))
+	OR (portaspi/state_s_FSM_FFd1 AND 
+	portaspi/state_s_FSM_FFd2 AND portaspi/count_q(0) AND NOT portaspi/spi_clk_buf_s AND 
+	portaspi/count_q(1) AND NOT portaspi/count_q(2) AND $OpTx$FX_DC$330));
+
+FTCPE_portaspi/count_q3: FTCPE port map (portaspi/count_q(3),portaspi/count_q_T(3),clock_i,'0','0',reset_n_i);
+portaspi/count_q_T(3) <= ((portaspi/ff_q AND NOT portaspi/state_s_FSM_FFd1 AND 
+	NOT portaspi/state_s_FSM_FFd2 AND portaspi/count_q(3))
+	OR (portaspi/state_s_FSM_FFd1 AND 
+	portaspi/state_s_FSM_FFd2 AND portaspi/count_q(0) AND NOT portaspi/spi_clk_buf_s AND 
+	portaspi/count_q(1) AND portaspi/count_q(2) AND portaspi/prev_spi_clk_s));
+
+FTCPE_portaspi/ff_clr_s: FTCPE port map (portaspi/ff_clr_s,portaspi/ff_clr_s_T,clock_i,NOT reset_n_i,'0');
+portaspi/ff_clr_s_T <= ((NOT portaspi/state_s_FSM_FFd1 AND 
+	portaspi/state_s_FSM_FFd2 AND portaspi/ff_clr_s)
+	OR (portaspi/ff_q AND NOT portaspi/state_s_FSM_FFd1 AND 
+	NOT portaspi/state_s_FSM_FFd2 AND NOT portaspi/ff_clr_s));
+
+FDCPE_portaspi/ff_q: FDCPE port map (portaspi/ff_q,portaspi/start_s,clock_i,portaspi/ff_clr_s,'0');
+
+FDCPE_portaspi/prev_spi_clk_s: FDCPE port map (portaspi/prev_spi_clk_s,portaspi/spi_clk_buf_s,clock_i,'0','0',reset_n_i);
+
+FTCPE_portaspi/shift_reg_s0: FTCPE port map (portaspi/shift_reg_s(0),portaspi/shift_reg_s_T(0),clock_i,'0','0',reset_n_i);
+portaspi/shift_reg_s_T(0) <= ((portaspi/ff_q AND NOT portaspi/state_s_FSM_FFd1 AND 
+	NOT portaspi/state_s_FSM_FFd2 AND NOT portaspi/shift_reg_s(0))
+	OR (sd_miso_i AND portaspi/state_s_FSM_FFd1 AND 
+	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s AND portaspi/prev_spi_clk_s AND 
+	NOT portaspi/shift_reg_s(0))
+	OR (NOT sd_miso_i AND portaspi/state_s_FSM_FFd1 AND 
+	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s AND portaspi/prev_spi_clk_s AND 
+	portaspi/shift_reg_s(0)));
+
+FDCPE_portaspi/shift_reg_s1: FDCPE port map (portaspi/shift_reg_s(1),portaspi/shift_reg_s_D(1),clock_i,'0','0',reset_n_i);
+portaspi/shift_reg_s_D(1) <= ((portaspi/shift_reg_s(1) AND NOT $OpTx$FX_DC$330)
+	OR (portaspi/ff_q AND NOT portaspi/state_s_FSM_FFd1 AND 
+	NOT portaspi/state_s_FSM_FFd2 AND portaspi/spi_data_buf_s(0))
+	OR (portaspi/state_s_FSM_FFd1 AND 
+	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s AND portaspi/prev_spi_clk_s AND 
+	portaspi/shift_reg_s(0)));
+
+FDCPE_portaspi/shift_reg_s2: FDCPE port map (portaspi/shift_reg_s(2),portaspi/shift_reg_s_D(2),clock_i,'0','0',reset_n_i);
+portaspi/shift_reg_s_D(2) <= ((portaspi/shift_reg_s(2) AND NOT $OpTx$FX_DC$330)
+	OR (portaspi/ff_q AND NOT portaspi/state_s_FSM_FFd1 AND 
+	NOT portaspi/state_s_FSM_FFd2 AND portaspi/spi_data_buf_s(1))
+	OR (portaspi/state_s_FSM_FFd1 AND 
+	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s AND portaspi/prev_spi_clk_s AND 
+	portaspi/shift_reg_s(1)));
+
+FDCPE_portaspi/shift_reg_s3: FDCPE port map (portaspi/shift_reg_s(3),portaspi/shift_reg_s_D(3),clock_i,'0','0',reset_n_i);
+portaspi/shift_reg_s_D(3) <= ((portaspi/shift_reg_s(3) AND NOT $OpTx$FX_DC$330)
+	OR (portaspi/ff_q AND NOT portaspi/state_s_FSM_FFd1 AND 
+	NOT portaspi/state_s_FSM_FFd2 AND portaspi/spi_data_buf_s(2))
+	OR (portaspi/state_s_FSM_FFd1 AND 
+	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s AND portaspi/prev_spi_clk_s AND 
+	portaspi/shift_reg_s(2)));
+
+FDCPE_portaspi/shift_reg_s4: FDCPE port map (portaspi/shift_reg_s(4),portaspi/shift_reg_s_D(4),clock_i,'0','0',reset_n_i);
+portaspi/shift_reg_s_D(4) <= ((portaspi/shift_reg_s(4) AND NOT $OpTx$FX_DC$330)
+	OR (portaspi/ff_q AND NOT portaspi/state_s_FSM_FFd1 AND 
+	NOT portaspi/state_s_FSM_FFd2 AND portaspi/spi_data_buf_s(3))
+	OR (portaspi/state_s_FSM_FFd1 AND 
+	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s AND portaspi/prev_spi_clk_s AND 
+	portaspi/shift_reg_s(3)));
+
+FDCPE_portaspi/shift_reg_s5: FDCPE port map (portaspi/shift_reg_s(5),portaspi/shift_reg_s_D(5),clock_i,'0','0',reset_n_i);
+portaspi/shift_reg_s_D(5) <= ((portaspi/shift_reg_s(5) AND NOT $OpTx$FX_DC$330)
+	OR (portaspi/ff_q AND NOT portaspi/state_s_FSM_FFd1 AND 
+	NOT portaspi/state_s_FSM_FFd2 AND portaspi/spi_data_buf_s(4))
+	OR (portaspi/state_s_FSM_FFd1 AND 
+	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s AND portaspi/prev_spi_clk_s AND 
+	portaspi/shift_reg_s(4)));
+
+FDCPE_portaspi/shift_reg_s6: FDCPE port map (portaspi/shift_reg_s(6),portaspi/shift_reg_s_D(6),clock_i,'0','0',reset_n_i);
+portaspi/shift_reg_s_D(6) <= ((portaspi/shift_reg_s(6) AND NOT $OpTx$FX_DC$330)
+	OR (portaspi/ff_q AND NOT portaspi/state_s_FSM_FFd1 AND 
+	NOT portaspi/state_s_FSM_FFd2 AND portaspi/spi_data_buf_s(5))
+	OR (portaspi/state_s_FSM_FFd1 AND 
+	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s AND portaspi/prev_spi_clk_s AND 
+	portaspi/shift_reg_s(5)));
+
+FDCPE_portaspi/shift_reg_s7: FDCPE port map (portaspi/shift_reg_s(7),portaspi/shift_reg_s_D(7),clock_i,'0','0',reset_n_i);
+portaspi/shift_reg_s_D(7) <= ((portaspi/shift_reg_s(7) AND NOT $OpTx$FX_DC$330)
+	OR (portaspi/ff_q AND NOT portaspi/state_s_FSM_FFd1 AND 
+	NOT portaspi/state_s_FSM_FFd2 AND portaspi/spi_data_buf_s(6))
+	OR (portaspi/state_s_FSM_FFd1 AND 
+	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s AND portaspi/prev_spi_clk_s AND 
+	portaspi/shift_reg_s(6)));
+
+FDCPE_portaspi/spi_clk_buf_s: FDCPE port map (portaspi/spi_clk_buf_s,portaspi/spi_clk_buf_s_D,clock_i,NOT reset_n_i,'0');
+portaspi/spi_clk_buf_s_D <= (portaspi/state_s_FSM_FFd1 AND 
+	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s);
+
+FDCPE_portaspi/spi_data_buf_s0: FDCPE port map (portaspi/spi_data_buf_s(0),portaspi/spi_data_buf_s_D(0),portaspi/start_s/portaspi/start_s_CLKF,'0',NOT portaspi/start_s/portaspi/start_s_RSTF);
+portaspi/spi_data_buf_s_D(0) <= (NOT data_bus_io(0).PIN AND rd_n_i);
+
+FDCPE_portaspi/spi_data_buf_s1: FDCPE port map (portaspi/spi_data_buf_s(1),portaspi/spi_data_buf_s_D(1),portaspi/start_s/portaspi/start_s_CLKF,'0',NOT portaspi/start_s/portaspi/start_s_RSTF);
+portaspi/spi_data_buf_s_D(1) <= (NOT data_bus_io(1).PIN AND rd_n_i);
+
+FDCPE_portaspi/spi_data_buf_s2: FDCPE port map (portaspi/spi_data_buf_s(2),portaspi/spi_data_buf_s_D(2),portaspi/start_s/portaspi/start_s_CLKF,'0',NOT portaspi/start_s/portaspi/start_s_RSTF);
+portaspi/spi_data_buf_s_D(2) <= (NOT data_bus_io(2).PIN AND rd_n_i);
+
+FDCPE_portaspi/spi_data_buf_s3: FDCPE port map (portaspi/spi_data_buf_s(3),portaspi/spi_data_buf_s_D(3),portaspi/start_s/portaspi/start_s_CLKF,'0',NOT portaspi/start_s/portaspi/start_s_RSTF);
+portaspi/spi_data_buf_s_D(3) <= (NOT data_bus_io(3).PIN AND rd_n_i);
+
+FDCPE_portaspi/spi_data_buf_s4: FDCPE port map (portaspi/spi_data_buf_s(4),portaspi/spi_data_buf_s_D(4),portaspi/start_s/portaspi/start_s_CLKF,'0',NOT portaspi/start_s/portaspi/start_s_RSTF);
+portaspi/spi_data_buf_s_D(4) <= (NOT data_bus_io(4).PIN AND rd_n_i);
+
+FDCPE_portaspi/spi_data_buf_s5: FDCPE port map (portaspi/spi_data_buf_s(5),portaspi/spi_data_buf_s_D(5),portaspi/start_s/portaspi/start_s_CLKF,'0',NOT portaspi/start_s/portaspi/start_s_RSTF);
+portaspi/spi_data_buf_s_D(5) <= (NOT data_bus_io(5).PIN AND rd_n_i);
+
+FDCPE_portaspi/spi_data_buf_s6: FDCPE port map (portaspi/spi_data_buf_s(6),portaspi/spi_data_buf_s_D(6),portaspi/start_s/portaspi/start_s_CLKF,'0',NOT portaspi/start_s/portaspi/start_s_RSTF);
+portaspi/spi_data_buf_s_D(6) <= (NOT data_bus_io(6).PIN AND rd_n_i);
+
+FDCPE_portaspi/spi_data_buf_s7: FDCPE port map (portaspi/spi_data_buf_s(7),portaspi/spi_data_buf_s_D(7),portaspi/start_s/portaspi/start_s_CLKF,'0',NOT portaspi/start_s/portaspi/start_s_RSTF);
+portaspi/spi_data_buf_s_D(7) <= (NOT data_bus_io(7).PIN AND rd_n_i);
+
+FDCPE_portaspi/spi_data_q0: FDCPE port map (portaspi/spi_data_q(0),portaspi/shift_reg_s(0),clock_i,'0','0',portaspi/spi_data_q_CE(0));
+portaspi/spi_data_q_CE(0) <= (reset_n_i AND portaspi/state_s_FSM_FFd1 AND 
+	NOT portaspi/state_s_FSM_FFd2);
+
+FDCPE_portaspi/spi_data_q1: FDCPE port map (portaspi/spi_data_q(1),portaspi/shift_reg_s(1),clock_i,'0','0',portaspi/spi_data_q_CE(1));
+portaspi/spi_data_q_CE(1) <= (reset_n_i AND portaspi/state_s_FSM_FFd1 AND 
+	NOT portaspi/state_s_FSM_FFd2);
+
+FDCPE_portaspi/spi_data_q2: FDCPE port map (portaspi/spi_data_q(2),portaspi/shift_reg_s(2),clock_i,'0','0',portaspi/spi_data_q_CE(2));
+portaspi/spi_data_q_CE(2) <= (reset_n_i AND portaspi/state_s_FSM_FFd1 AND 
+	NOT portaspi/state_s_FSM_FFd2);
+
+FDCPE_portaspi/spi_data_q3: FDCPE port map (portaspi/spi_data_q(3),portaspi/shift_reg_s(3),clock_i,'0','0',portaspi/spi_data_q_CE(3));
+portaspi/spi_data_q_CE(3) <= (reset_n_i AND portaspi/state_s_FSM_FFd1 AND 
+	NOT portaspi/state_s_FSM_FFd2);
+
+FDCPE_portaspi/spi_data_q4: FDCPE port map (portaspi/spi_data_q(4),portaspi/shift_reg_s(4),clock_i,'0','0',portaspi/spi_data_q_CE(4));
+portaspi/spi_data_q_CE(4) <= (reset_n_i AND portaspi/state_s_FSM_FFd1 AND 
+	NOT portaspi/state_s_FSM_FFd2);
+
+FDCPE_portaspi/spi_data_q5: FDCPE port map (portaspi/spi_data_q(5),portaspi/shift_reg_s(5),clock_i,'0','0',portaspi/spi_data_q_CE(5));
+portaspi/spi_data_q_CE(5) <= (reset_n_i AND portaspi/state_s_FSM_FFd1 AND 
+	NOT portaspi/state_s_FSM_FFd2);
+
+FDCPE_portaspi/spi_data_q6: FDCPE port map (portaspi/spi_data_q(6),portaspi/shift_reg_s(6),clock_i,'0','0',portaspi/spi_data_q_CE(6));
+portaspi/spi_data_q_CE(6) <= (reset_n_i AND portaspi/state_s_FSM_FFd1 AND 
+	NOT portaspi/state_s_FSM_FFd2);
+
+FDCPE_portaspi/spi_data_q7: FDCPE port map (portaspi/spi_data_q(7),portaspi/shift_reg_s(7),clock_i,'0','0',portaspi/spi_data_q_CE(7));
+portaspi/spi_data_q_CE(7) <= (reset_n_i AND portaspi/state_s_FSM_FFd1 AND 
+	NOT portaspi/state_s_FSM_FFd2);
+
+FDCPE_portaspi/start_s: FDCPE port map (portaspi/start_s,'1',portaspi/start_s/portaspi/start_s_CLKF,NOT portaspi/start_s/portaspi/start_s_RSTF,'0');
+
+
+portaspi/start_s/portaspi/start_s_CLKF <= ((NOT rd_n_i AND spi_cs_s/spi_cs_s_D2)
+	OR (NOT wr_n_i AND spi_cs_s/spi_cs_s_D2));
+
+
+portaspi/start_s/portaspi/start_s_RSTF <= (reset_n_i AND NOT portaspi/ff_clr_s);
+
+FDCPE_portaspi/state_s_FSM_FFd1: FDCPE port map (portaspi/state_s_FSM_FFd1,portaspi/state_s_FSM_FFd2,clock_i,'0','0',reset_n_i);
+
+FTCPE_portaspi/state_s_FSM_FFd2: FTCPE port map (portaspi/state_s_FSM_FFd2,portaspi/state_s_FSM_FFd2_T,clock_i,'0','0',reset_n_i);
+portaspi/state_s_FSM_FFd2_T <= ((portaspi/ff_q AND NOT portaspi/state_s_FSM_FFd1 AND 
+	NOT portaspi/state_s_FSM_FFd2)
+	OR (portaspi/state_s_FSM_FFd1 AND 
+	portaspi/state_s_FSM_FFd2 AND portaspi/count_q(0) AND NOT portaspi/spi_clk_buf_s AND 
+	portaspi/count_q(1) AND portaspi/count_q(2) AND NOT portaspi/count_q(3) AND 
+	portaspi/prev_spi_clk_s));
+
+FTCPE_portaspi/wait_n_s: FTCPE port map (portaspi/wait_n_s,portaspi/wait_n_s_T,clock_i,'0','0',reset_n_i);
+portaspi/wait_n_s_T <= ((NOT portaspi/state_s_FSM_FFd1 AND 
+	NOT portaspi/state_s_FSM_FFd2 AND NOT portaspi/wait_n_s)
+	OR (portaspi/state_s_FSM_FFd1 AND 
+	portaspi/state_s_FSM_FFd2 AND portaspi/wait_n_s AND portaspi/start_s));
+
+
+ram_a_o(13) <= addr_bus_i(13);
+
+
+ram_a_o(14) <= ((addr_bus_i(15) AND addr_bus_i(14) AND 
+	memmapper/MapBank3_q(0))
+	OR (addr_bus_i(15) AND NOT addr_bus_i(14) AND 
+	memmapper/MapBank2_q(0))
+	OR (NOT addr_bus_i(15) AND addr_bus_i(14) AND 
+	memmapper/MapBank1_q(0))
+	OR (NOT addr_bus_i(15) AND NOT addr_bus_i(14) AND 
+	memmapper/MapBank0_q(0)));
+
+
+ram_a_o(15) <= ((addr_bus_i(15) AND addr_bus_i(14) AND 
+	memmapper/MapBank3_q(1))
+	OR (addr_bus_i(15) AND NOT addr_bus_i(14) AND 
+	memmapper/MapBank2_q(1))
+	OR (NOT addr_bus_i(15) AND addr_bus_i(14) AND 
+	memmapper/MapBank1_q(1))
+	OR (NOT addr_bus_i(15) AND NOT addr_bus_i(14) AND 
+	memmapper/MapBank0_q(1)));
+
+
+ram_a_o(16) <= ((addr_bus_i(15) AND addr_bus_i(14) AND 
+	memmapper/MapBank3_q(2))
+	OR (addr_bus_i(15) AND NOT addr_bus_i(14) AND 
+	memmapper/MapBank2_q(2))
+	OR (NOT addr_bus_i(15) AND addr_bus_i(14) AND 
+	memmapper/MapBank1_q(2))
+	OR (NOT addr_bus_i(15) AND NOT addr_bus_i(14) AND 
+	memmapper/MapBank0_q(2)));
+
+
+ram_a_o(17) <= ((addr_bus_i(15) AND addr_bus_i(14) AND 
+	memmapper/MapBank3_q(3))
+	OR (addr_bus_i(15) AND NOT addr_bus_i(14) AND 
+	memmapper/MapBank2_q(3))
+	OR (NOT addr_bus_i(15) AND addr_bus_i(14) AND 
+	memmapper/MapBank1_q(3))
+	OR (NOT addr_bus_i(15) AND NOT addr_bus_i(14) AND 
+	memmapper/MapBank0_q(3)));
+
+
+ram_a_o(18) <= ((addr_bus_i(15) AND addr_bus_i(14) AND 
+	memmapper/MapBank3_q(4))
+	OR (addr_bus_i(15) AND NOT addr_bus_i(14) AND 
+	memmapper/MapBank2_q(4))
+	OR (NOT addr_bus_i(15) AND addr_bus_i(14) AND 
+	memmapper/MapBank1_q(4))
+	OR (NOT addr_bus_i(15) AND NOT addr_bus_i(14) AND 
+	memmapper/MapBank0_q(4)));
+
+
+ram_cs_n_o <= NOT (((addr_bus_i(15) AND addr_bus_i(14) AND sw_i(0) AND 
+	exp/exp_reg(6) AND NOT exp/exp_reg(7) AND NOT sltsl_n_i AND NOT ffff/ffff_D2)
+	OR (addr_bus_i(15) AND NOT addr_bus_i(14) AND sw_i(0) AND 
+	exp/exp_reg(4) AND NOT exp/exp_reg(5) AND NOT sltsl_n_i AND NOT ffff/ffff_D2)
+	OR (NOT addr_bus_i(15) AND addr_bus_i(14) AND sw_i(0) AND 
+	exp/exp_reg(2) AND NOT exp/exp_reg(3) AND NOT sltsl_n_i AND NOT ffff/ffff_D2)
+	OR (NOT addr_bus_i(15) AND NOT addr_bus_i(14) AND sw_i(0) AND 
+	exp/exp_reg(0) AND NOT exp/exp_reg(1) AND NOT sltsl_n_i AND NOT ffff/ffff_D2)));
+
+
+ram_we_n_o <= wr_n_i;
+
+
+rom_a_o(14) <= ((addr_bus_i(15) AND NOT addr_bus_i(14) AND rom_bank2_q(0) AND 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (NOT addr_bus_i(15) AND addr_bus_i(14) AND rom_bank1_q(0) AND 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2));
+
+
+rom_a_o(15) <= ((addr_bus_i(15) AND NOT addr_bus_i(14) AND rom_bank2_q(1) AND 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (NOT addr_bus_i(15) AND addr_bus_i(14) AND rom_bank1_q(1) AND 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2));
+
+
+rom_a_o(16) <= ((addr_bus_i(15) AND NOT addr_bus_i(14) AND rom_bank2_q(2) AND 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (NOT addr_bus_i(15) AND addr_bus_i(14) AND rom_bank1_q(2) AND 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2));
+
+
+rom_a_o(17) <= sw_i(1);
+
+FDCPE_rom_bank1_q0: FDCPE port map (rom_bank1_q(0),data_bus_io(0).PIN,rom_bank1_q_C(0),NOT reset_n_i,'0',NOT addr_bus_i(12));
+rom_bank1_q_C(0) <= NOT ((NOT addr_bus_i(15) AND addr_bus_i(14) AND addr_bus_i(13) AND 
+	NOT addr_bus_i(11) AND NOT wr_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2));
+
+FDCPE_rom_bank1_q1: FDCPE port map (rom_bank1_q(1),data_bus_io(1).PIN,rom_bank1_q_C(1),NOT reset_n_i,'0',NOT addr_bus_i(12));
+rom_bank1_q_C(1) <= NOT ((NOT addr_bus_i(15) AND addr_bus_i(14) AND addr_bus_i(13) AND 
+	NOT addr_bus_i(11) AND NOT wr_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2));
+
+FDCPE_rom_bank1_q2: FDCPE port map (rom_bank1_q(2),data_bus_io(2).PIN,rom_bank1_q_C(2),NOT reset_n_i,'0',NOT addr_bus_i(12));
+rom_bank1_q_C(2) <= NOT ((NOT addr_bus_i(15) AND addr_bus_i(14) AND addr_bus_i(13) AND 
+	NOT addr_bus_i(11) AND NOT wr_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2));
+
+FDCPE_rom_bank2_q0: FDCPE port map (rom_bank2_q(0),data_bus_io(0).PIN,rom_bank2_q_C(0),NOT reset_n_i,'0',addr_bus_i(12));
+rom_bank2_q_C(0) <= NOT ((NOT addr_bus_i(15) AND addr_bus_i(14) AND addr_bus_i(13) AND 
+	NOT addr_bus_i(11) AND NOT wr_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2));
+
+FDCPE_rom_bank2_q1: FDCPE port map (rom_bank2_q(1),data_bus_io(1).PIN,rom_bank2_q_C(1),NOT reset_n_i,'0',addr_bus_i(12));
+rom_bank2_q_C(1) <= NOT ((NOT addr_bus_i(15) AND addr_bus_i(14) AND addr_bus_i(13) AND 
+	NOT addr_bus_i(11) AND NOT wr_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2));
+
+FDCPE_rom_bank2_q2: FDCPE port map (rom_bank2_q(2),data_bus_io(2).PIN,rom_bank2_q_C(2),NOT reset_n_i,'0',addr_bus_i(12));
+rom_bank2_q_C(2) <= NOT ((NOT addr_bus_i(15) AND addr_bus_i(14) AND addr_bus_i(13) AND 
+	NOT addr_bus_i(11) AND NOT wr_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2));
+
+FDCPE_rom_bank2_q3: FDCPE port map (rom_bank2_q(3),data_bus_io(3).PIN,rom_bank2_q_C(3),NOT reset_n_i,'0',addr_bus_i(12));
+rom_bank2_q_C(3) <= NOT ((NOT addr_bus_i(15) AND addr_bus_i(14) AND addr_bus_i(13) AND 
+	NOT addr_bus_i(11) AND NOT wr_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2));
+
+
+rom_ce_n_o <= ((NOT sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (NOT addr_bus_i(14) AND NOT rom_bank2_q(3))
+	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND addr_bus_i(9) AND addr_bus_i(8) AND addr_bus_i(14) AND 
+	addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND addr_bus_i(10))
+	OR (addr_bus_i(15) AND addr_bus_i(14))
+	OR (NOT addr_bus_i(15) AND NOT addr_bus_i(14))
+	OR (addr_bus_i(14) AND rd_n_i)
+	OR (addr_bus_i(14) AND spi_cs_s/spi_cs_s_D2));
+
+
+rom_we_n_o <= NOT ((addr_bus_i(15) AND NOT addr_bus_i(14) AND NOT wr_n_i AND 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2));
+
+FTCPE_sd_chg_q0: FTCPE port map (sd_chg_q(0),sd_chg_q_T(0),sd_chg_q_C(0),NOT reset_n_i,sd_pres_n_i(0));
+sd_chg_q_T(0) <= (sd_chg_q(0) AND NOT sd_cs_n_o(0) AND sd_cs_n_o(1));
+sd_chg_q_C(0) <= NOT ((addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2));
+
+FTCPE_sd_chg_q1: FTCPE port map (sd_chg_q(1),sd_chg_q_T(1),sd_chg_q_C(1),NOT reset_n_i,sd_pres_n_i(1));
+sd_chg_q_T(1) <= (sd_chg_q(1) AND sd_cs_n_o(0) AND NOT sd_cs_n_o(1));
+sd_chg_q_C(1) <= NOT ((addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2));
+
+FDCPE_sd_chg_s0: FDCPE port map (sd_chg_s(0),sd_chg_q(0),sd_chg_s_C(0),NOT reset_n_i,'0');
+sd_chg_s_C(0) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2);
+
+FDCPE_sd_chg_s1: FDCPE port map (sd_chg_s(1),sd_chg_q(1),sd_chg_s_C(1),NOT reset_n_i,'0');
+sd_chg_s_C(1) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2);
+
+FDCPE_sd_cs_n_o0: FDCPE port map (sd_cs_n_o(0),NOT data_bus_io(0).PIN,sd_cs_n_o_C(0),'0',NOT reset_n_i);
+sd_cs_n_o_C(0) <= NOT ((addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT wr_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2));
+
+FDCPE_sd_cs_n_o1: FDCPE port map (sd_cs_n_o(1),NOT data_bus_io(1).PIN,sd_cs_n_o_C(1),'0',NOT reset_n_i);
+sd_cs_n_o_C(1) <= NOT ((addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT wr_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2));
+
+FDCPE_sd_mosi_o: FDCPE port map (sd_mosi_o,sd_mosi_o_D,clock_i,'0','0',reset_n_i);
+sd_mosi_o_D <= ((sd_mosi_o AND NOT $OpTx$FX_DC$330)
+	OR (portaspi/ff_q AND NOT portaspi/state_s_FSM_FFd1 AND 
+	NOT portaspi/state_s_FSM_FFd2 AND portaspi/spi_data_buf_s(7))
+	OR (portaspi/state_s_FSM_FFd1 AND 
+	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s AND portaspi/prev_spi_clk_s AND 
+	portaspi/shift_reg_s(7)));
+
+FTCPE_sd_sclk_o: FTCPE port map (sd_sclk_o,sd_sclk_o_T,clock_i,'0','0');
+sd_sclk_o_T <= ((reset_n_i AND portaspi/state_s_FSM_FFd1 AND 
+	portaspi/state_s_FSM_FFd2 AND portaspi/spi_clk_buf_s AND NOT portaspi/prev_spi_clk_s AND 
+	NOT sd_sclk_o)
+	OR (reset_n_i AND portaspi/state_s_FSM_FFd1 AND 
+	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s AND portaspi/prev_spi_clk_s AND 
+	sd_sclk_o));
+
+
+sltsl_rom_n_s/sltsl_rom_n_s_D2 <= ((NOT sw_i(0) AND NOT sltsl_n_i)
+	OR (addr_bus_i(15) AND addr_bus_i(14) AND NOT exp/exp_reg(6) AND 
+	NOT exp/exp_reg(7) AND NOT sltsl_n_i AND NOT ffff/ffff_D2)
+	OR (addr_bus_i(15) AND NOT addr_bus_i(14) AND NOT exp/exp_reg(4) AND 
+	NOT exp/exp_reg(5) AND NOT sltsl_n_i AND NOT ffff/ffff_D2)
+	OR (NOT addr_bus_i(15) AND addr_bus_i(14) AND NOT exp/exp_reg(2) AND 
+	NOT exp/exp_reg(3) AND NOT sltsl_n_i AND NOT ffff/ffff_D2)
+	OR (NOT addr_bus_i(15) AND NOT addr_bus_i(14) AND NOT exp/exp_reg(0) AND 
+	NOT exp/exp_reg(1) AND NOT sltsl_n_i AND NOT ffff/ffff_D2));
+
+
+spi_cs_s/spi_cs_s_D2 <= ((NOT addr_bus_i(9) AND NOT addr_bus_i(15) AND addr_bus_i(14) AND 
+	addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND addr_bus_i(10) AND 
+	rom_bank1_q(0) AND rom_bank1_q(1) AND rom_bank1_q(2) AND 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (NOT addr_bus_i(8) AND NOT addr_bus_i(15) AND addr_bus_i(14) AND 
+	addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND addr_bus_i(10) AND 
+	rom_bank1_q(0) AND rom_bank1_q(1) AND rom_bank1_q(2) AND 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+	OR (addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	NOT addr_bus_i(10) AND rom_bank1_q(0) AND rom_bank1_q(1) AND rom_bank1_q(2) AND 
+	sltsl_rom_n_s/sltsl_rom_n_s_D2));
+
+FDCPE_tmr_cnt_q0: FDCPE port map (tmr_cnt_q(0),tmr_cnt_q_D(0),clock_i,'0','0');
+tmr_cnt_q_D(0) <= ((tmr_cnt_q(0) AND NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND NOT tmr_cnt_q(9) AND 
+	NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND NOT tmr_cnt_q(1) AND 
+	NOT tmr_cnt_q(3) AND NOT tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND 
+	NOT tmr_cnt_q(15) AND NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND NOT tmr_cnt_q(6) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2));
+
+FDCPE_tmr_cnt_q1: FDCPE port map (tmr_cnt_q(1),tmr_cnt_q_D(1),clock_i,'0','0');
+tmr_cnt_q_D(1) <= ((tmr_cnt_q(0) AND NOT tmr_cnt_q(1) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT tmr_cnt_q(0) AND tmr_cnt_q(1) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND 
+	NOT tmr_cnt_q(9) AND NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND 
+	NOT tmr_cnt_q(3) AND NOT tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND 
+	NOT tmr_cnt_q(15) AND NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND NOT tmr_cnt_q(6) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2));
+
+FDCPE_tmr_cnt_q2: FDCPE port map (tmr_cnt_q(2),tmr_cnt_q_D(2),clock_i,'0','0');
+tmr_cnt_q_D(2) <= ((tmr_cnt_q(0) AND NOT tmr_cnt_q(2) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (tmr_cnt_q(1) AND NOT tmr_cnt_q(2) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(1) AND tmr_cnt_q(2) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND NOT tmr_cnt_q(9) AND 
+	NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND NOT tmr_cnt_q(3) AND 
+	NOT tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND NOT tmr_cnt_q(15) AND 
+	NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND NOT tmr_cnt_q(6) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2));
+
+FDCPE_tmr_cnt_q3: FDCPE port map (tmr_cnt_q(3),tmr_cnt_q_D(3),clock_i,'0','0');
+tmr_cnt_q_D(3) <= ((tmr_cnt_q(0) AND NOT tmr_cnt_q(3) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (tmr_cnt_q(1) AND NOT tmr_cnt_q(3) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT tmr_cnt_q(3) AND tmr_cnt_q(2) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(1) AND tmr_cnt_q(3) AND 
+	NOT tmr_cnt_q(2) AND NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND NOT tmr_cnt_q(9) AND 
+	NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND NOT tmr_cnt_q(3) AND 
+	NOT tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND NOT tmr_cnt_q(15) AND 
+	NOT tmr_cnt_q(4) AND NOT tmr_cnt_q(6) AND NOT tmr_wr_s/tmr_wr_s_D2));
+
+FDCPE_tmr_cnt_q4: FDCPE port map (tmr_cnt_q(4),tmr_cnt_q_D(4),clock_i,'0','0');
+tmr_cnt_q_D(4) <= ((NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(1) AND NOT tmr_cnt_q(3) AND 
+	NOT tmr_cnt_q(2) AND tmr_cnt_q(4) AND NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (tmr_cnt_q(0) AND NOT tmr_cnt_q(4) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (tmr_cnt_q(1) AND NOT tmr_cnt_q(4) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (tmr_cnt_q(3) AND NOT tmr_cnt_q(4) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND NOT tmr_cnt_q(9) AND 
+	NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND NOT tmr_cnt_q(5) AND 
+	NOT tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND NOT tmr_cnt_q(15) AND NOT tmr_cnt_q(4) AND 
+	NOT tmr_cnt_q(6) AND NOT tmr_wr_s/tmr_wr_s_D2));
+
+FDCPE_tmr_cnt_q5: FDCPE port map (tmr_cnt_q(5),tmr_cnt_q_D(5),clock_i,'0','0');
+tmr_cnt_q_D(5) <= ((tmr_cnt_q(5) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+	Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2)
+	OR (NOT tmr_cnt_q(5) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+	NOT Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2)
+	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND 
+	NOT tmr_cnt_q(9) AND NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND 
+	NOT tmr_cnt_q(1) AND NOT tmr_cnt_q(3) AND NOT tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND 
+	NOT tmr_cnt_q(8) AND NOT tmr_cnt_q(15) AND NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND 
+	NOT tmr_cnt_q(6) AND NOT tmr_wr_s/tmr_wr_s_D2));
+
+FDCPE_tmr_cnt_q6: FDCPE port map (tmr_cnt_q(6),tmr_cnt_q_D(6),clock_i,'0','0');
+tmr_cnt_q_D(6) <= ((tmr_cnt_q(5) AND NOT tmr_cnt_q(6) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT tmr_cnt_q(6) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+	NOT Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2)
+	OR (NOT tmr_cnt_q(5) AND tmr_cnt_q(6) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2 AND 
+	Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2)
+	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND 
+	NOT tmr_cnt_q(9) AND NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND 
+	NOT tmr_cnt_q(1) AND NOT tmr_cnt_q(3) AND NOT tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND 
+	NOT tmr_cnt_q(15) AND NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND NOT tmr_cnt_q(6) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2));
+
+FDCPE_tmr_cnt_q7: FDCPE port map (tmr_cnt_q(7),tmr_cnt_q_D(7),clock_i,'0','0');
+tmr_cnt_q_D(7) <= ((tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT tmr_cnt_q(7) AND tmr_cnt_q(6) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT tmr_cnt_q(7) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+	NOT Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2)
+	OR (NOT tmr_cnt_q(5) AND tmr_cnt_q(7) AND NOT tmr_cnt_q(6) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2 AND 
+	Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2)
+	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND 
+	NOT tmr_cnt_q(9) AND NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND 
+	NOT tmr_cnt_q(1) AND NOT tmr_cnt_q(3) AND NOT tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND 
+	NOT tmr_cnt_q(15) AND NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2));
+
+FDCPE_tmr_cnt_q8: FDCPE port map (tmr_cnt_q(8),tmr_cnt_q_D(8),clock_i,'0','0');
+tmr_cnt_q_D(8) <= ((NOT tmr_cnt_q(8) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+	NOT Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2)
+	OR (NOT tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND tmr_cnt_q(8) AND 
+	NOT tmr_cnt_q(6) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+	Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2)
+	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND 
+	NOT tmr_cnt_q(9) AND NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND 
+	NOT tmr_cnt_q(1) AND NOT tmr_cnt_q(3) AND NOT tmr_cnt_q(8) AND NOT tmr_cnt_q(15) AND 
+	NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT data_bus_io(0).PIN AND tmr_wr_s/tmr_wr_s_D2)
+	OR (tmr_cnt_q(5) AND NOT tmr_cnt_q(8) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT tmr_cnt_q(8) AND tmr_cnt_q(6) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2));
+
+FDCPE_tmr_cnt_q9: FDCPE port map (tmr_cnt_q(9),tmr_cnt_q_D(9),clock_i,'0','0');
+tmr_cnt_q_D(9) <= ((NOT tmr_cnt_q(9) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+	NOT Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2)
+	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND 
+	NOT tmr_cnt_q(9) AND NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND 
+	NOT tmr_cnt_q(1) AND NOT tmr_cnt_q(3) AND NOT tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND 
+	NOT tmr_cnt_q(8) AND NOT tmr_cnt_q(15) AND NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND 
+	NOT tmr_cnt_q(6) AND NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT data_bus_io(1).PIN AND tmr_wr_s/tmr_wr_s_D2)
+	OR (tmr_cnt_q(9) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2));
+
+FDCPE_tmr_cnt_q10: FDCPE port map (tmr_cnt_q(10),tmr_cnt_q_D(10),clock_i,'0','0');
+tmr_cnt_q_D(10) <= ((NOT tmr_cnt_q(10) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+	NOT Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2)
+	OR (NOT tmr_cnt_q(9) AND tmr_cnt_q(10) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2 AND 
+	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2)
+	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND 
+	NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND NOT tmr_cnt_q(1) AND 
+	NOT tmr_cnt_q(3) AND NOT tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND 
+	NOT tmr_cnt_q(15) AND NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND NOT tmr_cnt_q(6) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT data_bus_io(2).PIN AND tmr_wr_s/tmr_wr_s_D2)
+	OR (tmr_cnt_q(9) AND NOT tmr_cnt_q(10) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2));
+
+FDCPE_tmr_cnt_q11: FDCPE port map (tmr_cnt_q(11),tmr_cnt_q_D(11),clock_i,'0','0');
+tmr_cnt_q_D(11) <= ((NOT tmr_cnt_q(11) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+	NOT Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2)
+	OR (tmr_cnt_q(11) AND NOT tmr_cnt_q(9) AND NOT tmr_cnt_q(10) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2 AND 
+	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2)
+	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND 
+	NOT tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND NOT tmr_cnt_q(1) AND NOT tmr_cnt_q(3) AND 
+	NOT tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND NOT tmr_cnt_q(15) AND 
+	NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND NOT tmr_cnt_q(6) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT data_bus_io(3).PIN AND tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT tmr_cnt_q(11) AND tmr_cnt_q(9) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT tmr_cnt_q(11) AND tmr_cnt_q(10) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2));
+
+FDCPE_tmr_cnt_q12: FDCPE port map (tmr_cnt_q(12),tmr_cnt_q_D(12),clock_i,'0','0');
+tmr_cnt_q_D(12) <= ((NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(9) AND NOT tmr_cnt_q(10) AND 
+	tmr_cnt_q(12) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2)
+	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(13) AND NOT tmr_cnt_q(12) AND 
+	NOT tmr_cnt_q(14) AND NOT tmr_cnt_q(1) AND NOT tmr_cnt_q(3) AND NOT tmr_cnt_q(5) AND 
+	NOT tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND NOT tmr_cnt_q(15) AND NOT tmr_cnt_q(2) AND 
+	NOT tmr_cnt_q(4) AND NOT tmr_cnt_q(6) AND NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT data_bus_io(4).PIN AND tmr_wr_s/tmr_wr_s_D2)
+	OR (tmr_cnt_q(11) AND NOT tmr_cnt_q(12) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (tmr_cnt_q(9) AND NOT tmr_cnt_q(12) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT tmr_cnt_q(12) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+	NOT Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2));
+
+FDCPE_tmr_cnt_q13: FDCPE port map (tmr_cnt_q(13),tmr_cnt_q_D(13),clock_i,'0','0');
+tmr_cnt_q_D(13) <= ((NOT data_bus_io(5).PIN AND tmr_wr_s/tmr_wr_s_D2)
+	OR (tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT tmr_cnt_q(11) AND tmr_cnt_q(13) AND NOT tmr_cnt_q(9) AND 
+	NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2)
+	OR (NOT tmr_cnt_q(13) AND tmr_cnt_q(9) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT tmr_cnt_q(13) AND tmr_cnt_q(10) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT tmr_cnt_q(13) AND tmr_cnt_q(12) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT tmr_cnt_q(13) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+	NOT Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2)
+	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(13) AND NOT tmr_cnt_q(14) AND 
+	NOT tmr_cnt_q(1) AND NOT tmr_cnt_q(3) AND NOT tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND 
+	NOT tmr_cnt_q(8) AND NOT tmr_cnt_q(15) AND NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND 
+	NOT tmr_cnt_q(6) AND NOT tmr_wr_s/tmr_wr_s_D2));
+
+FDCPE_tmr_cnt_q14: FDCPE port map (tmr_cnt_q(14),tmr_cnt_q_D(14),clock_i,'0','0');
+tmr_cnt_q_D(14) <= ((NOT data_bus_io(6).PIN AND tmr_wr_s/tmr_wr_s_D2)
+	OR (tmr_cnt_q(11) AND NOT tmr_cnt_q(14) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (tmr_cnt_q(9) AND NOT tmr_cnt_q(14) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND NOT tmr_cnt_q(9) AND 
+	NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND tmr_cnt_q(14) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2 AND 
+	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2)
+	OR (tmr_cnt_q(13) AND NOT tmr_cnt_q(14) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (tmr_cnt_q(10) AND NOT tmr_cnt_q(14) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT tmr_cnt_q(14) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+	NOT Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2)
+	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(14) AND NOT tmr_cnt_q(1) AND 
+	NOT tmr_cnt_q(3) AND NOT tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND 
+	NOT tmr_cnt_q(15) AND NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND NOT tmr_cnt_q(6) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2));
+
+FDCPE_tmr_cnt_q15: FDCPE port map (tmr_cnt_q(15),tmr_cnt_q_D(15),clock_i,'0','0');
+tmr_cnt_q_D(15) <= ((tmr_cnt_q(11) AND NOT tmr_cnt_q(15) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (tmr_cnt_q(9) AND NOT tmr_cnt_q(15) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (tmr_cnt_q(10) AND NOT tmr_cnt_q(15) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT data_bus_io(7).PIN AND tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND NOT tmr_cnt_q(9) AND 
+	NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND tmr_cnt_q(15) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2 AND 
+	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2)
+	OR (tmr_cnt_q(13) AND NOT tmr_cnt_q(15) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (tmr_cnt_q(12) AND NOT tmr_cnt_q(15) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (tmr_cnt_q(14) AND NOT tmr_cnt_q(15) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2)
+	OR (NOT tmr_cnt_q(15) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+	NOT Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2)
+	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(1) AND NOT tmr_cnt_q(3) AND 
+	NOT tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND NOT tmr_cnt_q(15) AND 
+	NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND NOT tmr_cnt_q(6) AND 
+	NOT tmr_wr_s/tmr_wr_s_D2));
+
+
+tmr_wr_s/tmr_wr_s_D2 <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+	addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+	addr_bus_i(10) AND NOT wr_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2);
+
+
+wait_n_o_I <= '0';
+wait_n_o <= wait_n_o_I when wait_n_o_OE = '1' else 'Z';
+wait_n_o_OE <= NOT portaspi/wait_n_s;
+
+Register Legend:
+ FDCPE (Q,D,C,CLR,PRE,CE); 
+ FTCPE (Q,D,C,CLR,PRE,CE); 
+ LDCP  (Q,D,G,CLR,PRE); 
+
+******************************  Device Pin Out *****************************
+
+Device : XC95144XL-10-TQ100
+
+
+   --------------------------------------------------  
+  /100 98  96  94  92  90  88  86  84  82  80  78  76  \
+ |   99  97  95  93  91  89  87  85  83  81  79  77    |
+ | 1                                               75  | 
+ | 2                                               74  | 
+ | 3                                               73  | 
+ | 4                                               72  | 
+ | 5                                               71  | 
+ | 6                                               70  | 
+ | 7                                               69  | 
+ | 8                                               68  | 
+ | 9                                               67  | 
+ | 10                                              66  | 
+ | 11                                              65  | 
+ | 12                                              64  | 
+ | 13              XC95144XL-10-TQ100              63  | 
+ | 14                                              62  | 
+ | 15                                              61  | 
+ | 16                                              60  | 
+ | 17                                              59  | 
+ | 18                                              58  | 
+ | 19                                              57  | 
+ | 20                                              56  | 
+ | 21                                              55  | 
+ | 22                                              54  | 
+ | 23                                              53  | 
+ | 24                                              52  | 
+ | 25                                              51  | 
+ |   27  29  31  33  35  37  39  41  43  45  47  49    |
+  \26  28  30  32  34  36  38  40  42  44  46  48  50  /
+   --------------------------------------------------  
+
+
+Pin Signal                         Pin Signal                        
+No. Name                           No. Name                          
+  1 sw_i<1>                          51 VCC                           
+  2 sw_i<0>                          52 addr_bus_i<9>                 
+  3 KPR                              53 KPR                           
+  4 sd_miso_i                        54 addr_bus_i<15>                
+  5 VCC                              55 wr_n_i                        
+  6 sd_sclk_o                        56 rd_n_i                        
+  7 sd_mosi_o                        57 VCC                           
+  8 sd_wp_i<1>                       58 iorq_n_i                      
+  9 sd_wp_i<0>                       59 m1_n_i                        
+ 10 sd_pres_n_i<0>                   60 KPR                           
+ 11 KPR                              61 KPR                           
+ 12 KPR                              62 GND                           
+ 13 KPR                              63 KPR                           
+ 14 KPR                              64 KPR                           
+ 15 data_bus_io<7>                   65 ram_we_n_o                    
+ 16 data_bus_io<6>                   66 sltsl_n_i                     
+ 17 data_bus_io<5>                   67 rom_a_o<17>                   
+ 18 data_bus_io<4>                   68 KPR                           
+ 19 data_bus_io<3>                   69 GND                           
+ 20 data_bus_io<2>                   70 ram_a_o<13>                   
+ 21 GND                              71 KPR                           
+ 22 clock_i                          72 KPR                           
+ 23 data_bus_io<1>                   73 KPR                           
+ 24 data_bus_io<0>                   74 KPR                           
+ 25 addr_bus_i<5>                    75 GND                           
+ 26 VCC                              76 rom_we_n_o                    
+ 27 addr_bus_i<4>                    77 rom_ce_n_o                    
+ 28 addr_bus_i<3>                    78 rom_a_o<14>                   
+ 29 addr_bus_i<2>                    79 rom_a_o<15>                   
+ 30 addr_bus_i<1>                    80 rom_a_o<16>                   
+ 31 GND                              81 ram_a_o<14>                   
+ 32 addr_bus_i<0>                    82 ram_a_o<15>                   
+ 33 addr_bus_i<14>                   83 TDO                           
+ 34 addr_bus_i<13>                   84 GND                           
+ 35 addr_bus_i<12>                   85 ram_a_o<16>                   
+ 36 wait_n_o                         86 ram_a_o<17>                   
+ 37 addr_bus_i<8>                    87 ram_a_o<18>                   
+ 38 VCC                              88 VCC                           
+ 39 KPR                              89 ram_cs_n_o                    
+ 40 KPR                              90 KPR                           
+ 41 addr_bus_i<7>                    91 KPR                           
+ 42 addr_bus_i<6>                    92 KPR                           
+ 43 addr_bus_i<11>                   93 sd_cs_n_o<0>                  
+ 44 GND                              94 sd_cs_n_o<1>                  
+ 45 TDI                              95 KPR                           
+ 46 KPR                              96 sd_pres_n_i<1>                
+ 47 TMS                              97 KPR                           
+ 48 TCK                              98 VCC                           
+ 49 busdir_n_o                       99 reset_n_i                     
+ 50 addr_bus_i<10>                  100 GND                           
+
+
+Legend :  NC  = Not Connected, unbonded pin
+         PGND = Unused I/O configured as additional Ground pin
+         TIE  = Unused I/O floating -- must tie to VCC, GND or other signal
+         KPR  = Unused I/O with weak keeper (leave unconnected)
+         VCC  = Dedicated Power Pin
+         GND  = Dedicated Ground Pin
+         TDI  = Test Data In, JTAG pin
+         TDO  = Test Data Out, JTAG pin
+         TCK  = Test Clock, JTAG pin
+         TMS  = Test Mode Select, JTAG pin
+  PROHIBITED  = User reserved pin
+****************************  Compiler Options  ****************************
+
+Following is a list of all global compiler options used by the fitter run.
+
+Device(s) Specified                         : xc95144xl-10-TQ100
+Optimization Method                         : DENSITY
+Multi-Level Logic Optimization              : ON
+Ignore Timing Specifications                : OFF
+Default Register Power Up Value             : LOW
+Keep User Location Constraints              : ON
+What-You-See-Is-What-You-Get                : OFF
+Exhaustive Fitting                          : OFF
+Keep Unused Inputs                          : OFF
+Slew Rate                                   : FAST
+Power Mode                                  : STD
+Ground on Unused IOs                        : OFF
+Set I/O Pin Termination                     : KEEPER
+Global Clock Optimization                   : ON
+Global Set/Reset Optimization               : ON
+Global Ouput Enable Optimization            : OFF
+Input Limit                                 : 54
+Pterm Limit                                 : 90

@@ -1,0 +1,1198 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+</td></tr><tr><td>
+$OpTx$FX_DC$330 <= ((portaspi/ff_q AND NOT portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT portaspi/state_s_FSM_FFd2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s AND portaspi/prev_spi_clk_s));
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+</td></tr><tr><td>
+Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2 <= (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(1) AND NOT tmr_cnt_q(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4));
+</td></tr><tr><td>
+</td></tr><tr><td>
+Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2 <= (NOT tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2);
+</td></tr><tr><td>
+</td></tr><tr><td>
+busdir_n_o <= NOT ((addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	m1_n_i AND NOT rd_n_i AND NOT iorq_n_i));
+</td></tr><tr><td>
+</td></tr><tr><td>
+data_bus_io_I(0) <= NOT (((addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank3_q(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rd_n_i AND NOT iorq_n_i)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT tmr_cnt_q(8) AND NOT rd_n_i AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND sw_i(0) AND exp/exp_reg(0) AND NOT rd_n_i AND NOT sltsl_n_i)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT rd_n_i AND NOT sd_chg_s(0) AND NOT sd_cs_n_o(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT rd_n_i AND NOT sd_chg_s(1) AND NOT sd_cs_n_o(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT rd_n_i AND NOT sd_cs_n_o(0) AND NOT sd_cs_n_o(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT sw_i(0) AND NOT rd_n_i AND sd_cs_n_o(0) AND sd_cs_n_o(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_n_i AND NOT portaspi/spi_data_q(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	spi_cs_s/spi_cs_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank2_q(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rd_n_i AND NOT iorq_n_i)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank1_q(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rd_n_i AND NOT iorq_n_i)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank0_q(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rd_n_i AND NOT iorq_n_i)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_bus_io(0) <= data_bus_io_I(0) when data_bus_io_OE(0) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_bus_io_OE(0) <= data_bus_io(4)_MLTSRCEDGE/data_bus_io(4)_MLTSRCEDGE_TRST;
+</td></tr><tr><td>
+</td></tr><tr><td>
+data_bus_io_I(1) <= NOT (((addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank3_q(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rd_n_i AND NOT iorq_n_i)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT tmr_cnt_q(9) AND NOT rd_n_i AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT sd_pres_n_i(1) AND NOT rd_n_i AND NOT sd_cs_n_o(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT rd_n_i AND NOT sd_cs_n_o(0) AND NOT sd_cs_n_o(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND sw_i(0) AND exp/exp_reg(1) AND NOT rd_n_i AND NOT sltsl_n_i)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT sd_pres_n_i(0) AND NOT rd_n_i AND NOT sd_cs_n_o(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT rd_n_i AND NOT sw_i(1) AND sd_cs_n_o(0) AND sd_cs_n_o(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_n_i AND NOT portaspi/spi_data_q(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	spi_cs_s/spi_cs_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank2_q(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rd_n_i AND NOT iorq_n_i)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank1_q(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rd_n_i AND NOT iorq_n_i)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank0_q(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rd_n_i AND NOT iorq_n_i)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_bus_io(1) <= data_bus_io_I(1) when data_bus_io_OE(1) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_bus_io_OE(1) <= data_bus_io(4)_MLTSRCEDGE/data_bus_io(4)_MLTSRCEDGE_TRST;
+</td></tr><tr><td>
+</td></tr><tr><td>
+data_bus_io(2)_BUFR <= NOT (((addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND sw_i(0) AND exp/exp_reg(2) AND NOT rd_n_i AND NOT sltsl_n_i)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT tmr_cnt_q(10) AND NOT rd_n_i AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT rd_n_i AND NOT sd_wp_i(0) AND sd_cs_n_o(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT rd_n_i AND NOT sd_wp_i(1) AND NOT sd_cs_n_o(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT rd_n_i AND sd_cs_n_o(0) AND sd_cs_n_o(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT rd_n_i AND NOT sd_cs_n_o(0) AND NOT sd_cs_n_o(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_n_i AND NOT portaspi/spi_data_q(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	spi_cs_s/spi_cs_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank3_q(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rd_n_i AND NOT iorq_n_i)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank2_q(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rd_n_i AND NOT iorq_n_i)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank1_q(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rd_n_i AND NOT iorq_n_i)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank0_q(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rd_n_i AND NOT iorq_n_i)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+data_bus_io_I(2) <= data_bus_io(2)_BUFR;
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_bus_io(2) <= data_bus_io_I(2) when data_bus_io_OE(2) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_bus_io_OE(2) <= data_bus_io(4)_MLTSRCEDGE/data_bus_io(4)_MLTSRCEDGE_TRST;
+</td></tr><tr><td>
+</td></tr><tr><td>
+data_bus_io_I(3) <= NOT (((addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank3_q(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rd_n_i AND NOT iorq_n_i)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND addr_bus_i(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(11) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND sw_i(0) AND exp/exp_reg(3) AND NOT rd_n_i AND NOT sltsl_n_i)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_n_i AND NOT portaspi/spi_data_q(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	spi_cs_s/spi_cs_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank2_q(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rd_n_i AND NOT iorq_n_i)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank1_q(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rd_n_i AND NOT iorq_n_i)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank0_q(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rd_n_i AND NOT iorq_n_i)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_bus_io(3) <= data_bus_io_I(3) when data_bus_io_OE(3) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_bus_io_OE(3) <= data_bus_io(4)_MLTSRCEDGE/data_bus_io(4)_MLTSRCEDGE_TRST;
+</td></tr><tr><td>
+</td></tr><tr><td>
+data_bus_io(4)_MLTSRCEDGE/data_bus_io(4)_MLTSRCEDGE_TRST <= ((
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	data_bus_io(7)_MLTSRCEDGE/data_bus_io(7)_MLTSRCEDGE_TRST)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	m1_n_i AND NOT rd_n_i AND NOT iorq_n_i));
+</td></tr><tr><td>
+</td></tr><tr><td>
+data_bus_io_I(4) <= NOT (((addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank3_q(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rd_n_i AND NOT iorq_n_i)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND addr_bus_i(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(12) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND sw_i(0) AND exp/exp_reg(4) AND NOT rd_n_i AND NOT sltsl_n_i)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT rd_n_i AND NOT portaspi/spi_data_q(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	spi_cs_s/spi_cs_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank2_q(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rd_n_i AND NOT iorq_n_i)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank1_q(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rd_n_i AND NOT iorq_n_i)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND sw_i(0) AND m1_n_i AND NOT memmapper/MapBank0_q(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rd_n_i AND NOT iorq_n_i)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_bus_io(4) <= data_bus_io_I(4) when data_bus_io_OE(4) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_bus_io_OE(4) <= data_bus_io(4)_MLTSRCEDGE/data_bus_io(4)_MLTSRCEDGE_TRST;
+</td></tr><tr><td>
+</td></tr><tr><td>
+data_bus_io_I(5) <= NOT (((NOT rd_n_i AND NOT portaspi/spi_data_q(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	spi_cs_s/spi_cs_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND addr_bus_i(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(13) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND sw_i(0) AND exp/exp_reg(5) AND NOT rd_n_i AND NOT sltsl_n_i)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_bus_io(5) <= data_bus_io_I(5) when data_bus_io_OE(5) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_bus_io_OE(5) <= data_bus_io(7)_MLTSRCEDGE/data_bus_io(7)_MLTSRCEDGE_TRST;
+</td></tr><tr><td>
+</td></tr><tr><td>
+data_bus_io_I(6) <= NOT (((NOT rd_n_i AND NOT portaspi/spi_data_q(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	spi_cs_s/spi_cs_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND addr_bus_i(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(14) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND sw_i(0) AND exp/exp_reg(6) AND NOT rd_n_i AND NOT sltsl_n_i)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_bus_io(6) <= data_bus_io_I(6) when data_bus_io_OE(6) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_bus_io_OE(6) <= data_bus_io(7)_MLTSRCEDGE/data_bus_io(7)_MLTSRCEDGE_TRST;
+</td></tr><tr><td>
+</td></tr><tr><td>
+data_bus_io_I(7) <= NOT (((NOT rd_n_i AND NOT portaspi/spi_data_q(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	spi_cs_s/spi_cs_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND addr_bus_i(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(15) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND sw_i(0) AND exp/exp_reg(7) AND NOT rd_n_i AND NOT sltsl_n_i)));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_bus_io(7) <= data_bus_io_I(7) when data_bus_io_OE(7) = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;data_bus_io_OE(7) <= data_bus_io(7)_MLTSRCEDGE/data_bus_io(7)_MLTSRCEDGE_TRST;
+</td></tr><tr><td>
+</td></tr><tr><td>
+data_bus_io(7)_MLTSRCEDGE/data_bus_io(7)_MLTSRCEDGE_TRST <= ((NOT rd_n_i AND spi_cs_s/spi_cs_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sw_i(0) AND NOT rd_n_i AND NOT sltsl_n_i AND ffff/ffff_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND addr_bus_i(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2));
+</td></tr><tr><td>
+FDCPE_exp/exp_reg0: FDCPE port map (exp/exp_reg(0),data_bus_io(0).PIN,exp/exp_reg_C(0),NOT reset_n_i,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exp/exp_reg_C(0) <= NOT ((sw_i(0) AND NOT wr_n_i AND NOT sltsl_n_i AND ffff/ffff_D2));
+</td></tr><tr><td>
+FDCPE_exp/exp_reg1: FDCPE port map (exp/exp_reg(1),data_bus_io(1).PIN,exp/exp_reg_C(1),NOT reset_n_i,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exp/exp_reg_C(1) <= NOT ((sw_i(0) AND NOT wr_n_i AND NOT sltsl_n_i AND ffff/ffff_D2));
+</td></tr><tr><td>
+FDCPE_exp/exp_reg2: FDCPE port map (exp/exp_reg(2),data_bus_io(2).PIN,exp/exp_reg_C(2),NOT reset_n_i,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exp/exp_reg_C(2) <= NOT ((sw_i(0) AND NOT wr_n_i AND NOT sltsl_n_i AND ffff/ffff_D2));
+</td></tr><tr><td>
+FDCPE_exp/exp_reg3: FDCPE port map (exp/exp_reg(3),data_bus_io(3).PIN,exp/exp_reg_C(3),NOT reset_n_i,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exp/exp_reg_C(3) <= NOT ((sw_i(0) AND NOT wr_n_i AND NOT sltsl_n_i AND ffff/ffff_D2));
+</td></tr><tr><td>
+FDCPE_exp/exp_reg4: FDCPE port map (exp/exp_reg(4),data_bus_io(4).PIN,exp/exp_reg_C(4),NOT reset_n_i,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exp/exp_reg_C(4) <= NOT ((sw_i(0) AND NOT wr_n_i AND NOT sltsl_n_i AND ffff/ffff_D2));
+</td></tr><tr><td>
+FDCPE_exp/exp_reg5: FDCPE port map (exp/exp_reg(5),data_bus_io(5).PIN,exp/exp_reg_C(5),NOT reset_n_i,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exp/exp_reg_C(5) <= NOT ((sw_i(0) AND NOT wr_n_i AND NOT sltsl_n_i AND ffff/ffff_D2));
+</td></tr><tr><td>
+FDCPE_exp/exp_reg6: FDCPE port map (exp/exp_reg(6),data_bus_io(6).PIN,exp/exp_reg_C(6),NOT reset_n_i,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exp/exp_reg_C(6) <= NOT ((sw_i(0) AND NOT wr_n_i AND NOT sltsl_n_i AND ffff/ffff_D2));
+</td></tr><tr><td>
+FDCPE_exp/exp_reg7: FDCPE port map (exp/exp_reg(7),data_bus_io(7).PIN,exp/exp_reg_C(7),NOT reset_n_i,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exp/exp_reg_C(7) <= NOT ((sw_i(0) AND NOT wr_n_i AND NOT sltsl_n_i AND ffff/ffff_D2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ffff/ffff_D2 <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10));
+</td></tr><tr><td>
+FDCPE_memmapper/MapBank0_q0: FDCPE port map (memmapper/MapBank0_q(0),data_bus_io(0).PIN,memmapper/MapBank0_q_C(0),'0',NOT reset_n_i,memmapper/MapBank0_q_CE(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank0_q_C(0) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank0_q_CE(0) <= (NOT addr_bus_i(1) AND NOT addr_bus_i(0));
+</td></tr><tr><td>
+FDCPE_memmapper/MapBank0_q1: FDCPE port map (memmapper/MapBank0_q(1),data_bus_io(1).PIN,memmapper/MapBank0_q_C(1),'0',NOT reset_n_i,memmapper/MapBank0_q_CE(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank0_q_C(1) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank0_q_CE(1) <= (NOT addr_bus_i(1) AND NOT addr_bus_i(0));
+</td></tr><tr><td>
+FDCPE_memmapper/MapBank0_q2: FDCPE port map (memmapper/MapBank0_q(2),data_bus_io(2).PIN,memmapper/MapBank0_q_C(2),NOT reset_n_i,'0',memmapper/MapBank0_q_CE(2));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank0_q_C(2) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank0_q_CE(2) <= (NOT addr_bus_i(1) AND NOT addr_bus_i(0));
+</td></tr><tr><td>
+FDCPE_memmapper/MapBank0_q3: FDCPE port map (memmapper/MapBank0_q(3),data_bus_io(3).PIN,memmapper/MapBank0_q_C(3),NOT reset_n_i,'0',memmapper/MapBank0_q_CE(3));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank0_q_C(3) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank0_q_CE(3) <= (NOT addr_bus_i(1) AND NOT addr_bus_i(0));
+</td></tr><tr><td>
+FDCPE_memmapper/MapBank0_q4: FDCPE port map (memmapper/MapBank0_q(4),data_bus_io(4).PIN,memmapper/MapBank0_q_C(4),NOT reset_n_i,'0',memmapper/MapBank0_q_CE(4));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank0_q_C(4) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank0_q_CE(4) <= (NOT addr_bus_i(1) AND NOT addr_bus_i(0));
+</td></tr><tr><td>
+FDCPE_memmapper/MapBank1_q0: FDCPE port map (memmapper/MapBank1_q(0),data_bus_io(0).PIN,memmapper/MapBank1_q_C(0),NOT reset_n_i,'0',memmapper/MapBank1_q_CE(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank1_q_C(0) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank1_q_CE(0) <= (NOT addr_bus_i(1) AND addr_bus_i(0));
+</td></tr><tr><td>
+FDCPE_memmapper/MapBank1_q1: FDCPE port map (memmapper/MapBank1_q(1),data_bus_io(1).PIN,memmapper/MapBank1_q_C(1),'0',NOT reset_n_i,memmapper/MapBank1_q_CE(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank1_q_C(1) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank1_q_CE(1) <= (NOT addr_bus_i(1) AND addr_bus_i(0));
+</td></tr><tr><td>
+FDCPE_memmapper/MapBank1_q2: FDCPE port map (memmapper/MapBank1_q(2),data_bus_io(2).PIN,memmapper/MapBank1_q_C(2),NOT reset_n_i,'0',memmapper/MapBank1_q_CE(2));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank1_q_C(2) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank1_q_CE(2) <= (NOT addr_bus_i(1) AND addr_bus_i(0));
+</td></tr><tr><td>
+FDCPE_memmapper/MapBank1_q3: FDCPE port map (memmapper/MapBank1_q(3),data_bus_io(3).PIN,memmapper/MapBank1_q_C(3),NOT reset_n_i,'0',memmapper/MapBank1_q_CE(3));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank1_q_C(3) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank1_q_CE(3) <= (NOT addr_bus_i(1) AND addr_bus_i(0));
+</td></tr><tr><td>
+FDCPE_memmapper/MapBank1_q4: FDCPE port map (memmapper/MapBank1_q(4),data_bus_io(4).PIN,memmapper/MapBank1_q_C(4),NOT reset_n_i,'0',memmapper/MapBank1_q_CE(4));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank1_q_C(4) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank1_q_CE(4) <= (NOT addr_bus_i(1) AND addr_bus_i(0));
+</td></tr><tr><td>
+FDCPE_memmapper/MapBank2_q0: FDCPE port map (memmapper/MapBank2_q(0),data_bus_io(0).PIN,memmapper/MapBank2_q_C(0),'0',NOT reset_n_i,memmapper/MapBank2_q_CE(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank2_q_C(0) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank2_q_CE(0) <= (addr_bus_i(1) AND NOT addr_bus_i(0));
+</td></tr><tr><td>
+FDCPE_memmapper/MapBank2_q1: FDCPE port map (memmapper/MapBank2_q(1),data_bus_io(1).PIN,memmapper/MapBank2_q_C(1),NOT reset_n_i,'0',memmapper/MapBank2_q_CE(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank2_q_C(1) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank2_q_CE(1) <= (addr_bus_i(1) AND NOT addr_bus_i(0));
+</td></tr><tr><td>
+FDCPE_memmapper/MapBank2_q2: FDCPE port map (memmapper/MapBank2_q(2),data_bus_io(2).PIN,memmapper/MapBank2_q_C(2),NOT reset_n_i,'0',memmapper/MapBank2_q_CE(2));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank2_q_C(2) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank2_q_CE(2) <= (addr_bus_i(1) AND NOT addr_bus_i(0));
+</td></tr><tr><td>
+FDCPE_memmapper/MapBank2_q3: FDCPE port map (memmapper/MapBank2_q(3),data_bus_io(3).PIN,memmapper/MapBank2_q_C(3),NOT reset_n_i,'0',memmapper/MapBank2_q_CE(3));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank2_q_C(3) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank2_q_CE(3) <= (addr_bus_i(1) AND NOT addr_bus_i(0));
+</td></tr><tr><td>
+FDCPE_memmapper/MapBank2_q4: FDCPE port map (memmapper/MapBank2_q(4),data_bus_io(4).PIN,memmapper/MapBank2_q_C(4),NOT reset_n_i,'0',memmapper/MapBank2_q_CE(4));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank2_q_C(4) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank2_q_CE(4) <= (addr_bus_i(1) AND NOT addr_bus_i(0));
+</td></tr><tr><td>
+FDCPE_memmapper/MapBank3_q0: FDCPE port map (memmapper/MapBank3_q(0),data_bus_io(0).PIN,memmapper/MapBank3_q_C(0),NOT reset_n_i,'0',memmapper/MapBank3_q_CE(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank3_q_C(0) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank3_q_CE(0) <= (addr_bus_i(1) AND addr_bus_i(0));
+</td></tr><tr><td>
+FDCPE_memmapper/MapBank3_q1: FDCPE port map (memmapper/MapBank3_q(1),data_bus_io(1).PIN,memmapper/MapBank3_q_C(1),NOT reset_n_i,'0',memmapper/MapBank3_q_CE(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank3_q_C(1) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank3_q_CE(1) <= (addr_bus_i(1) AND addr_bus_i(0));
+</td></tr><tr><td>
+FDCPE_memmapper/MapBank3_q2: FDCPE port map (memmapper/MapBank3_q(2),data_bus_io(2).PIN,memmapper/MapBank3_q_C(2),NOT reset_n_i,'0',memmapper/MapBank3_q_CE(2));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank3_q_C(2) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank3_q_CE(2) <= (addr_bus_i(1) AND addr_bus_i(0));
+</td></tr><tr><td>
+FDCPE_memmapper/MapBank3_q3: FDCPE port map (memmapper/MapBank3_q(3),data_bus_io(3).PIN,memmapper/MapBank3_q_C(3),NOT reset_n_i,'0',memmapper/MapBank3_q_CE(3));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank3_q_C(3) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank3_q_CE(3) <= (addr_bus_i(1) AND addr_bus_i(0));
+</td></tr><tr><td>
+FDCPE_memmapper/MapBank3_q4: FDCPE port map (memmapper/MapBank3_q(4),data_bus_io(4).PIN,memmapper/MapBank3_q_C(4),NOT reset_n_i,'0',memmapper/MapBank3_q_CE(4));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank3_q_C(4) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(3) AND addr_bus_i(2) AND sw_i(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	m1_n_i AND NOT wr_n_i AND NOT iorq_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memmapper/MapBank3_q_CE(4) <= (addr_bus_i(1) AND addr_bus_i(0));
+</td></tr><tr><td>
+FDCPE_portaspi/count_q0: FDCPE port map (portaspi/count_q(0),portaspi/count_q_D(0),clock_i,'0','0',reset_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/count_q_D(0) <= ((portaspi/count_q(0) AND NOT $OpTx$FX_DC$330)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/state_s_FSM_FFd2 AND NOT portaspi/count_q(0) AND NOT portaspi/spi_clk_buf_s AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/prev_spi_clk_s));
+</td></tr><tr><td>
+FDCPE_portaspi/count_q1: FDCPE port map (portaspi/count_q(1),portaspi/count_q_D(1),clock_i,'0','0',reset_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/count_q_D(1) <= ((portaspi/count_q(1) AND NOT $OpTx$FX_DC$330)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/state_s_FSM_FFd2 AND NOT portaspi/count_q(0) AND NOT portaspi/spi_clk_buf_s AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/count_q(1) AND portaspi/prev_spi_clk_s)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/state_s_FSM_FFd2 AND portaspi/count_q(0) AND NOT portaspi/spi_clk_buf_s AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT portaspi/count_q(1) AND portaspi/prev_spi_clk_s AND $OpTx$FX_DC$330));
+</td></tr><tr><td>
+FDCPE_portaspi/count_q2: FDCPE port map (portaspi/count_q(2),portaspi/count_q_D(2),clock_i,'0','0',reset_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/count_q_D(2) <= ((portaspi/count_q(2) AND NOT $OpTx$FX_DC$330)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/state_s_FSM_FFd2 AND NOT portaspi/count_q(0) AND NOT portaspi/spi_clk_buf_s AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/count_q(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s AND NOT portaspi/count_q(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/count_q(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/state_s_FSM_FFd2 AND portaspi/count_q(0) AND NOT portaspi/spi_clk_buf_s AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/count_q(1) AND NOT portaspi/count_q(2) AND $OpTx$FX_DC$330));
+</td></tr><tr><td>
+FTCPE_portaspi/count_q3: FTCPE port map (portaspi/count_q(3),portaspi/count_q_T(3),clock_i,'0','0',reset_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/count_q_T(3) <= ((portaspi/ff_q AND NOT portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT portaspi/state_s_FSM_FFd2 AND portaspi/count_q(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/state_s_FSM_FFd2 AND portaspi/count_q(0) AND NOT portaspi/spi_clk_buf_s AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/count_q(1) AND portaspi/count_q(2) AND portaspi/prev_spi_clk_s));
+</td></tr><tr><td>
+FTCPE_portaspi/ff_clr_s: FTCPE port map (portaspi/ff_clr_s,portaspi/ff_clr_s_T,clock_i,NOT reset_n_i,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/ff_clr_s_T <= ((NOT portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/state_s_FSM_FFd2 AND portaspi/ff_clr_s)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/ff_q AND NOT portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT portaspi/state_s_FSM_FFd2 AND NOT portaspi/ff_clr_s));
+</td></tr><tr><td>
+FDCPE_portaspi/ff_q: FDCPE port map (portaspi/ff_q,portaspi/start_s,clock_i,portaspi/ff_clr_s,'0');
+</td></tr><tr><td>
+FDCPE_portaspi/prev_spi_clk_s: FDCPE port map (portaspi/prev_spi_clk_s,portaspi/spi_clk_buf_s,clock_i,'0','0',reset_n_i);
+</td></tr><tr><td>
+FTCPE_portaspi/shift_reg_s0: FTCPE port map (portaspi/shift_reg_s(0),portaspi/shift_reg_s_T(0),clock_i,'0','0',reset_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/shift_reg_s_T(0) <= ((portaspi/ff_q AND NOT portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT portaspi/state_s_FSM_FFd2 AND NOT portaspi/shift_reg_s(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (sd_miso_i AND portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s AND portaspi/prev_spi_clk_s AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT portaspi/shift_reg_s(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT sd_miso_i AND portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s AND portaspi/prev_spi_clk_s AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/shift_reg_s(0)));
+</td></tr><tr><td>
+FDCPE_portaspi/shift_reg_s1: FDCPE port map (portaspi/shift_reg_s(1),portaspi/shift_reg_s_D(1),clock_i,'0','0',reset_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/shift_reg_s_D(1) <= ((portaspi/shift_reg_s(1) AND NOT $OpTx$FX_DC$330)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/ff_q AND NOT portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT portaspi/state_s_FSM_FFd2 AND portaspi/spi_data_buf_s(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s AND portaspi/prev_spi_clk_s AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/shift_reg_s(0)));
+</td></tr><tr><td>
+FDCPE_portaspi/shift_reg_s2: FDCPE port map (portaspi/shift_reg_s(2),portaspi/shift_reg_s_D(2),clock_i,'0','0',reset_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/shift_reg_s_D(2) <= ((portaspi/shift_reg_s(2) AND NOT $OpTx$FX_DC$330)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/ff_q AND NOT portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT portaspi/state_s_FSM_FFd2 AND portaspi/spi_data_buf_s(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s AND portaspi/prev_spi_clk_s AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/shift_reg_s(1)));
+</td></tr><tr><td>
+FDCPE_portaspi/shift_reg_s3: FDCPE port map (portaspi/shift_reg_s(3),portaspi/shift_reg_s_D(3),clock_i,'0','0',reset_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/shift_reg_s_D(3) <= ((portaspi/shift_reg_s(3) AND NOT $OpTx$FX_DC$330)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/ff_q AND NOT portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT portaspi/state_s_FSM_FFd2 AND portaspi/spi_data_buf_s(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s AND portaspi/prev_spi_clk_s AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/shift_reg_s(2)));
+</td></tr><tr><td>
+FDCPE_portaspi/shift_reg_s4: FDCPE port map (portaspi/shift_reg_s(4),portaspi/shift_reg_s_D(4),clock_i,'0','0',reset_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/shift_reg_s_D(4) <= ((portaspi/shift_reg_s(4) AND NOT $OpTx$FX_DC$330)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/ff_q AND NOT portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT portaspi/state_s_FSM_FFd2 AND portaspi/spi_data_buf_s(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s AND portaspi/prev_spi_clk_s AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/shift_reg_s(3)));
+</td></tr><tr><td>
+FDCPE_portaspi/shift_reg_s5: FDCPE port map (portaspi/shift_reg_s(5),portaspi/shift_reg_s_D(5),clock_i,'0','0',reset_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/shift_reg_s_D(5) <= ((portaspi/shift_reg_s(5) AND NOT $OpTx$FX_DC$330)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/ff_q AND NOT portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT portaspi/state_s_FSM_FFd2 AND portaspi/spi_data_buf_s(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s AND portaspi/prev_spi_clk_s AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/shift_reg_s(4)));
+</td></tr><tr><td>
+FDCPE_portaspi/shift_reg_s6: FDCPE port map (portaspi/shift_reg_s(6),portaspi/shift_reg_s_D(6),clock_i,'0','0',reset_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/shift_reg_s_D(6) <= ((portaspi/shift_reg_s(6) AND NOT $OpTx$FX_DC$330)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/ff_q AND NOT portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT portaspi/state_s_FSM_FFd2 AND portaspi/spi_data_buf_s(5))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s AND portaspi/prev_spi_clk_s AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/shift_reg_s(5)));
+</td></tr><tr><td>
+FDCPE_portaspi/shift_reg_s7: FDCPE port map (portaspi/shift_reg_s(7),portaspi/shift_reg_s_D(7),clock_i,'0','0',reset_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/shift_reg_s_D(7) <= ((portaspi/shift_reg_s(7) AND NOT $OpTx$FX_DC$330)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/ff_q AND NOT portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT portaspi/state_s_FSM_FFd2 AND portaspi/spi_data_buf_s(6))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s AND portaspi/prev_spi_clk_s AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/shift_reg_s(6)));
+</td></tr><tr><td>
+FDCPE_portaspi/spi_clk_buf_s: FDCPE port map (portaspi/spi_clk_buf_s,portaspi/spi_clk_buf_s_D,clock_i,NOT reset_n_i,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/spi_clk_buf_s_D <= (portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s);
+</td></tr><tr><td>
+FDCPE_portaspi/spi_data_buf_s0: FDCPE port map (portaspi/spi_data_buf_s(0),portaspi/spi_data_buf_s_D(0),portaspi/start_s/portaspi/start_s_CLKF,'0',NOT portaspi/start_s/portaspi/start_s_RSTF);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/spi_data_buf_s_D(0) <= (NOT data_bus_io(0).PIN AND rd_n_i);
+</td></tr><tr><td>
+FDCPE_portaspi/spi_data_buf_s1: FDCPE port map (portaspi/spi_data_buf_s(1),portaspi/spi_data_buf_s_D(1),portaspi/start_s/portaspi/start_s_CLKF,'0',NOT portaspi/start_s/portaspi/start_s_RSTF);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/spi_data_buf_s_D(1) <= (NOT data_bus_io(1).PIN AND rd_n_i);
+</td></tr><tr><td>
+FDCPE_portaspi/spi_data_buf_s2: FDCPE port map (portaspi/spi_data_buf_s(2),portaspi/spi_data_buf_s_D(2),portaspi/start_s/portaspi/start_s_CLKF,'0',NOT portaspi/start_s/portaspi/start_s_RSTF);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/spi_data_buf_s_D(2) <= (NOT data_bus_io(2).PIN AND rd_n_i);
+</td></tr><tr><td>
+FDCPE_portaspi/spi_data_buf_s3: FDCPE port map (portaspi/spi_data_buf_s(3),portaspi/spi_data_buf_s_D(3),portaspi/start_s/portaspi/start_s_CLKF,'0',NOT portaspi/start_s/portaspi/start_s_RSTF);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/spi_data_buf_s_D(3) <= (NOT data_bus_io(3).PIN AND rd_n_i);
+</td></tr><tr><td>
+FDCPE_portaspi/spi_data_buf_s4: FDCPE port map (portaspi/spi_data_buf_s(4),portaspi/spi_data_buf_s_D(4),portaspi/start_s/portaspi/start_s_CLKF,'0',NOT portaspi/start_s/portaspi/start_s_RSTF);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/spi_data_buf_s_D(4) <= (NOT data_bus_io(4).PIN AND rd_n_i);
+</td></tr><tr><td>
+FDCPE_portaspi/spi_data_buf_s5: FDCPE port map (portaspi/spi_data_buf_s(5),portaspi/spi_data_buf_s_D(5),portaspi/start_s/portaspi/start_s_CLKF,'0',NOT portaspi/start_s/portaspi/start_s_RSTF);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/spi_data_buf_s_D(5) <= (NOT data_bus_io(5).PIN AND rd_n_i);
+</td></tr><tr><td>
+FDCPE_portaspi/spi_data_buf_s6: FDCPE port map (portaspi/spi_data_buf_s(6),portaspi/spi_data_buf_s_D(6),portaspi/start_s/portaspi/start_s_CLKF,'0',NOT portaspi/start_s/portaspi/start_s_RSTF);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/spi_data_buf_s_D(6) <= (NOT data_bus_io(6).PIN AND rd_n_i);
+</td></tr><tr><td>
+FDCPE_portaspi/spi_data_buf_s7: FDCPE port map (portaspi/spi_data_buf_s(7),portaspi/spi_data_buf_s_D(7),portaspi/start_s/portaspi/start_s_CLKF,'0',NOT portaspi/start_s/portaspi/start_s_RSTF);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/spi_data_buf_s_D(7) <= (NOT data_bus_io(7).PIN AND rd_n_i);
+</td></tr><tr><td>
+FDCPE_portaspi/spi_data_q0: FDCPE port map (portaspi/spi_data_q(0),portaspi/shift_reg_s(0),clock_i,'0','0',portaspi/spi_data_q_CE(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/spi_data_q_CE(0) <= (reset_n_i AND portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT portaspi/state_s_FSM_FFd2);
+</td></tr><tr><td>
+FDCPE_portaspi/spi_data_q1: FDCPE port map (portaspi/spi_data_q(1),portaspi/shift_reg_s(1),clock_i,'0','0',portaspi/spi_data_q_CE(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/spi_data_q_CE(1) <= (reset_n_i AND portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT portaspi/state_s_FSM_FFd2);
+</td></tr><tr><td>
+FDCPE_portaspi/spi_data_q2: FDCPE port map (portaspi/spi_data_q(2),portaspi/shift_reg_s(2),clock_i,'0','0',portaspi/spi_data_q_CE(2));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/spi_data_q_CE(2) <= (reset_n_i AND portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT portaspi/state_s_FSM_FFd2);
+</td></tr><tr><td>
+FDCPE_portaspi/spi_data_q3: FDCPE port map (portaspi/spi_data_q(3),portaspi/shift_reg_s(3),clock_i,'0','0',portaspi/spi_data_q_CE(3));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/spi_data_q_CE(3) <= (reset_n_i AND portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT portaspi/state_s_FSM_FFd2);
+</td></tr><tr><td>
+FDCPE_portaspi/spi_data_q4: FDCPE port map (portaspi/spi_data_q(4),portaspi/shift_reg_s(4),clock_i,'0','0',portaspi/spi_data_q_CE(4));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/spi_data_q_CE(4) <= (reset_n_i AND portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT portaspi/state_s_FSM_FFd2);
+</td></tr><tr><td>
+FDCPE_portaspi/spi_data_q5: FDCPE port map (portaspi/spi_data_q(5),portaspi/shift_reg_s(5),clock_i,'0','0',portaspi/spi_data_q_CE(5));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/spi_data_q_CE(5) <= (reset_n_i AND portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT portaspi/state_s_FSM_FFd2);
+</td></tr><tr><td>
+FDCPE_portaspi/spi_data_q6: FDCPE port map (portaspi/spi_data_q(6),portaspi/shift_reg_s(6),clock_i,'0','0',portaspi/spi_data_q_CE(6));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/spi_data_q_CE(6) <= (reset_n_i AND portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT portaspi/state_s_FSM_FFd2);
+</td></tr><tr><td>
+FDCPE_portaspi/spi_data_q7: FDCPE port map (portaspi/spi_data_q(7),portaspi/shift_reg_s(7),clock_i,'0','0',portaspi/spi_data_q_CE(7));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/spi_data_q_CE(7) <= (reset_n_i AND portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT portaspi/state_s_FSM_FFd2);
+</td></tr><tr><td>
+FDCPE_portaspi/start_s: FDCPE port map (portaspi/start_s,'1',portaspi/start_s/portaspi/start_s_CLKF,NOT portaspi/start_s/portaspi/start_s_RSTF,'0');
+</td></tr><tr><td>
+</td></tr><tr><td>
+portaspi/start_s/portaspi/start_s_CLKF <= ((NOT rd_n_i AND spi_cs_s/spi_cs_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT wr_n_i AND spi_cs_s/spi_cs_s_D2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+portaspi/start_s/portaspi/start_s_RSTF <= (reset_n_i AND NOT portaspi/ff_clr_s);
+</td></tr><tr><td>
+FDCPE_portaspi/state_s_FSM_FFd1: FDCPE port map (portaspi/state_s_FSM_FFd1,portaspi/state_s_FSM_FFd2,clock_i,'0','0',reset_n_i);
+</td></tr><tr><td>
+FTCPE_portaspi/state_s_FSM_FFd2: FTCPE port map (portaspi/state_s_FSM_FFd2,portaspi/state_s_FSM_FFd2_T,clock_i,'0','0',reset_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/state_s_FSM_FFd2_T <= ((portaspi/ff_q AND NOT portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT portaspi/state_s_FSM_FFd2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/state_s_FSM_FFd2 AND portaspi/count_q(0) AND NOT portaspi/spi_clk_buf_s AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/count_q(1) AND portaspi/count_q(2) AND NOT portaspi/count_q(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/prev_spi_clk_s));
+</td></tr><tr><td>
+FTCPE_portaspi/wait_n_s: FTCPE port map (portaspi/wait_n_s,portaspi/wait_n_s_T,clock_i,'0','0',reset_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;portaspi/wait_n_s_T <= ((NOT portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT portaspi/state_s_FSM_FFd2 AND NOT portaspi/wait_n_s)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/state_s_FSM_FFd2 AND portaspi/wait_n_s AND portaspi/start_s));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ram_a_o(13) <= addr_bus_i(13);
+</td></tr><tr><td>
+</td></tr><tr><td>
+ram_a_o(14) <= ((addr_bus_i(15) AND addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	memmapper/MapBank3_q(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(15) AND NOT addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	memmapper/MapBank2_q(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT addr_bus_i(15) AND addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	memmapper/MapBank1_q(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT addr_bus_i(15) AND NOT addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	memmapper/MapBank0_q(0)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ram_a_o(15) <= ((addr_bus_i(15) AND addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	memmapper/MapBank3_q(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(15) AND NOT addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	memmapper/MapBank2_q(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT addr_bus_i(15) AND addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	memmapper/MapBank1_q(1))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT addr_bus_i(15) AND NOT addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	memmapper/MapBank0_q(1)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ram_a_o(16) <= ((addr_bus_i(15) AND addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	memmapper/MapBank3_q(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(15) AND NOT addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	memmapper/MapBank2_q(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT addr_bus_i(15) AND addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	memmapper/MapBank1_q(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT addr_bus_i(15) AND NOT addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	memmapper/MapBank0_q(2)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ram_a_o(17) <= ((addr_bus_i(15) AND addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	memmapper/MapBank3_q(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(15) AND NOT addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	memmapper/MapBank2_q(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT addr_bus_i(15) AND addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	memmapper/MapBank1_q(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT addr_bus_i(15) AND NOT addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	memmapper/MapBank0_q(3)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ram_a_o(18) <= ((addr_bus_i(15) AND addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	memmapper/MapBank3_q(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(15) AND NOT addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	memmapper/MapBank2_q(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT addr_bus_i(15) AND addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	memmapper/MapBank1_q(4))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT addr_bus_i(15) AND NOT addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	memmapper/MapBank0_q(4)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ram_cs_n_o <= NOT (((addr_bus_i(15) AND addr_bus_i(14) AND sw_i(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	exp/exp_reg(6) AND NOT exp/exp_reg(7) AND NOT sltsl_n_i AND NOT ffff/ffff_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(15) AND NOT addr_bus_i(14) AND sw_i(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	exp/exp_reg(4) AND NOT exp/exp_reg(5) AND NOT sltsl_n_i AND NOT ffff/ffff_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT addr_bus_i(15) AND addr_bus_i(14) AND sw_i(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	exp/exp_reg(2) AND NOT exp/exp_reg(3) AND NOT sltsl_n_i AND NOT ffff/ffff_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT addr_bus_i(15) AND NOT addr_bus_i(14) AND sw_i(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	exp/exp_reg(0) AND NOT exp/exp_reg(1) AND NOT sltsl_n_i AND NOT ffff/ffff_D2)));
+</td></tr><tr><td>
+</td></tr><tr><td>
+ram_we_n_o <= wr_n_i;
+</td></tr><tr><td>
+</td></tr><tr><td>
+rom_a_o(14) <= ((addr_bus_i(15) AND NOT addr_bus_i(14) AND rom_bank2_q(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT addr_bus_i(15) AND addr_bus_i(14) AND rom_bank1_q(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sltsl_rom_n_s/sltsl_rom_n_s_D2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+rom_a_o(15) <= ((addr_bus_i(15) AND NOT addr_bus_i(14) AND rom_bank2_q(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT addr_bus_i(15) AND addr_bus_i(14) AND rom_bank1_q(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sltsl_rom_n_s/sltsl_rom_n_s_D2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+rom_a_o(16) <= ((addr_bus_i(15) AND NOT addr_bus_i(14) AND rom_bank2_q(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT addr_bus_i(15) AND addr_bus_i(14) AND rom_bank1_q(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sltsl_rom_n_s/sltsl_rom_n_s_D2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+rom_a_o(17) <= sw_i(1);
+</td></tr><tr><td>
+FDCPE_rom_bank1_q0: FDCPE port map (rom_bank1_q(0),data_bus_io(0).PIN,rom_bank1_q_C(0),NOT reset_n_i,'0',NOT addr_bus_i(12));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rom_bank1_q_C(0) <= NOT ((NOT addr_bus_i(15) AND addr_bus_i(14) AND addr_bus_i(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(11) AND NOT wr_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2));
+</td></tr><tr><td>
+FDCPE_rom_bank1_q1: FDCPE port map (rom_bank1_q(1),data_bus_io(1).PIN,rom_bank1_q_C(1),NOT reset_n_i,'0',NOT addr_bus_i(12));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rom_bank1_q_C(1) <= NOT ((NOT addr_bus_i(15) AND addr_bus_i(14) AND addr_bus_i(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(11) AND NOT wr_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2));
+</td></tr><tr><td>
+FDCPE_rom_bank1_q2: FDCPE port map (rom_bank1_q(2),data_bus_io(2).PIN,rom_bank1_q_C(2),NOT reset_n_i,'0',NOT addr_bus_i(12));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rom_bank1_q_C(2) <= NOT ((NOT addr_bus_i(15) AND addr_bus_i(14) AND addr_bus_i(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(11) AND NOT wr_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2));
+</td></tr><tr><td>
+FDCPE_rom_bank2_q0: FDCPE port map (rom_bank2_q(0),data_bus_io(0).PIN,rom_bank2_q_C(0),NOT reset_n_i,'0',addr_bus_i(12));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rom_bank2_q_C(0) <= NOT ((NOT addr_bus_i(15) AND addr_bus_i(14) AND addr_bus_i(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(11) AND NOT wr_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2));
+</td></tr><tr><td>
+FDCPE_rom_bank2_q1: FDCPE port map (rom_bank2_q(1),data_bus_io(1).PIN,rom_bank2_q_C(1),NOT reset_n_i,'0',addr_bus_i(12));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rom_bank2_q_C(1) <= NOT ((NOT addr_bus_i(15) AND addr_bus_i(14) AND addr_bus_i(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(11) AND NOT wr_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2));
+</td></tr><tr><td>
+FDCPE_rom_bank2_q2: FDCPE port map (rom_bank2_q(2),data_bus_io(2).PIN,rom_bank2_q_C(2),NOT reset_n_i,'0',addr_bus_i(12));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rom_bank2_q_C(2) <= NOT ((NOT addr_bus_i(15) AND addr_bus_i(14) AND addr_bus_i(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(11) AND NOT wr_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2));
+</td></tr><tr><td>
+FDCPE_rom_bank2_q3: FDCPE port map (rom_bank2_q(3),data_bus_io(3).PIN,rom_bank2_q_C(3),NOT reset_n_i,'0',addr_bus_i(12));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rom_bank2_q_C(3) <= NOT ((NOT addr_bus_i(15) AND addr_bus_i(14) AND addr_bus_i(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(11) AND NOT wr_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+rom_ce_n_o <= ((NOT sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT addr_bus_i(14) AND NOT rom_bank2_q(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND addr_bus_i(9) AND addr_bus_i(8) AND addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND addr_bus_i(10))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(15) AND addr_bus_i(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT addr_bus_i(15) AND NOT addr_bus_i(14))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(14) AND rd_n_i)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(14) AND spi_cs_s/spi_cs_s_D2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+rom_we_n_o <= NOT ((addr_bus_i(15) AND NOT addr_bus_i(14) AND NOT wr_n_i AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sltsl_rom_n_s/sltsl_rom_n_s_D2));
+</td></tr><tr><td>
+FTCPE_sd_chg_q0: FTCPE port map (sd_chg_q(0),sd_chg_q_T(0),sd_chg_q_C(0),NOT reset_n_i,sd_pres_n_i(0));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sd_chg_q_T(0) <= (sd_chg_q(0) AND NOT sd_cs_n_o(0) AND sd_cs_n_o(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sd_chg_q_C(0) <= NOT ((addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2));
+</td></tr><tr><td>
+FTCPE_sd_chg_q1: FTCPE port map (sd_chg_q(1),sd_chg_q_T(1),sd_chg_q_C(1),NOT reset_n_i,sd_pres_n_i(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sd_chg_q_T(1) <= (sd_chg_q(1) AND sd_cs_n_o(0) AND NOT sd_cs_n_o(1));
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sd_chg_q_C(1) <= NOT ((addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2));
+</td></tr><tr><td>
+FDCPE_sd_chg_s0: FDCPE port map (sd_chg_s(0),sd_chg_q(0),sd_chg_s_C(0),NOT reset_n_i,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sd_chg_s_C(0) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2);
+</td></tr><tr><td>
+FDCPE_sd_chg_s1: FDCPE port map (sd_chg_s(1),sd_chg_q(1),sd_chg_s_C(1),NOT reset_n_i,'0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sd_chg_s_C(1) <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT rd_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2);
+</td></tr><tr><td>
+FDCPE_sd_cs_n_o0: FDCPE port map (sd_cs_n_o(0),NOT data_bus_io(0).PIN,sd_cs_n_o_C(0),'0',NOT reset_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sd_cs_n_o_C(0) <= NOT ((addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT wr_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2));
+</td></tr><tr><td>
+FDCPE_sd_cs_n_o1: FDCPE port map (sd_cs_n_o(1),NOT data_bus_io(1).PIN,sd_cs_n_o_C(1),'0',NOT reset_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sd_cs_n_o_C(1) <= NOT ((addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT wr_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2));
+</td></tr><tr><td>
+FDCPE_sd_mosi_o: FDCPE port map (sd_mosi_o,sd_mosi_o_D,clock_i,'0','0',reset_n_i);
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sd_mosi_o_D <= ((sd_mosi_o AND NOT $OpTx$FX_DC$330)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/ff_q AND NOT portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT portaspi/state_s_FSM_FFd2 AND portaspi/spi_data_buf_s(7))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s AND portaspi/prev_spi_clk_s AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/shift_reg_s(7)));
+</td></tr><tr><td>
+FTCPE_sd_sclk_o: FTCPE port map (sd_sclk_o,sd_sclk_o_T,clock_i,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sd_sclk_o_T <= ((reset_n_i AND portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/state_s_FSM_FFd2 AND portaspi/spi_clk_buf_s AND NOT portaspi/prev_spi_clk_s AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT sd_sclk_o)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (reset_n_i AND portaspi/state_s_FSM_FFd1 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	portaspi/state_s_FSM_FFd2 AND NOT portaspi/spi_clk_buf_s AND portaspi/prev_spi_clk_s AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sd_sclk_o));
+</td></tr><tr><td>
+</td></tr><tr><td>
+sltsl_rom_n_s/sltsl_rom_n_s_D2 <= ((NOT sw_i(0) AND NOT sltsl_n_i)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(15) AND addr_bus_i(14) AND NOT exp/exp_reg(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT exp/exp_reg(7) AND NOT sltsl_n_i AND NOT ffff/ffff_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(15) AND NOT addr_bus_i(14) AND NOT exp/exp_reg(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT exp/exp_reg(5) AND NOT sltsl_n_i AND NOT ffff/ffff_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT addr_bus_i(15) AND addr_bus_i(14) AND NOT exp/exp_reg(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT exp/exp_reg(3) AND NOT sltsl_n_i AND NOT ffff/ffff_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT addr_bus_i(15) AND NOT addr_bus_i(14) AND NOT exp/exp_reg(0) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT exp/exp_reg(1) AND NOT sltsl_n_i AND NOT ffff/ffff_D2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+spi_cs_s/spi_cs_s_D2 <= ((NOT addr_bus_i(9) AND NOT addr_bus_i(15) AND addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND addr_bus_i(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	rom_bank1_q(0) AND rom_bank1_q(1) AND rom_bank1_q(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT addr_bus_i(8) AND NOT addr_bus_i(15) AND addr_bus_i(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND addr_bus_i(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	rom_bank1_q(0) AND rom_bank1_q(1) AND rom_bank1_q(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sltsl_rom_n_s/sltsl_rom_n_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT addr_bus_i(10) AND rom_bank1_q(0) AND rom_bank1_q(1) AND rom_bank1_q(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	sltsl_rom_n_s/sltsl_rom_n_s_D2));
+</td></tr><tr><td>
+FDCPE_tmr_cnt_q0: FDCPE port map (tmr_cnt_q(0),tmr_cnt_q_D(0),clock_i,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tmr_cnt_q_D(0) <= ((tmr_cnt_q(0) AND NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND NOT tmr_cnt_q(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND NOT tmr_cnt_q(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(3) AND NOT tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(15) AND NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND NOT tmr_cnt_q(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2));
+</td></tr><tr><td>
+FDCPE_tmr_cnt_q1: FDCPE port map (tmr_cnt_q(1),tmr_cnt_q_D(1),clock_i,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tmr_cnt_q_D(1) <= ((tmr_cnt_q(0) AND NOT tmr_cnt_q(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(0) AND tmr_cnt_q(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(9) AND NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(3) AND NOT tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(15) AND NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND NOT tmr_cnt_q(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2));
+</td></tr><tr><td>
+FDCPE_tmr_cnt_q2: FDCPE port map (tmr_cnt_q(2),tmr_cnt_q_D(2),clock_i,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tmr_cnt_q_D(2) <= ((tmr_cnt_q(0) AND NOT tmr_cnt_q(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tmr_cnt_q(1) AND NOT tmr_cnt_q(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(1) AND tmr_cnt_q(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND NOT tmr_cnt_q(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND NOT tmr_cnt_q(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND NOT tmr_cnt_q(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND NOT tmr_cnt_q(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2));
+</td></tr><tr><td>
+FDCPE_tmr_cnt_q3: FDCPE port map (tmr_cnt_q(3),tmr_cnt_q_D(3),clock_i,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tmr_cnt_q_D(3) <= ((tmr_cnt_q(0) AND NOT tmr_cnt_q(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tmr_cnt_q(1) AND NOT tmr_cnt_q(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(3) AND tmr_cnt_q(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(1) AND tmr_cnt_q(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(2) AND NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND NOT tmr_cnt_q(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND NOT tmr_cnt_q(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND NOT tmr_cnt_q(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(4) AND NOT tmr_cnt_q(6) AND NOT tmr_wr_s/tmr_wr_s_D2));
+</td></tr><tr><td>
+FDCPE_tmr_cnt_q4: FDCPE port map (tmr_cnt_q(4),tmr_cnt_q_D(4),clock_i,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tmr_cnt_q_D(4) <= ((NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(1) AND NOT tmr_cnt_q(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(2) AND tmr_cnt_q(4) AND NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tmr_cnt_q(0) AND NOT tmr_cnt_q(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tmr_cnt_q(1) AND NOT tmr_cnt_q(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tmr_cnt_q(3) AND NOT tmr_cnt_q(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND NOT tmr_cnt_q(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND NOT tmr_cnt_q(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND NOT tmr_cnt_q(15) AND NOT tmr_cnt_q(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(6) AND NOT tmr_wr_s/tmr_wr_s_D2));
+</td></tr><tr><td>
+FDCPE_tmr_cnt_q5: FDCPE port map (tmr_cnt_q(5),tmr_cnt_q_D(5),clock_i,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tmr_cnt_q_D(5) <= ((tmr_cnt_q(5) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(5) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(9) AND NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(1) AND NOT tmr_cnt_q(3) AND NOT tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(8) AND NOT tmr_cnt_q(15) AND NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(6) AND NOT tmr_wr_s/tmr_wr_s_D2));
+</td></tr><tr><td>
+FDCPE_tmr_cnt_q6: FDCPE port map (tmr_cnt_q(6),tmr_cnt_q_D(6),clock_i,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tmr_cnt_q_D(6) <= ((tmr_cnt_q(5) AND NOT tmr_cnt_q(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(6) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(5) AND tmr_cnt_q(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(9) AND NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(1) AND NOT tmr_cnt_q(3) AND NOT tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(15) AND NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND NOT tmr_cnt_q(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2));
+</td></tr><tr><td>
+FDCPE_tmr_cnt_q7: FDCPE port map (tmr_cnt_q(7),tmr_cnt_q_D(7),clock_i,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tmr_cnt_q_D(7) <= ((tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(7) AND tmr_cnt_q(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(7) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(5) AND tmr_cnt_q(7) AND NOT tmr_cnt_q(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(9) AND NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(1) AND NOT tmr_cnt_q(3) AND NOT tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(15) AND NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2));
+</td></tr><tr><td>
+FDCPE_tmr_cnt_q8: FDCPE port map (tmr_cnt_q(8),tmr_cnt_q_D(8),clock_i,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tmr_cnt_q_D(8) <= ((NOT tmr_cnt_q(8) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND tmr_cnt_q(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(6) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Msub_tmr_cnt_q_sub0000__or0003/Msub_tmr_cnt_q_sub0000__or0003_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(9) AND NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(1) AND NOT tmr_cnt_q(3) AND NOT tmr_cnt_q(8) AND NOT tmr_cnt_q(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT data_bus_io(0).PIN AND tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tmr_cnt_q(5) AND NOT tmr_cnt_q(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(8) AND tmr_cnt_q(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2));
+</td></tr><tr><td>
+FDCPE_tmr_cnt_q9: FDCPE port map (tmr_cnt_q(9),tmr_cnt_q_D(9),clock_i,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tmr_cnt_q_D(9) <= ((NOT tmr_cnt_q(9) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(9) AND NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(1) AND NOT tmr_cnt_q(3) AND NOT tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(8) AND NOT tmr_cnt_q(15) AND NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(6) AND NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT data_bus_io(1).PIN AND tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tmr_cnt_q(9) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2));
+</td></tr><tr><td>
+FDCPE_tmr_cnt_q10: FDCPE port map (tmr_cnt_q(10),tmr_cnt_q_D(10),clock_i,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tmr_cnt_q_D(10) <= ((NOT tmr_cnt_q(10) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(9) AND tmr_cnt_q(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND NOT tmr_cnt_q(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(3) AND NOT tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(15) AND NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND NOT tmr_cnt_q(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT data_bus_io(2).PIN AND tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tmr_cnt_q(9) AND NOT tmr_cnt_q(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2));
+</td></tr><tr><td>
+FDCPE_tmr_cnt_q11: FDCPE port map (tmr_cnt_q(11),tmr_cnt_q_D(11),clock_i,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tmr_cnt_q_D(11) <= ((NOT tmr_cnt_q(11) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tmr_cnt_q(11) AND NOT tmr_cnt_q(9) AND NOT tmr_cnt_q(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND NOT tmr_cnt_q(1) AND NOT tmr_cnt_q(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND NOT tmr_cnt_q(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND NOT tmr_cnt_q(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT data_bus_io(3).PIN AND tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(11) AND tmr_cnt_q(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(11) AND tmr_cnt_q(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2));
+</td></tr><tr><td>
+FDCPE_tmr_cnt_q12: FDCPE port map (tmr_cnt_q(12),tmr_cnt_q_D(12),clock_i,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tmr_cnt_q_D(12) <= ((NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(9) AND NOT tmr_cnt_q(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	tmr_cnt_q(12) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(13) AND NOT tmr_cnt_q(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(14) AND NOT tmr_cnt_q(1) AND NOT tmr_cnt_q(3) AND NOT tmr_cnt_q(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND NOT tmr_cnt_q(15) AND NOT tmr_cnt_q(2) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(4) AND NOT tmr_cnt_q(6) AND NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT data_bus_io(4).PIN AND tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tmr_cnt_q(11) AND NOT tmr_cnt_q(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tmr_cnt_q(9) AND NOT tmr_cnt_q(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(12) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2));
+</td></tr><tr><td>
+FDCPE_tmr_cnt_q13: FDCPE port map (tmr_cnt_q(13),tmr_cnt_q_D(13),clock_i,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tmr_cnt_q_D(13) <= ((NOT data_bus_io(5).PIN AND tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(11) AND tmr_cnt_q(13) AND NOT tmr_cnt_q(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(13) AND tmr_cnt_q(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(13) AND tmr_cnt_q(10) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(13) AND tmr_cnt_q(12) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(13) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(13) AND NOT tmr_cnt_q(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(1) AND NOT tmr_cnt_q(3) AND NOT tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(8) AND NOT tmr_cnt_q(15) AND NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(6) AND NOT tmr_wr_s/tmr_wr_s_D2));
+</td></tr><tr><td>
+FDCPE_tmr_cnt_q14: FDCPE port map (tmr_cnt_q(14),tmr_cnt_q_D(14),clock_i,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tmr_cnt_q_D(14) <= ((NOT data_bus_io(6).PIN AND tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tmr_cnt_q(11) AND NOT tmr_cnt_q(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tmr_cnt_q(9) AND NOT tmr_cnt_q(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND NOT tmr_cnt_q(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND tmr_cnt_q(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tmr_cnt_q(13) AND NOT tmr_cnt_q(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tmr_cnt_q(10) AND NOT tmr_cnt_q(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(14) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(14) AND NOT tmr_cnt_q(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(3) AND NOT tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(15) AND NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND NOT tmr_cnt_q(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2));
+</td></tr><tr><td>
+FDCPE_tmr_cnt_q15: FDCPE port map (tmr_cnt_q(15),tmr_cnt_q_D(15),clock_i,'0','0');
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tmr_cnt_q_D(15) <= ((tmr_cnt_q(11) AND NOT tmr_cnt_q(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tmr_cnt_q(9) AND NOT tmr_cnt_q(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tmr_cnt_q(10) AND NOT tmr_cnt_q(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT data_bus_io(7).PIN AND tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(11) AND NOT tmr_cnt_q(13) AND NOT tmr_cnt_q(9) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(10) AND NOT tmr_cnt_q(12) AND NOT tmr_cnt_q(14) AND tmr_cnt_q(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tmr_cnt_q(13) AND NOT tmr_cnt_q(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tmr_cnt_q(12) AND NOT tmr_cnt_q(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (tmr_cnt_q(14) AND NOT tmr_cnt_q(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(15) AND NOT tmr_wr_s/tmr_wr_s_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT Msub_tmr_cnt_q_sub0000__or0007/Msub_tmr_cnt_q_sub0000__or0007_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT tmr_cnt_q(0) AND NOT tmr_cnt_q(1) AND NOT tmr_cnt_q(3) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(5) AND NOT tmr_cnt_q(7) AND NOT tmr_cnt_q(8) AND NOT tmr_cnt_q(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_cnt_q(2) AND NOT tmr_cnt_q(4) AND NOT tmr_cnt_q(6) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT tmr_wr_s/tmr_wr_s_D2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+tmr_wr_s/tmr_wr_s_D2 <= (addr_bus_i(7) AND addr_bus_i(6) AND addr_bus_i(5) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(4) AND NOT addr_bus_i(3) AND NOT addr_bus_i(2) AND NOT addr_bus_i(1) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(0) AND addr_bus_i(9) AND addr_bus_i(8) AND NOT addr_bus_i(15) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(14) AND addr_bus_i(13) AND addr_bus_i(12) AND addr_bus_i(11) AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	addr_bus_i(10) AND NOT wr_n_i AND sltsl_rom_n_s/sltsl_rom_n_s_D2);
+</td></tr><tr><td>
+</td></tr><tr><td>
+wait_n_o_I <= '0';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wait_n_o <= wait_n_o_I when wait_n_o_OE = '1' else 'Z';
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;wait_n_o_OE <= NOT portaspi/wait_n_s;
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>
