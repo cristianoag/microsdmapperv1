@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.00 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.00 secs
  
 --> 
 Reading design: sdmapper.prj
@@ -78,13 +78,13 @@ wysiwyg                            : NO
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "/home/ise/msxsdmapperv2/CPLD/src/spi.vhd" in Library work.
+Compiling vhdl file "/home/ise/microsdmapper/src/spi.vhd" in Library work.
 Architecture behavioral of Entity spi is up to date.
-Compiling vhdl file "/home/ise/msxsdmapperv2/CPLD/src/exp_slot.vhd" in Library work.
+Compiling vhdl file "/home/ise/microsdmapper/src/exp_slot.vhd" in Library work.
 Architecture rtl of Entity exp_slot is up to date.
-Compiling vhdl file "/home/ise/msxsdmapperv2/CPLD/src/mapper.vhd" in Library work.
+Compiling vhdl file "/home/ise/microsdmapper/src/mapper.vhd" in Library work.
 Architecture rtl of Entity mapper is up to date.
-Compiling vhdl file "/home/ise/msxsdmapperv2/CPLD/src/sdmapper.vhd" in Library work.
+Compiling vhdl file "/home/ise/microsdmapper/src/sdmapper.vhd" in Library work.
 Architecture behavioral of Entity sdmapper is up to date.
 
 =========================================================================
@@ -122,7 +122,7 @@ Entity <mapper> analyzed. Unit <mapper> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <spi>.
-    Related source file is "/home/ise/msxsdmapperv2/CPLD/src/spi.vhd".
+    Related source file is "/home/ise/microsdmapper/src/spi.vhd".
     Found finite state machine <FSM_0> for signal <state_s>.
     -----------------------------------------------------------------------
     | States             | 4                                              |
@@ -157,7 +157,7 @@ Unit <spi> synthesized.
 
 
 Synthesizing Unit <exp_slot>.
-    Related source file is "/home/ise/msxsdmapperv2/CPLD/src/exp_slot.vhd".
+    Related source file is "/home/ise/microsdmapper/src/exp_slot.vhd".
     Found 8-bit tristate buffer for signal <cpu_d>.
     Found 8-bit register for signal <exp_reg>.
     Found 2-bit 4-to-1 multiplexer for signal <exp_sel>.
@@ -167,7 +167,7 @@ Unit <exp_slot> synthesized.
 
 
 Synthesizing Unit <mapper>.
-    Related source file is "/home/ise/msxsdmapperv2/CPLD/src/mapper.vhd".
+    Related source file is "/home/ise/microsdmapper/src/mapper.vhd".
 WARNING:Xst:2563 - Inout <cpu_d_io<5>> is never assigned. Tied to value Z.
 WARNING:Xst:2563 - Inout <cpu_d_io<6>> is never assigned. Tied to value Z.
 WARNING:Xst:2563 - Inout <cpu_d_io<7>> is never assigned. Tied to value Z.
@@ -196,7 +196,7 @@ Unit <mapper> synthesized.
 
 
 Synthesizing Unit <sdmapper>.
-    Related source file is "/home/ise/msxsdmapperv2/CPLD/src/sdmapper.vhd".
+    Related source file is "/home/ise/microsdmapper/src/sdmapper.vhd".
 WARNING:Xst:646 - Signal <slt_exp_n<3:2>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 8-bit tristate buffer for signal <data_bus_io>.
     Found 1-bit tristate buffer for signal <wait_n_o>.
@@ -348,13 +348,13 @@ Cell Usage :
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 2.56 secs
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 2.25 secs
  
 --> 
 
 
-Total memory usage is 616044 kilobytes
+Total memory usage is 616032 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    9 (   0 filtered)

@@ -32,10 +32,11 @@ const char *basehtml =
 	"host: <input id='host' type='text' value='{host}'/><br>"
 	"ssid: <input id='ssid' type='text' value='{ssid}'/><br>"
 	"pass: <input id='pass' type='text' value='{pass}'/><br>"
-	"<br><input type='submit' onclick='save()' value='Save'/>&nbsp;&nbsp;<input type='submit' onclick='reboot()' value='Reboot'/>"
+	"<br><input type='submit' onclick='save()' value='Save'/>&nbsp;&nbsp;<input type='submit' onclick='erase()' value='Erase'/>&nbsp;&nbsp;<input type='submit' onclick='reboot()' value='Reboot'/>"
 	"</body>"
 	"<script language='javascript'>"
 	"function save() { window.location.href=location.protocol + '//' + location.host + '/save/' + host.value + '/' + ssid.value + '/' + pass.value; }"
+	"function erase() { window.location.href=location.protocol + '//' + location.host + '/erase'; }"
 	"function reboot() { window.location.href=location.protocol + '//' + location.host + '/reboot'; }"
 	"</script>"
 	"</html>";
@@ -90,6 +91,23 @@ void ESPWebDAV::handleNotFound() {
 		reboot = true;
 		return;
 	}
+
+	// erase EEPROM
+	if (method.equals("GET") && uri.equalsIgnoreCase("/erase")) {
+		config.ssid_flag = 0;
+		EEPROM.begin(EEPROM_SIZE);
+		// for (uint8 i = 0; i < EEPROM_SIZE; i++) {
+		// 	EEPROM.write(i, -1);
+		// }
+		uint8_t *p = (uint8_t*)(&config);
+		for (uint8 i = 0; i < sizeof(config); i++) {
+			EEPROM.write(i, *(p + i));
+		}
+		EEPROM.commit();
+		send("200 OK", "text/plain", "processing erase request. . .");
+		return;
+	}
+
 
 	// save all 
 	if (method.equals("GET") && uri.startsWith("/save/")) {

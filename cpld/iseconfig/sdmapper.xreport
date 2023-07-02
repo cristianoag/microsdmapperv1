@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2023-05-28T14:45:38</DateModified>
+  <DateModified>2023-07-02T22:27:49</DateModified>
   <ModuleName>sdmapper</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/home/ise/msxsdmapperv2/CPLD/iseconfig/sdmapper.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/ise/msxsdmapperv2/CPLD/</ImplementationReportsDirectory>
+  <SavedFilePath>/home/ise/microsdmapper/iseconfig/sdmapper.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/ise/microsdmapper/</ImplementationReportsDirectory>
   <DateInitialized>2022-11-21T01:30:58</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

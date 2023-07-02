@@ -287,7 +287,13 @@ void setup() {
 		blink();
 		DBG_PRINTLN("\nWebDAV server started");
 #if OLED_DISPLAY == 1
-		Display(WiFi.localIP().toString(),"WebDAV Ready!");
+		if (config.ssid_flag == 9) {
+			Display(WiFi.localIP().toString(),"WebDAV Ready!");
+		}
+		else
+		{
+			Display(WiFi.localIP().toString(),"SoftAP Active");
+		}
 #endif
   	}
 

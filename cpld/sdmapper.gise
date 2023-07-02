@@ -49,11 +49,9 @@
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="sdmapper.xml"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="sdmapper.xst"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="sdmapper_build.xml"/>
-    <file xil_pn:fileType="FILE_HTML" xil_pn:name="sdmapper_envsettings.html"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="sdmapper_html"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="sdmapper_ngdbuild.xrpt"/>
     <file xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="sdmapper_pad.csv"/>
-    <file xil_pn:fileType="FILE_HTML" xil_pn:name="sdmapper_summary.html"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="sdmapper_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="sdmapper_xst.xrpt"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
@@ -62,15 +60,15 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1685285160" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1685285160">
+    <transform xil_pn:end_ts="1688338521" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1688338521">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1685285160" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-4156711058092002737" xil_pn:start_ts="1685285160">
+    <transform xil_pn:end_ts="1688338521" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-4156711058092002737" xil_pn:start_ts="1688338521">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1685285167" xil_pn:in_ck="6777443443834307196" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="-1224325660780515292" xil_pn:start_ts="1685285160">
+    <transform xil_pn:end_ts="1688338527" xil_pn:in_ck="6777443443834307196" xil_pn:name="TRANEXT_xstsynthesize_xc9500xl" xil_pn:prop_ck="-1224325660780515292" xil_pn:start_ts="1688338521">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -87,11 +85,11 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1669047338" xil_pn:in_ck="5276581806455035787" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="7389599813643447508" xil_pn:start_ts="1669047337">
+    <transform xil_pn:end_ts="1688338527" xil_pn:in_ck="5276581806455035787" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="7389599813643447508" xil_pn:start_ts="1688338527">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1685285171" xil_pn:in_ck="-6357346068573467699" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="1893441463969615248" xil_pn:start_ts="1685285167">
+    <transform xil_pn:end_ts="1688338532" xil_pn:in_ck="-6357346068573467699" xil_pn:name="TRAN_ngdbuild" xil_pn:prop_ck="1893441463969615248" xil_pn:start_ts="1688338527">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_ngo"/>
@@ -100,7 +98,7 @@
       <outfile xil_pn:name="sdmapper.ngd"/>
       <outfile xil_pn:name="sdmapper_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1685285182" xil_pn:in_ck="5970700343040483139" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="8814713351148234059" xil_pn:start_ts="1685285171">
+    <transform xil_pn:end_ts="1688338542" xil_pn:in_ck="5970700343040483139" xil_pn:name="TRANEXT_vm6File_xc9500xl" xil_pn:prop_ck="8814713351148234059" xil_pn:start_ts="1688338532">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
@@ -118,28 +116,24 @@
       <outfile xil_pn:name="sdmapper_html"/>
       <outfile xil_pn:name="sdmapper_pad.csv"/>
     </transform>
-    <transform xil_pn:end_ts="1685285186" xil_pn:in_ck="5970700343040492003" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-6294026017969277533" xil_pn:start_ts="1685285182">
+    <transform xil_pn:end_ts="1688338546" xil_pn:in_ck="5970700343040492003" xil_pn:name="TRANEXT_crtProg_xc9500" xil_pn:prop_ck="-6294026017969277533" xil_pn:start_ts="1688338542">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="sdmapper.jed"/>
     </transform>
-    <transform xil_pn:end_ts="1685285202" xil_pn:in_ck="5970700343040478717" xil_pn:name="TRAN_impactProgrammingTool_CPLD" xil_pn:prop_ck="-8487078306172248444" xil_pn:start_ts="1685285202">
+    <transform xil_pn:end_ts="1688339069" xil_pn:in_ck="5970700343040478717" xil_pn:name="TRAN_impactProgrammingTool_CPLD" xil_pn:prop_ck="-8487078306172248444" xil_pn:start_ts="1688339069">
+      <status xil_pn:value="FailedRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="_impactbatch.log"/>
+      <outfile xil_pn:name="ise_impact.cmd"/>
+    </transform>
+    <transform xil_pn:end_ts="1688339132" xil_pn:in_ck="5970700343040478717" xil_pn:name="TRAN_configureTargetDevice_CPLD" xil_pn:prop_ck="-950559214863119156" xil_pn:start_ts="1688339126">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_impactbatch.log"/>
       <outfile xil_pn:name="ise_impact.cmd"/>
     </transform>
-    <transform xil_pn:end_ts="1669047176" xil_pn:in_ck="5970700343040478717" xil_pn:name="TRAN_configureTargetDevice_CPLD" xil_pn:prop_ck="-950559214863119156" xil_pn:start_ts="1669047176">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="_impactbatch.log"/>
-      <outfile xil_pn:name="ise_impact.cmd"/>
-    </transform>
-    <transform xil_pn:end_ts="1668994464" xil_pn:in_ck="5970700343040492003" xil_pn:name="TRAN_timRpt" xil_pn:prop_ck="111903974446" xil_pn:start_ts="1668994458">
+    <transform xil_pn:end_ts="1688338256" xil_pn:in_ck="5970700343040492003" xil_pn:name="TRAN_timRpt" xil_pn:prop_ck="111903974446" xil_pn:start_ts="1688338252">
       <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
