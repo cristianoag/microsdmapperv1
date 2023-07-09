@@ -2333,7 +2333,6 @@
     )
   )
 
-
   (junction (at 271.78 54.61) (diameter 0) (color 0 0 0 0)
     (uuid 0727f1f3-00c5-4997-9400-fa21fae67c70)
   )
@@ -5324,31 +5323,6 @@
     )
   )
 
-  (symbol (lib_id "power:+5V") (at 360.68 209.55 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid 841f0ac6-4fe4-4fe3-9bca-b1fed17e0039)
-    (property "Reference" "#PWR020" (at 360.68 213.36 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+5V" (at 360.68 205.74 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 360.68 209.55 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 360.68 209.55 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid d8f8498a-35b4-44ce-8e2e-dc25b572f678))
-    (instances
-      (project "microsdmapper"
-        (path "/c945c20f-3691-483a-95d3-09d0b04a2d96"
-          (reference "#PWR020") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Connector_Generic:Conn_02x03_Odd_Even") (at 171.45 269.24 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8690c7fd-da3c-4ea3-8e18-87f192957743)
@@ -6124,6 +6098,31 @@
       (project "microsdmapper"
         (path "/c945c20f-3691-483a-95d3-09d0b04a2d96"
           (reference "IC1") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3.3V") (at 360.68 209.55 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid fd451cec-2d66-42b5-945a-91db77d06bf0)
+    (property "Reference" "#PWR020" (at 360.68 213.36 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3.3V" (at 360.68 205.74 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 360.68 209.55 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 360.68 209.55 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid f4151061-5247-4d06-9ba5-a950b6695451))
+    (instances
+      (project "microsdmapper"
+        (path "/c945c20f-3691-483a-95d3-09d0b04a2d96"
+          (reference "#PWR020") (unit 1)
         )
       )
     )
