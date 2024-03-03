@@ -66,6 +66,16 @@ mknexrom.exe Nextor-2.1.1.base.dat msdmap.rom /d:driver.bin
 
 ## License 
 
-This work is licensed under the CERN OHL-S v2. You may redistribute and modify this project and its documentation under the terms of the CERN-OHL-S v2.
+![Open Hardware](images/ccans.png)
 
-![Open Hardware](images/1024px-Open-source-hardware-logo.svg.png)
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+* If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+* You may not use the material for commercial purposes.
+* You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+
+**ATTENTION**
+
+This project was made for the retro community and not for commercial purposes. So only retro hardware forums and individual people can build this project.
+
+THE SALE OF ANY PART OF THIS PROJECT WITHOUT EXPRESS AUTHORIZATION IS PROHIBITED!
